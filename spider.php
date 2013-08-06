@@ -20,23 +20,51 @@ $types = parseTypes($html['file']);
 if (DEBUG)
 	echo "Started Spider4Schema \n";
 
-// For each Type retrieve all available Properties and information
-foreach ($types as $typeName)
+// Create the minified Library
+if (CREATE_LIBRARY === 'minified')
 {
+	// For each Type retrieve all available Properties and information
+	foreach ($types as $typeName)
+	{
+		if (DEBUG)
+			echo "\n------------------------------------------------------------\n"
+				. "Creating array type: $typeName \n";
+
+		// Retrieve the Type HTML
+		$type = $http->httpRequest('http://schema.org/' . $typeName);
+		$type = parseType($type['file'], $typeName);
+		$types[$typeName] = $type;
+
+		// Wait some time, to not DDOS the Schema.org website
+		sleep(rand(0, 1));
+	}
+
 	if (DEBUG)
-		echo "\n------------------------------------------------------------\n"
-			. "Creating array type: $typeName \n";
+		echo "\nCreating all Types class \n";
 
-	// Retrieve the Type HTML
-	$type = $http->httpRequest('http://schema.org/' . $typeName);
-	$type = parseType($type['file'], $typeName);
-	$types[$typeName] = $type;
-
-	// Wait some time, to not DDOS the Schema.org website
-	sleep(rand(0, 1));
+	createAllTypesClass($types, dirname(__FILE__) . '/libraries');
 }
 
-if (DEBUG)
-	echo "\nCreating all Types class \n";
+// Create the Type library
+if (CREATE_LIBRARY === 'normal')
+{
+	// For each Type retrieve all available Properties and information
+	foreach ($types as $typeName)
+	{
+		if (DEBUG)
+			echo "\n------------------------------------------------------------\n"
+			. "Creating array type: $typeName \n";
 
-createAllTypesClass($types, dirname(__FILE__) . '/libraries');
+		// Retrieve the Type HTML
+		$type = $http->httpRequest('http://schema.org/' . $typeName);
+		$type = parseType($type['file'], $typeName);
+
+		if (DEBUG)
+			echo "\nCreating Types class: \n";
+
+		createTypeClass($typeName, $type, dirname(__FILE__) . '/libraries/types');
+
+		// Wait some time, to not DDOS the Schema.org website
+		sleep(rand(0, 1));
+	}
+}

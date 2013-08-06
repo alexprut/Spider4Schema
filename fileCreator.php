@@ -20,11 +20,11 @@ function createAllTypesClass($types, $path)
 	// Creating the $typesArray
 	$typesArray = '';
 
-	// Create the Properties array
-	$typeProperties = "";
-
 	foreach ($types as $typeName => $type)
 	{
+		// Create the Properties array
+		$typeProperties = "";
+
 		if (is_array($type))
 		{
 			// Control if the Type has Properties
@@ -59,24 +59,18 @@ function createAllTypesClass($types, $path)
 	$typesArray = substr($typesArray, 0, -2);
 
 	// The final class code
-	$code =
-'<?php
-/**
- *
- *
- */
-class Types
-{
-	/**
-	 * An array with all available Types and information
-	 *
-	 * @var	array
-	 */
-	protected $types = array(
-' . $typesArray . '
-	);
-}
-';
+	$code = "<?php\n"
+		. "class Types\n"
+		. "{\n"
+		. "\t/**\n"
+		. "\t * An array with all available Types and information\n"
+		. "\t *\n"
+		. "\t * @var	array\n"
+		. "\t */\n"
+		. "\tprotected \$types = array(\n"
+		. $typesArray
+		. "\n\t);\n"
+		. "}\n";
 
 	// Write the class file and close the handle
 	fwrite($handle, $code);
@@ -85,4 +79,96 @@ class Types
 	// Debug
 	if (DEBUG)
 		echo "Created the $fileName file \n";
+}
+
+/**
+ * Creates a minified class file with all Types
+ *
+ * @param   string  $typeName  The name of the Type
+ * @param   array   $type      An array with all information about the Type
+ * @param   string  $path      The path where to create the file
+ *
+ * @return  void
+ */
+function createTypeClass($typeName, $type, $path)
+{
+	// Create the new file
+	$fileName = lcfirst($typeName) . '.php';
+	$handle = fopen($path . '/' . $fileName, 'w');
+
+	// Create the Properties variables
+	$typeProperties = "";
+
+	// Create the Properties methods code
+	$propertiesMethods = "";
+
+	foreach ($type['properties'] as $propertyName => $propertyInfo)
+	{
+		// Create the class variables
+		$typeProperties .= "\n\n\t/**\n"
+			. "\t * " . $propertyInfo['description'] . "\n"
+			. "\t * Expected Type: " . join("', '", $propertyInfo['expectedTypes']) . "\n"
+			. "\t * \n"
+			. "\t * @var	array\n"
+			. "\t */\n"
+			. "\tprotected static $" . lcfirst($propertyName) . " = array('value' => '$propertyName',\n"
+			. "\t\t'expectedTypes' => array('" . join("', '", $propertyInfo['expectedTypes']) . "')\n"
+			. "\t);";
+
+		// Create the class functions
+		$propertiesMethods .= "\n\n\t/**\n"
+			. "\t * Return the '$propertyName' Property value\n"
+			. "\t *\n"
+			. "\t * @return	string\n"
+			. "\t */\n"
+			. "\tpublic static function p" . ucfirst($propertyName) . "()\n"
+			. "\t{\n"
+			. "\t\treturn self::getValue(self::\$$propertyName);\n"
+			. "\t}";
+	}
+
+	// Create the extends part
+	if ($type['extends'])
+		$extends = ' extends ' . ucfirst(CLASS_PREFIX) . $type['extends'];
+	else
+		$extends = '';
+
+	// The final class code
+	$code = "<?php\n"
+		. "/**\n"
+		. " * @package     Joomla.Platform\n"
+		. " * @subpackage  Microdata\n"
+		. " *\n"
+		. " * @copyright   Copyright (C) 2005 - 2013 Open Source Matters, Inc. All rights reserved.\n"
+		. " * @license     GNU General Public License version 2 or later; see LICENSE\n"
+		. " */\n\n"
+		. "defined(\"JPATH_PLATFORM\") or die;\n\n"
+		. "/**\n"
+		. " * " . $type['comment'] . "\n"
+		. " *\n"
+		. " * @package     Joomla.Platform\n"
+		. " * @subpackage  Microdata\n"
+		. " *\n"
+		. " * @see         http://schema.org/" . ucfirst($typeName) . "\n"
+		. " * @since       13.1\n"
+		. "*/\n"
+		. "abstract class " . ucfirst(CLASS_PREFIX) . ucfirst($typeName) . $extends . "\n"
+		. "{\n"
+		. "\t/**\n"
+		. "\t * The Schema.org Type Scope\n"
+		. "\t *\n"
+		. "\t * @var string\n"
+		. "\t */\n"
+		. "\tprotected static \$scope = 'https://schema.org/" . ucfirst($typeName) . "';"
+		. $typeProperties
+		. $propertiesMethods
+		. "\n}\n";
+
+	// Write the class file and close the handle
+	fwrite($handle, $code);
+	fclose($handle);
+
+	// Debug
+	if (DEBUG)
+		echo "Created $fileName library file \n";
 }
