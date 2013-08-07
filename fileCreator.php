@@ -1,6 +1,6 @@
 <?php
 /**
- * 
+ * Methods to create the library classes
  */
 
 /**
@@ -32,9 +32,7 @@ function createAllTypesClass($types, $path)
 			{
 				foreach ($type['properties'] as $properyName => $propertyInfo)
 				{
-					$typeProperties .= "\n\t\t\t\t'$properyName' => array(\n"
-						. "\t\t\t\t\t'expectedTypes' => array('" . join("', '", $propertyInfo['expectedTypes']) . "')"
-						. "\n\t\t\t\t),";
+					$typeProperties .= "\n\t\t\t\t'$properyName' => array('" . join("', '", $propertyInfo['expectedTypes']) . "'),";
 				}
 
 				// Sanitize $typeProperties, remove ','

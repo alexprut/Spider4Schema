@@ -50,24 +50,12 @@ class Types
 		'Thing' => array(
 			'extends' => '',
 			'properties' => array(
-				'additionalType' => array(
-					'expectedTypes' => array('URL')
-				),
-				'description' => array(
-					'expectedTypes' => array('Text')
-				),
-				'image' => array(
-					'expectedTypes' => array('URL')
-				),
-				'name' => array(
-					'expectedTypes' => array('Text')
-				),
-				'sameAs' => array(
-					'expectedTypes' => array('URL')
-				),
-				'url' => array(
-					'expectedTypes' => array('URL')
-				)
+				'additionalType' => array('URL'),
+				'description' => array('Text'),
+				'image' => array('URL'),
+				'name' => array('Text'),
+				'sameAs' => array('URL'),
+				'url' => array('URL')
 			)
 		),
 		'Class' => array(
@@ -77,170 +65,64 @@ class Types
 		'CreativeWork' => array(
 			'extends' => 'Thing',
 			'properties' => array(
-				'about' => array(
-					'expectedTypes' => array('Thing')
-				),
-				'accountablePerson' => array(
-					'expectedTypes' => array('Person')
-				),
-				'aggregateRating' => array(
-					'expectedTypes' => array('AggregateRating')
-				),
-				'alternativeHeadline' => array(
-					'expectedTypes' => array('Text')
-				),
-				'associatedMedia' => array(
-					'expectedTypes' => array('MediaObject')
-				),
-				'audience' => array(
-					'expectedTypes' => array('Audience')
-				),
-				'audio' => array(
-					'expectedTypes' => array('AudioObject')
-				),
-				'author' => array(
-					'expectedTypes' => array('Organization', 'Person')
-				),
-				'award' => array(
-					'expectedTypes' => array('Text')
-				),
-				'awards' => array(
-					'expectedTypes' => array('Text')
-				),
-				'citation' => array(
-					'expectedTypes' => array('CreativeWork', 'Text')
-				),
-				'comment' => array(
-					'expectedTypes' => array('UserComments')
-				),
-				'contentLocation' => array(
-					'expectedTypes' => array('Place')
-				),
-				'contentRating' => array(
-					'expectedTypes' => array('Text')
-				),
-				'contributor' => array(
-					'expectedTypes' => array('Organization', 'Person')
-				),
-				'copyrightHolder' => array(
-					'expectedTypes' => array('Organization', 'Person')
-				),
-				'copyrightYear' => array(
-					'expectedTypes' => array('Number')
-				),
-				'creator' => array(
-					'expectedTypes' => array('Organization', 'Person')
-				),
-				'dateCreated' => array(
-					'expectedTypes' => array('Date')
-				),
-				'dateModified' => array(
-					'expectedTypes' => array('Date')
-				),
-				'datePublished' => array(
-					'expectedTypes' => array('Date')
-				),
-				'discussionUrl' => array(
-					'expectedTypes' => array('URL')
-				),
-				'editor' => array(
-					'expectedTypes' => array('Person')
-				),
-				'educationalAlignment' => array(
-					'expectedTypes' => array('AlignmentObject')
-				),
-				'educationalUse' => array(
-					'expectedTypes' => array('Text')
-				),
-				'encoding' => array(
-					'expectedTypes' => array('MediaObject')
-				),
-				'encodings' => array(
-					'expectedTypes' => array('MediaObject')
-				),
-				'genre' => array(
-					'expectedTypes' => array('Text')
-				),
-				'headline' => array(
-					'expectedTypes' => array('Text')
-				),
-				'inLanguage' => array(
-					'expectedTypes' => array('Text')
-				),
-				'interactionCount' => array(
-					'expectedTypes' => array('Text')
-				),
-				'interactivityType' => array(
-					'expectedTypes' => array('Text')
-				),
-				'isBasedOnUrl' => array(
-					'expectedTypes' => array('URL')
-				),
-				'isFamilyFriendly' => array(
-					'expectedTypes' => array('Boolean')
-				),
-				'keywords' => array(
-					'expectedTypes' => array('Text')
-				),
-				'learningResourceType' => array(
-					'expectedTypes' => array('Text')
-				),
-				'mentions' => array(
-					'expectedTypes' => array('Thing')
-				),
-				'offers' => array(
-					'expectedTypes' => array('Offer')
-				),
-				'provider' => array(
-					'expectedTypes' => array('Organization', 'Person')
-				),
-				'publisher' => array(
-					'expectedTypes' => array('Organization')
-				),
-				'publishingPrinciples' => array(
-					'expectedTypes' => array('URL')
-				),
-				'review' => array(
-					'expectedTypes' => array('Review')
-				),
-				'reviews' => array(
-					'expectedTypes' => array('Review')
-				),
-				'sourceOrganization' => array(
-					'expectedTypes' => array('Organization')
-				),
-				'text' => array(
-					'expectedTypes' => array('Text')
-				),
-				'thumbnailUrl' => array(
-					'expectedTypes' => array('URL')
-				),
-				'timeRequired' => array(
-					'expectedTypes' => array('Duration')
-				),
-				'typicalAgeRange' => array(
-					'expectedTypes' => array('Text')
-				),
-				'version' => array(
-					'expectedTypes' => array('Number')
-				),
-				'video' => array(
-					'expectedTypes' => array('VideoObject')
-				)
+				'about' => array('Thing'),
+				'accountablePerson' => array('Person'),
+				'aggregateRating' => array('AggregateRating'),
+				'alternativeHeadline' => array('Text'),
+				'associatedMedia' => array('MediaObject'),
+				'audience' => array('Audience'),
+				'audio' => array('AudioObject'),
+				'author' => array('Organization', 'Person'),
+				'award' => array('Text'),
+				'awards' => array('Text'),
+				'citation' => array('CreativeWork', 'Text'),
+				'comment' => array('UserComments'),
+				'contentLocation' => array('Place'),
+				'contentRating' => array('Text'),
+				'contributor' => array('Organization', 'Person'),
+				'copyrightHolder' => array('Organization', 'Person'),
+				'copyrightYear' => array('Number'),
+				'creator' => array('Organization', 'Person'),
+				'dateCreated' => array('Date'),
+				'dateModified' => array('Date'),
+				'datePublished' => array('Date'),
+				'discussionUrl' => array('URL'),
+				'editor' => array('Person'),
+				'educationalAlignment' => array('AlignmentObject'),
+				'educationalUse' => array('Text'),
+				'encoding' => array('MediaObject'),
+				'encodings' => array('MediaObject'),
+				'genre' => array('Text'),
+				'headline' => array('Text'),
+				'inLanguage' => array('Text'),
+				'interactionCount' => array('Text'),
+				'interactivityType' => array('Text'),
+				'isBasedOnUrl' => array('URL'),
+				'isFamilyFriendly' => array('Boolean'),
+				'keywords' => array('Text'),
+				'learningResourceType' => array('Text'),
+				'mentions' => array('Thing'),
+				'offers' => array('Offer'),
+				'provider' => array('Organization', 'Person'),
+				'publisher' => array('Organization'),
+				'publishingPrinciples' => array('URL'),
+				'review' => array('Review'),
+				'reviews' => array('Review'),
+				'sourceOrganization' => array('Organization'),
+				'text' => array('Text'),
+				'thumbnailUrl' => array('URL'),
+				'timeRequired' => array('Duration'),
+				'typicalAgeRange' => array('Text'),
+				'version' => array('Number'),
+				'video' => array('VideoObject')
 			)
 		),
 		'Article' => array(
 			'extends' => 'CreativeWork',
 			'properties' => array(
-				'articleBody' => array(
-					'expectedTypes' => array('Text')
-				),
-				'articleSection' => array(
-					'expectedTypes' => array('Text')
-				),
-				'wordCount' => array(
-					'expectedTypes' => array('Integer')
-				)
+				'articleBody' => array('Text'),
+				'articleSection' => array('Text'),
+				'wordCount' => array('Integer')
 			)
 		),
 		'BlogPosting' => array(
@@ -250,21 +132,11 @@ class Types
 		'NewsArticle' => array(
 			'extends' => 'Article',
 			'properties' => array(
-				'dateline' => array(
-					'expectedTypes' => array('Text')
-				),
-				'printColumn' => array(
-					'expectedTypes' => array('Text')
-				),
-				'printEdition' => array(
-					'expectedTypes' => array('Text')
-				),
-				'printPage' => array(
-					'expectedTypes' => array('Text')
-				),
-				'printSection' => array(
-					'expectedTypes' => array('Text')
-				)
+				'dateline' => array('Text'),
+				'printColumn' => array('Text'),
+				'printEdition' => array('Text'),
+				'printPage' => array('Text'),
+				'printSection' => array('Text')
 			)
 		),
 		'ScholarlyArticle' => array(
@@ -274,88 +146,50 @@ class Types
 		'MedicalScholarlyArticle' => array(
 			'extends' => 'ScholarlyArticle',
 			'properties' => array(
-				'publicationType' => array(
-					'expectedTypes' => array('Text')
-				)
+				'publicationType' => array('Text')
 			)
 		),
 		'TechArticle' => array(
 			'extends' => 'Article',
 			'properties' => array(
-				'dependencies' => array(
-					'expectedTypes' => array('Text')
-				),
-				'proficiencyLevel' => array(
-					'expectedTypes' => array('Text')
-				)
+				'dependencies' => array('Text'),
+				'proficiencyLevel' => array('Text')
 			)
 		),
 		'APIReference' => array(
 			'extends' => 'TechArticle',
 			'properties' => array(
-				'assembly' => array(
-					'expectedTypes' => array('Text')
-				),
-				'assemblyVersion' => array(
-					'expectedTypes' => array('Text')
-				),
-				'programmingModel' => array(
-					'expectedTypes' => array('Text')
-				),
-				'targetPlatform' => array(
-					'expectedTypes' => array('Text')
-				)
+				'assembly' => array('Text'),
+				'assemblyVersion' => array('Text'),
+				'programmingModel' => array('Text'),
+				'targetPlatform' => array('Text')
 			)
 		),
 		'Blog' => array(
 			'extends' => 'CreativeWork',
 			'properties' => array(
-				'blogPost' => array(
-					'expectedTypes' => array('BlogPosting')
-				),
-				'blogPosts' => array(
-					'expectedTypes' => array('BlogPosting')
-				)
+				'blogPost' => array('BlogPosting'),
+				'blogPosts' => array('BlogPosting')
 			)
 		),
 		'Book' => array(
 			'extends' => 'CreativeWork',
 			'properties' => array(
-				'bookEdition' => array(
-					'expectedTypes' => array('Text')
-				),
-				'bookFormat' => array(
-					'expectedTypes' => array('BookFormatType')
-				),
-				'illustrator' => array(
-					'expectedTypes' => array('Person')
-				),
-				'isbn' => array(
-					'expectedTypes' => array('Text')
-				),
-				'numberOfPages' => array(
-					'expectedTypes' => array('Integer')
-				)
+				'bookEdition' => array('Text'),
+				'bookFormat' => array('BookFormatType'),
+				'illustrator' => array('Person'),
+				'isbn' => array('Text'),
+				'numberOfPages' => array('Integer')
 			)
 		),
 		'Code' => array(
 			'extends' => 'CreativeWork',
 			'properties' => array(
-				'codeRepository' => array(
-					'expectedTypes' => array('URL')
-				),
-				'programmingLanguage' => array(
-					'expectedTypes' => array('Thing')
-				),
-				'runtime' => array(
-					'expectedTypes' => array('Text')
-				),
-				'sampleType' => array(
-					'expectedTypes' => array('Text')
-				),
-				'targetProduct' => array(
-					'expectedTypes' => array('SoftwareApplication')
-				)
+				'codeRepository' => array('URL'),
+				'programmingLanguage' => array('Thing'),
+				'runtime' => array('Text'),
+				'sampleType' => array('Text'),
+				'targetProduct' => array('SoftwareApplication')
 			)
 		),
 		'Comment' => array(
@@ -365,92 +199,48 @@ class Types
 		'DataCatalog' => array(
 			'extends' => 'CreativeWork',
 			'properties' => array(
-				'dataset' => array(
-					'expectedTypes' => array('Dataset')
-				)
+				'dataset' => array('Dataset')
 			)
 		),
 		'Dataset' => array(
 			'extends' => 'CreativeWork',
 			'properties' => array(
-				'catalog' => array(
-					'expectedTypes' => array('DataCatalog')
-				),
-				'distribution' => array(
-					'expectedTypes' => array('DataDownload')
-				),
-				'spatial' => array(
-					'expectedTypes' => array('Place')
-				),
-				'temporal' => array(
-					'expectedTypes' => array('DateTime')
-				)
+				'catalog' => array('DataCatalog'),
+				'distribution' => array('DataDownload'),
+				'spatial' => array('Place'),
+				'temporal' => array('DateTime')
 			)
 		),
 		'Diet' => array(
 			'extends' => 'CreativeWork',
 			'properties' => array(
-				'dietFeatures' => array(
-					'expectedTypes' => array('Text')
-				),
-				'endorsers' => array(
-					'expectedTypes' => array('Organization', 'Person')
-				),
-				'expertConsiderations' => array(
-					'expectedTypes' => array('Text')
-				),
-				'overview' => array(
-					'expectedTypes' => array('Text')
-				),
-				'physiologicalBenefits' => array(
-					'expectedTypes' => array('Text')
-				),
-				'proprietaryName' => array(
-					'expectedTypes' => array('Text')
-				),
-				'risks' => array(
-					'expectedTypes' => array('Text')
-				)
+				'dietFeatures' => array('Text'),
+				'endorsers' => array('Organization', 'Person'),
+				'expertConsiderations' => array('Text'),
+				'overview' => array('Text'),
+				'physiologicalBenefits' => array('Text'),
+				'proprietaryName' => array('Text'),
+				'risks' => array('Text')
 			)
 		),
 		'ExercisePlan' => array(
 			'extends' => 'CreativeWork',
 			'properties' => array(
-				'activityDuration' => array(
-					'expectedTypes' => array('Duration')
-				),
-				'activityFrequency' => array(
-					'expectedTypes' => array('Text')
-				),
-				'additionalVariable' => array(
-					'expectedTypes' => array('Text')
-				),
-				'exerciseType' => array(
-					'expectedTypes' => array('Text')
-				),
-				'intensity' => array(
-					'expectedTypes' => array('Text')
-				),
-				'repetitions' => array(
-					'expectedTypes' => array('Number')
-				),
-				'restPeriods' => array(
-					'expectedTypes' => array('Text')
-				),
-				'workload' => array(
-					'expectedTypes' => array('Energy')
-				)
+				'activityDuration' => array('Duration'),
+				'activityFrequency' => array('Text'),
+				'additionalVariable' => array('Text'),
+				'exerciseType' => array('Text'),
+				'intensity' => array('Text'),
+				'repetitions' => array('Number'),
+				'restPeriods' => array('Text'),
+				'workload' => array('Energy')
 			)
 		),
 		'ItemList' => array(
 			'extends' => 'CreativeWork',
 			'properties' => array(
-				'itemListElement' => array(
-					'expectedTypes' => array('Text')
-				),
-				'itemListOrder' => array(
-					'expectedTypes' => array('Text')
-				)
+				'itemListElement' => array('Text'),
+				'itemListOrder' => array('Text')
 			)
 		),
 		'Map' => array(
@@ -460,59 +250,27 @@ class Types
 		'MediaObject' => array(
 			'extends' => 'CreativeWork',
 			'properties' => array(
-				'associatedArticle' => array(
-					'expectedTypes' => array('NewsArticle')
-				),
-				'bitrate' => array(
-					'expectedTypes' => array('Text')
-				),
-				'contentSize' => array(
-					'expectedTypes' => array('Text')
-				),
-				'contentUrl' => array(
-					'expectedTypes' => array('URL')
-				),
-				'duration' => array(
-					'expectedTypes' => array('Duration')
-				),
-				'embedUrl' => array(
-					'expectedTypes' => array('URL')
-				),
-				'encodesCreativeWork' => array(
-					'expectedTypes' => array('CreativeWork')
-				),
-				'encodingFormat' => array(
-					'expectedTypes' => array('Text')
-				),
-				'expires' => array(
-					'expectedTypes' => array('Date')
-				),
-				'height' => array(
-					'expectedTypes' => array('Distance', 'QuantitativeValue')
-				),
-				'playerType' => array(
-					'expectedTypes' => array('Text')
-				),
-				'regionsAllowed' => array(
-					'expectedTypes' => array('Place')
-				),
-				'requiresSubscription' => array(
-					'expectedTypes' => array('Boolean')
-				),
-				'uploadDate' => array(
-					'expectedTypes' => array('Date')
-				),
-				'width' => array(
-					'expectedTypes' => array('Distance', 'QuantitativeValue')
-				)
+				'associatedArticle' => array('NewsArticle'),
+				'bitrate' => array('Text'),
+				'contentSize' => array('Text'),
+				'contentUrl' => array('URL'),
+				'duration' => array('Duration'),
+				'embedUrl' => array('URL'),
+				'encodesCreativeWork' => array('CreativeWork'),
+				'encodingFormat' => array('Text'),
+				'expires' => array('Date'),
+				'height' => array('Distance', 'QuantitativeValue'),
+				'playerType' => array('Text'),
+				'regionsAllowed' => array('Place'),
+				'requiresSubscription' => array('Boolean'),
+				'uploadDate' => array('Date'),
+				'width' => array('Distance', 'QuantitativeValue')
 			)
 		),
 		'AudioObject' => array(
 			'extends' => 'MediaObject',
 			'properties' => array(
-				'transcript' => array(
-					'expectedTypes' => array('Text')
-				)
+				'transcript' => array('Text')
 			)
 		),
 		'DataDownload' => array(
@@ -522,18 +280,10 @@ class Types
 		'ImageObject' => array(
 			'extends' => 'MediaObject',
 			'properties' => array(
-				'caption' => array(
-					'expectedTypes' => array('Text')
-				),
-				'exifData' => array(
-					'expectedTypes' => array('Text')
-				),
-				'representativeOfPage' => array(
-					'expectedTypes' => array('Boolean')
-				),
-				'thumbnail' => array(
-					'expectedTypes' => array('ImageObject')
-				)
+				'caption' => array('Text'),
+				'exifData' => array('Text'),
+				'representativeOfPage' => array('Boolean'),
+				'thumbnail' => array('ImageObject')
 			)
 		),
 		'MusicVideoObject' => array(
@@ -543,92 +293,48 @@ class Types
 		'VideoObject' => array(
 			'extends' => 'MediaObject',
 			'properties' => array(
-				'caption' => array(
-					'expectedTypes' => array('Text')
-				),
-				'productionCompany' => array(
-					'expectedTypes' => array('Organization')
-				),
-				'thumbnail' => array(
-					'expectedTypes' => array('ImageObject')
-				),
-				'transcript' => array(
-					'expectedTypes' => array('Text')
-				),
-				'videoFrameSize' => array(
-					'expectedTypes' => array('Text')
-				),
-				'videoQuality' => array(
-					'expectedTypes' => array('Text')
-				)
+				'caption' => array('Text'),
+				'productionCompany' => array('Organization'),
+				'thumbnail' => array('ImageObject'),
+				'transcript' => array('Text'),
+				'videoFrameSize' => array('Text'),
+				'videoQuality' => array('Text')
 			)
 		),
 		'Movie' => array(
 			'extends' => 'CreativeWork',
 			'properties' => array(
-				'actor' => array(
-					'expectedTypes' => array('Person')
-				),
-				'actors' => array(
-					'expectedTypes' => array('Person')
-				),
-				'director' => array(
-					'expectedTypes' => array('Person')
-				),
-				'duration' => array(
-					'expectedTypes' => array('Duration')
-				),
-				'musicBy' => array(
-					'expectedTypes' => array('MusicGroup', 'Person')
-				),
-				'producer' => array(
-					'expectedTypes' => array('Person')
-				),
-				'productionCompany' => array(
-					'expectedTypes' => array('Organization')
-				),
-				'trailer' => array(
-					'expectedTypes' => array('VideoObject')
-				)
+				'actor' => array('Person'),
+				'actors' => array('Person'),
+				'director' => array('Person'),
+				'duration' => array('Duration'),
+				'musicBy' => array('MusicGroup', 'Person'),
+				'producer' => array('Person'),
+				'productionCompany' => array('Organization'),
+				'trailer' => array('VideoObject')
 			)
 		),
 		'MusicPlaylist' => array(
 			'extends' => 'CreativeWork',
 			'properties' => array(
-				'numTracks' => array(
-					'expectedTypes' => array('Integer')
-				),
-				'track' => array(
-					'expectedTypes' => array('MusicRecording')
-				),
-				'tracks' => array(
-					'expectedTypes' => array('MusicRecording')
-				)
+				'numTracks' => array('Integer'),
+				'track' => array('MusicRecording'),
+				'tracks' => array('MusicRecording')
 			)
 		),
 		'MusicAlbum' => array(
 			'extends' => 'MusicPlaylist',
 			'properties' => array(
-				'byArtist' => array(
-					'expectedTypes' => array('MusicGroup')
-				)
+				'byArtist' => array('MusicGroup')
 			)
 		),
 		'MusicRecording' => array(
 			'extends' => 'CreativeWork',
 			'properties' => array(
-				'byArtist' => array(
-					'expectedTypes' => array('MusicGroup')
-				),
-				'duration' => array(
-					'expectedTypes' => array('Duration')
-				),
-				'inAlbum' => array(
-					'expectedTypes' => array('MusicAlbum')
-				),
-				'inPlaylist' => array(
-					'expectedTypes' => array('MusicPlaylist')
-				)
+				'byArtist' => array('MusicGroup'),
+				'duration' => array('Duration'),
+				'inAlbum' => array('MusicAlbum'),
+				'inPlaylist' => array('MusicPlaylist')
 			)
 		),
 		'Painting' => array(
@@ -642,50 +348,24 @@ class Types
 		'Recipe' => array(
 			'extends' => 'CreativeWork',
 			'properties' => array(
-				'cookingMethod' => array(
-					'expectedTypes' => array('Text')
-				),
-				'cookTime' => array(
-					'expectedTypes' => array('Duration')
-				),
-				'ingredients' => array(
-					'expectedTypes' => array('Text')
-				),
-				'nutrition' => array(
-					'expectedTypes' => array('NutritionInformation')
-				),
-				'prepTime' => array(
-					'expectedTypes' => array('Duration')
-				),
-				'recipeCategory' => array(
-					'expectedTypes' => array('Text')
-				),
-				'recipeCuisine' => array(
-					'expectedTypes' => array('Text')
-				),
-				'recipeInstructions' => array(
-					'expectedTypes' => array('Text')
-				),
-				'recipeYield' => array(
-					'expectedTypes' => array('Text')
-				),
-				'totalTime' => array(
-					'expectedTypes' => array('Duration')
-				)
+				'cookingMethod' => array('Text'),
+				'cookTime' => array('Duration'),
+				'ingredients' => array('Text'),
+				'nutrition' => array('NutritionInformation'),
+				'prepTime' => array('Duration'),
+				'recipeCategory' => array('Text'),
+				'recipeCuisine' => array('Text'),
+				'recipeInstructions' => array('Text'),
+				'recipeYield' => array('Text'),
+				'totalTime' => array('Duration')
 			)
 		),
 		'Review' => array(
 			'extends' => 'CreativeWork',
 			'properties' => array(
-				'itemReviewed' => array(
-					'expectedTypes' => array('Thing')
-				),
-				'reviewBody' => array(
-					'expectedTypes' => array('Text')
-				),
-				'reviewRating' => array(
-					'expectedTypes' => array('Rating')
-				)
+				'itemReviewed' => array('Thing'),
+				'reviewBody' => array('Text'),
+				'reviewRating' => array('Rating')
 			)
 		),
 		'Sculpture' => array(
@@ -695,228 +375,100 @@ class Types
 		'SoftwareApplication' => array(
 			'extends' => 'CreativeWork',
 			'properties' => array(
-				'applicationCategory' => array(
-					'expectedTypes' => array('Text', 'URL')
-				),
-				'applicationSubCategory' => array(
-					'expectedTypes' => array('Text', 'URL')
-				),
-				'applicationSuite' => array(
-					'expectedTypes' => array('Text')
-				),
-				'countriesNotSupported' => array(
-					'expectedTypes' => array('Text')
-				),
-				'countriesSupported' => array(
-					'expectedTypes' => array('Text')
-				),
-				'device' => array(
-					'expectedTypes' => array('Text')
-				),
-				'downloadUrl' => array(
-					'expectedTypes' => array('URL')
-				),
-				'featureList' => array(
-					'expectedTypes' => array('Text', 'URL')
-				),
-				'fileFormat' => array(
-					'expectedTypes' => array('Text')
-				),
-				'fileSize' => array(
-					'expectedTypes' => array('Integer')
-				),
-				'installUrl' => array(
-					'expectedTypes' => array('URL')
-				),
-				'memoryRequirements' => array(
-					'expectedTypes' => array('Text', 'URL')
-				),
-				'operatingSystem' => array(
-					'expectedTypes' => array('Text')
-				),
-				'permissions' => array(
-					'expectedTypes' => array('Text')
-				),
-				'processorRequirements' => array(
-					'expectedTypes' => array('Text')
-				),
-				'releaseNotes' => array(
-					'expectedTypes' => array('Text', 'URL')
-				),
-				'requirements' => array(
-					'expectedTypes' => array('Text', 'URL')
-				),
-				'screenshot' => array(
-					'expectedTypes' => array('ImageObject', 'URL')
-				),
-				'softwareVersion' => array(
-					'expectedTypes' => array('Text')
-				),
-				'storageRequirements' => array(
-					'expectedTypes' => array('Text', 'URL')
-				)
+				'applicationCategory' => array('Text', 'URL'),
+				'applicationSubCategory' => array('Text', 'URL'),
+				'applicationSuite' => array('Text'),
+				'countriesNotSupported' => array('Text'),
+				'countriesSupported' => array('Text'),
+				'device' => array('Text'),
+				'downloadUrl' => array('URL'),
+				'featureList' => array('Text', 'URL'),
+				'fileFormat' => array('Text'),
+				'fileSize' => array('Integer'),
+				'installUrl' => array('URL'),
+				'memoryRequirements' => array('Text', 'URL'),
+				'operatingSystem' => array('Text'),
+				'permissions' => array('Text'),
+				'processorRequirements' => array('Text'),
+				'releaseNotes' => array('Text', 'URL'),
+				'requirements' => array('Text', 'URL'),
+				'screenshot' => array('ImageObject', 'URL'),
+				'softwareVersion' => array('Text'),
+				'storageRequirements' => array('Text', 'URL')
 			)
 		),
 		'MobileApplication' => array(
 			'extends' => 'SoftwareApplication',
 			'properties' => array(
-				'carrierRequirements' => array(
-					'expectedTypes' => array('Text')
-				)
+				'carrierRequirements' => array('Text')
 			)
 		),
 		'WebApplication' => array(
 			'extends' => 'SoftwareApplication',
 			'properties' => array(
-				'browserRequirements' => array(
-					'expectedTypes' => array('Text')
-				)
+				'browserRequirements' => array('Text')
 			)
 		),
 		'TVEpisode' => array(
 			'extends' => 'CreativeWork',
 			'properties' => array(
-				'actor' => array(
-					'expectedTypes' => array('Person')
-				),
-				'actors' => array(
-					'expectedTypes' => array('Person')
-				),
-				'director' => array(
-					'expectedTypes' => array('Person')
-				),
-				'episodeNumber' => array(
-					'expectedTypes' => array('Number')
-				),
-				'musicBy' => array(
-					'expectedTypes' => array('MusicGroup', 'Person')
-				),
-				'partOfSeason' => array(
-					'expectedTypes' => array('TVSeason')
-				),
-				'partOfTVSeries' => array(
-					'expectedTypes' => array('TVSeries')
-				),
-				'producer' => array(
-					'expectedTypes' => array('Person')
-				),
-				'productionCompany' => array(
-					'expectedTypes' => array('Organization')
-				),
-				'trailer' => array(
-					'expectedTypes' => array('VideoObject')
-				)
+				'actor' => array('Person'),
+				'actors' => array('Person'),
+				'director' => array('Person'),
+				'episodeNumber' => array('Number'),
+				'musicBy' => array('MusicGroup', 'Person'),
+				'partOfSeason' => array('TVSeason'),
+				'partOfTVSeries' => array('TVSeries'),
+				'producer' => array('Person'),
+				'productionCompany' => array('Organization'),
+				'trailer' => array('VideoObject')
 			)
 		),
 		'TVSeason' => array(
 			'extends' => 'CreativeWork',
 			'properties' => array(
-				'endDate' => array(
-					'expectedTypes' => array('Date')
-				),
-				'episode' => array(
-					'expectedTypes' => array('TVEpisode')
-				),
-				'episodes' => array(
-					'expectedTypes' => array('TVEpisode')
-				),
-				'numberOfEpisodes' => array(
-					'expectedTypes' => array('Number')
-				),
-				'partOfTVSeries' => array(
-					'expectedTypes' => array('TVSeries')
-				),
-				'seasonNumber' => array(
-					'expectedTypes' => array('Integer')
-				),
-				'startDate' => array(
-					'expectedTypes' => array('Date')
-				),
-				'trailer' => array(
-					'expectedTypes' => array('VideoObject')
-				)
+				'endDate' => array('Date'),
+				'episode' => array('TVEpisode'),
+				'episodes' => array('TVEpisode'),
+				'numberOfEpisodes' => array('Number'),
+				'partOfTVSeries' => array('TVSeries'),
+				'seasonNumber' => array('Integer'),
+				'startDate' => array('Date'),
+				'trailer' => array('VideoObject')
 			)
 		),
 		'TVSeries' => array(
 			'extends' => 'CreativeWork',
 			'properties' => array(
-				'actor' => array(
-					'expectedTypes' => array('Person')
-				),
-				'actors' => array(
-					'expectedTypes' => array('Person')
-				),
-				'director' => array(
-					'expectedTypes' => array('Person')
-				),
-				'endDate' => array(
-					'expectedTypes' => array('Date')
-				),
-				'episode' => array(
-					'expectedTypes' => array('TVEpisode')
-				),
-				'episodes' => array(
-					'expectedTypes' => array('TVEpisode')
-				),
-				'musicBy' => array(
-					'expectedTypes' => array('MusicGroup', 'Person')
-				),
-				'numberOfEpisodes' => array(
-					'expectedTypes' => array('Number')
-				),
-				'producer' => array(
-					'expectedTypes' => array('Person')
-				),
-				'productionCompany' => array(
-					'expectedTypes' => array('Organization')
-				),
-				'season' => array(
-					'expectedTypes' => array('TVSeason')
-				),
-				'seasons' => array(
-					'expectedTypes' => array('TVSeason')
-				),
-				'startDate' => array(
-					'expectedTypes' => array('Date')
-				),
-				'trailer' => array(
-					'expectedTypes' => array('VideoObject')
-				)
+				'actor' => array('Person'),
+				'actors' => array('Person'),
+				'director' => array('Person'),
+				'endDate' => array('Date'),
+				'episode' => array('TVEpisode'),
+				'episodes' => array('TVEpisode'),
+				'musicBy' => array('MusicGroup', 'Person'),
+				'numberOfEpisodes' => array('Number'),
+				'producer' => array('Person'),
+				'productionCompany' => array('Organization'),
+				'season' => array('TVSeason'),
+				'seasons' => array('TVSeason'),
+				'startDate' => array('Date'),
+				'trailer' => array('VideoObject')
 			)
 		),
 		'WebPage' => array(
 			'extends' => 'CreativeWork',
 			'properties' => array(
-				'breadcrumb' => array(
-					'expectedTypes' => array('Text')
-				),
-				'isPartOf' => array(
-					'expectedTypes' => array('CollectionPage')
-				),
-				'lastReviewed' => array(
-					'expectedTypes' => array('Date')
-				),
-				'mainContentOfPage' => array(
-					'expectedTypes' => array('WebPageElement')
-				),
-				'primaryImageOfPage' => array(
-					'expectedTypes' => array('ImageObject')
-				),
-				'relatedLink' => array(
-					'expectedTypes' => array('URL')
-				),
-				'reviewedBy' => array(
-					'expectedTypes' => array('Organization', 'Person')
-				),
-				'significantLink' => array(
-					'expectedTypes' => array('URL')
-				),
-				'significantLinks' => array(
-					'expectedTypes' => array('URL')
-				),
-				'specialty' => array(
-					'expectedTypes' => array('Specialty')
-				)
+				'breadcrumb' => array('Text'),
+				'isPartOf' => array('CollectionPage'),
+				'lastReviewed' => array('Date'),
+				'mainContentOfPage' => array('WebPageElement'),
+				'primaryImageOfPage' => array('ImageObject'),
+				'relatedLink' => array('URL'),
+				'reviewedBy' => array('Organization', 'Person'),
+				'significantLink' => array('URL'),
+				'significantLinks' => array('URL'),
+				'specialty' => array('Specialty')
 			)
 		),
 		'AboutPage' => array(
@@ -950,9 +502,7 @@ class Types
 		'MedicalWebPage' => array(
 			'extends' => 'WebPage',
 			'properties' => array(
-				'aspect' => array(
-					'expectedTypes' => array('Text')
-				)
+				'aspect' => array('Text')
 			)
 		),
 		'ProfilePage' => array(
@@ -994,42 +544,18 @@ class Types
 		'Event' => array(
 			'extends' => 'Thing',
 			'properties' => array(
-				'attendee' => array(
-					'expectedTypes' => array('Organization', 'Person')
-				),
-				'attendees' => array(
-					'expectedTypes' => array('Organization', 'Person')
-				),
-				'duration' => array(
-					'expectedTypes' => array('Duration')
-				),
-				'endDate' => array(
-					'expectedTypes' => array('Date')
-				),
-				'location' => array(
-					'expectedTypes' => array('Place', 'PostalAddress')
-				),
-				'offers' => array(
-					'expectedTypes' => array('Offer')
-				),
-				'performer' => array(
-					'expectedTypes' => array('Organization', 'Person')
-				),
-				'performers' => array(
-					'expectedTypes' => array('Organization', 'Person')
-				),
-				'startDate' => array(
-					'expectedTypes' => array('Date')
-				),
-				'subEvent' => array(
-					'expectedTypes' => array('Event')
-				),
-				'subEvents' => array(
-					'expectedTypes' => array('Event')
-				),
-				'superEvent' => array(
-					'expectedTypes' => array('Event')
-				)
+				'attendee' => array('Organization', 'Person'),
+				'attendees' => array('Organization', 'Person'),
+				'duration' => array('Duration'),
+				'endDate' => array('Date'),
+				'location' => array('Place', 'PostalAddress'),
+				'offers' => array('Offer'),
+				'performer' => array('Organization', 'Person'),
+				'performers' => array('Organization', 'Person'),
+				'startDate' => array('Date'),
+				'subEvent' => array('Event'),
+				'subEvents' => array('Event'),
+				'superEvent' => array('Event')
 			)
 		),
 		'BusinessEvent' => array(
@@ -1099,21 +625,11 @@ class Types
 		'UserComments' => array(
 			'extends' => 'UserInteraction',
 			'properties' => array(
-				'commentText' => array(
-					'expectedTypes' => array('Text')
-				),
-				'commentTime' => array(
-					'expectedTypes' => array('Date')
-				),
-				'creator' => array(
-					'expectedTypes' => array('Organization', 'Person')
-				),
-				'discusses' => array(
-					'expectedTypes' => array('CreativeWork')
-				),
-				'replyToUrl' => array(
-					'expectedTypes' => array('URL')
-				)
+				'commentText' => array('Text'),
+				'commentTime' => array('Date'),
+				'creator' => array('Organization', 'Person'),
+				'discusses' => array('CreativeWork'),
+				'replyToUrl' => array('URL')
 			)
 		),
 		'UserDownloads' => array(
@@ -1151,21 +667,11 @@ class Types
 		'AlignmentObject' => array(
 			'extends' => 'Intangible',
 			'properties' => array(
-				'alignmentType' => array(
-					'expectedTypes' => array('Text')
-				),
-				'educationalFramework' => array(
-					'expectedTypes' => array('Text')
-				),
-				'targetDescription' => array(
-					'expectedTypes' => array('Text')
-				),
-				'targetName' => array(
-					'expectedTypes' => array('Text')
-				),
-				'targetUrl' => array(
-					'expectedTypes' => array('URL')
-				)
+				'alignmentType' => array('Text'),
+				'educationalFramework' => array('Text'),
+				'targetDescription' => array('Text'),
+				'targetName' => array('Text'),
+				'targetUrl' => array('URL')
 			)
 		),
 		'Audience' => array(
@@ -1175,9 +681,7 @@ class Types
 		'EducationalAudience' => array(
 			'extends' => 'Audience',
 			'properties' => array(
-				'educationalRole' => array(
-					'expectedTypes' => array('Text')
-				)
+				'educationalRole' => array('Text')
 			)
 		),
 		'MedicalAudience' => array(
@@ -1187,129 +691,57 @@ class Types
 		'PeopleAudience' => array(
 			'extends' => 'Audience',
 			'properties' => array(
-				'healthCondition' => array(
-					'expectedTypes' => array('MedicalCondition')
-				),
-				'suggestedGender' => array(
-					'expectedTypes' => array('Text')
-				),
-				'suggestedMaxAge' => array(
-					'expectedTypes' => array('Number')
-				),
-				'suggestedMinAge' => array(
-					'expectedTypes' => array('Number')
-				)
+				'healthCondition' => array('MedicalCondition'),
+				'suggestedGender' => array('Text'),
+				'suggestedMaxAge' => array('Number'),
+				'suggestedMinAge' => array('Number')
 			)
 		),
 		'ParentAudience' => array(
 			'extends' => 'PeopleAudience',
 			'properties' => array(
-				'childMaxAge' => array(
-					'expectedTypes' => array('Number')
-				),
-				'childMinAge' => array(
-					'expectedTypes' => array('Number')
-				)
+				'childMaxAge' => array('Number'),
+				'childMinAge' => array('Number')
 			)
 		),
 		'Brand' => array(
 			'extends' => 'Intangible',
 			'properties' => array(
-				'logo' => array(
-					'expectedTypes' => array('ImageObject', 'URL')
-				)
+				'logo' => array('ImageObject', 'URL')
 			)
 		),
 		'Demand' => array(
 			'extends' => 'Intangible',
 			'properties' => array(
-				'acceptedPaymentMethod' => array(
-					'expectedTypes' => array('PaymentMethod')
-				),
-				'advanceBookingRequirement' => array(
-					'expectedTypes' => array('QuantitativeValue')
-				),
-				'availability' => array(
-					'expectedTypes' => array('ItemAvailability')
-				),
-				'availabilityEnds' => array(
-					'expectedTypes' => array('DateTime')
-				),
-				'availabilityStarts' => array(
-					'expectedTypes' => array('DateTime')
-				),
-				'availableAtOrFrom' => array(
-					'expectedTypes' => array('Place')
-				),
-				'availableDeliveryMethod' => array(
-					'expectedTypes' => array('DeliveryMethod')
-				),
-				'businessFunction' => array(
-					'expectedTypes' => array('BusinessFunction')
-				),
-				'deliveryLeadTime' => array(
-					'expectedTypes' => array('QuantitativeValue')
-				),
-				'eligibleCustomerType' => array(
-					'expectedTypes' => array('BusinessEntityType')
-				),
-				'eligibleDuration' => array(
-					'expectedTypes' => array('QuantitativeValue')
-				),
-				'eligibleQuantity' => array(
-					'expectedTypes' => array('QuantitativeValue')
-				),
-				'eligibleRegion' => array(
-					'expectedTypes' => array('GeoShape', 'Text')
-				),
-				'eligibleTransactionVolume' => array(
-					'expectedTypes' => array('PriceSpecification')
-				),
-				'gtin13' => array(
-					'expectedTypes' => array('Text')
-				),
-				'gtin14' => array(
-					'expectedTypes' => array('Text')
-				),
-				'gtin8' => array(
-					'expectedTypes' => array('Text')
-				),
-				'includesObject' => array(
-					'expectedTypes' => array('TypeAndQuantityNode')
-				),
-				'inventoryLevel' => array(
-					'expectedTypes' => array('QuantitativeValue')
-				),
-				'itemCondition' => array(
-					'expectedTypes' => array('OfferItemCondition')
-				),
-				'itemOffered' => array(
-					'expectedTypes' => array('Product')
-				),
-				'mpn' => array(
-					'expectedTypes' => array('Text')
-				),
-				'priceSpecification' => array(
-					'expectedTypes' => array('PriceSpecification')
-				),
-				'seller' => array(
-					'expectedTypes' => array('Organization', 'Person')
-				),
-				'serialNumber' => array(
-					'expectedTypes' => array('Text')
-				),
-				'sku' => array(
-					'expectedTypes' => array('Text')
-				),
-				'validFrom' => array(
-					'expectedTypes' => array('DateTime')
-				),
-				'validThrough' => array(
-					'expectedTypes' => array('DateTime')
-				),
-				'warranty' => array(
-					'expectedTypes' => array('WarrantyPromise')
-				)
+				'acceptedPaymentMethod' => array('PaymentMethod'),
+				'advanceBookingRequirement' => array('QuantitativeValue'),
+				'availability' => array('ItemAvailability'),
+				'availabilityEnds' => array('DateTime'),
+				'availabilityStarts' => array('DateTime'),
+				'availableAtOrFrom' => array('Place'),
+				'availableDeliveryMethod' => array('DeliveryMethod'),
+				'businessFunction' => array('BusinessFunction'),
+				'deliveryLeadTime' => array('QuantitativeValue'),
+				'eligibleCustomerType' => array('BusinessEntityType'),
+				'eligibleDuration' => array('QuantitativeValue'),
+				'eligibleQuantity' => array('QuantitativeValue'),
+				'eligibleRegion' => array('GeoShape', 'Text'),
+				'eligibleTransactionVolume' => array('PriceSpecification'),
+				'gtin13' => array('Text'),
+				'gtin14' => array('Text'),
+				'gtin8' => array('Text'),
+				'includesObject' => array('TypeAndQuantityNode'),
+				'inventoryLevel' => array('QuantitativeValue'),
+				'itemCondition' => array('OfferItemCondition'),
+				'itemOffered' => array('Product'),
+				'mpn' => array('Text'),
+				'priceSpecification' => array('PriceSpecification'),
+				'seller' => array('Organization', 'Person'),
+				'serialNumber' => array('Text'),
+				'sku' => array('Text'),
+				'validFrom' => array('DateTime'),
+				'validThrough' => array('DateTime'),
+				'warranty' => array('WarrantyPromise')
 			)
 		),
 		'Enumeration' => array(
@@ -1359,27 +791,13 @@ class Types
 		'QualitativeValue' => array(
 			'extends' => 'Enumeration',
 			'properties' => array(
-				'equal' => array(
-					'expectedTypes' => array('QualitativeValue')
-				),
-				'greater' => array(
-					'expectedTypes' => array('QualitativeValue')
-				),
-				'greaterOrEqual' => array(
-					'expectedTypes' => array('QualitativeValue')
-				),
-				'lesser' => array(
-					'expectedTypes' => array('QualitativeValue')
-				),
-				'lesserOrEqual' => array(
-					'expectedTypes' => array('QualitativeValue')
-				),
-				'nonEqual' => array(
-					'expectedTypes' => array('QualitativeValue')
-				),
-				'valueReference' => array(
-					'expectedTypes' => array('Enumeration', 'StructuredValue')
-				)
+				'equal' => array('QualitativeValue'),
+				'greater' => array('QualitativeValue'),
+				'greaterOrEqual' => array('QualitativeValue'),
+				'lesser' => array('QualitativeValue'),
+				'lesserOrEqual' => array('QualitativeValue'),
+				'nonEqual' => array('QualitativeValue'),
+				'valueReference' => array('Enumeration', 'StructuredValue')
 			)
 		),
 		'Specialty' => array(
@@ -1397,60 +815,24 @@ class Types
 		'JobPosting' => array(
 			'extends' => 'Intangible',
 			'properties' => array(
-				'baseSalary' => array(
-					'expectedTypes' => array('Number')
-				),
-				'benefits' => array(
-					'expectedTypes' => array('Text')
-				),
-				'datePosted' => array(
-					'expectedTypes' => array('Date')
-				),
-				'educationRequirements' => array(
-					'expectedTypes' => array('Text')
-				),
-				'employmentType' => array(
-					'expectedTypes' => array('Text')
-				),
-				'experienceRequirements' => array(
-					'expectedTypes' => array('Text')
-				),
-				'hiringOrganization' => array(
-					'expectedTypes' => array('Organization')
-				),
-				'incentives' => array(
-					'expectedTypes' => array('Text')
-				),
-				'industry' => array(
-					'expectedTypes' => array('Text')
-				),
-				'jobLocation' => array(
-					'expectedTypes' => array('Place')
-				),
-				'occupationalCategory' => array(
-					'expectedTypes' => array('Text')
-				),
-				'qualifications' => array(
-					'expectedTypes' => array('Text')
-				),
-				'responsibilities' => array(
-					'expectedTypes' => array('Text')
-				),
-				'salaryCurrency' => array(
-					'expectedTypes' => array('Text')
-				),
-				'skills' => array(
-					'expectedTypes' => array('Text')
-				),
-				'specialCommitments' => array(
-					'expectedTypes' => array('Text')
-				),
-				'title' => array(
-					'expectedTypes' => array('Text')
-				),
-				'workHours' => array(
-					'expectedTypes' => array('Text')
-				)
+				'baseSalary' => array('Number'),
+				'benefits' => array('Text'),
+				'datePosted' => array('Date'),
+				'educationRequirements' => array('Text'),
+				'employmentType' => array('Text'),
+				'experienceRequirements' => array('Text'),
+				'hiringOrganization' => array('Organization'),
+				'incentives' => array('Text'),
+				'industry' => array('Text'),
+				'jobLocation' => array('Place'),
+				'occupationalCategory' => array('Text'),
+				'qualifications' => array('Text'),
+				'responsibilities' => array('Text'),
+				'salaryCurrency' => array('Text'),
+				'skills' => array('Text'),
+				'specialCommitments' => array('Text'),
+				'title' => array('Text'),
+				'workHours' => array('Text')
 			)
 		),
 		'Language' => array(
@@ -1460,131 +842,51 @@ class Types
 		'Offer' => array(
 			'extends' => 'Intangible',
 			'properties' => array(
-				'acceptedPaymentMethod' => array(
-					'expectedTypes' => array('PaymentMethod')
-				),
-				'addOn' => array(
-					'expectedTypes' => array('Offer')
-				),
-				'advanceBookingRequirement' => array(
-					'expectedTypes' => array('QuantitativeValue')
-				),
-				'aggregateRating' => array(
-					'expectedTypes' => array('AggregateRating')
-				),
-				'availability' => array(
-					'expectedTypes' => array('ItemAvailability')
-				),
-				'availabilityEnds' => array(
-					'expectedTypes' => array('DateTime')
-				),
-				'availabilityStarts' => array(
-					'expectedTypes' => array('DateTime')
-				),
-				'availableAtOrFrom' => array(
-					'expectedTypes' => array('Place')
-				),
-				'availableDeliveryMethod' => array(
-					'expectedTypes' => array('DeliveryMethod')
-				),
-				'businessFunction' => array(
-					'expectedTypes' => array('BusinessFunction')
-				),
-				'category' => array(
-					'expectedTypes' => array('PhysicalActivityCategory', 'Text', 'Thing')
-				),
-				'deliveryLeadTime' => array(
-					'expectedTypes' => array('QuantitativeValue')
-				),
-				'eligibleCustomerType' => array(
-					'expectedTypes' => array('BusinessEntityType')
-				),
-				'eligibleDuration' => array(
-					'expectedTypes' => array('QuantitativeValue')
-				),
-				'eligibleQuantity' => array(
-					'expectedTypes' => array('QuantitativeValue')
-				),
-				'eligibleRegion' => array(
-					'expectedTypes' => array('GeoShape', 'Text')
-				),
-				'eligibleTransactionVolume' => array(
-					'expectedTypes' => array('PriceSpecification')
-				),
-				'gtin13' => array(
-					'expectedTypes' => array('Text')
-				),
-				'gtin14' => array(
-					'expectedTypes' => array('Text')
-				),
-				'gtin8' => array(
-					'expectedTypes' => array('Text')
-				),
-				'includesObject' => array(
-					'expectedTypes' => array('TypeAndQuantityNode')
-				),
-				'inventoryLevel' => array(
-					'expectedTypes' => array('QuantitativeValue')
-				),
-				'itemCondition' => array(
-					'expectedTypes' => array('OfferItemCondition')
-				),
-				'itemOffered' => array(
-					'expectedTypes' => array('Product')
-				),
-				'mpn' => array(
-					'expectedTypes' => array('Text')
-				),
-				'price' => array(
-					'expectedTypes' => array('Number', 'Text')
-				),
-				'priceCurrency' => array(
-					'expectedTypes' => array('Text')
-				),
-				'priceSpecification' => array(
-					'expectedTypes' => array('PriceSpecification')
-				),
-				'priceValidUntil' => array(
-					'expectedTypes' => array('Date')
-				),
-				'review' => array(
-					'expectedTypes' => array('Review')
-				),
-				'reviews' => array(
-					'expectedTypes' => array('Review')
-				),
-				'seller' => array(
-					'expectedTypes' => array('Organization', 'Person')
-				),
-				'serialNumber' => array(
-					'expectedTypes' => array('Text')
-				),
-				'sku' => array(
-					'expectedTypes' => array('Text')
-				),
-				'validFrom' => array(
-					'expectedTypes' => array('DateTime')
-				),
-				'validThrough' => array(
-					'expectedTypes' => array('DateTime')
-				),
-				'warranty' => array(
-					'expectedTypes' => array('WarrantyPromise')
-				)
+				'acceptedPaymentMethod' => array('PaymentMethod'),
+				'addOn' => array('Offer'),
+				'advanceBookingRequirement' => array('QuantitativeValue'),
+				'aggregateRating' => array('AggregateRating'),
+				'availability' => array('ItemAvailability'),
+				'availabilityEnds' => array('DateTime'),
+				'availabilityStarts' => array('DateTime'),
+				'availableAtOrFrom' => array('Place'),
+				'availableDeliveryMethod' => array('DeliveryMethod'),
+				'businessFunction' => array('BusinessFunction'),
+				'category' => array('PhysicalActivityCategory', 'Text', 'Thing'),
+				'deliveryLeadTime' => array('QuantitativeValue'),
+				'eligibleCustomerType' => array('BusinessEntityType'),
+				'eligibleDuration' => array('QuantitativeValue'),
+				'eligibleQuantity' => array('QuantitativeValue'),
+				'eligibleRegion' => array('GeoShape', 'Text'),
+				'eligibleTransactionVolume' => array('PriceSpecification'),
+				'gtin13' => array('Text'),
+				'gtin14' => array('Text'),
+				'gtin8' => array('Text'),
+				'includesObject' => array('TypeAndQuantityNode'),
+				'inventoryLevel' => array('QuantitativeValue'),
+				'itemCondition' => array('OfferItemCondition'),
+				'itemOffered' => array('Product'),
+				'mpn' => array('Text'),
+				'price' => array('Number', 'Text'),
+				'priceCurrency' => array('Text'),
+				'priceSpecification' => array('PriceSpecification'),
+				'priceValidUntil' => array('Date'),
+				'review' => array('Review'),
+				'reviews' => array('Review'),
+				'seller' => array('Organization', 'Person'),
+				'serialNumber' => array('Text'),
+				'sku' => array('Text'),
+				'validFrom' => array('DateTime'),
+				'validThrough' => array('DateTime'),
+				'warranty' => array('WarrantyPromise')
 			)
 		),
 		'AggregateOffer' => array(
 			'extends' => 'Offer',
 			'properties' => array(
-				'highPrice' => array(
-					'expectedTypes' => array('Number', 'Text')
-				),
-				'lowPrice' => array(
-					'expectedTypes' => array('Number', 'Text')
-				),
-				'offerCount' => array(
-					'expectedTypes' => array('Integer')
-				)
+				'highPrice' => array('Number', 'Text'),
+				'lowPrice' => array('Number', 'Text'),
+				'offerCount' => array('Integer')
 			)
 		),
 		'Quantity' => array(
@@ -1610,29 +912,17 @@ class Types
 		'Rating' => array(
 			'extends' => 'Intangible',
 			'properties' => array(
-				'bestRating' => array(
-					'expectedTypes' => array('Number', 'Text')
-				),
-				'ratingValue' => array(
-					'expectedTypes' => array('Text')
-				),
-				'worstRating' => array(
-					'expectedTypes' => array('Number', 'Text')
-				)
+				'bestRating' => array('Number', 'Text'),
+				'ratingValue' => array('Text'),
+				'worstRating' => array('Number', 'Text')
 			)
 		),
 		'AggregateRating' => array(
 			'extends' => 'Rating',
 			'properties' => array(
-				'itemReviewed' => array(
-					'expectedTypes' => array('Thing')
-				),
-				'ratingCount' => array(
-					'expectedTypes' => array('Number')
-				),
-				'reviewCount' => array(
-					'expectedTypes' => array('Number')
-				)
+				'itemReviewed' => array('Thing'),
+				'ratingCount' => array('Number'),
+				'reviewCount' => array('Number')
 			)
 		),
 		'StructuredValue' => array(
@@ -1642,327 +932,163 @@ class Types
 		'ContactPoint' => array(
 			'extends' => 'StructuredValue',
 			'properties' => array(
-				'contactType' => array(
-					'expectedTypes' => array('Text')
-				),
-				'email' => array(
-					'expectedTypes' => array('Text')
-				),
-				'faxNumber' => array(
-					'expectedTypes' => array('Text')
-				),
-				'telephone' => array(
-					'expectedTypes' => array('Text')
-				)
+				'contactType' => array('Text'),
+				'email' => array('Text'),
+				'faxNumber' => array('Text'),
+				'telephone' => array('Text')
 			)
 		),
 		'PostalAddress' => array(
 			'extends' => 'ContactPoint',
 			'properties' => array(
-				'addressCountry' => array(
-					'expectedTypes' => array('Country')
-				),
-				'addressLocality' => array(
-					'expectedTypes' => array('Text')
-				),
-				'addressRegion' => array(
-					'expectedTypes' => array('Text')
-				),
-				'postalCode' => array(
-					'expectedTypes' => array('Text')
-				),
-				'postOfficeBoxNumber' => array(
-					'expectedTypes' => array('Text')
-				),
-				'streetAddress' => array(
-					'expectedTypes' => array('Text')
-				)
+				'addressCountry' => array('Country'),
+				'addressLocality' => array('Text'),
+				'addressRegion' => array('Text'),
+				'postalCode' => array('Text'),
+				'postOfficeBoxNumber' => array('Text'),
+				'streetAddress' => array('Text')
 			)
 		),
 		'GeoCoordinates' => array(
 			'extends' => 'StructuredValue',
 			'properties' => array(
-				'elevation' => array(
-					'expectedTypes' => array('Number', 'Text')
-				),
-				'latitude' => array(
-					'expectedTypes' => array('Number', 'Text')
-				),
-				'longitude' => array(
-					'expectedTypes' => array('Number', 'Text')
-				)
+				'elevation' => array('Number', 'Text'),
+				'latitude' => array('Number', 'Text'),
+				'longitude' => array('Number', 'Text')
 			)
 		),
 		'GeoShape' => array(
 			'extends' => 'StructuredValue',
 			'properties' => array(
-				'box' => array(
-					'expectedTypes' => array('Text')
-				),
-				'circle' => array(
-					'expectedTypes' => array('Text')
-				),
-				'elevation' => array(
-					'expectedTypes' => array('Number', 'Text')
-				),
-				'line' => array(
-					'expectedTypes' => array('Text')
-				),
-				'polygon' => array(
-					'expectedTypes' => array('Text')
-				)
+				'box' => array('Text'),
+				'circle' => array('Text'),
+				'elevation' => array('Number', 'Text'),
+				'line' => array('Text'),
+				'polygon' => array('Text')
 			)
 		),
 		'NutritionInformation' => array(
 			'extends' => 'StructuredValue',
 			'properties' => array(
-				'calories' => array(
-					'expectedTypes' => array('Energy')
-				),
-				'carbohydrateContent' => array(
-					'expectedTypes' => array('Mass')
-				),
-				'cholesterolContent' => array(
-					'expectedTypes' => array('Mass')
-				),
-				'fatContent' => array(
-					'expectedTypes' => array('Mass')
-				),
-				'fiberContent' => array(
-					'expectedTypes' => array('Mass')
-				),
-				'proteinContent' => array(
-					'expectedTypes' => array('Mass')
-				),
-				'saturatedFatContent' => array(
-					'expectedTypes' => array('Mass')
-				),
-				'servingSize' => array(
-					'expectedTypes' => array('Text')
-				),
-				'sodiumContent' => array(
-					'expectedTypes' => array('Mass')
-				),
-				'sugarContent' => array(
-					'expectedTypes' => array('Mass')
-				),
-				'transFatContent' => array(
-					'expectedTypes' => array('Mass')
-				),
-				'unsaturatedFatContent' => array(
-					'expectedTypes' => array('Mass')
-				)
+				'calories' => array('Energy'),
+				'carbohydrateContent' => array('Mass'),
+				'cholesterolContent' => array('Mass'),
+				'fatContent' => array('Mass'),
+				'fiberContent' => array('Mass'),
+				'proteinContent' => array('Mass'),
+				'saturatedFatContent' => array('Mass'),
+				'servingSize' => array('Text'),
+				'sodiumContent' => array('Mass'),
+				'sugarContent' => array('Mass'),
+				'transFatContent' => array('Mass'),
+				'unsaturatedFatContent' => array('Mass')
 			)
 		),
 		'OpeningHoursSpecification' => array(
 			'extends' => 'StructuredValue',
 			'properties' => array(
-				'closes' => array(
-					'expectedTypes' => array('Time')
-				),
-				'dayOfWeek' => array(
-					'expectedTypes' => array('DayOfWeek')
-				),
-				'opens' => array(
-					'expectedTypes' => array('Time')
-				),
-				'validFrom' => array(
-					'expectedTypes' => array('DateTime')
-				),
-				'validThrough' => array(
-					'expectedTypes' => array('DateTime')
-				)
+				'closes' => array('Time'),
+				'dayOfWeek' => array('DayOfWeek'),
+				'opens' => array('Time'),
+				'validFrom' => array('DateTime'),
+				'validThrough' => array('DateTime')
 			)
 		),
 		'OwnershipInfo' => array(
 			'extends' => 'StructuredValue',
 			'properties' => array(
-				'acquiredFrom' => array(
-					'expectedTypes' => array('Organization', 'Person')
-				),
-				'ownedFrom' => array(
-					'expectedTypes' => array('DateTime')
-				),
-				'ownedThrough' => array(
-					'expectedTypes' => array('DateTime')
-				),
-				'typeOfGood' => array(
-					'expectedTypes' => array('Product')
-				)
+				'acquiredFrom' => array('Organization', 'Person'),
+				'ownedFrom' => array('DateTime'),
+				'ownedThrough' => array('DateTime'),
+				'typeOfGood' => array('Product')
 			)
 		),
 		'PriceSpecification' => array(
 			'extends' => 'StructuredValue',
 			'properties' => array(
-				'eligibleQuantity' => array(
-					'expectedTypes' => array('QuantitativeValue')
-				),
-				'eligibleTransactionVolume' => array(
-					'expectedTypes' => array('PriceSpecification')
-				),
-				'maxPrice' => array(
-					'expectedTypes' => array('Number')
-				),
-				'minPrice' => array(
-					'expectedTypes' => array('Number')
-				),
-				'price' => array(
-					'expectedTypes' => array('Number', 'Text')
-				),
-				'priceCurrency' => array(
-					'expectedTypes' => array('Text')
-				),
-				'validFrom' => array(
-					'expectedTypes' => array('DateTime')
-				),
-				'validThrough' => array(
-					'expectedTypes' => array('DateTime')
-				),
-				'valueAddedTaxIncluded' => array(
-					'expectedTypes' => array('Boolean')
-				)
+				'eligibleQuantity' => array('QuantitativeValue'),
+				'eligibleTransactionVolume' => array('PriceSpecification'),
+				'maxPrice' => array('Number'),
+				'minPrice' => array('Number'),
+				'price' => array('Number', 'Text'),
+				'priceCurrency' => array('Text'),
+				'validFrom' => array('DateTime'),
+				'validThrough' => array('DateTime'),
+				'valueAddedTaxIncluded' => array('Boolean')
 			)
 		),
 		'DeliveryChargeSpecification' => array(
 			'extends' => 'PriceSpecification',
 			'properties' => array(
-				'appliesToDeliveryMethod' => array(
-					'expectedTypes' => array('DeliveryMethod')
-				),
-				'eligibleRegion' => array(
-					'expectedTypes' => array('GeoShape', 'Text')
-				)
+				'appliesToDeliveryMethod' => array('DeliveryMethod'),
+				'eligibleRegion' => array('GeoShape', 'Text')
 			)
 		),
 		'PaymentChargeSpecification' => array(
 			'extends' => 'PriceSpecification',
 			'properties' => array(
-				'appliesToDeliveryMethod' => array(
-					'expectedTypes' => array('DeliveryMethod')
-				),
-				'appliesToPaymentMethod' => array(
-					'expectedTypes' => array('PaymentMethod')
-				)
+				'appliesToDeliveryMethod' => array('DeliveryMethod'),
+				'appliesToPaymentMethod' => array('PaymentMethod')
 			)
 		),
 		'UnitPriceSpecification' => array(
 			'extends' => 'PriceSpecification',
 			'properties' => array(
-				'billingIncrement' => array(
-					'expectedTypes' => array('Number')
-				),
-				'priceType' => array(
-					'expectedTypes' => array('Text')
-				),
-				'unitCode' => array(
-					'expectedTypes' => array('Text')
-				)
+				'billingIncrement' => array('Number'),
+				'priceType' => array('Text'),
+				'unitCode' => array('Text')
 			)
 		),
 		'QuantitativeValue' => array(
 			'extends' => 'StructuredValue',
 			'properties' => array(
-				'maxValue' => array(
-					'expectedTypes' => array('Number')
-				),
-				'minValue' => array(
-					'expectedTypes' => array('Number')
-				),
-				'unitCode' => array(
-					'expectedTypes' => array('Text')
-				),
-				'value' => array(
-					'expectedTypes' => array('Number')
-				),
-				'valueReference' => array(
-					'expectedTypes' => array('Enumeration', 'StructuredValue')
-				)
+				'maxValue' => array('Number'),
+				'minValue' => array('Number'),
+				'unitCode' => array('Text'),
+				'value' => array('Number'),
+				'valueReference' => array('Enumeration', 'StructuredValue')
 			)
 		),
 		'TypeAndQuantityNode' => array(
 			'extends' => 'StructuredValue',
 			'properties' => array(
-				'amountOfThisGood' => array(
-					'expectedTypes' => array('Number')
-				),
-				'businessFunction' => array(
-					'expectedTypes' => array('BusinessFunction')
-				),
-				'typeOfGood' => array(
-					'expectedTypes' => array('Product')
-				),
-				'unitCode' => array(
-					'expectedTypes' => array('Text')
-				)
+				'amountOfThisGood' => array('Number'),
+				'businessFunction' => array('BusinessFunction'),
+				'typeOfGood' => array('Product'),
+				'unitCode' => array('Text')
 			)
 		),
 		'WarrantyPromise' => array(
 			'extends' => 'StructuredValue',
 			'properties' => array(
-				'durationOfWarranty' => array(
-					'expectedTypes' => array('QuantitativeValue')
-				),
-				'warrantyScope' => array(
-					'expectedTypes' => array('WarrantyScope')
-				)
+				'durationOfWarranty' => array('QuantitativeValue'),
+				'warrantyScope' => array('WarrantyScope')
 			)
 		),
 		'MedicalEntity' => array(
 			'extends' => 'Thing',
 			'properties' => array(
-				'alternateName' => array(
-					'expectedTypes' => array('Text')
-				),
-				'code' => array(
-					'expectedTypes' => array('MedicalCode')
-				),
-				'guideline' => array(
-					'expectedTypes' => array('MedicalGuideline')
-				),
-				'medicineSystem' => array(
-					'expectedTypes' => array('MedicineSystem')
-				),
-				'recognizingAuthority' => array(
-					'expectedTypes' => array('Organization')
-				),
-				'relevantSpecialty' => array(
-					'expectedTypes' => array('MedicalSpecialty')
-				),
-				'study' => array(
-					'expectedTypes' => array('MedicalStudy')
-				)
+				'alternateName' => array('Text'),
+				'code' => array('MedicalCode'),
+				'guideline' => array('MedicalGuideline'),
+				'medicineSystem' => array('MedicineSystem'),
+				'recognizingAuthority' => array('Organization'),
+				'relevantSpecialty' => array('MedicalSpecialty'),
+				'study' => array('MedicalStudy')
 			)
 		),
 		'AnatomicalStructure' => array(
 			'extends' => 'MedicalEntity',
 			'properties' => array(
-				'associatedPathophysiology' => array(
-					'expectedTypes' => array('Text')
-				),
-				'bodyLocation' => array(
-					'expectedTypes' => array('Text')
-				),
-				'connectedTo' => array(
-					'expectedTypes' => array('AnatomicalStructure')
-				),
-				'diagram' => array(
-					'expectedTypes' => array('ImageObject')
-				),
-				'function' => array(
-					'expectedTypes' => array('Text')
-				),
-				'partOfSystem' => array(
-					'expectedTypes' => array('AnatomicalSystem')
-				),
-				'relatedCondition' => array(
-					'expectedTypes' => array('MedicalCondition')
-				),
-				'relatedTherapy' => array(
-					'expectedTypes' => array('MedicalTherapy')
-				),
-				'subStructure' => array(
-					'expectedTypes' => array('AnatomicalStructure')
-				)
+				'associatedPathophysiology' => array('Text'),
+				'bodyLocation' => array('Text'),
+				'connectedTo' => array('AnatomicalStructure'),
+				'diagram' => array('ImageObject'),
+				'function' => array('Text'),
+				'partOfSystem' => array('AnatomicalSystem'),
+				'relatedCondition' => array('MedicalCondition'),
+				'relatedTherapy' => array('MedicalTherapy'),
+				'subStructure' => array('AnatomicalStructure')
 			)
 		),
 		'Bone' => array(
@@ -1976,15 +1102,9 @@ class Types
 		'Joint' => array(
 			'extends' => 'AnatomicalStructure',
 			'properties' => array(
-				'biomechnicalClass' => array(
-					'expectedTypes' => array('Text')
-				),
-				'functionalClass' => array(
-					'expectedTypes' => array('Text')
-				),
-				'structuralClass' => array(
-					'expectedTypes' => array('Text')
-				)
+				'biomechnicalClass' => array('Text'),
+				'functionalClass' => array('Text'),
+				'structuralClass' => array('Text')
 			)
 		),
 		'Ligament' => array(
@@ -1994,41 +1114,21 @@ class Types
 		'Muscle' => array(
 			'extends' => 'AnatomicalStructure',
 			'properties' => array(
-				'action' => array(
-					'expectedTypes' => array('Text')
-				),
-				'antagonist' => array(
-					'expectedTypes' => array('Muscle')
-				),
-				'bloodSupply' => array(
-					'expectedTypes' => array('Vessel')
-				),
-				'insertion' => array(
-					'expectedTypes' => array('AnatomicalStructure')
-				),
-				'nerve' => array(
-					'expectedTypes' => array('Nerve')
-				),
-				'origin' => array(
-					'expectedTypes' => array('AnatomicalStructure')
-				)
+				'action' => array('Text'),
+				'antagonist' => array('Muscle'),
+				'bloodSupply' => array('Vessel'),
+				'insertion' => array('AnatomicalStructure'),
+				'nerve' => array('Nerve'),
+				'origin' => array('AnatomicalStructure')
 			)
 		),
 		'Nerve' => array(
 			'extends' => 'AnatomicalStructure',
 			'properties' => array(
-				'branch' => array(
-					'expectedTypes' => array('AnatomicalStructure', 'Nerve')
-				),
-				'nerveMotor' => array(
-					'expectedTypes' => array('Muscle')
-				),
-				'sensoryUnit' => array(
-					'expectedTypes' => array('AnatomicalStructure', 'SuperficialAnatomy')
-				),
-				'sourcedFrom' => array(
-					'expectedTypes' => array('BrainStructure')
-				)
+				'branch' => array('AnatomicalStructure', 'Nerve'),
+				'nerveMotor' => array('Muscle'),
+				'sensoryUnit' => array('AnatomicalStructure', 'SuperficialAnatomy'),
+				'sourcedFrom' => array('BrainStructure')
 			)
 		),
 		'Vessel' => array(
@@ -2038,138 +1138,70 @@ class Types
 		'Artery' => array(
 			'extends' => 'Vessel',
 			'properties' => array(
-				'arterialBranch' => array(
-					'expectedTypes' => array('AnatomicalStructure')
-				),
-				'source' => array(
-					'expectedTypes' => array('AnatomicalStructure')
-				),
-				'supplyTo' => array(
-					'expectedTypes' => array('AnatomicalStructure')
-				)
+				'arterialBranch' => array('AnatomicalStructure'),
+				'source' => array('AnatomicalStructure'),
+				'supplyTo' => array('AnatomicalStructure')
 			)
 		),
 		'LymphaticVessel' => array(
 			'extends' => 'Vessel',
 			'properties' => array(
-				'originatesFrom' => array(
-					'expectedTypes' => array('Vessel')
-				),
-				'regionDrained' => array(
-					'expectedTypes' => array('AnatomicalStructure', 'AnatomicalSystem')
-				),
-				'runsTo' => array(
-					'expectedTypes' => array('Vessel')
-				)
+				'originatesFrom' => array('Vessel'),
+				'regionDrained' => array('AnatomicalStructure', 'AnatomicalSystem'),
+				'runsTo' => array('Vessel')
 			)
 		),
 		'Vein' => array(
 			'extends' => 'Vessel',
 			'properties' => array(
-				'drainsTo' => array(
-					'expectedTypes' => array('Vessel')
-				),
-				'regionDrained' => array(
-					'expectedTypes' => array('AnatomicalStructure', 'AnatomicalSystem')
-				),
-				'tributary' => array(
-					'expectedTypes' => array('AnatomicalStructure')
-				)
+				'drainsTo' => array('Vessel'),
+				'regionDrained' => array('AnatomicalStructure', 'AnatomicalSystem'),
+				'tributary' => array('AnatomicalStructure')
 			)
 		),
 		'AnatomicalSystem' => array(
 			'extends' => 'MedicalEntity',
 			'properties' => array(
-				'associatedPathophysiology' => array(
-					'expectedTypes' => array('Text')
-				),
-				'comprisedOf' => array(
-					'expectedTypes' => array('AnatomicalStructure', 'AnatomicalSystem')
-				),
-				'relatedCondition' => array(
-					'expectedTypes' => array('MedicalCondition')
-				),
-				'relatedStructure' => array(
-					'expectedTypes' => array('AnatomicalStructure')
-				),
-				'relatedTherapy' => array(
-					'expectedTypes' => array('MedicalTherapy')
-				)
+				'associatedPathophysiology' => array('Text'),
+				'comprisedOf' => array('AnatomicalStructure', 'AnatomicalSystem'),
+				'relatedCondition' => array('MedicalCondition'),
+				'relatedStructure' => array('AnatomicalStructure'),
+				'relatedTherapy' => array('MedicalTherapy')
 			)
 		),
 		'MedicalCause' => array(
 			'extends' => 'MedicalEntity',
 			'properties' => array(
-				'causeOf' => array(
-					'expectedTypes' => array('MedicalEntity')
-				)
+				'causeOf' => array('MedicalEntity')
 			)
 		),
 		'MedicalCondition' => array(
 			'extends' => 'MedicalEntity',
 			'properties' => array(
-				'associatedAnatomy' => array(
-					'expectedTypes' => array('AnatomicalStructure', 'AnatomicalSystem', 'SuperficialAnatomy')
-				),
-				'cause' => array(
-					'expectedTypes' => array('MedicalCause')
-				),
-				'differentialDiagnosis' => array(
-					'expectedTypes' => array('DDxElement')
-				),
-				'epidemiology' => array(
-					'expectedTypes' => array('Text')
-				),
-				'expectedPrognosis' => array(
-					'expectedTypes' => array('Text')
-				),
-				'naturalProgression' => array(
-					'expectedTypes' => array('Text')
-				),
-				'pathophysiology' => array(
-					'expectedTypes' => array('Text')
-				),
-				'possibleComplication' => array(
-					'expectedTypes' => array('Text')
-				),
-				'possibleTreatment' => array(
-					'expectedTypes' => array('MedicalTherapy')
-				),
-				'primaryPrevention' => array(
-					'expectedTypes' => array('MedicalTherapy')
-				),
-				'riskFactor' => array(
-					'expectedTypes' => array('MedicalRiskFactor')
-				),
-				'secondaryPrevention' => array(
-					'expectedTypes' => array('MedicalTherapy')
-				),
-				'signOrSymptom' => array(
-					'expectedTypes' => array('MedicalSignOrSymptom')
-				),
-				'stage' => array(
-					'expectedTypes' => array('MedicalConditionStage')
-				),
-				'subtype' => array(
-					'expectedTypes' => array('Text')
-				),
-				'typicalTest' => array(
-					'expectedTypes' => array('MedicalTest')
-				)
+				'associatedAnatomy' => array('AnatomicalStructure', 'AnatomicalSystem', 'SuperficialAnatomy'),
+				'cause' => array('MedicalCause'),
+				'differentialDiagnosis' => array('DDxElement'),
+				'epidemiology' => array('Text'),
+				'expectedPrognosis' => array('Text'),
+				'naturalProgression' => array('Text'),
+				'pathophysiology' => array('Text'),
+				'possibleComplication' => array('Text'),
+				'possibleTreatment' => array('MedicalTherapy'),
+				'primaryPrevention' => array('MedicalTherapy'),
+				'riskFactor' => array('MedicalRiskFactor'),
+				'secondaryPrevention' => array('MedicalTherapy'),
+				'signOrSymptom' => array('MedicalSignOrSymptom'),
+				'stage' => array('MedicalConditionStage'),
+				'subtype' => array('Text'),
+				'typicalTest' => array('MedicalTest')
 			)
 		),
 		'InfectiousDisease' => array(
 			'extends' => 'MedicalCondition',
 			'properties' => array(
-				'infectiousAgent' => array(
-					'expectedTypes' => array('Text')
-				),
-				'infectiousAgentClass' => array(
-					'expectedTypes' => array('InfectiousAgentClass')
-				),
-				'transmissionMethod' => array(
-					'expectedTypes' => array('Text')
-				)
+				'infectiousAgent' => array('Text'),
+				'infectiousAgentClass' => array('InfectiousAgentClass'),
+				'transmissionMethod' => array('Text')
 			)
 		),
 		'MedicalContraindication' => array(
@@ -2179,47 +1211,23 @@ class Types
 		'MedicalDevice' => array(
 			'extends' => 'MedicalEntity',
 			'properties' => array(
-				'adverseOutcome' => array(
-					'expectedTypes' => array('MedicalEntity')
-				),
-				'contraindication' => array(
-					'expectedTypes' => array('MedicalContraindication')
-				),
-				'indication' => array(
-					'expectedTypes' => array('MedicalIndication')
-				),
-				'postOp' => array(
-					'expectedTypes' => array('Text')
-				),
-				'preOp' => array(
-					'expectedTypes' => array('Text')
-				),
-				'procedure' => array(
-					'expectedTypes' => array('Text')
-				),
-				'purpose' => array(
-					'expectedTypes' => array('MedicalDevicePurpose')
-				),
-				'seriousAdverseOutcome' => array(
-					'expectedTypes' => array('MedicalEntity')
-				)
+				'adverseOutcome' => array('MedicalEntity'),
+				'contraindication' => array('MedicalContraindication'),
+				'indication' => array('MedicalIndication'),
+				'postOp' => array('Text'),
+				'preOp' => array('Text'),
+				'procedure' => array('Text'),
+				'purpose' => array('MedicalDevicePurpose'),
+				'seriousAdverseOutcome' => array('MedicalEntity')
 			)
 		),
 		'MedicalGuideline' => array(
 			'extends' => 'MedicalEntity',
 			'properties' => array(
-				'evidenceLevel' => array(
-					'expectedTypes' => array('MedicalEvidenceLevel')
-				),
-				'evidenceOrigin' => array(
-					'expectedTypes' => array('Text')
-				),
-				'guidelineDate' => array(
-					'expectedTypes' => array('Date')
-				),
-				'guidelineSubject' => array(
-					'expectedTypes' => array('MedicalEntity')
-				)
+				'evidenceLevel' => array('MedicalEvidenceLevel'),
+				'evidenceOrigin' => array('Text'),
+				'guidelineDate' => array('Date'),
+				'guidelineSubject' => array('MedicalEntity')
 			)
 		),
 		'MedicalGuidelineContraindication' => array(
@@ -2229,9 +1237,7 @@ class Types
 		'MedicalGuidelineRecommendation' => array(
 			'extends' => 'MedicalGuideline',
 			'properties' => array(
-				'recommendationStrength' => array(
-					'expectedTypes' => array('Text')
-				)
+				'recommendationStrength' => array('Text')
 			)
 		),
 		'MedicalIndication' => array(
@@ -2257,29 +1263,17 @@ class Types
 		'DDxElement' => array(
 			'extends' => 'MedicalIntangible',
 			'properties' => array(
-				'diagnosis' => array(
-					'expectedTypes' => array('MedicalCondition')
-				),
-				'distinguishingSign' => array(
-					'expectedTypes' => array('MedicalSignOrSymptom')
-				)
+				'diagnosis' => array('MedicalCondition'),
+				'distinguishingSign' => array('MedicalSignOrSymptom')
 			)
 		),
 		'DoseSchedule' => array(
 			'extends' => 'MedicalIntangible',
 			'properties' => array(
-				'doseUnit' => array(
-					'expectedTypes' => array('Text')
-				),
-				'doseValue' => array(
-					'expectedTypes' => array('Number')
-				),
-				'frequency' => array(
-					'expectedTypes' => array('Text')
-				),
-				'targetPopulation' => array(
-					'expectedTypes' => array('Text')
-				)
+				'doseUnit' => array('Text'),
+				'doseValue' => array('Number'),
+				'frequency' => array('Text'),
+				'targetPopulation' => array('Text')
 			)
 		),
 		'MaximumDoseSchedule' => array(
@@ -2297,71 +1291,41 @@ class Types
 		'DrugCost' => array(
 			'extends' => 'MedicalIntangible',
 			'properties' => array(
-				'applicableLocation' => array(
-					'expectedTypes' => array('AdministrativeArea')
-				),
-				'costCategory' => array(
-					'expectedTypes' => array('DrugCostCategory')
-				),
-				'costCurrency' => array(
-					'expectedTypes' => array('Text')
-				),
-				'costOrigin' => array(
-					'expectedTypes' => array('Text')
-				),
-				'costPerUnit' => array(
-					'expectedTypes' => array('Number', 'Text')
-				),
-				'drugUnit' => array(
-					'expectedTypes' => array('Text')
-				)
+				'applicableLocation' => array('AdministrativeArea'),
+				'costCategory' => array('DrugCostCategory'),
+				'costCurrency' => array('Text'),
+				'costOrigin' => array('Text'),
+				'costPerUnit' => array('Number', 'Text'),
+				'drugUnit' => array('Text')
 			)
 		),
 		'DrugLegalStatus' => array(
 			'extends' => 'MedicalIntangible',
 			'properties' => array(
-				'applicableLocation' => array(
-					'expectedTypes' => array('AdministrativeArea')
-				)
+				'applicableLocation' => array('AdministrativeArea')
 			)
 		),
 		'DrugStrength' => array(
 			'extends' => 'MedicalIntangible',
 			'properties' => array(
-				'activeIngredient' => array(
-					'expectedTypes' => array('Text')
-				),
-				'availableIn' => array(
-					'expectedTypes' => array('AdministrativeArea')
-				),
-				'strengthUnit' => array(
-					'expectedTypes' => array('Text')
-				),
-				'strengthValue' => array(
-					'expectedTypes' => array('Number')
-				)
+				'activeIngredient' => array('Text'),
+				'availableIn' => array('AdministrativeArea'),
+				'strengthUnit' => array('Text'),
+				'strengthValue' => array('Number')
 			)
 		),
 		'MedicalCode' => array(
 			'extends' => 'MedicalIntangible',
 			'properties' => array(
-				'codeValue' => array(
-					'expectedTypes' => array('Text')
-				),
-				'codingSystem' => array(
-					'expectedTypes' => array('Text')
-				)
+				'codeValue' => array('Text'),
+				'codingSystem' => array('Text')
 			)
 		),
 		'MedicalConditionStage' => array(
 			'extends' => 'MedicalIntangible',
 			'properties' => array(
-				'stageAsNumber' => array(
-					'expectedTypes' => array('Number')
-				),
-				'subStageSuffix' => array(
-					'expectedTypes' => array('Text')
-				)
+				'stageAsNumber' => array('Number'),
+				'subStageSuffix' => array('Text')
 			)
 		),
 		'MedicalEnumeration' => array(
@@ -2427,18 +1391,10 @@ class Types
 		'MedicalProcedure' => array(
 			'extends' => 'MedicalEntity',
 			'properties' => array(
-				'followup' => array(
-					'expectedTypes' => array('Text')
-				),
-				'howPerformed' => array(
-					'expectedTypes' => array('Text')
-				),
-				'preparation' => array(
-					'expectedTypes' => array('Text')
-				),
-				'procedureType' => array(
-					'expectedTypes' => array('MedicalProcedureType')
-				)
+				'followup' => array('Text'),
+				'howPerformed' => array('Text'),
+				'preparation' => array('Text'),
+				'procedureType' => array('MedicalProcedureType')
 			)
 		),
 		'DiagnosticProcedure' => array(
@@ -2456,12 +1412,8 @@ class Types
 		'MedicalRiskEstimator' => array(
 			'extends' => 'MedicalEntity',
 			'properties' => array(
-				'estimatesRiskOf' => array(
-					'expectedTypes' => array('MedicalEntity')
-				),
-				'includedRiskFactor' => array(
-					'expectedTypes' => array('MedicalRiskFactor')
-				)
+				'estimatesRiskOf' => array('MedicalEntity'),
+				'includedRiskFactor' => array('MedicalRiskFactor')
 			)
 		),
 		'MedicalRiskCalculator' => array(
@@ -2471,39 +1423,27 @@ class Types
 		'MedicalRiskScore' => array(
 			'extends' => 'MedicalRiskEstimator',
 			'properties' => array(
-				'algorithm' => array(
-					'expectedTypes' => array('Text')
-				)
+				'algorithm' => array('Text')
 			)
 		),
 		'MedicalRiskFactor' => array(
 			'extends' => 'MedicalEntity',
 			'properties' => array(
-				'increasesRiskOf' => array(
-					'expectedTypes' => array('MedicalEntity')
-				)
+				'increasesRiskOf' => array('MedicalEntity')
 			)
 		),
 		'MedicalSignOrSymptom' => array(
 			'extends' => 'MedicalEntity',
 			'properties' => array(
-				'cause' => array(
-					'expectedTypes' => array('MedicalCause')
-				),
-				'possibleTreatment' => array(
-					'expectedTypes' => array('MedicalTherapy')
-				)
+				'cause' => array('MedicalCause'),
+				'possibleTreatment' => array('MedicalTherapy')
 			)
 		),
 		'MedicalSign' => array(
 			'extends' => 'MedicalSignOrSymptom',
 			'properties' => array(
-				'identifyingExam' => array(
-					'expectedTypes' => array('PhysicalExam')
-				),
-				'identifyingTest' => array(
-					'expectedTypes' => array('MedicalTest')
-				)
+				'identifyingExam' => array('PhysicalExam'),
+				'identifyingTest' => array('MedicalTest')
 			)
 		),
 		'MedicalSymptom' => array(
@@ -2513,63 +1453,35 @@ class Types
 		'MedicalStudy' => array(
 			'extends' => 'MedicalEntity',
 			'properties' => array(
-				'outcome' => array(
-					'expectedTypes' => array('Text')
-				),
-				'population' => array(
-					'expectedTypes' => array('Text')
-				),
-				'sponsor' => array(
-					'expectedTypes' => array('Organization')
-				),
-				'status' => array(
-					'expectedTypes' => array('MedicalStudyStatus')
-				),
-				'studyLocation' => array(
-					'expectedTypes' => array('AdministrativeArea')
-				),
-				'studySubject' => array(
-					'expectedTypes' => array('MedicalEntity')
-				)
+				'outcome' => array('Text'),
+				'population' => array('Text'),
+				'sponsor' => array('Organization'),
+				'status' => array('MedicalStudyStatus'),
+				'studyLocation' => array('AdministrativeArea'),
+				'studySubject' => array('MedicalEntity')
 			)
 		),
 		'MedicalObservationalStudy' => array(
 			'extends' => 'MedicalStudy',
 			'properties' => array(
-				'studyDesign' => array(
-					'expectedTypes' => array('MedicalObservationalStudyDesign')
-				)
+				'studyDesign' => array('MedicalObservationalStudyDesign')
 			)
 		),
 		'MedicalTrial' => array(
 			'extends' => 'MedicalStudy',
 			'properties' => array(
-				'phase' => array(
-					'expectedTypes' => array('Text')
-				),
-				'trialDesign' => array(
-					'expectedTypes' => array('MedicalTrialDesign')
-				)
+				'phase' => array('Text'),
+				'trialDesign' => array('MedicalTrialDesign')
 			)
 		),
 		'MedicalTest' => array(
 			'extends' => 'MedicalEntity',
 			'properties' => array(
-				'affectedBy' => array(
-					'expectedTypes' => array('Drug')
-				),
-				'normalRange' => array(
-					'expectedTypes' => array('Text')
-				),
-				'signDetected' => array(
-					'expectedTypes' => array('MedicalSign')
-				),
-				'usedToDiagnose' => array(
-					'expectedTypes' => array('MedicalCondition')
-				),
-				'usesDevice' => array(
-					'expectedTypes' => array('MedicalDevice')
-				)
+				'affectedBy' => array('Drug'),
+				'normalRange' => array('Text'),
+				'signDetected' => array('MedicalSign'),
+				'usedToDiagnose' => array('MedicalCondition'),
+				'usesDevice' => array('MedicalDevice')
 			)
 		),
 		'BloodTest' => array(
@@ -2579,177 +1491,83 @@ class Types
 		'ImagingTest' => array(
 			'extends' => 'MedicalTest',
 			'properties' => array(
-				'imagingTechnique' => array(
-					'expectedTypes' => array('MedicalImagingTechnique')
-				)
+				'imagingTechnique' => array('MedicalImagingTechnique')
 			)
 		),
 		'MedicalTestPanel' => array(
 			'extends' => 'MedicalTest',
 			'properties' => array(
-				'subTest' => array(
-					'expectedTypes' => array('MedicalTest')
-				)
+				'subTest' => array('MedicalTest')
 			)
 		),
 		'PathologyTest' => array(
 			'extends' => 'MedicalTest',
 			'properties' => array(
-				'tissueSample' => array(
-					'expectedTypes' => array('Text')
-				)
+				'tissueSample' => array('Text')
 			)
 		),
 		'MedicalTherapy' => array(
 			'extends' => 'MedicalEntity',
 			'properties' => array(
-				'adverseOutcome' => array(
-					'expectedTypes' => array('MedicalEntity')
-				),
-				'contraindication' => array(
-					'expectedTypes' => array('MedicalContraindication')
-				),
-				'duplicateTherapy' => array(
-					'expectedTypes' => array('MedicalTherapy')
-				),
-				'indication' => array(
-					'expectedTypes' => array('MedicalIndication')
-				),
-				'seriousAdverseOutcome' => array(
-					'expectedTypes' => array('MedicalEntity')
-				)
+				'adverseOutcome' => array('MedicalEntity'),
+				'contraindication' => array('MedicalContraindication'),
+				'duplicateTherapy' => array('MedicalTherapy'),
+				'indication' => array('MedicalIndication'),
+				'seriousAdverseOutcome' => array('MedicalEntity')
 			)
 		),
 		'DietarySupplement' => array(
 			'extends' => 'MedicalTherapy',
 			'properties' => array(
-				'activeIngredient' => array(
-					'expectedTypes' => array('Text')
-				),
-				'background' => array(
-					'expectedTypes' => array('Text')
-				),
-				'dosageForm' => array(
-					'expectedTypes' => array('Text')
-				),
-				'isProprietary' => array(
-					'expectedTypes' => array('Boolean')
-				),
-				'legalStatus' => array(
-					'expectedTypes' => array('DrugLegalStatus')
-				),
-				'manufacturer' => array(
-					'expectedTypes' => array('Organization')
-				),
-				'maximumIntake' => array(
-					'expectedTypes' => array('MaximumDoseSchedule')
-				),
-				'mechanismOfAction' => array(
-					'expectedTypes' => array('Text')
-				),
-				'nonProprietaryName' => array(
-					'expectedTypes' => array('Text')
-				),
-				'recommendedIntake' => array(
-					'expectedTypes' => array('RecommendedDoseSchedule')
-				),
-				'safetyConsideration' => array(
-					'expectedTypes' => array('Text')
-				),
-				'targetPopulation' => array(
-					'expectedTypes' => array('Text')
-				)
+				'activeIngredient' => array('Text'),
+				'background' => array('Text'),
+				'dosageForm' => array('Text'),
+				'isProprietary' => array('Boolean'),
+				'legalStatus' => array('DrugLegalStatus'),
+				'manufacturer' => array('Organization'),
+				'maximumIntake' => array('MaximumDoseSchedule'),
+				'mechanismOfAction' => array('Text'),
+				'nonProprietaryName' => array('Text'),
+				'recommendedIntake' => array('RecommendedDoseSchedule'),
+				'safetyConsideration' => array('Text'),
+				'targetPopulation' => array('Text')
 			)
 		),
 		'Drug' => array(
 			'extends' => 'MedicalTherapy',
 			'properties' => array(
-				'activeIngredient' => array(
-					'expectedTypes' => array('Text')
-				),
-				'administrationRoute' => array(
-					'expectedTypes' => array('Text')
-				),
-				'alcoholWarning' => array(
-					'expectedTypes' => array('Text')
-				),
-				'availableStrength' => array(
-					'expectedTypes' => array('DrugStrength')
-				),
-				'breastfeedingWarning' => array(
-					'expectedTypes' => array('Text')
-				),
-				'clincalPharmacology' => array(
-					'expectedTypes' => array('Text')
-				),
-				'cost' => array(
-					'expectedTypes' => array('DrugCost')
-				),
-				'dosageForm' => array(
-					'expectedTypes' => array('Text')
-				),
-				'doseSchedule' => array(
-					'expectedTypes' => array('DoseSchedule')
-				),
-				'drugClass' => array(
-					'expectedTypes' => array('DrugClass')
-				),
-				'foodWarning' => array(
-					'expectedTypes' => array('Text')
-				),
-				'interactingDrug' => array(
-					'expectedTypes' => array('Drug')
-				),
-				'isAvailableGenerically' => array(
-					'expectedTypes' => array('Boolean')
-				),
-				'isProprietary' => array(
-					'expectedTypes' => array('Boolean')
-				),
-				'labelDetails' => array(
-					'expectedTypes' => array('URL')
-				),
-				'legalStatus' => array(
-					'expectedTypes' => array('DrugLegalStatus')
-				),
-				'manufacturer' => array(
-					'expectedTypes' => array('Organization')
-				),
-				'mechanismOfAction' => array(
-					'expectedTypes' => array('Text')
-				),
-				'nonProprietaryName' => array(
-					'expectedTypes' => array('Text')
-				),
-				'overdosage' => array(
-					'expectedTypes' => array('Text')
-				),
-				'pregnancyCategory' => array(
-					'expectedTypes' => array('DrugPregnancyCategory')
-				),
-				'pregnancyWarning' => array(
-					'expectedTypes' => array('Text')
-				),
-				'prescribingInfo' => array(
-					'expectedTypes' => array('URL')
-				),
-				'prescriptionStatus' => array(
-					'expectedTypes' => array('DrugPrescriptionStatus')
-				),
-				'relatedDrug' => array(
-					'expectedTypes' => array('Drug')
-				),
-				'warning' => array(
-					'expectedTypes' => array('Text', 'URL')
-				)
+				'activeIngredient' => array('Text'),
+				'administrationRoute' => array('Text'),
+				'alcoholWarning' => array('Text'),
+				'availableStrength' => array('DrugStrength'),
+				'breastfeedingWarning' => array('Text'),
+				'clincalPharmacology' => array('Text'),
+				'cost' => array('DrugCost'),
+				'dosageForm' => array('Text'),
+				'doseSchedule' => array('DoseSchedule'),
+				'drugClass' => array('DrugClass'),
+				'foodWarning' => array('Text'),
+				'interactingDrug' => array('Drug'),
+				'isAvailableGenerically' => array('Boolean'),
+				'isProprietary' => array('Boolean'),
+				'labelDetails' => array('URL'),
+				'legalStatus' => array('DrugLegalStatus'),
+				'manufacturer' => array('Organization'),
+				'mechanismOfAction' => array('Text'),
+				'nonProprietaryName' => array('Text'),
+				'overdosage' => array('Text'),
+				'pregnancyCategory' => array('DrugPregnancyCategory'),
+				'pregnancyWarning' => array('Text'),
+				'prescribingInfo' => array('URL'),
+				'prescriptionStatus' => array('DrugPrescriptionStatus'),
+				'relatedDrug' => array('Drug'),
+				'warning' => array('Text', 'URL')
 			)
 		),
 		'DrugClass' => array(
 			'extends' => 'MedicalTherapy',
 			'properties' => array(
-				'drug' => array(
-					'expectedTypes' => array('Drug')
-				)
+				'drug' => array('Drug')
 			)
 		),
 		'LifestyleModification' => array(
@@ -2759,18 +1577,10 @@ class Types
 		'PhysicalActivity' => array(
 			'extends' => 'LifestyleModification',
 			'properties' => array(
-				'associatedAnatomy' => array(
-					'expectedTypes' => array('AnatomicalStructure', 'AnatomicalSystem', 'SuperficialAnatomy')
-				),
-				'category' => array(
-					'expectedTypes' => array('PhysicalActivityCategory', 'Text', 'Thing')
-				),
-				'epidemiology' => array(
-					'expectedTypes' => array('Text')
-				),
-				'pathophysiology' => array(
-					'expectedTypes' => array('Text')
-				)
+				'associatedAnatomy' => array('AnatomicalStructure', 'AnatomicalSystem', 'SuperficialAnatomy'),
+				'category' => array('PhysicalActivityCategory', 'Text', 'Thing'),
+				'epidemiology' => array('Text'),
+				'pathophysiology' => array('Text')
 			)
 		),
 		'PhysicalTherapy' => array(
@@ -2788,141 +1598,61 @@ class Types
 		'SuperficialAnatomy' => array(
 			'extends' => 'MedicalEntity',
 			'properties' => array(
-				'associatedPathophysiology' => array(
-					'expectedTypes' => array('Text')
-				),
-				'relatedAnatomy' => array(
-					'expectedTypes' => array('AnatomicalStructure', 'AnatomicalSystem')
-				),
-				'relatedCondition' => array(
-					'expectedTypes' => array('MedicalCondition')
-				),
-				'relatedTherapy' => array(
-					'expectedTypes' => array('MedicalTherapy')
-				),
-				'significance' => array(
-					'expectedTypes' => array('Text')
-				)
+				'associatedPathophysiology' => array('Text'),
+				'relatedAnatomy' => array('AnatomicalStructure', 'AnatomicalSystem'),
+				'relatedCondition' => array('MedicalCondition'),
+				'relatedTherapy' => array('MedicalTherapy'),
+				'significance' => array('Text')
 			)
 		),
 		'Organization' => array(
 			'extends' => 'Thing',
 			'properties' => array(
-				'address' => array(
-					'expectedTypes' => array('PostalAddress')
-				),
-				'aggregateRating' => array(
-					'expectedTypes' => array('AggregateRating')
-				),
-				'brand' => array(
-					'expectedTypes' => array('Brand', 'Organization')
-				),
-				'contactPoint' => array(
-					'expectedTypes' => array('ContactPoint')
-				),
-				'contactPoints' => array(
-					'expectedTypes' => array('ContactPoint')
-				),
-				'duns' => array(
-					'expectedTypes' => array('Text')
-				),
-				'email' => array(
-					'expectedTypes' => array('Text')
-				),
-				'employee' => array(
-					'expectedTypes' => array('Person')
-				),
-				'employees' => array(
-					'expectedTypes' => array('Person')
-				),
-				'event' => array(
-					'expectedTypes' => array('Event')
-				),
-				'events' => array(
-					'expectedTypes' => array('Event')
-				),
-				'faxNumber' => array(
-					'expectedTypes' => array('Text')
-				),
-				'founder' => array(
-					'expectedTypes' => array('Person')
-				),
-				'founders' => array(
-					'expectedTypes' => array('Person')
-				),
-				'foundingDate' => array(
-					'expectedTypes' => array('Date')
-				),
-				'globalLocationNumber' => array(
-					'expectedTypes' => array('Text')
-				),
-				'hasPOS' => array(
-					'expectedTypes' => array('Place')
-				),
-				'interactionCount' => array(
-					'expectedTypes' => array('Text')
-				),
-				'isicV4' => array(
-					'expectedTypes' => array('Text')
-				),
-				'legalName' => array(
-					'expectedTypes' => array('Text')
-				),
-				'location' => array(
-					'expectedTypes' => array('Place', 'PostalAddress')
-				),
-				'logo' => array(
-					'expectedTypes' => array('ImageObject', 'URL')
-				),
-				'makesOffer' => array(
-					'expectedTypes' => array('Offer')
-				),
-				'member' => array(
-					'expectedTypes' => array('Organization', 'Person')
-				),
-				'members' => array(
-					'expectedTypes' => array('Organization', 'Person')
-				),
-				'naics' => array(
-					'expectedTypes' => array('Text')
-				),
-				'owns' => array(
-					'expectedTypes' => array('OwnershipInfo', 'Product')
-				),
-				'review' => array(
-					'expectedTypes' => array('Review')
-				),
-				'reviews' => array(
-					'expectedTypes' => array('Review')
-				),
-				'seeks' => array(
-					'expectedTypes' => array('Demand')
-				),
-				'taxID' => array(
-					'expectedTypes' => array('Text')
-				),
-				'telephone' => array(
-					'expectedTypes' => array('Text')
-				),
-				'vatID' => array(
-					'expectedTypes' => array('Text')
-				)
+				'address' => array('PostalAddress'),
+				'aggregateRating' => array('AggregateRating'),
+				'brand' => array('Brand', 'Organization'),
+				'contactPoint' => array('ContactPoint'),
+				'contactPoints' => array('ContactPoint'),
+				'duns' => array('Text'),
+				'email' => array('Text'),
+				'employee' => array('Person'),
+				'employees' => array('Person'),
+				'event' => array('Event'),
+				'events' => array('Event'),
+				'faxNumber' => array('Text'),
+				'founder' => array('Person'),
+				'founders' => array('Person'),
+				'foundingDate' => array('Date'),
+				'globalLocationNumber' => array('Text'),
+				'hasPOS' => array('Place'),
+				'interactionCount' => array('Text'),
+				'isicV4' => array('Text'),
+				'legalName' => array('Text'),
+				'location' => array('Place', 'PostalAddress'),
+				'logo' => array('ImageObject', 'URL'),
+				'makesOffer' => array('Offer'),
+				'member' => array('Organization', 'Person'),
+				'members' => array('Organization', 'Person'),
+				'naics' => array('Text'),
+				'owns' => array('OwnershipInfo', 'Product'),
+				'review' => array('Review'),
+				'reviews' => array('Review'),
+				'seeks' => array('Demand'),
+				'taxID' => array('Text'),
+				'telephone' => array('Text'),
+				'vatID' => array('Text')
 			)
 		),
 		'Corporation' => array(
 			'extends' => 'Organization',
 			'properties' => array(
-				'tickerSymbol' => array(
-					'expectedTypes' => array('Text')
-				)
+				'tickerSymbol' => array('Text')
 			)
 		),
 		'EducationalOrganization' => array(
 			'extends' => 'Organization',
 			'properties' => array(
-				'alumni' => array(
-					'expectedTypes' => array('Person')
-				)
+				'alumni' => array('Person')
 			)
 		),
 		'CollegeOrUniversity' => array(
@@ -2956,21 +1686,11 @@ class Types
 		'LocalBusiness' => array(
 			'extends' => 'Organization',
 			'properties' => array(
-				'branchOf' => array(
-					'expectedTypes' => array('Organization')
-				),
-				'currenciesAccepted' => array(
-					'expectedTypes' => array('Text')
-				),
-				'openingHours' => array(
-					'expectedTypes' => array('Duration')
-				),
-				'paymentAccepted' => array(
-					'expectedTypes' => array('Text')
-				),
-				'priceRange' => array(
-					'expectedTypes' => array('Text')
-				)
+				'branchOf' => array('Organization'),
+				'currenciesAccepted' => array('Text'),
+				'openingHours' => array('Duration'),
+				'paymentAccepted' => array('Text'),
+				'priceRange' => array('Text')
 			)
 		),
 		'AnimalShelter' => array(
@@ -3036,12 +1756,8 @@ class Types
 		'Hospital' => array(
 			'extends' => 'CivicStructure',
 			'properties' => array(
-				'availableService' => array(
-					'expectedTypes' => array('MedicalProcedure', 'MedicalTest', 'MedicalTherapy')
-				),
-				'medicalSpecialty' => array(
-					'expectedTypes' => array('MedicalSpecialty')
-				)
+				'availableService' => array('MedicalProcedure', 'MedicalTest', 'MedicalTherapy'),
+				'medicalSpecialty' => array('MedicalSpecialty')
 			)
 		),
 		'PoliceStation' => array(
@@ -3107,15 +1823,9 @@ class Types
 		'FoodEstablishment' => array(
 			'extends' => 'LocalBusiness',
 			'properties' => array(
-				'acceptsReservations' => array(
-					'expectedTypes' => array('Text', 'URL')
-				),
-				'menu' => array(
-					'expectedTypes' => array('Text', 'URL')
-				),
-				'servesCuisine' => array(
-					'expectedTypes' => array('Text')
-				)
+				'acceptsReservations' => array('Text', 'URL'),
+				'menu' => array('Text', 'URL'),
+				'servesCuisine' => array('Text')
 			)
 		),
 		'Bakery' => array(
@@ -3261,20 +1971,14 @@ class Types
 		'DiagnosticLab' => array(
 			'extends' => 'MedicalOrganization',
 			'properties' => array(
-				'availableTest' => array(
-					'expectedTypes' => array('MedicalTest')
-				)
+				'availableTest' => array('MedicalTest')
 			)
 		),
 		'MedicalClinic' => array(
 			'extends' => 'MedicalOrganization',
 			'properties' => array(
-				'availableService' => array(
-					'expectedTypes' => array('MedicalProcedure', 'MedicalTest', 'MedicalTherapy')
-				),
-				'medicalSpecialty' => array(
-					'expectedTypes' => array('MedicalSpecialty')
-				)
+				'availableService' => array('MedicalProcedure', 'MedicalTest', 'MedicalTherapy'),
+				'medicalSpecialty' => array('MedicalSpecialty')
 			)
 		),
 		'Optician' => array(
@@ -3288,15 +1992,9 @@ class Types
 		'Physician' => array(
 			'extends' => 'MedicalOrganization',
 			'properties' => array(
-				'availableService' => array(
-					'expectedTypes' => array('MedicalProcedure', 'MedicalTest', 'MedicalTherapy')
-				),
-				'hospitalAffiliation' => array(
-					'expectedTypes' => array('Hospital')
-				),
-				'medicalSpecialty' => array(
-					'expectedTypes' => array('MedicalSpecialty')
-				)
+				'availableService' => array('MedicalProcedure', 'MedicalTest', 'MedicalTherapy'),
+				'hospitalAffiliation' => array('Hospital'),
+				'medicalSpecialty' => array('MedicalSpecialty')
 			)
 		),
 		'VeterinaryCare' => array(
@@ -3518,21 +2216,11 @@ class Types
 		'MusicGroup' => array(
 			'extends' => 'PerformingGroup',
 			'properties' => array(
-				'album' => array(
-					'expectedTypes' => array('MusicAlbum')
-				),
-				'albums' => array(
-					'expectedTypes' => array('MusicAlbum')
-				),
-				'musicGroupMember' => array(
-					'expectedTypes' => array('Person')
-				),
-				'track' => array(
-					'expectedTypes' => array('MusicRecording')
-				),
-				'tracks' => array(
-					'expectedTypes' => array('MusicRecording')
-				)
+				'album' => array('MusicAlbum'),
+				'albums' => array('MusicAlbum'),
+				'musicGroupMember' => array('Person'),
+				'track' => array('MusicRecording'),
+				'tracks' => array('MusicRecording')
 			)
 		),
 		'TheaterGroup' => array(
@@ -3546,212 +2234,78 @@ class Types
 		'Person' => array(
 			'extends' => 'Thing',
 			'properties' => array(
-				'additionalName' => array(
-					'expectedTypes' => array('Text')
-				),
-				'address' => array(
-					'expectedTypes' => array('PostalAddress')
-				),
-				'affiliation' => array(
-					'expectedTypes' => array('Organization')
-				),
-				'alumniOf' => array(
-					'expectedTypes' => array('EducationalOrganization')
-				),
-				'award' => array(
-					'expectedTypes' => array('Text')
-				),
-				'awards' => array(
-					'expectedTypes' => array('Text')
-				),
-				'birthDate' => array(
-					'expectedTypes' => array('Date')
-				),
-				'brand' => array(
-					'expectedTypes' => array('Brand', 'Organization')
-				),
-				'children' => array(
-					'expectedTypes' => array('Person')
-				),
-				'colleague' => array(
-					'expectedTypes' => array('Person')
-				),
-				'colleagues' => array(
-					'expectedTypes' => array('Person')
-				),
-				'contactPoint' => array(
-					'expectedTypes' => array('ContactPoint')
-				),
-				'contactPoints' => array(
-					'expectedTypes' => array('ContactPoint')
-				),
-				'deathDate' => array(
-					'expectedTypes' => array('Date')
-				),
-				'duns' => array(
-					'expectedTypes' => array('Text')
-				),
-				'email' => array(
-					'expectedTypes' => array('Text')
-				),
-				'familyName' => array(
-					'expectedTypes' => array('Text')
-				),
-				'faxNumber' => array(
-					'expectedTypes' => array('Text')
-				),
-				'follows' => array(
-					'expectedTypes' => array('Person')
-				),
-				'gender' => array(
-					'expectedTypes' => array('Text')
-				),
-				'givenName' => array(
-					'expectedTypes' => array('Text')
-				),
-				'globalLocationNumber' => array(
-					'expectedTypes' => array('Text')
-				),
-				'hasPOS' => array(
-					'expectedTypes' => array('Place')
-				),
-				'homeLocation' => array(
-					'expectedTypes' => array('ContactPoint', 'Place')
-				),
-				'honorificPrefix' => array(
-					'expectedTypes' => array('Text')
-				),
-				'honorificSuffix' => array(
-					'expectedTypes' => array('Text')
-				),
-				'interactionCount' => array(
-					'expectedTypes' => array('Text')
-				),
-				'isicV4' => array(
-					'expectedTypes' => array('Text')
-				),
-				'jobTitle' => array(
-					'expectedTypes' => array('Text')
-				),
-				'knows' => array(
-					'expectedTypes' => array('Person')
-				),
-				'makesOffer' => array(
-					'expectedTypes' => array('Offer')
-				),
-				'memberOf' => array(
-					'expectedTypes' => array('Organization')
-				),
-				'naics' => array(
-					'expectedTypes' => array('Text')
-				),
-				'nationality' => array(
-					'expectedTypes' => array('Country')
-				),
-				'owns' => array(
-					'expectedTypes' => array('OwnershipInfo', 'Product')
-				),
-				'parent' => array(
-					'expectedTypes' => array('Person')
-				),
-				'parents' => array(
-					'expectedTypes' => array('Person')
-				),
-				'performerIn' => array(
-					'expectedTypes' => array('Event')
-				),
-				'relatedTo' => array(
-					'expectedTypes' => array('Person')
-				),
-				'seeks' => array(
-					'expectedTypes' => array('Demand')
-				),
-				'sibling' => array(
-					'expectedTypes' => array('Person')
-				),
-				'siblings' => array(
-					'expectedTypes' => array('Person')
-				),
-				'spouse' => array(
-					'expectedTypes' => array('Person')
-				),
-				'taxID' => array(
-					'expectedTypes' => array('Text')
-				),
-				'telephone' => array(
-					'expectedTypes' => array('Text')
-				),
-				'vatID' => array(
-					'expectedTypes' => array('Text')
-				),
-				'workLocation' => array(
-					'expectedTypes' => array('ContactPoint', 'Place')
-				),
-				'worksFor' => array(
-					'expectedTypes' => array('Organization')
-				)
+				'additionalName' => array('Text'),
+				'address' => array('PostalAddress'),
+				'affiliation' => array('Organization'),
+				'alumniOf' => array('EducationalOrganization'),
+				'award' => array('Text'),
+				'awards' => array('Text'),
+				'birthDate' => array('Date'),
+				'brand' => array('Brand', 'Organization'),
+				'children' => array('Person'),
+				'colleague' => array('Person'),
+				'colleagues' => array('Person'),
+				'contactPoint' => array('ContactPoint'),
+				'contactPoints' => array('ContactPoint'),
+				'deathDate' => array('Date'),
+				'duns' => array('Text'),
+				'email' => array('Text'),
+				'familyName' => array('Text'),
+				'faxNumber' => array('Text'),
+				'follows' => array('Person'),
+				'gender' => array('Text'),
+				'givenName' => array('Text'),
+				'globalLocationNumber' => array('Text'),
+				'hasPOS' => array('Place'),
+				'homeLocation' => array('ContactPoint', 'Place'),
+				'honorificPrefix' => array('Text'),
+				'honorificSuffix' => array('Text'),
+				'interactionCount' => array('Text'),
+				'isicV4' => array('Text'),
+				'jobTitle' => array('Text'),
+				'knows' => array('Person'),
+				'makesOffer' => array('Offer'),
+				'memberOf' => array('Organization'),
+				'naics' => array('Text'),
+				'nationality' => array('Country'),
+				'owns' => array('OwnershipInfo', 'Product'),
+				'parent' => array('Person'),
+				'parents' => array('Person'),
+				'performerIn' => array('Event'),
+				'relatedTo' => array('Person'),
+				'seeks' => array('Demand'),
+				'sibling' => array('Person'),
+				'siblings' => array('Person'),
+				'spouse' => array('Person'),
+				'taxID' => array('Text'),
+				'telephone' => array('Text'),
+				'vatID' => array('Text'),
+				'workLocation' => array('ContactPoint', 'Place'),
+				'worksFor' => array('Organization')
 			)
 		),
 		'Place' => array(
 			'extends' => 'Thing',
 			'properties' => array(
-				'address' => array(
-					'expectedTypes' => array('PostalAddress')
-				),
-				'aggregateRating' => array(
-					'expectedTypes' => array('AggregateRating')
-				),
-				'containedIn' => array(
-					'expectedTypes' => array('Place')
-				),
-				'event' => array(
-					'expectedTypes' => array('Event')
-				),
-				'events' => array(
-					'expectedTypes' => array('Event')
-				),
-				'faxNumber' => array(
-					'expectedTypes' => array('Text')
-				),
-				'geo' => array(
-					'expectedTypes' => array('GeoCoordinates', 'GeoShape')
-				),
-				'globalLocationNumber' => array(
-					'expectedTypes' => array('Text')
-				),
-				'interactionCount' => array(
-					'expectedTypes' => array('Text')
-				),
-				'isicV4' => array(
-					'expectedTypes' => array('Text')
-				),
-				'logo' => array(
-					'expectedTypes' => array('ImageObject', 'URL')
-				),
-				'map' => array(
-					'expectedTypes' => array('URL')
-				),
-				'maps' => array(
-					'expectedTypes' => array('URL')
-				),
-				'openingHoursSpecification' => array(
-					'expectedTypes' => array('OpeningHoursSpecification')
-				),
-				'photo' => array(
-					'expectedTypes' => array('ImageObject', 'Photograph')
-				),
-				'photos' => array(
-					'expectedTypes' => array('ImageObject', 'Photograph')
-				),
-				'review' => array(
-					'expectedTypes' => array('Review')
-				),
-				'reviews' => array(
-					'expectedTypes' => array('Review')
-				),
-				'telephone' => array(
-					'expectedTypes' => array('Text')
-				)
+				'address' => array('PostalAddress'),
+				'aggregateRating' => array('AggregateRating'),
+				'containedIn' => array('Place'),
+				'event' => array('Event'),
+				'events' => array('Event'),
+				'faxNumber' => array('Text'),
+				'geo' => array('GeoCoordinates', 'GeoShape'),
+				'globalLocationNumber' => array('Text'),
+				'interactionCount' => array('Text'),
+				'isicV4' => array('Text'),
+				'logo' => array('ImageObject', 'URL'),
+				'map' => array('URL'),
+				'maps' => array('URL'),
+				'openingHoursSpecification' => array('OpeningHoursSpecification'),
+				'photo' => array('ImageObject', 'Photograph'),
+				'photos' => array('ImageObject', 'Photograph'),
+				'review' => array('Review'),
+				'reviews' => array('Review'),
+				'telephone' => array('Text')
 			)
 		),
 		'AdministrativeArea' => array(
@@ -3773,9 +2327,7 @@ class Types
 		'CivicStructure' => array(
 			'extends' => 'Place',
 			'properties' => array(
-				'openingHours' => array(
-					'expectedTypes' => array('Duration')
-				)
+				'openingHours' => array('Duration')
 			)
 		),
 		'Airport' => array(
@@ -3989,125 +2541,59 @@ class Types
 		'Product' => array(
 			'extends' => 'Thing',
 			'properties' => array(
-				'aggregateRating' => array(
-					'expectedTypes' => array('AggregateRating')
-				),
-				'audience' => array(
-					'expectedTypes' => array('Audience')
-				),
-				'brand' => array(
-					'expectedTypes' => array('Brand', 'Organization')
-				),
-				'color' => array(
-					'expectedTypes' => array('Text')
-				),
-				'depth' => array(
-					'expectedTypes' => array('Distance', 'QuantitativeValue')
-				),
-				'gtin13' => array(
-					'expectedTypes' => array('Text')
-				),
-				'gtin14' => array(
-					'expectedTypes' => array('Text')
-				),
-				'gtin8' => array(
-					'expectedTypes' => array('Text')
-				),
-				'height' => array(
-					'expectedTypes' => array('Distance', 'QuantitativeValue')
-				),
-				'isAccessoryOrSparePartFor' => array(
-					'expectedTypes' => array('Product')
-				),
-				'isConsumableFor' => array(
-					'expectedTypes' => array('Product')
-				),
-				'isRelatedTo' => array(
-					'expectedTypes' => array('Product')
-				),
-				'isSimilarTo' => array(
-					'expectedTypes' => array('Product')
-				),
-				'itemCondition' => array(
-					'expectedTypes' => array('OfferItemCondition')
-				),
-				'logo' => array(
-					'expectedTypes' => array('ImageObject', 'URL')
-				),
-				'manufacturer' => array(
-					'expectedTypes' => array('Organization')
-				),
-				'model' => array(
-					'expectedTypes' => array('ProductModel', 'Text')
-				),
-				'mpn' => array(
-					'expectedTypes' => array('Text')
-				),
-				'offers' => array(
-					'expectedTypes' => array('Offer')
-				),
-				'productID' => array(
-					'expectedTypes' => array('Text')
-				),
-				'releaseDate' => array(
-					'expectedTypes' => array('Date')
-				),
-				'review' => array(
-					'expectedTypes' => array('Review')
-				),
-				'reviews' => array(
-					'expectedTypes' => array('Review')
-				),
-				'sku' => array(
-					'expectedTypes' => array('Text')
-				),
-				'weight' => array(
-					'expectedTypes' => array('QuantitativeValue')
-				),
-				'width' => array(
-					'expectedTypes' => array('Distance', 'QuantitativeValue')
-				)
+				'aggregateRating' => array('AggregateRating'),
+				'audience' => array('Audience'),
+				'brand' => array('Brand', 'Organization'),
+				'color' => array('Text'),
+				'depth' => array('Distance', 'QuantitativeValue'),
+				'gtin13' => array('Text'),
+				'gtin14' => array('Text'),
+				'gtin8' => array('Text'),
+				'height' => array('Distance', 'QuantitativeValue'),
+				'isAccessoryOrSparePartFor' => array('Product'),
+				'isConsumableFor' => array('Product'),
+				'isRelatedTo' => array('Product'),
+				'isSimilarTo' => array('Product'),
+				'itemCondition' => array('OfferItemCondition'),
+				'logo' => array('ImageObject', 'URL'),
+				'manufacturer' => array('Organization'),
+				'model' => array('ProductModel', 'Text'),
+				'mpn' => array('Text'),
+				'offers' => array('Offer'),
+				'productID' => array('Text'),
+				'releaseDate' => array('Date'),
+				'review' => array('Review'),
+				'reviews' => array('Review'),
+				'sku' => array('Text'),
+				'weight' => array('QuantitativeValue'),
+				'width' => array('Distance', 'QuantitativeValue')
 			)
 		),
 		'IndividualProduct' => array(
 			'extends' => 'Product',
 			'properties' => array(
-				'serialNumber' => array(
-					'expectedTypes' => array('Text')
-				)
+				'serialNumber' => array('Text')
 			)
 		),
 		'ProductModel' => array(
 			'extends' => 'Product',
 			'properties' => array(
-				'isVariantOf' => array(
-					'expectedTypes' => array('ProductModel')
-				),
-				'predecessorOf' => array(
-					'expectedTypes' => array('ProductModel')
-				),
-				'successorOf' => array(
-					'expectedTypes' => array('ProductModel')
-				)
+				'isVariantOf' => array('ProductModel'),
+				'predecessorOf' => array('ProductModel'),
+				'successorOf' => array('ProductModel')
 			)
 		),
 		'SomeProducts' => array(
 			'extends' => 'Product',
 			'properties' => array(
-				'inventoryLevel' => array(
-					'expectedTypes' => array('QuantitativeValue')
-				)
+				'inventoryLevel' => array('QuantitativeValue')
 			)
 		),
 		'Property' => array(
 			'extends' => 'Thing',
 			'properties' => array(
-				'domainIncludes' => array(
-					'expectedTypes' => array('Class')
-				),
-				'rangeIncludes' => array(
-					'expectedTypes' => array('Class')
-				)
+				'domainIncludes' => array('Class'),
+				'rangeIncludes' => array('Class')
 			)
 		)
 	);

@@ -16,5 +16,5 @@ define('DEBUG', true);
  * The Type of library to create, available options:
  * minified, normal
  */
-define('CREATE_LIBRARY', 'normal');
+define('CREATE_LIBRARY', 'minified');
 define('CLASS_PREFIX', 'Type');
