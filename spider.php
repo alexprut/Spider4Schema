@@ -45,7 +45,7 @@ if (CREATE_LIBRARY === 'minified')
 	createAllTypesClass($types, dirname(__FILE__) . '/libraries');
 }
 
-// Create the Type library
+// Create the normal Type library
 if (CREATE_LIBRARY === 'normal')
 {
 	// For each Type retrieve all available Properties and information
@@ -67,4 +67,29 @@ if (CREATE_LIBRARY === 'normal')
 		// Wait some time, to not DDOS the Schema.org website
 		sleep(rand(0, 1));
 	}
+}
+
+// Create the JSON Library
+if (CREATE_LIBRARY === 'json')
+{
+	// For each Type retrieve all available Properties and information
+	foreach ($types as $typeName)
+	{
+		if (DEBUG)
+			echo "\n------------------------------------------------------------\n"
+				. "Creating array type: $typeName \n";
+
+		// Retrieve the Type HTML
+		$type = $http->httpRequest('http://schema.org/' . $typeName);
+		$type = parseType($type['file'], $typeName);
+		$types[$typeName] = $type;
+
+		// Wait some time, to not DDOS the Schema.org website
+		sleep(rand(0, 1));
+	}
+
+	if (DEBUG)
+		echo "\nCreating the JSON file library \n";
+
+	createJSONLibrary($types, dirname(__FILE__) . '/libraries');
 }

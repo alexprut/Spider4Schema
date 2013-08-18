@@ -170,3 +170,39 @@ function createTypeClass($typeName, $type, $path)
 	if (DEBUG)
 		echo "Created $fileName library file \n";
 }
+
+/**
+ * Creates a JSON file with all Types
+ *
+ * @param   array   $types  An array with all available Types
+ * @param   string  $path   The path where to create the file
+ *
+ * @return  void
+ */
+function createJSONLibrary($types, $path)
+{
+	// Create the new file
+	$fileName = 'types.json';
+	$handle = fopen($path . '/' . $fileName, 'w');
+
+	// Remove comments from the $types array
+	foreach ($types as &$type)
+	{
+		unset($type['comment']);
+
+		foreach ($type['properties'] as &$property)
+		{
+			unset($property['description']);
+		}
+	}
+
+	$code = json_encode($types);
+
+	// Write the class file and close the handle
+	fwrite($handle, $code);
+	fclose($handle);
+
+	// Debug
+	if (DEBUG)
+		echo "Created the $fileName file \n";
+}

@@ -14,7 +14,7 @@ define('DEBUG', true);
 
 /*
  * The Type of library to create, available options:
- * minified, normal
+ * minified, normal, json
  */
-define('CREATE_LIBRARY', 'minified');
+define('CREATE_LIBRARY', 'json');
 define('CLASS_PREFIX', 'Type');
