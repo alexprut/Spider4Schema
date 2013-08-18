@@ -39,7 +39,7 @@ abstract class TypeAnatomicalSystem extends TypeMedicalEntity
 
 	/**
 	 * The underlying anatomical structures, such as organs, that comprise the anatomical system.
-	 * Expected Type: AnatomicalStructure', 'AnatomicalSystem
+	 * Expected Type: AnatomicalStructure, AnatomicalSystem
 	 * 
 	 * @var	array
 	 */

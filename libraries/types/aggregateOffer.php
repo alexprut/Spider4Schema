@@ -29,7 +29,7 @@ abstract class TypeAggregateOffer extends TypeOffer
 
 	/**
 	 * The highest price of all offers available.
-	 * Expected Type: Number', 'Text
+	 * Expected Type: Number, Text
 	 * 
 	 * @var	array
 	 */
@@ -39,7 +39,7 @@ abstract class TypeAggregateOffer extends TypeOffer
 
 	/**
 	 * The lowest price of all offers available.
-	 * Expected Type: Number', 'Text
+	 * Expected Type: Number, Text
 	 * 
 	 * @var	array
 	 */

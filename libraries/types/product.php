@@ -49,7 +49,7 @@ abstract class TypeProduct extends TypeThing
 
 	/**
 	 * The brand(s) associated with a product or service, or the brand(s) maintained by an organization or business person.
-	 * Expected Type: Brand', 'Organization
+	 * Expected Type: Brand, Organization
 	 * 
 	 * @var	array
 	 */
@@ -69,7 +69,7 @@ abstract class TypeProduct extends TypeThing
 
 	/**
 	 * The depth of the product.
-	 * Expected Type: Distance', 'QuantitativeValue
+	 * Expected Type: Distance, QuantitativeValue
 	 * 
 	 * @var	array
 	 */
@@ -109,7 +109,7 @@ abstract class TypeProduct extends TypeThing
 
 	/**
 	 * The height of the item.
-	 * Expected Type: Distance', 'QuantitativeValue
+	 * Expected Type: Distance, QuantitativeValue
 	 * 
 	 * @var	array
 	 */
@@ -169,7 +169,7 @@ abstract class TypeProduct extends TypeThing
 
 	/**
 	 * URL of an image for the logo of the item.
-	 * Expected Type: ImageObject', 'URL
+	 * Expected Type: ImageObject, URL
 	 * 
 	 * @var	array
 	 */
@@ -189,7 +189,7 @@ abstract class TypeProduct extends TypeThing
 
 	/**
 	 * The model of the product. Use with the URL of a ProductModel or a textual representation of the model identifier. The URL of the ProductModel can be from an external source. It is recommended to additionally provide strong product identifiers via the gtin8/gtin13/gtin14 and mpn properties.
-	 * Expected Type: ProductModel', 'Text
+	 * Expected Type: ProductModel, Text
 	 * 
 	 * @var	array
 	 */
@@ -279,7 +279,7 @@ abstract class TypeProduct extends TypeThing
 
 	/**
 	 * The width of the item.
-	 * Expected Type: Distance', 'QuantitativeValue
+	 * Expected Type: Distance, QuantitativeValue
 	 * 
 	 * @var	array
 	 */

@@ -105,7 +105,7 @@ function createTypeClass($typeName, $type, $path)
 		// Create the class variables
 		$typeProperties .= "\n\n\t/**\n"
 			. "\t * " . $propertyInfo['description'] . "\n"
-			. "\t * Expected Type: " . join("', '", $propertyInfo['expectedTypes']) . "\n"
+			. "\t * Expected Type: " . join(", ", $propertyInfo['expectedTypes']) . "\n"
 			. "\t * \n"
 			. "\t * @var	array\n"
 			. "\t */\n"

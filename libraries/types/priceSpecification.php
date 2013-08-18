@@ -69,7 +69,7 @@ abstract class TypePriceSpecification extends TypeStructuredValue
 
 	/**
 	 * The offer price of a product, or of a price component when attached to PriceSpecification and its subtypes.
-	 * Expected Type: Number', 'Text
+	 * Expected Type: Number, Text
 	 * 
 	 * @var	array
 	 */

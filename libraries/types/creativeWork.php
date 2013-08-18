@@ -99,7 +99,7 @@ abstract class TypeCreativeWork extends TypeThing
 
 	/**
 	 * The author of this content. Please note that author is special in that HTML 5 provides a special mechanism for indicating authorship via the rel tag. That is equivalent to this and may be used interchangeably.
-	 * Expected Type: Organization', 'Person
+	 * Expected Type: Organization, Person
 	 * 
 	 * @var	array
 	 */
@@ -128,8 +128,8 @@ abstract class TypeCreativeWork extends TypeThing
 	);
 
 	/**
-	 * A citation or reference to another creative work, such as another publication, web page, scholarly article, etc.
-	 * Expected Type: CreativeWork', 'Text
+	 * A citation or reference to another creative work, such as another publication, web page, scholarly article, etc. NOTE: Candidate for promotion to ScholarlyArticle.
+	 * Expected Type: CreativeWork, Text
 	 * 
 	 * @var	array
 	 */
@@ -169,7 +169,7 @@ abstract class TypeCreativeWork extends TypeThing
 
 	/**
 	 * A secondary contributor to the CreativeWork.
-	 * Expected Type: Organization', 'Person
+	 * Expected Type: Organization, Person
 	 * 
 	 * @var	array
 	 */
@@ -179,7 +179,7 @@ abstract class TypeCreativeWork extends TypeThing
 
 	/**
 	 * The party holding the legal copyright to the CreativeWork.
-	 * Expected Type: Organization', 'Person
+	 * Expected Type: Organization, Person
 	 * 
 	 * @var	array
 	 */
@@ -199,7 +199,7 @@ abstract class TypeCreativeWork extends TypeThing
 
 	/**
 	 * The creator/author of this CreativeWork or UserComments. This is the same as the Author property for CreativeWork.
-	 * Expected Type: Organization', 'Person
+	 * Expected Type: Organization, Person
 	 * 
 	 * @var	array
 	 */
@@ -409,7 +409,7 @@ abstract class TypeCreativeWork extends TypeThing
 
 	/**
 	 * Specifies the Person or Organization that distributed the CreativeWork.
-	 * Expected Type: Organization', 'Person
+	 * Expected Type: Organization, Person
 	 * 
 	 * @var	array
 	 */

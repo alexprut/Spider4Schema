@@ -99,7 +99,7 @@ abstract class TypePerson extends TypeThing
 
 	/**
 	 * The brand(s) associated with a product or service, or the brand(s) maintained by an organization or business person.
-	 * Expected Type: Brand', 'Organization
+	 * Expected Type: Brand, Organization
 	 * 
 	 * @var	array
 	 */
@@ -259,7 +259,7 @@ abstract class TypePerson extends TypeThing
 
 	/**
 	 * A contact location for a person's residence.
-	 * Expected Type: ContactPoint', 'Place
+	 * Expected Type: ContactPoint, Place
 	 * 
 	 * @var	array
 	 */
@@ -369,7 +369,7 @@ abstract class TypePerson extends TypeThing
 
 	/**
 	 * Products owned by the organization or person.
-	 * Expected Type: OwnershipInfo', 'Product
+	 * Expected Type: OwnershipInfo, Product
 	 * 
 	 * @var	array
 	 */
@@ -489,7 +489,7 @@ abstract class TypePerson extends TypeThing
 
 	/**
 	 * A contact location for a person's place of work.
-	 * Expected Type: ContactPoint', 'Place
+	 * Expected Type: ContactPoint, Place
 	 * 
 	 * @var	array
 	 */

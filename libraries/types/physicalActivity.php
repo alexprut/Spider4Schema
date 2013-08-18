@@ -29,7 +29,7 @@ abstract class TypePhysicalActivity extends TypeLifestyleModification
 
 	/**
 	 * The anatomy of the underlying organ system or structures associated with this entity.
-	 * Expected Type: AnatomicalStructure', 'AnatomicalSystem', 'SuperficialAnatomy
+	 * Expected Type: AnatomicalStructure, AnatomicalSystem, SuperficialAnatomy
 	 * 
 	 * @var	array
 	 */
@@ -39,7 +39,7 @@ abstract class TypePhysicalActivity extends TypeLifestyleModification
 
 	/**
 	 * A category for the item. Greater signs or slashes can be used to informally indicate a category hierarchy.
-	 * Expected Type: PhysicalActivityCategory', 'Text', 'Thing
+	 * Expected Type: PhysicalActivityCategory, Text, Thing
 	 * 
 	 * @var	array
 	 */

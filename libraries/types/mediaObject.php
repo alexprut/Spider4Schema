@@ -119,7 +119,7 @@ abstract class TypeMediaObject extends TypeCreativeWork
 
 	/**
 	 * The height of the item.
-	 * Expected Type: Distance', 'QuantitativeValue
+	 * Expected Type: Distance, QuantitativeValue
 	 * 
 	 * @var	array
 	 */
@@ -169,7 +169,7 @@ abstract class TypeMediaObject extends TypeCreativeWork
 
 	/**
 	 * The width of the item.
-	 * Expected Type: Distance', 'QuantitativeValue
+	 * Expected Type: Distance, QuantitativeValue
 	 * 
 	 * @var	array
 	 */

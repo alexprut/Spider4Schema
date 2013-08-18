@@ -29,7 +29,7 @@ abstract class TypeFoodEstablishment extends TypeLocalBusiness
 
 	/**
 	 * Either Yes/No, or a URL at which reservations can be made.
-	 * Expected Type: Text', 'URL
+	 * Expected Type: Text, URL
 	 * 
 	 * @var	array
 	 */
@@ -39,7 +39,7 @@ abstract class TypeFoodEstablishment extends TypeLocalBusiness
 
 	/**
 	 * Either the actual menu or a URL of the menu.
-	 * Expected Type: Text', 'URL
+	 * Expected Type: Text, URL
 	 * 
 	 * @var	array
 	 */

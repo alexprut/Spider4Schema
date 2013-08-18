@@ -69,7 +69,7 @@ abstract class TypeTVEpisode extends TypeCreativeWork
 
 	/**
 	 * The composer of the movie or TV soundtrack.
-	 * Expected Type: MusicGroup', 'Person
+	 * Expected Type: MusicGroup, Person
 	 * 
 	 * @var	array
 	 */

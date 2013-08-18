@@ -49,7 +49,7 @@ abstract class TypeOrganization extends TypeThing
 
 	/**
 	 * The brand(s) associated with a product or service, or the brand(s) maintained by an organization or business person.
-	 * Expected Type: Brand', 'Organization
+	 * Expected Type: Brand, Organization
 	 * 
 	 * @var	array
 	 */
@@ -228,8 +228,8 @@ abstract class TypeOrganization extends TypeThing
 	);
 
 	/**
-	 * The location of the event or organization.
-	 * Expected Type: Place', 'PostalAddress
+	 * The location of the event, organization or action.
+	 * Expected Type: Place, PostalAddress
 	 * 
 	 * @var	array
 	 */
@@ -239,7 +239,7 @@ abstract class TypeOrganization extends TypeThing
 
 	/**
 	 * URL of an image for the logo of the item.
-	 * Expected Type: ImageObject', 'URL
+	 * Expected Type: ImageObject, URL
 	 * 
 	 * @var	array
 	 */
@@ -259,7 +259,7 @@ abstract class TypeOrganization extends TypeThing
 
 	/**
 	 * A member of this organization.
-	 * Expected Type: Organization', 'Person
+	 * Expected Type: Organization, Person
 	 * 
 	 * @var	array
 	 */
@@ -269,7 +269,7 @@ abstract class TypeOrganization extends TypeThing
 
 	/**
 	 * A member of this organization (legacy spelling; see singular form, member).
-	 * Expected Type: Organization', 'Person
+	 * Expected Type: Organization, Person
 	 * 
 	 * @var	array
 	 */
@@ -289,7 +289,7 @@ abstract class TypeOrganization extends TypeThing
 
 	/**
 	 * Products owned by the organization or person.
-	 * Expected Type: OwnershipInfo', 'Product
+	 * Expected Type: OwnershipInfo, Product
 	 * 
 	 * @var	array
 	 */

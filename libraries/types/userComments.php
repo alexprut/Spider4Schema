@@ -49,7 +49,7 @@ abstract class TypeUserComments extends TypeUserInteraction
 
 	/**
 	 * The creator/author of this CreativeWork or UserComments. This is the same as the Author property for CreativeWork.
-	 * Expected Type: Organization', 'Person
+	 * Expected Type: Organization, Person
 	 * 
 	 * @var	array
 	 */

@@ -39,7 +39,7 @@ abstract class TypeSuperficialAnatomy extends TypeMedicalEntity
 
 	/**
 	 * Anatomical systems or structures that relate to the superficial anatomy.
-	 * Expected Type: AnatomicalStructure', 'AnatomicalSystem
+	 * Expected Type: AnatomicalStructure, AnatomicalSystem
 	 * 
 	 * @var	array
 	 */

@@ -29,7 +29,7 @@ abstract class TypeSoftwareApplication extends TypeCreativeWork
 
 	/**
 	 * Type of software application, e.g. "Game, Multimedia".
-	 * Expected Type: Text', 'URL
+	 * Expected Type: Text, URL
 	 * 
 	 * @var	array
 	 */
@@ -39,7 +39,7 @@ abstract class TypeSoftwareApplication extends TypeCreativeWork
 
 	/**
 	 * Subcategory of the application, e.g. "Arcade Game".
-	 * Expected Type: Text', 'URL
+	 * Expected Type: Text, URL
 	 * 
 	 * @var	array
 	 */
@@ -99,7 +99,7 @@ abstract class TypeSoftwareApplication extends TypeCreativeWork
 
 	/**
 	 * Features or modules provided by this application (and possibly required by other applications).
-	 * Expected Type: Text', 'URL
+	 * Expected Type: Text, URL
 	 * 
 	 * @var	array
 	 */
@@ -139,7 +139,7 @@ abstract class TypeSoftwareApplication extends TypeCreativeWork
 
 	/**
 	 * Minimum memory requirements.
-	 * Expected Type: Text', 'URL
+	 * Expected Type: Text, URL
 	 * 
 	 * @var	array
 	 */
@@ -179,7 +179,7 @@ abstract class TypeSoftwareApplication extends TypeCreativeWork
 
 	/**
 	 * Description of what changed in this version.
-	 * Expected Type: Text', 'URL
+	 * Expected Type: Text, URL
 	 * 
 	 * @var	array
 	 */
@@ -189,7 +189,7 @@ abstract class TypeSoftwareApplication extends TypeCreativeWork
 
 	/**
 	 * Component dependency requirements for application. This includes runtime environments and shared libraries that are not included in the application distribution package, but required to run the application (Examples: DirectX, Java or .NET runtime).
-	 * Expected Type: Text', 'URL
+	 * Expected Type: Text, URL
 	 * 
 	 * @var	array
 	 */
@@ -199,7 +199,7 @@ abstract class TypeSoftwareApplication extends TypeCreativeWork
 
 	/**
 	 * A link to a screenshot image of the app.
-	 * Expected Type: ImageObject', 'URL
+	 * Expected Type: ImageObject, URL
 	 * 
 	 * @var	array
 	 */
@@ -219,7 +219,7 @@ abstract class TypeSoftwareApplication extends TypeCreativeWork
 
 	/**
 	 * Storage requirements (free space required).
-	 * Expected Type: Text', 'URL
+	 * Expected Type: Text, URL
 	 * 
 	 * @var	array
 	 */

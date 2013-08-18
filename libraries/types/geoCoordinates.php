@@ -29,7 +29,7 @@ abstract class TypeGeoCoordinates extends TypeStructuredValue
 
 	/**
 	 * The elevation of a location.
-	 * Expected Type: Number', 'Text
+	 * Expected Type: Number, Text
 	 * 
 	 * @var	array
 	 */
@@ -39,7 +39,7 @@ abstract class TypeGeoCoordinates extends TypeStructuredValue
 
 	/**
 	 * The latitude of a location. For example 37.42242.
-	 * Expected Type: Number', 'Text
+	 * Expected Type: Number, Text
 	 * 
 	 * @var	array
 	 */
@@ -49,7 +49,7 @@ abstract class TypeGeoCoordinates extends TypeStructuredValue
 
 	/**
 	 * The longitude of a location. For example -122.08585.
-	 * Expected Type: Number', 'Text
+	 * Expected Type: Number, Text
 	 * 
 	 * @var	array
 	 */

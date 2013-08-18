@@ -89,7 +89,7 @@ abstract class TypePlace extends TypeThing
 
 	/**
 	 * The geo coordinates of the place.
-	 * Expected Type: GeoCoordinates', 'GeoShape
+	 * Expected Type: GeoCoordinates, GeoShape
 	 * 
 	 * @var	array
 	 */
@@ -129,7 +129,7 @@ abstract class TypePlace extends TypeThing
 
 	/**
 	 * URL of an image for the logo of the item.
-	 * Expected Type: ImageObject', 'URL
+	 * Expected Type: ImageObject, URL
 	 * 
 	 * @var	array
 	 */
@@ -169,7 +169,7 @@ abstract class TypePlace extends TypeThing
 
 	/**
 	 * A photograph of this place.
-	 * Expected Type: ImageObject', 'Photograph
+	 * Expected Type: ImageObject, Photograph
 	 * 
 	 * @var	array
 	 */
@@ -179,7 +179,7 @@ abstract class TypePlace extends TypeThing
 
 	/**
 	 * Photographs of this place (legacy spelling; see singular form, photo).
-	 * Expected Type: ImageObject', 'Photograph
+	 * Expected Type: ImageObject, Photograph
 	 * 
 	 * @var	array
 	 */

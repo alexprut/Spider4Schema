@@ -39,7 +39,7 @@ abstract class TypeDiet extends TypeCreativeWork
 
 	/**
 	 * People or organizations that endorse the plan.
-	 * Expected Type: Organization', 'Person
+	 * Expected Type: Organization, Person
 	 * 
 	 * @var	array
 	 */

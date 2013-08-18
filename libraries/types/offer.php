@@ -129,7 +129,7 @@ abstract class TypeOffer extends TypeIntangible
 
 	/**
 	 * A category for the item. Greater signs or slashes can be used to informally indicate a category hierarchy.
-	 * Expected Type: PhysicalActivityCategory', 'Text', 'Thing
+	 * Expected Type: PhysicalActivityCategory, Text, Thing
 	 * 
 	 * @var	array
 	 */
@@ -179,7 +179,7 @@ abstract class TypeOffer extends TypeIntangible
 
 	/**
 	 * The ISO 3166-1 (ISO 3166-1 alpha-2) or ISO 3166-2 code, or the GeoShape for the geo-political region(s) for which the offer or delivery charge specification is valid.
-	 * Expected Type: GeoShape', 'Text
+	 * Expected Type: GeoShape, Text
 	 * 
 	 * @var	array
 	 */
@@ -279,7 +279,7 @@ abstract class TypeOffer extends TypeIntangible
 
 	/**
 	 * The offer price of a product, or of a price component when attached to PriceSpecification and its subtypes.
-	 * Expected Type: Number', 'Text
+	 * Expected Type: Number, Text
 	 * 
 	 * @var	array
 	 */
@@ -339,7 +339,7 @@ abstract class TypeOffer extends TypeIntangible
 
 	/**
 	 * The seller.
-	 * Expected Type: Organization', 'Person
+	 * Expected Type: Organization, Person
 	 * 
 	 * @var	array
 	 */

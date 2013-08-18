@@ -69,7 +69,7 @@ abstract class TypeQuantitativeValue extends TypeStructuredValue
 
 	/**
 	 * A pointer to a secondary value that provides additional information on the original value, e.g. a reference temperature.
-	 * Expected Type: Enumeration', 'StructuredValue
+	 * Expected Type: Enumeration, StructuredValue
 	 * 
 	 * @var	array
 	 */

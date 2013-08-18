@@ -29,7 +29,7 @@ abstract class TypeEvent extends TypeThing
 
 	/**
 	 * A person or organization attending the event.
-	 * Expected Type: Organization', 'Person
+	 * Expected Type: Organization, Person
 	 * 
 	 * @var	array
 	 */
@@ -39,7 +39,7 @@ abstract class TypeEvent extends TypeThing
 
 	/**
 	 * A person attending the event (legacy spelling; see singular form, attendee).
-	 * Expected Type: Organization', 'Person
+	 * Expected Type: Organization, Person
 	 * 
 	 * @var	array
 	 */
@@ -68,8 +68,8 @@ abstract class TypeEvent extends TypeThing
 	);
 
 	/**
-	 * The location of the event or organization.
-	 * Expected Type: Place', 'PostalAddress
+	 * The location of the event, organization or action.
+	 * Expected Type: Place, PostalAddress
 	 * 
 	 * @var	array
 	 */
@@ -89,7 +89,7 @@ abstract class TypeEvent extends TypeThing
 
 	/**
 	 * A performer at the event—for example, a presenter, musician, musical group or actor.
-	 * Expected Type: Organization', 'Person
+	 * Expected Type: Organization, Person
 	 * 
 	 * @var	array
 	 */
@@ -99,7 +99,7 @@ abstract class TypeEvent extends TypeThing
 
 	/**
 	 * The main performer or performers of the event—for example, a presenter, musician, or actor (legacy spelling; see singular form, performer).
-	 * Expected Type: Organization', 'Person
+	 * Expected Type: Organization, Person
 	 * 
 	 * @var	array
 	 */

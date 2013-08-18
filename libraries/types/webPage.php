@@ -89,7 +89,7 @@ abstract class TypeWebPage extends TypeCreativeWork
 
 	/**
 	 * People or organizations that have reviewed the content on this web page for accuracy and/or completeness.
-	 * Expected Type: Organization', 'Person
+	 * Expected Type: Organization, Person
 	 * 
 	 * @var	array
 	 */

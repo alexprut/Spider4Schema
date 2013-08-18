@@ -39,7 +39,7 @@ abstract class TypeVein extends TypeVessel
 
 	/**
 	 * The anatomical or organ system drained by this vessel; generally refers to a specific part of an organ.
-	 * Expected Type: AnatomicalStructure', 'AnatomicalSystem
+	 * Expected Type: AnatomicalStructure, AnatomicalSystem
 	 * 
 	 * @var	array
 	 */

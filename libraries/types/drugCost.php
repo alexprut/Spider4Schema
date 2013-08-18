@@ -69,7 +69,7 @@ abstract class TypeDrugCost extends TypeMedicalIntangible
 
 	/**
 	 * The cost per unit of the drug.
-	 * Expected Type: Number', 'Text
+	 * Expected Type: Number, Text
 	 * 
 	 * @var	array
 	 */

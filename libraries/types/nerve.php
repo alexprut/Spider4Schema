@@ -29,7 +29,7 @@ abstract class TypeNerve extends TypeAnatomicalStructure
 
 	/**
 	 * The branches that delineate from the nerve bundle.
-	 * Expected Type: AnatomicalStructure', 'Nerve
+	 * Expected Type: AnatomicalStructure, Nerve
 	 * 
 	 * @var	array
 	 */
@@ -49,7 +49,7 @@ abstract class TypeNerve extends TypeAnatomicalStructure
 
 	/**
 	 * The neurological pathway extension that inputs and sends information to the brain or spinal cord.
-	 * Expected Type: AnatomicalStructure', 'SuperficialAnatomy
+	 * Expected Type: AnatomicalStructure, SuperficialAnatomy
 	 * 
 	 * @var	array
 	 */

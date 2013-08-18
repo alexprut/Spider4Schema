@@ -29,7 +29,7 @@ abstract class TypeBrand extends TypeIntangible
 
 	/**
 	 * URL of an image for the logo of the item.
-	 * Expected Type: ImageObject', 'URL
+	 * Expected Type: ImageObject, URL
 	 * 
 	 * @var	array
 	 */

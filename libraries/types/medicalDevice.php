@@ -88,13 +88,13 @@ abstract class TypeMedicalDevice extends TypeMedicalEntity
 	);
 
 	/**
-	 * The purpose or purposes of this device, for example whether it is intended for diagnostic or therapeutic use.
-	 * Expected Type: MedicalDevicePurpose
+	 * A goal towards an action is taken. Can be concrete or abstract.
+	 * Expected Type: MedicalDevicePurpose, Thing
 	 * 
 	 * @var	array
 	 */
 	protected static $purpose = array('value' => 'purpose',
-		'expectedTypes' => array('MedicalDevicePurpose')
+		'expectedTypes' => array('MedicalDevicePurpose', 'Thing')
 	);
 
 	/**

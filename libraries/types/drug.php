@@ -279,7 +279,7 @@ abstract class TypeDrug extends TypeMedicalTherapy
 
 	/**
 	 * Any FDA or other warnings about the drug (text or URL).
-	 * Expected Type: Text', 'URL
+	 * Expected Type: Text, URL
 	 * 
 	 * @var	array
 	 */

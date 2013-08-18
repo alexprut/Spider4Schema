@@ -29,7 +29,7 @@ abstract class TypeMedicalCondition extends TypeMedicalEntity
 
 	/**
 	 * The anatomy of the underlying organ system or structures associated with this entity.
-	 * Expected Type: AnatomicalStructure', 'AnatomicalSystem', 'SuperficialAnatomy
+	 * Expected Type: AnatomicalStructure, AnatomicalSystem, SuperficialAnatomy
 	 * 
 	 * @var	array
 	 */

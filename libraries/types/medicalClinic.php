@@ -29,7 +29,7 @@ abstract class TypeMedicalClinic extends TypeMedicalOrganization
 
 	/**
 	 * A medical service available from this provider.
-	 * Expected Type: MedicalProcedure', 'MedicalTest', 'MedicalTherapy
+	 * Expected Type: MedicalProcedure, MedicalTest, MedicalTherapy
 	 * 
 	 * @var	array
 	 */

@@ -49,7 +49,7 @@ abstract class TypeGeoShape extends TypeStructuredValue
 
 	/**
 	 * The elevation of a location.
-	 * Expected Type: Number', 'Text
+	 * Expected Type: Number, Text
 	 * 
 	 * @var	array
 	 */

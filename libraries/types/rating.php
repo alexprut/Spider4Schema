@@ -29,7 +29,7 @@ abstract class TypeRating extends TypeIntangible
 
 	/**
 	 * The highest value allowed in this rating system. If bestRating is omitted, 5 is assumed.
-	 * Expected Type: Number', 'Text
+	 * Expected Type: Number, Text
 	 * 
 	 * @var	array
 	 */
@@ -49,7 +49,7 @@ abstract class TypeRating extends TypeIntangible
 
 	/**
 	 * The lowest value allowed in this rating system. If worstRating is omitted, 1 is assumed.
-	 * Expected Type: Number', 'Text
+	 * Expected Type: Number, Text
 	 * 
 	 * @var	array
 	 */
