@@ -185,7 +185,7 @@ class MicrodataTest extends PHPUnit_Framework_TestCase
 			->enable(false)
 			->display();
 
-		$this->assertEquals($responce, '');
+		$this->assertEquals($responce, $content);
 	}
 
 	/**
