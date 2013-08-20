@@ -62,7 +62,7 @@ if (CREATE_LIBRARY === 'normal')
 		if (DEBUG)
 			echo "\nCreating Types class: \n";
 
-		createTypeClass($typeName, $type, dirname(__FILE__) . '/libraries/types');
+		createTypeClass($typeName, $type, dirname(__FILE__) . '/libraries/type');
 
 		// Wait some time, to not DDOS the Schema.org website
 		sleep(rand(0, 1));

@@ -90,6 +90,7 @@ function createAllTypesClass($types, $path)
  */
 function createTypeClass($typeName, $type, $path)
 {
+	// FIXME Add getName(), scope() and other default functions to Thing and Date Type
 	// Create the new file
 	$fileName = lcfirst($typeName) . '.php';
 	$handle = fopen($path . '/' . $fileName, 'w');
@@ -134,21 +135,10 @@ function createTypeClass($typeName, $type, $path)
 	// The final class code
 	$code = "<?php\n"
 		. "/**\n"
-		. " * @package     Joomla.Platform\n"
-		. " * @subpackage  Microdata\n"
-		. " *\n"
-		. " * @copyright   Copyright (C) 2005 - 2013 Open Source Matters, Inc. All rights reserved.\n"
-		. " * @license     GNU General Public License version 2 or later; see LICENSE\n"
-		. " */\n\n"
-		. "defined(\"JPATH_PLATFORM\") or die;\n\n"
-		. "/**\n"
 		. " * " . $type['comment'] . "\n"
 		. " *\n"
-		. " * @package     Joomla.Platform\n"
-		. " * @subpackage  Microdata\n"
-		. " *\n"
-		. " * @see         http://schema.org/" . ucfirst($typeName) . "\n"
-		. " * @since       13.1\n"
+		. " * @see    http://schema.org/" . ucfirst($typeName) . "\n"
+		. " * @since  1.0\n"
 		. "*/\n"
 		. "abstract class " . ucfirst(CLASS_PREFIX) . ucfirst($typeName) . $extends . "\n"
 		. "{\n"

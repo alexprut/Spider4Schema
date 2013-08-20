@@ -58,6 +58,535 @@ class Types
 				'url' => array('URL')
 			)
 		),
+		'Action' => array(
+			'extends' => 'Thing',
+			'properties' => array(
+				'agent' => array('Organization', 'Person'),
+				'endTime' => array('DateTime'),
+				'instrument' => array('Thing'),
+				'location' => array('Place', 'PostalAddress'),
+				'object' => array('Thing'),
+				'participant' => array('Organization', 'Person'),
+				'result' => array('Thing'),
+				'startTime' => array('DateTime')
+			)
+		),
+		'AchieveAction' => array(
+			'extends' => 'Action',
+			'properties' => array()
+		),
+		'LoseAction' => array(
+			'extends' => 'AchieveAction',
+			'properties' => array(
+				'winner' => array('Person')
+			)
+		),
+		'TieAction' => array(
+			'extends' => 'AchieveAction',
+			'properties' => array()
+		),
+		'WinAction' => array(
+			'extends' => 'AchieveAction',
+			'properties' => array(
+				'loser' => array('Person')
+			)
+		),
+		'AssessAction' => array(
+			'extends' => 'Action',
+			'properties' => array()
+		),
+		'ChooseAction' => array(
+			'extends' => 'AssessAction',
+			'properties' => array(
+				'option' => array('Text', 'Thing')
+			)
+		),
+		'VoteAction' => array(
+			'extends' => 'ChooseAction',
+			'properties' => array(
+				'candidate' => array('Person')
+			)
+		),
+		'IgnoreAction' => array(
+			'extends' => 'AssessAction',
+			'properties' => array()
+		),
+		'ReactAction' => array(
+			'extends' => 'AssessAction',
+			'properties' => array()
+		),
+		'AgreeAction' => array(
+			'extends' => 'ReactAction',
+			'properties' => array()
+		),
+		'DisagreeAction' => array(
+			'extends' => 'ReactAction',
+			'properties' => array()
+		),
+		'DislikeAction' => array(
+			'extends' => 'ReactAction',
+			'properties' => array()
+		),
+		'EndorseAction' => array(
+			'extends' => 'ReactAction',
+			'properties' => array(
+				'endorsee' => array('Organization', 'Person')
+			)
+		),
+		'LikeAction' => array(
+			'extends' => 'ReactAction',
+			'properties' => array()
+		),
+		'WantAction' => array(
+			'extends' => 'ReactAction',
+			'properties' => array()
+		),
+		'ReviewAction' => array(
+			'extends' => 'AssessAction',
+			'properties' => array(
+				'resultReview' => array('Review')
+			)
+		),
+		'ConsumeAction' => array(
+			'extends' => 'Action',
+			'properties' => array()
+		),
+		'DrinkAction' => array(
+			'extends' => 'ConsumeAction',
+			'properties' => array()
+		),
+		'EatAction' => array(
+			'extends' => 'ConsumeAction',
+			'properties' => array()
+		),
+		'InstallAction' => array(
+			'extends' => 'ConsumeAction',
+			'properties' => array()
+		),
+		'ListenAction' => array(
+			'extends' => 'ConsumeAction',
+			'properties' => array()
+		),
+		'ReadAction' => array(
+			'extends' => 'ConsumeAction',
+			'properties' => array()
+		),
+		'UseAction' => array(
+			'extends' => 'ConsumeAction',
+			'properties' => array()
+		),
+		'WearAction' => array(
+			'extends' => 'UseAction',
+			'properties' => array()
+		),
+		'ViewAction' => array(
+			'extends' => 'ConsumeAction',
+			'properties' => array()
+		),
+		'WatchAction' => array(
+			'extends' => 'ConsumeAction',
+			'properties' => array()
+		),
+		'CreateAction' => array(
+			'extends' => 'Action',
+			'properties' => array()
+		),
+		'CookAction' => array(
+			'extends' => 'CreateAction',
+			'properties' => array(
+				'foodEstablishment' => array('FoodEstablishment', 'Place'),
+				'foodEvent' => array('FoodEvent'),
+				'recipe' => array('Recipe')
+			)
+		),
+		'DrawAction' => array(
+			'extends' => 'CreateAction',
+			'properties' => array()
+		),
+		'FilmAction' => array(
+			'extends' => 'CreateAction',
+			'properties' => array()
+		),
+		'PaintAction' => array(
+			'extends' => 'CreateAction',
+			'properties' => array()
+		),
+		'PhotographAction' => array(
+			'extends' => 'CreateAction',
+			'properties' => array()
+		),
+		'WriteAction' => array(
+			'extends' => 'CreateAction',
+			'properties' => array(
+				'language' => array('Language')
+			)
+		),
+		'FindAction' => array(
+			'extends' => 'Action',
+			'properties' => array()
+		),
+		'CheckAction' => array(
+			'extends' => 'FindAction',
+			'properties' => array()
+		),
+		'DiscoverAction' => array(
+			'extends' => 'FindAction',
+			'properties' => array()
+		),
+		'TrackAction' => array(
+			'extends' => 'FindAction',
+			'properties' => array(
+				'deliveryMethod' => array('DeliveryMethod')
+			)
+		),
+		'InteractAction' => array(
+			'extends' => 'Action',
+			'properties' => array()
+		),
+		'BefriendAction' => array(
+			'extends' => 'InteractAction',
+			'properties' => array()
+		),
+		'CommunicateAction' => array(
+			'extends' => 'InteractAction',
+			'properties' => array(
+				'about' => array('Thing'),
+				'language' => array('Language'),
+				'recipient' => array('Audience', 'Organization', 'Person')
+			)
+		),
+		'AskAction' => array(
+			'extends' => 'CommunicateAction',
+			'properties' => array(
+				'question' => array('Text')
+			)
+		),
+		'CheckInAction' => array(
+			'extends' => 'CommunicateAction',
+			'properties' => array()
+		),
+		'CheckOutAction' => array(
+			'extends' => 'CommunicateAction',
+			'properties' => array()
+		),
+		'CommentAction' => array(
+			'extends' => 'CommunicateAction',
+			'properties' => array()
+		),
+		'InformAction' => array(
+			'extends' => 'CommunicateAction',
+			'properties' => array(
+				'event' => array('Event')
+			)
+		),
+		'ConfirmAction' => array(
+			'extends' => 'InformAction',
+			'properties' => array()
+		),
+		'RsvpAction' => array(
+			'extends' => 'InformAction',
+			'properties' => array()
+		),
+		'InviteAction' => array(
+			'extends' => 'CommunicateAction',
+			'properties' => array(
+				'event' => array('Event')
+			)
+		),
+		'ReplyAction' => array(
+			'extends' => 'CommunicateAction',
+			'properties' => array()
+		),
+		'ShareAction' => array(
+			'extends' => 'CommunicateAction',
+			'properties' => array()
+		),
+		'FollowAction' => array(
+			'extends' => 'InteractAction',
+			'properties' => array(
+				'followee' => array('Organization', 'Person')
+			)
+		),
+		'JoinAction' => array(
+			'extends' => 'InteractAction',
+			'properties' => array(
+				'event' => array('Event')
+			)
+		),
+		'LeaveAction' => array(
+			'extends' => 'InteractAction',
+			'properties' => array(
+				'event' => array('Event')
+			)
+		),
+		'MarryAction' => array(
+			'extends' => 'InteractAction',
+			'properties' => array()
+		),
+		'RegisterAction' => array(
+			'extends' => 'InteractAction',
+			'properties' => array()
+		),
+		'SubscribeAction' => array(
+			'extends' => 'InteractAction',
+			'properties' => array()
+		),
+		'UnRegisterAction' => array(
+			'extends' => 'InteractAction',
+			'properties' => array()
+		),
+		'MoveAction' => array(
+			'extends' => 'Action',
+			'properties' => array(
+				'fromLocation' => array('Number', 'Place'),
+				'toLocation' => array('Number', 'Place')
+			)
+		),
+		'ArriveAction' => array(
+			'extends' => 'MoveAction',
+			'properties' => array()
+		),
+		'DepartAction' => array(
+			'extends' => 'MoveAction',
+			'properties' => array()
+		),
+		'TravelAction' => array(
+			'extends' => 'MoveAction',
+			'properties' => array(
+				'distance' => array('Distance')
+			)
+		),
+		'OrganizeAction' => array(
+			'extends' => 'Action',
+			'properties' => array()
+		),
+		'AllocateAction' => array(
+			'extends' => 'OrganizeAction',
+			'properties' => array(
+				'purpose' => array('MedicalDevicePurpose', 'Thing')
+			)
+		),
+		'AcceptAction' => array(
+			'extends' => 'AllocateAction',
+			'properties' => array()
+		),
+		'AssignAction' => array(
+			'extends' => 'AllocateAction',
+			'properties' => array()
+		),
+		'AuthorizeAction' => array(
+			'extends' => 'AllocateAction',
+			'properties' => array(
+				'recipient' => array('Audience', 'Organization', 'Person')
+			)
+		),
+		'RejectAction' => array(
+			'extends' => 'AllocateAction',
+			'properties' => array()
+		),
+		'ApplyAction' => array(
+			'extends' => 'OrganizeAction',
+			'properties' => array()
+		),
+		'BookmarkAction' => array(
+			'extends' => 'OrganizeAction',
+			'properties' => array()
+		),
+		'PlanAction' => array(
+			'extends' => 'OrganizeAction',
+			'properties' => array(
+				'scheduledTime' => array('DateTime')
+			)
+		),
+		'CancelAction' => array(
+			'extends' => 'PlanAction',
+			'properties' => array()
+		),
+		'ReserveAction' => array(
+			'extends' => 'PlanAction',
+			'properties' => array()
+		),
+		'ScheduleAction' => array(
+			'extends' => 'PlanAction',
+			'properties' => array()
+		),
+		'PlayAction' => array(
+			'extends' => 'Action',
+			'properties' => array(
+				'audience' => array('Audience'),
+				'event' => array('Event')
+			)
+		),
+		'ExerciseAction' => array(
+			'extends' => 'PlayAction',
+			'properties' => array(
+				'course' => array('Place'),
+				'diet' => array('Diet'),
+				'distance' => array('Distance'),
+				'exercisePlan' => array('ExercisePlan'),
+				'exerciseType' => array('Text'),
+				'fromLocation' => array('Number', 'Place'),
+				'oponent' => array('Person'),
+				'sportsActivityLocation' => array('SportsActivityLocation'),
+				'sportsEvent' => array('SportsEvent'),
+				'sportsTeam' => array('SportsTeam'),
+				'toLocation' => array('Number', 'Place')
+			)
+		),
+		'PerformAction' => array(
+			'extends' => 'PlayAction',
+			'properties' => array(
+				'entertainmentBusiness' => array('EntertainmentBusiness')
+			)
+		),
+		'SearchAction' => array(
+			'extends' => 'Action',
+			'properties' => array(
+				'query' => array('Class', 'Text')
+			)
+		),
+		'TradeAction' => array(
+			'extends' => 'Action',
+			'properties' => array(
+				'price' => array('Number', 'Text')
+			)
+		),
+		'BuyAction' => array(
+			'extends' => 'TradeAction',
+			'properties' => array(
+				'vendor' => array('Organization', 'Person'),
+				'warrantyPromise' => array('WarrantyPromise')
+			)
+		),
+		'DonateAction' => array(
+			'extends' => 'TradeAction',
+			'properties' => array(
+				'recipient' => array('Audience', 'Organization', 'Person')
+			)
+		),
+		'OrderAction' => array(
+			'extends' => 'TradeAction',
+			'properties' => array()
+		),
+		'PayAction' => array(
+			'extends' => 'TradeAction',
+			'properties' => array(
+				'purpose' => array('MedicalDevicePurpose', 'Thing'),
+				'recipient' => array('Audience', 'Organization', 'Person')
+			)
+		),
+		'QuoteAction' => array(
+			'extends' => 'TradeAction',
+			'properties' => array()
+		),
+		'RentAction' => array(
+			'extends' => 'TradeAction',
+			'properties' => array(
+				'landlord' => array('Organization', 'Person'),
+				'realEstateAgent' => array('RealEstateAgent')
+			)
+		),
+		'SellAction' => array(
+			'extends' => 'TradeAction',
+			'properties' => array(
+				'buyer' => array('Person'),
+				'warrantyPromise' => array('WarrantyPromise')
+			)
+		),
+		'TipAction' => array(
+			'extends' => 'TradeAction',
+			'properties' => array(
+				'recipient' => array('Audience', 'Organization', 'Person')
+			)
+		),
+		'TransferAction' => array(
+			'extends' => 'Action',
+			'properties' => array(
+				'fromLocation' => array('Number', 'Place'),
+				'toLocation' => array('Number', 'Place')
+			)
+		),
+		'BorrowAction' => array(
+			'extends' => 'TransferAction',
+			'properties' => array(
+				'lender' => array('Person')
+			)
+		),
+		'DownloadAction' => array(
+			'extends' => 'TransferAction',
+			'properties' => array()
+		),
+		'GiveAction' => array(
+			'extends' => 'TransferAction',
+			'properties' => array(
+				'recipient' => array('Audience', 'Organization', 'Person')
+			)
+		),
+		'LendAction' => array(
+			'extends' => 'TransferAction',
+			'properties' => array(
+				'borrower' => array('Person')
+			)
+		),
+		'ReceiveAction' => array(
+			'extends' => 'TransferAction',
+			'properties' => array(
+				'deliveryMethod' => array('DeliveryMethod'),
+				'sender' => array('Audience', 'Organization', 'Person')
+			)
+		),
+		'ReturnAction' => array(
+			'extends' => 'TransferAction',
+			'properties' => array(
+				'recipient' => array('Audience', 'Organization', 'Person')
+			)
+		),
+		'SendAction' => array(
+			'extends' => 'TransferAction',
+			'properties' => array(
+				'deliveryMethod' => array('DeliveryMethod'),
+				'recipient' => array('Audience', 'Organization', 'Person')
+			)
+		),
+		'TakeAction' => array(
+			'extends' => 'TransferAction',
+			'properties' => array()
+		),
+		'UpdateAction' => array(
+			'extends' => 'Action',
+			'properties' => array(
+				'collection' => array('Thing')
+			)
+		),
+		'AddAction' => array(
+			'extends' => 'UpdateAction',
+			'properties' => array()
+		),
+		'InsertAction' => array(
+			'extends' => 'AddAction',
+			'properties' => array(
+				'toLocation' => array('Number', 'Place')
+			)
+		),
+		'AppendAction' => array(
+			'extends' => 'InsertAction',
+			'properties' => array()
+		),
+		'PrependAction' => array(
+			'extends' => 'InsertAction',
+			'properties' => array()
+		),
+		'DeleteAction' => array(
+			'extends' => 'UpdateAction',
+			'properties' => array()
+		),
+		'ReplaceAction' => array(
+			'extends' => 'UpdateAction',
+			'properties' => array(
+				'replacee' => array('Thing'),
+				'replacer' => array('Thing')
+			)
+		),
 		'Class' => array(
 			'extends' => 'Thing',
 			'properties' => array()
@@ -1217,7 +1746,7 @@ class Types
 				'postOp' => array('Text'),
 				'preOp' => array('Text'),
 				'procedure' => array('Text'),
-				'purpose' => array('MedicalDevicePurpose'),
+				'purpose' => array('MedicalDevicePurpose', 'Thing'),
 				'seriousAdverseOutcome' => array('MedicalEntity')
 			)
 		),
