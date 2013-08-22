@@ -1,5 +1,6 @@
 # Spider4Schema
-A Web Bot using the cURL library that crawls the Schema.org web site and creates the PHP files for a Microdata PHP library. Created during the Google Summer of Code 2013 for my Joomla! project  
+A Web Bot that crawls the http://Schema.org web site to retrieve all available Types and Properties in order to create some PHP microdata libraries.  
+Created during the Google Summer of Code 2013 for my Joomla! project  
   
 # Documentation
   
@@ -19,13 +20,17 @@ A Web Bot using the cURL library that crawls the Schema.org web site and creates
 The libraries will be created in ```libraries``` folder  
   
 ##### Library Types
-There are 2 types of Microdata library you can create:
+There are 3 types of Microdata library you can create:
+* JSON → a .json file containing all Types and Properties
 * Minified → an array with all Types and Properties
 * Normal → each Type is file (an abstract class with static Properties)
   
 ##### Performance
+The __json__ library:  
+1 file, 70.2 KB, all Types and Properties are in JSON
+  
 The __minified__ library:  
-1 file, 71.7 KB, 2600 lines of code, the Types and Properties are in a hash table (array)  
+1 file, 84.5 KB, 2600 lines of code, the Types and Properties are in a hash table (array)  
   
 The __normal__ abstract static library:   
-428 files, 612.2 KB, 7.439 lines of code without comments and documentation, ~ 26.000 lines of code with comments and documentation     
+531 files, 541.5 KB, 8011 lines of code without comments and documentation, ~ 26.000 lines of code with comments and documentation     
