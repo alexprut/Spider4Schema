@@ -8,27 +8,27 @@
  *
  * @since  1.0
  */
-class Microdata
+class MicrodataJSON
 {
 	/**
+	 * Array with all available Types and Properties
+	 *
+	 * @var     array
+	 * @since   1.0
+	 */
+	protected static $types = null;
+
+	/**
 	 * The Schema.org Type
-	 * 
+	 *
 	 * @var		string
 	 * @since	1.0
 	 */
 	protected $type;
 
 	/**
-	 * The Type classes name prefix
-	 *
-	 * @var		string
-	 * @since	1.0
-	 */
-	protected $typePrefix = 'Type';
-
-	/**
 	 * The Property
-	 * 
+	 *
 	 * @var		string
 	 * @since	1.0
 	 */
@@ -36,7 +36,7 @@ class Microdata
 
 	/**
 	 * The Human value or Machine value
-	 * 
+	 *
 	 * @var		string
 	 * @since	1.0
 	 */
@@ -68,7 +68,7 @@ class Microdata
 
 	/**
 	 * Used to check if the Microdata semantics output are enabled or disabled
-	 * 
+	 *
 	 * @var 	boolean
 	 * @since	1.0
 	 */
@@ -76,15 +76,22 @@ class Microdata
 
 	/**
 	 * Initialize the class and setup the default Type
-	 * 
+	 *
 	 * @param   string  $type  Optional, Fallback to Thing Type
 	 */
 	public function __construct($type = '')
 	{
+		// Load the JSON file
+		if (!self::$types)
+		{
+			// TODO cache somewhere
+			self::$types = json_decode(file_get_contents("libraries/types.json"), true);
+		}
+
 		// Fallback to Thing Type
 		if (!$type)
 		{
-			$type = TypeThing::name();
+			$type = 'Thing';
 		}
 
 		$this->setType($type);
@@ -92,9 +99,9 @@ class Microdata
 
 	/**
 	 * Enable or Disable Microdata semantics output
-	 * 
+	 *
 	 * @param   boolean  $flag  Enable or disable
-	 * 
+	 *
 	 * @return	object
 	 */
 	public function enable($flag = true)
@@ -106,20 +113,20 @@ class Microdata
 
 	/**
 	 * Set a new Schema.org Type
-	 * 
+	 *
 	 * @param   string  $type  The Type to be setup
-	 * 
+	 *
 	 * @return	object
 	 */
 	public function setType($type)
 	{
 		// Sanitize the Type
-		$this->type = $this->sanitizeType($type);
+		$this->type = self::sanitizeType($type);
 
 		// If the given Type isn't available, fallback to Thing
-		if ( !$this->isTypeAvailable($this->type) )
+		if ( !self::isTypeAvailable($this->type) )
 		{
-			$this->type	= TypeThing::name();
+			$this->type	= 'Thing';
 		}
 
 		return $this;
@@ -137,18 +144,18 @@ class Microdata
 
 	/**
 	 * Setup a Property
-	 * 
+	 *
 	 * @param   string  $property  The Property
-	 * 
+	 *
 	 * @return	object
 	 */
 	public function property($property)
 	{
 		// Sanitize the Property
-		$property = $this->sanitizeProperty($property);
+		$property = self::sanitizeProperty($property);
 
 		// Control if the Property exist in the given Type and setup it, if not leave NULL
-		if ( $this->isPropertyInType($this->type, $property) )
+		if ( self::isPropertyInType($this->type, $property) )
 		{
 			$this->property = $property;
 		}
@@ -162,7 +169,7 @@ class Microdata
 
 	/**
 	 * Return the property variable
-	 * 
+	 *
 	 * @return	string
 	 */
 	public function getProperty()
@@ -172,9 +179,9 @@ class Microdata
 
 	/**
 	 * Setup a Text value or Content value for the Microdata
-	 * 
+	 *
 	 * @param   string  $value  The human value or marchine value to be used
-	 * 
+	 *
 	 * @return	object
 	 */
 	public function content($value)
@@ -186,7 +193,7 @@ class Microdata
 
 	/**
 	 * Return the content variable
-	 * 
+	 *
 	 * @return	string
 	 */
 	public function getContent()
@@ -199,22 +206,22 @@ class Microdata
 	 *
 	 * @param   string  $type      The Fallback Type
 	 * @param   string  $property  The Fallback Property
-	 * 
+	 *
 	 * @return	object
 	 */
 	public function fallback($type, $property)
 	{
 		// Sanitize the Type
-		$this->fallbackType = $this->sanitizeType($type);
+		$this->fallbackType = self::sanitizeType($type);
 
 		// If the given Type isn't available, fallback to Thing
-		if (!$this->isTypeAvailable($this->fallbackType))
+		if (!self::isTypeAvailable($this->fallbackType))
 		{
-			$this->fallbackType = TypeThing::name();
+			$this->fallbackType = 'Thing';
 		}
 
 		// Control if the Property exist in the given Type and setup it, if not leave NULL
-		if ($this->isPropertyInType($this->fallbackType, $property))
+		if (self::isPropertyInType($this->fallbackType, $property))
 		{
 			$this->fallbackProperty = $property;
 		}
@@ -228,7 +235,7 @@ class Microdata
 
 	/**
 	 * Return the fallbackType variable
-	 * 
+	 *
 	 * @return	string
 	 */
 	public function getFallbackType()
@@ -238,7 +245,7 @@ class Microdata
 
 	/**
 	 * Return the fallbackProperty variable
-	 * 
+	 *
 	 * @return	string
 	 */
 	public function getFallbackProperty()
@@ -250,17 +257,14 @@ class Microdata
 	 * This function handle the logic of a Microdata intelligent display.
 	 * Check if the Type, Property are available, if not check for a Fallback,
 	 * then reset all params for the next use and
-	 * return the Microdata HTML 
-	 * 
+	 * return the Microdata HTML
+	 *
 	 * @param   string  $displayType  Optional, 'inline', available ['inline'|'span'|'div'|meta]
-	 * 
+	 *
 	 * @return	string
 	 */
 	public function display($displayType = '')
 	{
-		// Setup the type
-		$type = $this->typePrefix . $this->type;
-
 		// Initialize the HTML to output
 		$html = $this->content;
 
@@ -300,13 +304,13 @@ class Microdata
 			{
 				/* Process and return the HTML in an automatic way,
 				 * with the Property expected Types an display the Microdata in the right way,
-				 * check if the Property is nested or must be rendered in a metadata tag */
-				switch (self::getExpectedDisplayType($type, $this->property))
+				* check if the Property is normal, nested or must be rendered in a metadata tag */
+				switch (self::getExpectedDisplayType($this->type, $this->property))
 				{
 					case 'nested':
 						// Retrive the expected nested Type of the Property
-						$nestedType = $type::getExpectedTypes($this->property);
-						$nestedType = $this->typePrefix . $nestedType[0];
+						$nestedType = self::getExpectedTypes($this->type, $this->property);
+						$nestedType = $nestedType[0];
 
 						/* Check if a Content is available,
 						 * otherwise Fallback to an 'inline' display type */
@@ -315,14 +319,14 @@ class Microdata
 							$html = self::htmlSpan(
 								$this->content,
 								$this->property,
-								$nestedType::scope(),
+								$nestedType,
 								true
 							);
 						}
 						else
 						{
 							$html = self::htmlProperty($this->property)
-								. " " . self::htmlScope($nestedType::scope());
+							. " " . self::htmlScope($nestedType);
 						}
 						break;
 
@@ -357,30 +361,27 @@ class Microdata
 		}
 		elseif ($this->fallbackProperty)
 		{
-			// Setup the type
-			$type = $this->typePrefix . $this->fallbackType;
-
 			// Process and return the HTML the way the user expects to
 			if ($displayType)
 			{
 				switch ($displayType)
 				{
 					case 'span':
-						$html = self::htmlSpan($this->content, $this->fallbackProperty, $type::scope());
+						$html = self::htmlSpan($this->content, $this->fallbackProperty, $this->fallbackType);
 						break;
 
 					case 'div':
-						$html = self::htmlDiv($this->content, $this->fallbackProperty, $type::scope());
+						$html = self::htmlDiv($this->content, $this->fallbackProperty, $this->fallbackType);
 						break;
 
 					case 'meta':
-						$html = self::htmlMeta($this->content, $this->fallbackProperty, $type::scope());
+						$html = self::htmlMeta($this->content, $this->fallbackProperty, $this->fallbackType);
 						break;
 
 					default:
 						// Default $displayType = 'inline'
 						$html = self::htmlScope($type::scope())
-							. ' ' . self::htmlProperty($this->fallbackProperty);
+						. ' ' . self::htmlProperty($this->fallbackProperty);
 						break;
 				}
 			}
@@ -388,20 +389,20 @@ class Microdata
 			{
 				/* Process and return the HTML in an automatic way,
 				 * with the Property expected Types an display the Microdata in the right way,
-				 * check if the Property is nested or must be rendered in a metadata tag */
-				switch (self::getExpectedDisplayType($type, $this->fallbackProperty))
+				* check if the Property is nested or must be rendered in a metadata tag */
+				switch (self::getExpectedDisplayType($this->fallbackType, $this->fallbackProperty))
 				{
 					case 'meta':
 						/* Check if the Content value is available,
 						 * otherwise Fallback to an 'inline' display Type */
 						if ($this->content)
 						{
-							$html = self::htmlMeta($this->content, $this->fallbackProperty, $type::scope());
+							$html = self::htmlMeta($this->content, $this->fallbackProperty, $this->fallbackType);
 						}
 						else
 						{
-							$html = self::htmlScope($type::scope())
-								. ' ' . self::htmlProperty($this->fallbackProperty);
+							$html = self::htmlScope($this->fallbackType)
+							. ' ' . self::htmlProperty($this->fallbackProperty);
 						}
 						break;
 
@@ -411,12 +412,12 @@ class Microdata
 						 * otherwise Fallback to an 'inline' display Type */
 						if ($this->content)
 						{
-							$html = self::htmlSpan($this->content, $this->fallbackProperty, $type::scope());
+							$html = self::htmlSpan($this->content, $this->fallbackProperty, $this->fallbackType);
 						}
 						else
 						{
-							$html = self::htmlScope($type::scope())
-								. ' ' . self::htmlProperty($this->fallbackProperty);
+							$html = self::htmlScope($this->fallbackType)
+							. ' ' . self::htmlProperty($this->fallbackProperty);
 						}
 						break;
 				}
@@ -440,15 +441,13 @@ class Microdata
 	 */
 	public function displayScope()
 	{
-		$type = $this->typePrefix . $this->type;
-
 		// Control if the Microdata output is enabled, otherwise return the content or empty string
 		if (!$this->enabled)
 		{
 			return '';
 		}
 
-		return self::htmlScope($type::scope());
+		return self::htmlScope($this->type);
 	}
 
 	/**
@@ -458,7 +457,7 @@ class Microdata
 	 *
 	 * @return	string
 	 */
-	public function sanitizeType($type)
+	public static function sanitizeType($type)
 	{
 		return ucfirst(trim($type));
 	}
@@ -470,32 +469,49 @@ class Microdata
 	 *
 	 * @return	string
 	 */
-	public function sanitizeProperty($property)
+	public static function sanitizeProperty($property)
 	{
 		return lcfirst(trim($property));
 	}
 
 	/**
 	 * Return an array with all available Types
-	 * 
+	 *
 	 * @return	array
 	 */
 	public static function getTypes()
 	{
-		// Get all available Types
-		$tmpTypes = scandir(__DIR__ . '/type');
-		$types = array();
+		return array_keys(self::$types);
+	}
 
-		foreach ($tmpTypes as $type)
+	/**
+	 * Return the expected types of the Property
+	 *
+	 * @param   string  $type      The Type to process
+	 * @param   string  $property  The Property to process
+	 *
+	 * @return  array
+	 */
+	public static function getExpectedTypes($type, $property)
+	{
+		$tmp = self::$types[$type]['properties'];
+
+		// Check if the Property is in the Type
+		if (isset($tmp[$property]))
 		{
-			if (strpos($type, '.php'))
-			{
-				$type = substr($type, 0, strpos($type, '.php'));
-				array_push($types, ucfirst($type));
-			}
+			return $tmp[$property]['expectedTypes'];
 		}
 
-		return $types;
+		// Check if the Property is inherit
+		$extendedType = self::$types[$type]['extends'];
+
+		// Recursive
+		if (!empty($extendedType))
+		{
+			return self::getExpectedTypes($extendedType, $property);
+		}
+
+		return array();
 	}
 
 	/**
@@ -510,16 +526,10 @@ class Microdata
 	 *
 	 * @return  string
 	 */
-	protected function getExpectedDisplayType($type, $property)
+	protected static function getExpectedDisplayType($type, $property)
 	{
-		// Sanitize the given Type
-		if (strpos($type, $this->typePrefix) === false)
-		{
-			$type = $this->typePrefix . $type;
-		}
-
 		// FIXME If the user want to use one of the expected Types, not the first Type found
-		$expectedTypes = $type::getExpectedTypes($property);
+		$expectedTypes = self::getExpectedTypes($type, $property);
 
 		// Retrieve the first expected type
 		$type = $expectedTypes[0];
@@ -541,49 +551,47 @@ class Microdata
 	}
 
 	/**
-	 * Control if the given Type has the given Property
-	 * 
+	 * Recursive function, control if the given Type has the given Property
+	 *
 	 * @param   string  $type      The Type where to check
 	 * @param   string  $property  The Property to check
-	 * 
+	 *
 	 * @return	boolean
 	 */
-	public function isPropertyInType($type, $property)
+	public static function isPropertyInType($type, $property)
 	{
-		if (!$this->isTypeAvailable($type))
+		if (!self::isTypeAvailable($type))
 		{
 			return false;
 		}
 
-		// Sanitize the Type for the function use
-		if (stripos($type, $this->typePrefix) !== 0)
+		// Control if the Property exists, and return true
+		if (array_key_exists($property, self::$types[$type]['properties']))
 		{
-			$type = $this->typePrefix . $type;
+			return true;
 		}
 
-		// Control if the Property exists
-		return ( in_array($property, $type::getProperties()) ) ? true : false;
+		// Recursive: Check if the Property is inherit
+		$extendedType = self::$types[$type]['extends'];
+
+		if (!empty($extendedType))
+		{
+			return self::isPropertyInType($extendedType, $property);
+		}
+
+		return false;
 	}
 
 	/**
 	 * Control if the given Type class is available
-	 * 
+	 *
 	 * @param   string  $type  The Type to check
-	 * 
+	 *
 	 * @return	boolean
 	 */
-	public function isTypeAvailable($type)
+	public static function isTypeAvailable($type)
 	{
-		// Sanitize the Type for the function use
-		if (stripos($type, $this->typePrefix) === 0)
-		{
-			$type = substr($type, strlen($this->typePrefix));
-		}
-
-		// Get all files from the current directory and see if the Type file is available
-		$dir = scandir(__DIR__ . '/type');
-
-		return ( in_array(lcfirst($type) . '.php', $dir) ) ? true : false;
+		return ( array_key_exists($type, self::$types) ) ? true : false;
 	}
 
 	/**
@@ -633,7 +641,7 @@ class Microdata
 	 * @param   string   $property  Optional, the human value to display
 	 * @param   string   $scope     Optional, the Type scope to display
 	 * @param   boolean  $inverse   Optional, default = false, inverse the $scope with the $property
-	 * 
+	 *
 	 * @return	string
 	 *
 	 * @since	1.0
@@ -674,7 +682,7 @@ class Microdata
 	 * @param   string   $property  Optional, the human value to display
 	 * @param   string   $scope     Optional, the Type scope to display
 	 * @param   boolean  $inverse   Optional, default = false, inverse the $scope with the $property
-	 * 
+	 *
 	 * @return	string
 	 *
 	 * @since	1.0
@@ -726,12 +734,12 @@ class Microdata
 	}
 
 	/**
-	* Return the HTML Property
-	*
-	* @param   string  $property  The Property to process
-	*
-	* @return  string
-	*/
+	 * Return the HTML Property
+	 *
+	 * @param   string  $property  The Property to process
+	 *
+	 * @return  string
+	 */
 	public static function htmlProperty($property)
 	{
 		return "itemprop='$property'";

@@ -1,61 +1,59 @@
 <?php
 /**
- * 
+ *
  */
 
-include_once 'libraries/microdata.php';
-include_once 'libraries/type/thing.php';
-include_once 'libraries/type/creativeWork.php';
-include_once 'libraries/type/article.php';
-include_once 'libraries/type/organization.php';
+include_once 'libraries/microdataJSON.php';
 
 /**
- * Test class for Microdata.
+ * Test class for MicrodataJSON.
  *
  * @since  1.0
  */
-class MicrodataTest extends PHPUnit_Framework_TestCase
+class MicrodataJSONTest extends PHPUnit_Framework_TestCase
 {
 	/**
 	 * The default fallback Type
-	 * 
+	 *
 	 * @var string
 	 */
 	protected $defaultType = 'Thing';
 
 	/**
 	 * Tested class handler
-	 * 
+	 *
 	 * @var object
 	 */
 	protected $handler;
 
 	/**
 	 * Test setup
-	 * 
+	 *
 	 * @return	void
 	 */
 	public function setUp()
 	{
-		$this->handler = new Microdata;
+		$this->handler = new MicrodataJSON;
 	}
 
 	/**
 	 * Test the default settings
-	 * 
+	 *
 	 * @return	void
 	 */
 	public function testDefaults()
 	{
-		$this->handler = new Microdata;
+		$this->handler = new MicrodataJSON;
 
 		// Test that the default Type is Thing
 		$this->assertEquals($this->handler->getType(), $this->defaultType);
+
+		$this->assertClassHasAttribute('types', 'MicrodataJSON');
 	}
 
 	/**
 	 * Test the setType() function
-	 * 
+	 *
 	 * @return	void
 	 */
 	public function testSetType()
@@ -72,7 +70,7 @@ class MicrodataTest extends PHPUnit_Framework_TestCase
 
 	/**
 	 * Test the fallback() function
-	 * 
+	 *
 	 * @return	void
 	 */
 	public function testFallback()
@@ -92,10 +90,10 @@ class MicrodataTest extends PHPUnit_Framework_TestCase
 		$this->assertEquals($this->handler->getFallbackType(), 'Thing');
 		$this->assertNull($this->handler->getFallbackProperty());
 	}
-	
+
 	/**
 	 * Test the display() function
-	 * 
+	 *
 	 * @return	void
 	 */
 	public function testDisplay()
@@ -104,7 +102,7 @@ class MicrodataTest extends PHPUnit_Framework_TestCase
 		$content = 'anything';
 
 		// Test display() with all null params
-		$this->handler = new Microdata;
+		$this->handler = new MicrodataJSON;
 
 		$this->assertEquals($this->handler->display(), '');
 
@@ -177,7 +175,7 @@ class MicrodataTest extends PHPUnit_Framework_TestCase
 			"<meta itemprop='datePublished' content='$content'/>"
 		);
 
-		// Test if the Microdata is disabled
+		// Test if the MicrodataJSON is disabled
 		$responce = $this->handler
 			->content($content)
 			->fallback('Article', 'about')
@@ -190,7 +188,7 @@ class MicrodataTest extends PHPUnit_Framework_TestCase
 
 	/**
 	 * Test the display() function when fallbacks
-	 * 
+	 *
 	 * @return	void
 	 */
 	public function testDisplayFallbacks()
@@ -204,7 +202,7 @@ class MicrodataTest extends PHPUnit_Framework_TestCase
 			->property('anUnanvailableProperty')
 			->fallback('Article', 'about')
 			->display();
-		
+
 		$this->assertEquals(
 			$responce,
 			"itemscope itemtype='https://schema.org/Article' itemprop='about'"
@@ -256,7 +254,7 @@ class MicrodataTest extends PHPUnit_Framework_TestCase
 
 	/**
 	 * Test the display() function, all display types
-	 * 
+	 *
 	 * @return	void
 	 */
 	public function testDisplayTypes()
@@ -327,11 +325,11 @@ class MicrodataTest extends PHPUnit_Framework_TestCase
 			$responce,
 			"<meta itemprop='$property' content='$content'/>"
 		);
-	
+
 		// Display Type: meta without $content
 		$responce = $microdata
-			->property($property)
-			->display('meta');
+		->property($property)
+		->display('meta');
 
 		$this->assertEquals(
 			$responce,
@@ -341,7 +339,7 @@ class MicrodataTest extends PHPUnit_Framework_TestCase
 
 	/**
 	 * Test the isTypeAvailabe() function
-	 * 
+	 *
 	 * @return	void
 	 */
 	public function testIsTypeAvailable()
@@ -359,7 +357,7 @@ class MicrodataTest extends PHPUnit_Framework_TestCase
 
 	/**
 	 * Test the isPropertyInType() function
-	 * 
+	 *
 	 * @return	void
 	 */
 	public function testIsPropertyInType()
@@ -390,7 +388,7 @@ class MicrodataTest extends PHPUnit_Framework_TestCase
 
 	/**
 	 * Test the expectedDisplayType() function
-	 * 
+	 *
 	 * @return	void
 	 */
 	public function testExpectedDisplayType()
@@ -398,7 +396,7 @@ class MicrodataTest extends PHPUnit_Framework_TestCase
 		// Setup
 		$type = 'Article';
 		$method = self::getMethod('getExpectedDisplayType');
-		$obj = new Microdata();
+		$obj = new MicrodataJSON();
 
 		// Test if Display Type is 'normal'
 		$this->assertEquals(
@@ -421,7 +419,7 @@ class MicrodataTest extends PHPUnit_Framework_TestCase
 
 	/**
 	 * Test the displayScope() function
-	 * 
+	 *
 	 * @return	void
 	 */
 	public function testDisplayScope()
@@ -429,7 +427,7 @@ class MicrodataTest extends PHPUnit_Framework_TestCase
 		// Setup
 		$type = 'Article';
 		$this->handler->setType($type)
-		->enable(true);
+			->enable(true);
 
 		// Test a displayScope() when microdata are enabled
 		$this->assertEquals(
@@ -446,13 +444,13 @@ class MicrodataTest extends PHPUnit_Framework_TestCase
 
 	/**
 	 * Test the getTypes() function
-	 * 
+	 *
 	 * @return	void
 	 */
 	public function testGetAllTypes()
 	{
 		$responce = $this->handler->getTypes();
-		
+
 		$this->assertGreaterThan(500, count($responce));
 		$this->assertNotEmpty($responce);
 		$this->assertTrue(in_array('Thing', $responce));
@@ -466,115 +464,117 @@ class MicrodataTest extends PHPUnit_Framework_TestCase
 
 		// Test with all params
 		$this->assertEquals(
-			Microdata::htmlMeta($content, $property, $scope),
+			MicrodataJSON::htmlMeta($content, $property, $scope),
 			"<meta itemscope itemtype='https://schema.org/$scope' itemprop='$property' content='$content'/>"
 		);
 
 		// Test with the inverse mode
 		$this->assertEquals(
-			Microdata::htmlMeta($content, $property, $scope, true),
+			MicrodataJSON::htmlMeta($content, $property, $scope, true),
 			"<meta itemprop='$property' itemscope itemtype='https://schema.org/$scope' content='$content'/>"
 		);
 
 		// Test without the $scope
 		$this->assertEquals(
-			Microdata::htmlMeta($content, $property),
+			MicrodataJSON::htmlMeta($content, $property),
 			"<meta itemprop='$property' content='$content'/>"
 		);
 	}
 
 	/**
 	 * Test the htmlDiv() function
-	 * 
+	 *
 	 * @return	void
 	 */
 	public function testHtmlDiv()
 	{
+		// Setup
 		$scope = 'Article';
 		$content = 'microdata';
 		$property = 'about';
 
 		// Test with all params
 		$this->assertEquals(
-			Microdata::htmlDiv($content, $property, $scope),
+			MicrodataJSON::htmlDiv($content, $property, $scope),
 			"<div itemscope itemtype='https://schema.org/$scope' itemprop='$property'>$content</div>"
 		);
 
 		// Test with the inverse mode
 		$this->assertEquals(
-			Microdata::htmlDiv($content, $property, $scope, true),
+			MicrodataJSON::htmlDiv($content, $property, $scope, true),
 			"<div itemprop='$property' itemscope itemtype='https://schema.org/$scope'>$content</div>"
 		);
 
 		// Test without the $scope
 		$this->assertEquals(
-			Microdata::htmlDiv($content, $property),
+			MicrodataJSON::htmlDiv($content, $property),
 			"<div itemprop='$property'>$content</div>"
 		);
 
 		// Test without the $property
 		$this->assertEquals(
-			Microdata::htmlDiv($content, $property, $scope, true),
+			MicrodataJSON::htmlDiv($content, $property, $scope, true),
 			"<div itemprop='$property' itemscope itemtype='https://schema.org/$scope'>$content</div>"
 		);
 
 		// Test withoud the $scope, $property
 		$this->assertEquals(
-			Microdata::htmlDiv($content),
+			MicrodataJSON::htmlDiv($content),
 			"<div>$content</div>"
 		);
 	}
 
 	/**
 	 * Test the htmlSpan() function
-	 * 
+	 *
 	 * @return	void
 	 */
 	public function testHtmlSpan()
 	{
+		// Setup
 		$scope = 'Article';
 		$content = 'microdata';
 		$property = 'about';
 
 		// Test with all params
 		$this->assertEquals(
-			Microdata::htmlSpan($content, $property, $scope),
+			MicrodataJSON::htmlSpan($content, $property, $scope),
 			"<span itemscope itemtype='https://schema.org/$scope' itemprop='$property'>$content</span>"
 		);
 
 		// Test with the inverse mode
 		$this->assertEquals(
-			Microdata::htmlSpan($content, $property, $scope, true),
+			MicrodataJSON::htmlSpan($content, $property, $scope, true),
 			"<span itemprop='$property' itemscope itemtype='https://schema.org/$scope'>$content</span>"
 		);
 
 		// Test without the $scope
 		$this->assertEquals(
-			Microdata::htmlSpan($content, $property),
+			MicrodataJSON::htmlSpan($content, $property),
 			"<span itemprop='$property'>$content</span>"
 		);
 
 		// Test without the $property
 		$this->assertEquals(
-			Microdata::htmlSpan($content, $property, $scope, true),
+			MicrodataJSON::htmlSpan($content, $property, $scope, true),
 			"<span itemprop='$property' itemscope itemtype='https://schema.org/$scope'>$content</span>"
 		);
 
 		// Test withoud the $scope, $property
 		$this->assertEquals(
-			Microdata::htmlSpan($content),
+			MicrodataJSON::htmlSpan($content),
 			"<span>$content</span>"
 		);
 	}
 
 	/**
 	 * A function helper that allows to test protected functions
-	 * 
+	 *
 	 * @param  string  $name
 	 */
 	protected static function getMethod($name)
 	{
-		$class = new ReflectionClass('Microdata');
+		$class = new ReflectionClass('MicrodataJSON');
 		$method = $class->getMethod($name);
 		$method->setAccessible(true);
 
