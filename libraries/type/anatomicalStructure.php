@@ -3,7 +3,6 @@
  * Any part of the human body, typically a component of an anatomical system. Organs, tissues, and cells are all anatomical structures.
  *
  * @see    http://schema.org/AnatomicalStructure
- * @since  1.0
 */
 abstract class TypeAnatomicalStructure extends TypeMedicalEntity
 {

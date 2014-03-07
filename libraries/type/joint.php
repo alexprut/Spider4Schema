@@ -3,7 +3,6 @@
  * The anatomical location at which two or more bones make contact.
  *
  * @see    http://schema.org/Joint
- * @since  1.0
 */
 abstract class TypeJoint extends TypeAnatomicalStructure
 {

@@ -3,7 +3,6 @@
  * A property, used to indicate attributes and relationships of some Thing; equivalent to rdf:Property.
  *
  * @see    http://schema.org/Property
- * @since  1.0
 */
 abstract class TypeProperty extends TypeThing
 {

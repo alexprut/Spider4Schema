@@ -3,7 +3,6 @@
  * A roofing contractor.
  *
  * @see    http://schema.org/RoofingContractor
- * @since  1.0
 */
 abstract class TypeRoofingContractor extends TypeHomeAndConstructionBusiness
 {

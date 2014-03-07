@@ -3,7 +3,6 @@
  * Target audiences for medical web pages. Enumerated type.
  *
  * @see    http://schema.org/MedicalAudience
- * @since  1.0
 */
 abstract class TypeMedicalAudience extends TypeAudience
 {

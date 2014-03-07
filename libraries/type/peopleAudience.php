@@ -3,7 +3,6 @@
  * A set of characteristics belonging to people, e.g. who compose an item's target audience.
  *
  * @see    http://schema.org/PeopleAudience
- * @since  1.0
 */
 abstract class TypePeopleAudience extends TypeAudience
 {
@@ -22,6 +21,36 @@ abstract class TypePeopleAudience extends TypeAudience
 	 */
 	protected static $healthCondition = array('value' => 'healthCondition',
 		'expectedTypes' => array('MedicalCondition')
+	);
+
+	/**
+	 * Audiences defined by a person's gender.
+	 * Expected Type: Text
+	 * 
+	 * @var	array
+	 */
+	protected static $requiredGender = array('value' => 'requiredGender',
+		'expectedTypes' => array('Text')
+	);
+
+	/**
+	 * Audiences defined by a person's maximum age.
+	 * Expected Type: Integer
+	 * 
+	 * @var	array
+	 */
+	protected static $requiredMaxAge = array('value' => 'requiredMaxAge',
+		'expectedTypes' => array('Integer')
+	);
+
+	/**
+	 * Audiences defined by a person's minimum age.
+	 * Expected Type: Integer
+	 * 
+	 * @var	array
+	 */
+	protected static $requiredMinAge = array('value' => 'requiredMinAge',
+		'expectedTypes' => array('Integer')
 	);
 
 	/**
@@ -62,6 +91,36 @@ abstract class TypePeopleAudience extends TypeAudience
 	public static function pHealthCondition()
 	{
 		return self::getValue(self::$healthCondition);
+	}
+
+	/**
+	 * Return the 'requiredGender' Property value
+	 *
+	 * @return	string
+	 */
+	public static function pRequiredGender()
+	{
+		return self::getValue(self::$requiredGender);
+	}
+
+	/**
+	 * Return the 'requiredMaxAge' Property value
+	 *
+	 * @return	string
+	 */
+	public static function pRequiredMaxAge()
+	{
+		return self::getValue(self::$requiredMaxAge);
+	}
+
+	/**
+	 * Return the 'requiredMinAge' Property value
+	 *
+	 * @return	string
+	 */
+	public static function pRequiredMinAge()
+	{
+		return self::getValue(self::$requiredMinAge);
 	}
 
 	/**

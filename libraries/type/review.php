@@ -3,7 +3,6 @@
  * A review of an item - for example, a restaurant, movie, or store.
  *
  * @see    http://schema.org/Review
- * @since  1.0
 */
 abstract class TypeReview extends TypeCreativeWork
 {

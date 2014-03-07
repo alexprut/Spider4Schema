@@ -3,7 +3,6 @@
  * An agent approves/certifies/likes/supports/sanction an object.
  *
  * @see    http://schema.org/EndorseAction
- * @since  1.0
 */
 abstract class TypeEndorseAction extends TypeReactAction
 {

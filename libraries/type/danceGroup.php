@@ -3,7 +3,6 @@
  * A dance group—for example, the Alvin Ailey Dance Theater or Riverdance.
  *
  * @see    http://schema.org/DanceGroup
- * @since  1.0
 */
 abstract class TypeDanceGroup extends TypePerformingGroup
 {

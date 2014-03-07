@@ -3,7 +3,6 @@
  * A music store.
  *
  * @see    http://schema.org/MusicStore
- * @since  1.0
 */
 abstract class TypeMusicStore extends TypeStore
 {

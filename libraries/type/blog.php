@@ -3,7 +3,6 @@
  * A blog
  *
  * @see    http://schema.org/Blog
- * @since  1.0
 */
 abstract class TypeBlog extends TypeCreativeWork
 {

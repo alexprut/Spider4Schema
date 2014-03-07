@@ -3,7 +3,6 @@
  * Event type: Theater performance.
  *
  * @see    http://schema.org/TheaterEvent
- * @since  1.0
 */
 abstract class TypeTheaterEvent extends TypeEvent
 {

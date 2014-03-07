@@ -3,7 +3,6 @@
  * A type of blood vessel that specifically carries blood away from the heart.
  *
  * @see    http://schema.org/Artery
- * @since  1.0
 */
 abstract class TypeArtery extends TypeVessel
 {

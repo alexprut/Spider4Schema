@@ -3,7 +3,6 @@
  * A general contractor.
  *
  * @see    http://schema.org/GeneralContractor
- * @since  1.0
 */
 abstract class TypeGeneralContractor extends TypeHomeAndConstructionBusiness
 {

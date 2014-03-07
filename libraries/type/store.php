@@ -3,7 +3,6 @@
  * A retail good store.
  *
  * @see    http://schema.org/Store
- * @since  1.0
 */
 abstract class TypeStore extends TypeLocalBusiness
 {

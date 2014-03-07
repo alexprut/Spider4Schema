@@ -3,7 +3,6 @@
  * Entities that have a somewhat fixed, physical extension.
  *
  * @see    http://schema.org/Place
- * @since  1.0
 */
 abstract class TypePlace extends TypeThing
 {
@@ -115,7 +114,7 @@ abstract class TypePlace extends TypeThing
 	);
 
 	/**
-	 * URL of an image for the logo of the item.
+	 * A logo associated with an organization.
 	 * Expected Type: ImageObject, URL
 	 * 
 	 * @var	array

@@ -3,7 +3,6 @@
  * A structured value indicating the quantity, unit of measurement, and business function of goods included in a bundle offer.
  *
  * @see    http://schema.org/TypeAndQuantityNode
- * @since  1.0
 */
 abstract class TypeTypeAndQuantityNode extends TypeStructuredValue
 {

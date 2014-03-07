@@ -3,7 +3,6 @@
  * Any medical imaging modality typically used for diagnostic purposes. Enumerated type.
  *
  * @see    http://schema.org/MedicalImagingTechnique
- * @since  1.0
 */
 abstract class TypeMedicalImagingTechnique extends TypeMedicalEnumeration
 {

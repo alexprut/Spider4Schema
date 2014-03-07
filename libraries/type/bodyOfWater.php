@@ -3,7 +3,6 @@
  * A body of water, such as a sea, ocean, or lake.
  *
  * @see    http://schema.org/BodyOfWater
- * @since  1.0
 */
 abstract class TypeBodyOfWater extends TypeLandform
 {

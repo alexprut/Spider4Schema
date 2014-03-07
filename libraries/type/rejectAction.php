@@ -3,7 +3,6 @@
  * The act of rejecting to/adopting an object.Related actions:AcceptAction: The antagonym of RejectAction.
  *
  * @see    http://schema.org/RejectAction
- * @since  1.0
 */
 abstract class TypeRejectAction extends TypeAllocateAction
 {

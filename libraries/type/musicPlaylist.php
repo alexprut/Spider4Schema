@@ -3,7 +3,6 @@
  * A collection of music tracks in playlist form.
  *
  * @see    http://schema.org/MusicPlaylist
- * @since  1.0
 */
 abstract class TypeMusicPlaylist extends TypeCreativeWork
 {

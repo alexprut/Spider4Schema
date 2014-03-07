@@ -3,7 +3,6 @@
  * An emergency service, such as a fire station or ER.
  *
  * @see    http://schema.org/EmergencyService
- * @since  1.0
 */
 abstract class TypeEmergencyService extends TypeLocalBusiness
 {

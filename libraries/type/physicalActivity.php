@@ -3,7 +3,6 @@
  * Any bodily activity that enhances or maintains physical fitness and overall health and wellness. Includes activity that is part of daily living and routine, structured exercise, and exercise prescribed as part of a medical treatment or recovery plan.
  *
  * @see    http://schema.org/PhysicalActivity
- * @since  1.0
 */
 abstract class TypePhysicalActivity extends TypeLifestyleModification
 {

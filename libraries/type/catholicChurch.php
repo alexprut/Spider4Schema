@@ -3,7 +3,6 @@
  * A Catholic church.
  *
  * @see    http://schema.org/CatholicChurch
- * @since  1.0
 */
 abstract class TypeCatholicChurch extends TypePlaceOfWorship
 {

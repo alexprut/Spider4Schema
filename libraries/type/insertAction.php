@@ -3,7 +3,6 @@
  * The act of adding at a specific location in an ordered collection.
  *
  * @see    http://schema.org/InsertAction
- * @since  1.0
 */
 abstract class TypeInsertAction extends TypeAddAction
 {

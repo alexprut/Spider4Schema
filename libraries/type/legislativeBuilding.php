@@ -3,7 +3,6 @@
  * A legislative building—for example, the state capitol.
  *
  * @see    http://schema.org/LegislativeBuilding
- * @since  1.0
 */
 abstract class TypeLegislativeBuilding extends TypeGovernmentBuilding
 {

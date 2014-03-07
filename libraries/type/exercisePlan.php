@@ -3,7 +3,6 @@
  * Fitness-related activity designed for a specific health-related purpose, including defined exercise routines as well as activity prescribed by a clinician.
  *
  * @see    http://schema.org/ExercisePlan
- * @since  1.0
 */
 abstract class TypeExercisePlan extends TypeCreativeWork
 {

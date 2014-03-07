@@ -3,7 +3,6 @@
  * A gas station.
  *
  * @see    http://schema.org/GasStation
- * @since  1.0
 */
 abstract class TypeGasStation extends TypeAutomotiveBusiness
 {

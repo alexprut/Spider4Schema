@@ -3,7 +3,6 @@
  * A theater group or company—for example, the Royal Shakespeare Company or Druid Theatre.
  *
  * @see    http://schema.org/TheaterGroup
- * @since  1.0
 */
 abstract class TypeTheaterGroup extends TypePerformingGroup
 {

@@ -3,7 +3,6 @@
  * A sporting goods store.
  *
  * @see    http://schema.org/SportingGoodsStore
- * @since  1.0
 */
 abstract class TypeSportingGoodsStore extends TypeStore
 {

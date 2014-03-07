@@ -3,7 +3,6 @@
  * A zoo.
  *
  * @see    http://schema.org/Zoo
- * @since  1.0
 */
 abstract class TypeZoo extends TypeCivicStructure
 {

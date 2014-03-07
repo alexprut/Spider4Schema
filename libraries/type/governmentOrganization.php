@@ -3,7 +3,6 @@
  * A governmental organization or agency.
  *
  * @see    http://schema.org/GovernmentOrganization
- * @since  1.0
 */
 abstract class TypeGovernmentOrganization extends TypeOrganization
 {

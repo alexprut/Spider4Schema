@@ -3,7 +3,6 @@
  * A tourist information center.
  *
  * @see    http://schema.org/TouristInformationCenter
- * @since  1.0
 */
 abstract class TypeTouristInformationCenter extends TypeLocalBusiness
 {

@@ -3,7 +3,6 @@
  * A process of care used in either a diagnostic, therapeutic, or palliative capacity that relies on invasive (surgical), non-invasive, or percutaneous techniques.
  *
  * @see    http://schema.org/MedicalProcedure
- * @since  1.0
 */
 abstract class TypeMedicalProcedure extends TypeMedicalEntity
 {

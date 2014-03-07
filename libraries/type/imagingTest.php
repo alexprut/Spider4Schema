@@ -3,7 +3,6 @@
  * Any medical imaging modality typically used for diagnostic purposes.
  *
  * @see    http://schema.org/ImagingTest
- * @since  1.0
 */
 abstract class TypeImagingTest extends TypeMedicalTest
 {

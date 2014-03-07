@@ -3,7 +3,6 @@
  * The act of returning to the origin that which was previously received (concrete objects) or taken (ownership).
  *
  * @see    http://schema.org/ReturnAction
- * @since  1.0
 */
 abstract class TypeReturnAction extends TypeTransferAction
 {

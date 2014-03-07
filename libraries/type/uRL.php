@@ -3,7 +3,6 @@
  * Data type: URL.
  *
  * @see    http://schema.org/URL
- * @since  1.0
 */
 abstract class TypeURL extends TypeText
 {

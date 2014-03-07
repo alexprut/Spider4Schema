@@ -3,7 +3,6 @@
  * The price asked for a given offer by the respective organization or person.
  *
  * @see    http://schema.org/UnitPriceSpecification
- * @since  1.0
 */
 abstract class TypeUnitPriceSpecification extends TypePriceSpecification
 {

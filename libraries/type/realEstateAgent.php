@@ -3,7 +3,6 @@
  * A real-estate agent.
  *
  * @see    http://schema.org/RealEstateAgent
- * @since  1.0
 */
 abstract class TypeRealEstateAgent extends TypeLocalBusiness
 {

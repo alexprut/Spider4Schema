@@ -3,7 +3,6 @@
  * Any indication of the existence of a medical condition or disease.
  *
  * @see    http://schema.org/MedicalSignOrSymptom
- * @since  1.0
 */
 abstract class TypeMedicalSignOrSymptom extends TypeMedicalEntity
 {

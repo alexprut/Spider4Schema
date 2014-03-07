@@ -3,7 +3,6 @@
  * A motorcycle repair shop.
  *
  * @see    http://schema.org/MotorcycleRepair
- * @since  1.0
 */
 abstract class TypeMotorcycleRepair extends TypeAutomotiveBusiness
 {

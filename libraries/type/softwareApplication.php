@@ -3,7 +3,6 @@
  * A software application.
  *
  * @see    http://schema.org/SoftwareApplication
- * @since  1.0
 */
 abstract class TypeSoftwareApplication extends TypeCreativeWork
 {

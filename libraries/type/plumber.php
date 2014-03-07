@@ -3,7 +3,6 @@
  * A plumbing service.
  *
  * @see    http://schema.org/Plumber
- * @since  1.0
 */
 abstract class TypePlumber extends TypeHomeAndConstructionBusiness
 {

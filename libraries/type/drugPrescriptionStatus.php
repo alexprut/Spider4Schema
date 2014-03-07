@@ -3,7 +3,6 @@
  * Indicates whether this drug is available by prescription or over-the-counter.
  *
  * @see    http://schema.org/DrugPrescriptionStatus
- * @since  1.0
 */
 abstract class TypeDrugPrescriptionStatus extends TypeMedicalEnumeration
 {

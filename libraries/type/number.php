@@ -3,7 +3,6 @@
  * Data type: Number.
  *
  * @see    http://schema.org/Number
- * @since  1.0
 */
 abstract class TypeNumber extends TypeDataType
 {

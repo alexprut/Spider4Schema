@@ -3,7 +3,6 @@
  * A jewelry store.
  *
  * @see    http://schema.org/JewelryStore
- * @since  1.0
 */
 abstract class TypeJewelryStore extends TypeStore
 {

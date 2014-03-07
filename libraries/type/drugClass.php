@@ -3,7 +3,6 @@
  * A class of medical drugs, e.g., statins. Classes can represent general pharmacological class, common mechanisms of action, common physiological effects, etc.
  *
  * @see    http://schema.org/DrugClass
- * @since  1.0
 */
 abstract class TypeDrugClass extends TypeMedicalTherapy
 {

@@ -3,7 +3,6 @@
  * User interaction: Visit to a web page.
  *
  * @see    http://schema.org/UserPageVisits
- * @since  1.0
 */
 abstract class TypeUserPageVisits extends TypeUserInteraction
 {

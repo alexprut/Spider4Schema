@@ -3,7 +3,6 @@
  * Reference documentation for application programming interfaces (APIs).
  *
  * @see    http://schema.org/APIReference
- * @since  1.0
 */
 abstract class TypeAPIReference extends TypeTechArticle
 {

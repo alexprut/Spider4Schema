@@ -3,7 +3,6 @@
  * The act of searching for an object.Related actions:FindAction: SearchAction generally leads to a FindAction, but not necessarily.
  *
  * @see    http://schema.org/SearchAction
- * @since  1.0
 */
 abstract class TypeSearchAction extends TypeAction
 {

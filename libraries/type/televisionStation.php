@@ -3,7 +3,6 @@
  * A television station.
  *
  * @see    http://schema.org/TelevisionStation
- * @since  1.0
 */
 abstract class TypeTelevisionStation extends TypeLocalBusiness
 {

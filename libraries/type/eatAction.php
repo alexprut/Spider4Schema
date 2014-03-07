@@ -3,7 +3,6 @@
  * The act of swallowing solid objects.
  *
  * @see    http://schema.org/EatAction
- * @since  1.0
 */
 abstract class TypeEatAction extends TypeConsumeAction
 {

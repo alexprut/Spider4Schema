@@ -3,7 +3,6 @@
  * Web applications.
  *
  * @see    http://schema.org/WebApplication
- * @since  1.0
 */
 abstract class TypeWebApplication extends TypeSoftwareApplication
 {

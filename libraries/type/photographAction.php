@@ -3,7 +3,6 @@
  * The act of capturing still images of objects using a camera.
  *
  * @see    http://schema.org/PhotographAction
- * @since  1.0
 */
 abstract class TypePhotographAction extends TypeCreateAction
 {

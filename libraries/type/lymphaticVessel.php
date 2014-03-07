@@ -3,7 +3,6 @@
  * A type of blood vessel that specifically carries lymph fluid unidirectionally toward the heart.
  *
  * @see    http://schema.org/LymphaticVessel
- * @since  1.0
 */
 abstract class TypeLymphaticVessel extends TypeVessel
 {

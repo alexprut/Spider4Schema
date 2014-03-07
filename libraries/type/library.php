@@ -3,7 +3,6 @@
  * A library.
  *
  * @see    http://schema.org/Library
- * @since  1.0
 */
 abstract class TypeLibrary extends TypeLocalBusiness
 {

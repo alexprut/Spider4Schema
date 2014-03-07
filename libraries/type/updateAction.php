@@ -3,7 +3,6 @@
  * The act of managing by changing/editing the state of the object.
  *
  * @see    http://schema.org/UpdateAction
- * @since  1.0
 */
 abstract class TypeUpdateAction extends TypeAction
 {

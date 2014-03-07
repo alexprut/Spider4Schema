@@ -3,7 +3,6 @@
  * A courthouse.
  *
  * @see    http://schema.org/Courthouse
- * @since  1.0
 */
 abstract class TypeCourthouse extends TypeGovernmentBuilding
 {

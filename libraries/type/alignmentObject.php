@@ -3,7 +3,6 @@
  * An intangible item that describes an alignment between a learning resource and a node in an educational framework.
  *
  * @see    http://schema.org/AlignmentObject
- * @since  1.0
 */
 abstract class TypeAlignmentObject extends TypeIntangible
 {

@@ -3,7 +3,6 @@
  * The legal availability status of a medical drug.
  *
  * @see    http://schema.org/DrugLegalStatus
- * @since  1.0
 */
 abstract class TypeDrugLegalStatus extends TypeMedicalIntangible
 {

@@ -3,7 +3,6 @@
  * The price for the delivery of an offer using a particular delivery method.
  *
  * @see    http://schema.org/DeliveryChargeSpecification
- * @since  1.0
 */
 abstract class TypeDeliveryChargeSpecification extends TypePriceSpecification
 {

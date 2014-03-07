@@ -3,7 +3,6 @@
  * A bowling alley.
  *
  * @see    http://schema.org/BowlingAlley
- * @since  1.0
 */
 abstract class TypeBowlingAlley extends TypeSportsActivityLocation
 {

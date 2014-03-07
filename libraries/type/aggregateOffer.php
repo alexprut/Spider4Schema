@@ -1,9 +1,8 @@
 <?php
 /**
- * When a single product that has different offers (for example, the same pair of shoes is offered by different merchants), then AggregateOffer can be used.
+ * When a single product is associated with multiple offers (for example, the same pair of shoes is offered by different merchants), then AggregateOffer can be used.
  *
  * @see    http://schema.org/AggregateOffer
- * @since  1.0
 */
 abstract class TypeAggregateOffer extends TypeOffer
 {

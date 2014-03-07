@@ -3,7 +3,6 @@
  * A music recording (track), usually a single song.
  *
  * @see    http://schema.org/MusicRecording
- * @since  1.0
 */
 abstract class TypeMusicRecording extends TypeCreativeWork
 {

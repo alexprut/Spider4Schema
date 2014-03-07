@@ -3,7 +3,6 @@
  * A synagogue.
  *
  * @see    http://schema.org/Synagogue
- * @since  1.0
 */
 abstract class TypeSynagogue extends TypePlaceOfWorship
 {

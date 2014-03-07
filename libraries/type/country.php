@@ -3,7 +3,6 @@
  * A country.
  *
  * @see    http://schema.org/Country
- * @since  1.0
 */
 abstract class TypeCountry extends TypeAdministrativeArea
 {

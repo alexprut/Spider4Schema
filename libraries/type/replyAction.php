@@ -3,7 +3,6 @@
  * The act of responding to a question/message asked/sent by the object. Related to AskAction.Related actions:AskAction: Appears generally as an origin of a ReplyAction.
  *
  * @see    http://schema.org/ReplyAction
- * @since  1.0
 */
 abstract class TypeReplyAction extends TypeCommunicateAction
 {

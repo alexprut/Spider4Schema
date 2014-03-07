@@ -3,7 +3,6 @@
  * A patient-reported or observed dosing schedule for a drug or supplement.
  *
  * @see    http://schema.org/ReportedDoseSchedule
- * @since  1.0
 */
 abstract class TypeReportedDoseSchedule extends TypeDoseSchedule
 {

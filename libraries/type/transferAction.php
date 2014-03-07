@@ -3,7 +3,6 @@
  * The act of transferring/moving (abstract or concrete) animate or inanimate objects from one place to another.
  *
  * @see    http://schema.org/TransferAction
- * @since  1.0
 */
 abstract class TypeTransferAction extends TypeAction
 {

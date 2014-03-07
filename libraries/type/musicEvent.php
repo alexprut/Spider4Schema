@@ -3,7 +3,6 @@
  * Event type: Music event.
  *
  * @see    http://schema.org/MusicEvent
- * @since  1.0
 */
 abstract class TypeMusicEvent extends TypeEvent
 {

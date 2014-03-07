@@ -3,7 +3,6 @@
  * A day spa.
  *
  * @see    http://schema.org/DaySpa
- * @since  1.0
 */
 abstract class TypeDaySpa extends TypeHealthAndBeautyBusiness
 {

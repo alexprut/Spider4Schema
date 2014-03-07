@@ -3,7 +3,6 @@
  * An electrician.
  *
  * @see    http://schema.org/Electrician
- * @since  1.0
 */
 abstract class TypeElectrician extends TypeHomeAndConstructionBusiness
 {

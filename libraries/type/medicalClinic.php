@@ -3,7 +3,6 @@
  * A medical clinic.
  *
  * @see    http://schema.org/MedicalClinic
- * @since  1.0
 */
 abstract class TypeMedicalClinic extends TypeMedicalOrganization
 {

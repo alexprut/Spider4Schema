@@ -3,7 +3,6 @@
  * Boolean: True or False.
  *
  * @see    http://schema.org/Boolean
- * @since  1.0
 */
 abstract class TypeBoolean extends TypeDataType
 {

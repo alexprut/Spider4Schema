@@ -3,7 +3,6 @@
  * A mobile software application.
  *
  * @see    http://schema.org/MobileApplication
- * @since  1.0
 */
 abstract class TypeMobileApplication extends TypeSoftwareApplication
 {

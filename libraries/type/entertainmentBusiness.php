@@ -3,7 +3,6 @@
  * A business providing entertainment.
  *
  * @see    http://schema.org/EntertainmentBusiness
- * @since  1.0
 */
 abstract class TypeEntertainmentBusiness extends TypeLocalBusiness
 {

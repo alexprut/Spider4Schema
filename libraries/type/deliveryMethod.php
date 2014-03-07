@@ -15,7 +15,6 @@ http://purl.org/goodrelations/v1#UPS
 		
  *
  * @see    http://schema.org/DeliveryMethod
- * @since  1.0
 */
 abstract class TypeDeliveryMethod extends TypeEnumeration
 {

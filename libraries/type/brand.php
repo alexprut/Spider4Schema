@@ -3,7 +3,6 @@
  * A brand is a name used by an organization or business person for labeling a product, product group, or similar.
  *
  * @see    http://schema.org/Brand
- * @since  1.0
 */
 abstract class TypeBrand extends TypeIntangible
 {
@@ -15,7 +14,7 @@ abstract class TypeBrand extends TypeIntangible
 	protected static $scope = 'https://schema.org/Brand';
 
 	/**
-	 * URL of an image for the logo of the item.
+	 * A logo associated with an organization.
 	 * Expected Type: ImageObject, URL
 	 * 
 	 * @var	array

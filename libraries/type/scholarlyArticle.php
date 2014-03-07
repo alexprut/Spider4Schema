@@ -3,7 +3,6 @@
  * A scholarly article.
  *
  * @see    http://schema.org/ScholarlyArticle
- * @since  1.0
 */
 abstract class TypeScholarlyArticle extends TypeArticle
 {

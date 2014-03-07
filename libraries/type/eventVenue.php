@@ -3,7 +3,6 @@
  * An event venue.
  *
  * @see    http://schema.org/EventVenue
- * @since  1.0
 */
 abstract class TypeEventVenue extends TypeCivicStructure
 {

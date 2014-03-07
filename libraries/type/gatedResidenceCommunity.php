@@ -3,7 +3,6 @@
  * Residence type: Gated community.
  *
  * @see    http://schema.org/GatedResidenceCommunity
- * @since  1.0
 */
 abstract class TypeGatedResidenceCommunity extends TypeResidence
 {

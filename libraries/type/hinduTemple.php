@@ -3,7 +3,6 @@
  * A Hindu temple.
  *
  * @see    http://schema.org/HinduTemple
- * @since  1.0
 */
 abstract class TypeHinduTemple extends TypePlaceOfWorship
 {

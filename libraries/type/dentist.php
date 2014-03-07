@@ -3,7 +3,6 @@
  * A dentist.
  *
  * @see    http://schema.org/Dentist
- * @since  1.0
 */
 abstract class TypeDentist extends TypeMedicalOrganization
 {

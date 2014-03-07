@@ -3,7 +3,6 @@
  * A musical group, such as a band, an orchestra, or a choir. Can also be a solo musician.
  *
  * @see    http://schema.org/MusicGroup
- * @since  1.0
 */
 abstract class TypeMusicGroup extends TypePerformingGroup
 {

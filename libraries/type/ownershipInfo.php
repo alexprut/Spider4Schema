@@ -3,7 +3,6 @@
  * A structured value providing information about when a certain organization or person owned a certain product.
  *
  * @see    http://schema.org/OwnershipInfo
- * @since  1.0
 */
 abstract class TypeOwnershipInfo extends TypeStructuredValue
 {

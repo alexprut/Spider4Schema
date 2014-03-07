@@ -3,7 +3,6 @@
  * An EducationalAudience
  *
  * @see    http://schema.org/EducationalAudience
- * @since  1.0
 */
 abstract class TypeEducationalAudience extends TypeAudience
 {

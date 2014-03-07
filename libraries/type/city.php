@@ -3,7 +3,6 @@
  * A city or town.
  *
  * @see    http://schema.org/City
- * @since  1.0
 */
 abstract class TypeCity extends TypeAdministrativeArea
 {

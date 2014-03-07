@@ -3,7 +3,6 @@
  * Aquarium.
  *
  * @see    http://schema.org/Aquarium
- * @since  1.0
 */
 abstract class TypeAquarium extends TypeCivicStructure
 {

@@ -3,7 +3,6 @@
  * ATM/cash machine.
  *
  * @see    http://schema.org/AutomatedTeller
- * @since  1.0
 */
 abstract class TypeAutomatedTeller extends TypeFinancialService
 {

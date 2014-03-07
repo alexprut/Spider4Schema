@@ -3,7 +3,6 @@
  * A hospital.
  *
  * @see    http://schema.org/Hospital
- * @since  1.0
 */
 abstract class TypeHospital extends TypeCivicStructure
 {

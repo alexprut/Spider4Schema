@@ -3,7 +3,6 @@
  * The act of obtaining an object under an agreement to return it at a later date. Reciprocal of LendAction.Related actions:LendAction: Reciprocal of BorrowAction.
  *
  * @see    http://schema.org/BorrowAction
- * @since  1.0
 */
 abstract class TypeBorrowAction extends TypeTransferAction
 {

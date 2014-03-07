@@ -3,7 +3,6 @@
  * A scholarly article in the medical domain.
  *
  * @see    http://schema.org/MedicalScholarlyArticle
- * @since  1.0
 */
 abstract class TypeMedicalScholarlyArticle extends TypeScholarlyArticle
 {

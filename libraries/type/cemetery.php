@@ -3,7 +3,6 @@
  * A graveyard.
  *
  * @see    http://schema.org/Cemetery
- * @since  1.0
 */
 abstract class TypeCemetery extends TypeCivicStructure
 {

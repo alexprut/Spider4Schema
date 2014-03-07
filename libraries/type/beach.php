@@ -3,7 +3,6 @@
  * Beach.
  *
  * @see    http://schema.org/Beach
- * @since  1.0
 */
 abstract class TypeBeach extends TypeCivicStructure
 {

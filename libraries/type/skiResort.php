@@ -3,7 +3,6 @@
  * A ski resort.
  *
  * @see    http://schema.org/SkiResort
- * @since  1.0
 */
 abstract class TypeSkiResort extends TypeSportsActivityLocation
 {

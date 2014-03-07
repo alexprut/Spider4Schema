@@ -3,7 +3,6 @@
  * A mosque.
  *
  * @see    http://schema.org/Mosque
- * @since  1.0
 */
 abstract class TypeMosque extends TypePlaceOfWorship
 {

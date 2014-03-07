@@ -3,7 +3,6 @@
  * A doctor's office.
  *
  * @see    http://schema.org/Physician
- * @since  1.0
 */
 abstract class TypePhysician extends TypeMedicalOrganization
 {

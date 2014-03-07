@@ -3,7 +3,6 @@
  * The act of producing/preparing food.
  *
  * @see    http://schema.org/CookAction
- * @since  1.0
 */
 abstract class TypeCookAction extends TypeCreateAction
 {

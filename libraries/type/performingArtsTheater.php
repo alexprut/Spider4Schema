@@ -3,7 +3,6 @@
  * A theatre or other performing art center.
  *
  * @see    http://schema.org/PerformingArtsTheater
- * @since  1.0
 */
 abstract class TypePerformingArtsTheater extends TypeCivicStructure
 {

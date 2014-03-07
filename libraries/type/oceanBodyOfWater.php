@@ -3,7 +3,6 @@
  * An ocean (for example, the Pacific).
  *
  * @see    http://schema.org/OceanBodyOfWater
- * @since  1.0
 */
 abstract class TypeOceanBodyOfWater extends TypeBodyOfWater
 {

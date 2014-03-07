@@ -3,7 +3,6 @@
  * A particular physical business or branch of an organization. Examples of LocalBusiness include a restaurant, a particular branch of a restaurant chain, a branch of a bank, a medical practice, a club, a bowling alley, etc.
  *
  * @see    http://schema.org/LocalBusiness
- * @since  1.0
 */
 abstract class TypeLocalBusiness extends TypeOrganization
 {

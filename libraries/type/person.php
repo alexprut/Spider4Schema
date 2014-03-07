@@ -3,7 +3,6 @@
  * A person (alive, dead, undead, or fictional).
  *
  * @see    http://schema.org/Person
- * @since  1.0
 */
 abstract class TypePerson extends TypeThing
 {

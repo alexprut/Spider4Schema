@@ -3,7 +3,6 @@
  * An agent leaves an event / group with participants/friends at a location.Related actions:JoinAction: The antagonym of LeaveAction.UnRegisterAction: Unlike UnRegisterAction, LeaveAction implies leaving a group/team of people rather than a service.
  *
  * @see    http://schema.org/LeaveAction
- * @since  1.0
 */
 abstract class TypeLeaveAction extends TypeInteractAction
 {

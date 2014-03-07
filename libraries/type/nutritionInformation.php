@@ -3,7 +3,6 @@
  * Nutritional information about the recipe.
  *
  * @see    http://schema.org/NutritionInformation
- * @since  1.0
 */
 abstract class TypeNutritionInformation extends TypeStructuredValue
 {

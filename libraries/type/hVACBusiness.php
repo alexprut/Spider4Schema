@@ -3,7 +3,6 @@
  * An HVAC service.
  *
  * @see    http://schema.org/HVACBusiness
- * @since  1.0
 */
 abstract class TypeHVACBusiness extends TypeHomeAndConstructionBusiness
 {

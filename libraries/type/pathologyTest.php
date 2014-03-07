@@ -3,7 +3,6 @@
  * A medical test performed by a laboratory that typically involves examination of a tissue sample by a pathologist.
  *
  * @see    http://schema.org/PathologyTest
- * @since  1.0
 */
 abstract class TypePathologyTest extends TypeMedicalTest
 {

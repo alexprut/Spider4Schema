@@ -3,7 +3,6 @@
  * An optician's store.
  *
  * @see    http://schema.org/Optician
- * @since  1.0
 */
 abstract class TypeOptician extends TypeMedicalOrganization
 {

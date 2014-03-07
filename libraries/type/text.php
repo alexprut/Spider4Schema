@@ -3,7 +3,6 @@
  * Data type: Text.
  *
  * @see    http://schema.org/Text
- * @since  1.0
 */
 abstract class TypeText extends TypeDataType
 {

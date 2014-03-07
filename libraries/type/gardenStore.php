@@ -3,7 +3,6 @@
  * A garden store.
  *
  * @see    http://schema.org/GardenStore
- * @since  1.0
 */
 abstract class TypeGardenStore extends TypeStore
 {

@@ -3,7 +3,6 @@
  * A tattoo parlor.
  *
  * @see    http://schema.org/TattooParlor
- * @since  1.0
 */
 abstract class TypeTattooParlor extends TypeHealthAndBeautyBusiness
 {

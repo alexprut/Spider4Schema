@@ -3,7 +3,6 @@
  * A video file.
  *
  * @see    http://schema.org/VideoObject
- * @since  1.0
 */
 abstract class TypeVideoObject extends TypeMediaObject
 {
@@ -22,16 +21,6 @@ abstract class TypeVideoObject extends TypeMediaObject
 	 */
 	protected static $caption = array('value' => 'caption',
 		'expectedTypes' => array('Text')
-	);
-
-	/**
-	 * The production company or studio that made the movie, TV series, season, or episode, or video.
-	 * Expected Type: Organization
-	 * 
-	 * @var	array
-	 */
-	protected static $productionCompany = array('value' => 'productionCompany',
-		'expectedTypes' => array('Organization')
 	);
 
 	/**
@@ -82,16 +71,6 @@ abstract class TypeVideoObject extends TypeMediaObject
 	public static function pCaption()
 	{
 		return self::getValue(self::$caption);
-	}
-
-	/**
-	 * Return the 'productionCompany' Property value
-	 *
-	 * @return	string
-	 */
-	public static function pProductionCompany()
-	{
-		return self::getValue(self::$productionCompany);
 	}
 
 	/**

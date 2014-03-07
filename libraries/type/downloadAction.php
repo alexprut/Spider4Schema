@@ -3,7 +3,6 @@
  * The act of downloading an object.
  *
  * @see    http://schema.org/DownloadAction
- * @since  1.0
 */
 abstract class TypeDownloadAction extends TypeTransferAction
 {

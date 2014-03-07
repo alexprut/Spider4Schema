@@ -3,7 +3,6 @@
  * A high school.
  *
  * @see    http://schema.org/HighSchool
- * @since  1.0
 */
 abstract class TypeHighSchool extends TypeEducationalOrganization
 {

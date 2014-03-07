@@ -3,7 +3,6 @@
  * Any object used in a medical capacity, such as to diagnose or treat a patient.
  *
  * @see    http://schema.org/MedicalDevice
- * @since  1.0
 */
 abstract class TypeMedicalDevice extends TypeMedicalEntity
 {

@@ -3,7 +3,6 @@
  * A specific dosing schedule for a drug or supplement.
  *
  * @see    http://schema.org/DoseSchedule
- * @since  1.0
 */
 abstract class TypeDoseSchedule extends TypeMedicalIntangible
 {

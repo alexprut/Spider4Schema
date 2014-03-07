@@ -3,7 +3,6 @@
  * Residence type: Apartment complex.
  *
  * @see    http://schema.org/ApartmentComplex
- * @since  1.0
 */
 abstract class TypeApartmentComplex extends TypeResidence
 {

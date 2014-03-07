@@ -3,7 +3,6 @@
  * A computer store.
  *
  * @see    http://schema.org/ComputerStore
- * @since  1.0
 */
 abstract class TypeComputerStore extends TypeStore
 {

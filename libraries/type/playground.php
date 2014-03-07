@@ -3,7 +3,6 @@
  * A playground.
  *
  * @see    http://schema.org/Playground
- * @since  1.0
 */
 abstract class TypePlayground extends TypeCivicStructure
 {

@@ -3,7 +3,6 @@
  * A demand entity represents the public, not necessarily binding, not necessarily exclusive, announcement by an organization or person to seek a certain type of goods or services. For describing demand using this type, the very same properties used for Offer apply.
  *
  * @see    http://schema.org/Demand
- * @since  1.0
 */
 abstract class TypeDemand extends TypeIntangible
 {
@@ -215,7 +214,7 @@ abstract class TypeDemand extends TypeIntangible
 	);
 
 	/**
-	 * The item being sold.
+	 * The item being offered.
 	 * Expected Type: Product
 	 * 
 	 * @var	array
@@ -245,7 +244,7 @@ abstract class TypeDemand extends TypeIntangible
 	);
 
 	/**
-	 * The seller.
+	 * The organization or person making the offer.
 	 * Expected Type: Organization, Person
 	 * 
 	 * @var	array
@@ -275,7 +274,7 @@ abstract class TypeDemand extends TypeIntangible
 	);
 
 	/**
-	 * The beginning of the validity of offer, price specification, or opening hours data.
+	 * The date when the item becomes valid.
 	 * Expected Type: DateTime
 	 * 
 	 * @var	array

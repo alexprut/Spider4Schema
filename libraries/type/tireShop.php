@@ -3,7 +3,6 @@
  * A tire shop.
  *
  * @see    http://schema.org/TireShop
- * @since  1.0
 */
 abstract class TypeTireShop extends TypeStore
 {

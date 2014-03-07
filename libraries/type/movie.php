@@ -3,7 +3,6 @@
  * A movie.
  *
  * @see    http://schema.org/Movie
- * @since  1.0
 */
 abstract class TypeMovie extends TypeCreativeWork
 {
@@ -15,7 +14,7 @@ abstract class TypeMovie extends TypeCreativeWork
 	protected static $scope = 'https://schema.org/Movie';
 
 	/**
-	 * A cast member of the movie, TV series, season, or episode, or video.
+	 * A cast member of the movie, tv/radio series, season, episode, or video.
 	 * Expected Type: Person
 	 * 
 	 * @var	array
@@ -25,7 +24,7 @@ abstract class TypeMovie extends TypeCreativeWork
 	);
 
 	/**
-	 * A cast member of the movie, TV series, season, or episode, or video. (legacy spelling; see singular form, actor)
+	 * A cast member of the movie, tv/radio series, season, episode, or video. (legacy spelling; see singular form, actor)
 	 * Expected Type: Person
 	 * 
 	 * @var	array
@@ -35,12 +34,22 @@ abstract class TypeMovie extends TypeCreativeWork
 	);
 
 	/**
-	 * The director of the movie, TV episode, or series.
+	 * The director of the movie, tv/radio episode or series.
 	 * Expected Type: Person
 	 * 
 	 * @var	array
 	 */
 	protected static $director = array('value' => 'director',
+		'expectedTypes' => array('Person')
+	);
+
+	/**
+	 * The director of the movie, tv/radio episode or series. (legacy spelling; see singular form, director)
+	 * Expected Type: Person
+	 * 
+	 * @var	array
+	 */
+	protected static $directors = array('value' => 'directors',
 		'expectedTypes' => array('Person')
 	);
 
@@ -55,7 +64,7 @@ abstract class TypeMovie extends TypeCreativeWork
 	);
 
 	/**
-	 * The composer of the movie or TV soundtrack.
+	 * The composer of the movie or TV/radio soundtrack.
 	 * Expected Type: MusicGroup, Person
 	 * 
 	 * @var	array
@@ -65,7 +74,7 @@ abstract class TypeMovie extends TypeCreativeWork
 	);
 
 	/**
-	 * The producer of the movie, TV series, season, or episode, or video.
+	 * The producer of the movie, tv/radio series, season, or episode, or video.
 	 * Expected Type: Person
 	 * 
 	 * @var	array
@@ -75,7 +84,7 @@ abstract class TypeMovie extends TypeCreativeWork
 	);
 
 	/**
-	 * The production company or studio that made the movie, TV series, season, or episode, or video.
+	 * The production company or studio that made the movie, tv/radio series, season, or episode, or media object.
 	 * Expected Type: Organization
 	 * 
 	 * @var	array
@@ -85,7 +94,7 @@ abstract class TypeMovie extends TypeCreativeWork
 	);
 
 	/**
-	 * The trailer of the movie or TV series, season, or episode.
+	 * The trailer of a movie or tv/radio series, season, or episode.
 	 * Expected Type: VideoObject
 	 * 
 	 * @var	array
@@ -122,6 +131,16 @@ abstract class TypeMovie extends TypeCreativeWork
 	public static function pDirector()
 	{
 		return self::getValue(self::$director);
+	}
+
+	/**
+	 * Return the 'directors' Property value
+	 *
+	 * @return	string
+	 */
+	public static function pDirectors()
+	{
+		return self::getValue(self::$directors);
 	}
 
 	/**

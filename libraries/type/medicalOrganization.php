@@ -3,7 +3,6 @@
  * A medical organization, such as a doctor's office or clinic.
  *
  * @see    http://schema.org/MedicalOrganization
- * @since  1.0
 */
 abstract class TypeMedicalOrganization extends TypeLocalBusiness
 {

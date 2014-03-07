@@ -3,7 +3,6 @@
  * The act of authoring written creative content.
  *
  * @see    http://schema.org/WriteAction
- * @since  1.0
 */
 abstract class TypeWriteAction extends TypeCreateAction
 {

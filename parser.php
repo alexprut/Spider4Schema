@@ -1,6 +1,9 @@
 <?php
 /**
  * A set of functions to parse the retrieved HTML and find the needed information
+ * 
+ * @copyright  Copyright (C) 2014. All rights reserved.
+ * @license    GNU General Public License version 2 or later; see LICENSE
  */
 
 /**

@@ -3,7 +3,6 @@
  * The average rating based on multiple ratings or reviews.
  *
  * @see    http://schema.org/AggregateRating
- * @since  1.0
 */
 abstract class TypeAggregateRating extends TypeRating
 {

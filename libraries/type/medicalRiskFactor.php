@@ -3,7 +3,6 @@
  * A risk factor is anything that increases a person's likelihood of developing or contracting a disease, medical condition, or complication.
  *
  * @see    http://schema.org/MedicalRiskFactor
- * @since  1.0
 */
 abstract class TypeMedicalRiskFactor extends TypeMedicalEntity
 {

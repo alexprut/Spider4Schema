@@ -3,7 +3,6 @@
  * A home goods store.
  *
  * @see    http://schema.org/HomeGoodsStore
- * @since  1.0
 */
 abstract class TypeHomeGoodsStore extends TypeStore
 {

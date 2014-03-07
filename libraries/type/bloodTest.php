@@ -3,7 +3,6 @@
  * A medical test performed on a sample of a patient's blood.
  *
  * @see    http://schema.org/BloodTest
- * @since  1.0
 */
 abstract class TypeBloodTest extends TypeMedicalTest
 {

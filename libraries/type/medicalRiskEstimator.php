@@ -3,7 +3,6 @@
  * Any rule set or interactive tool for estimating the risk of developing a complication or condition.
  *
  * @see    http://schema.org/MedicalRiskEstimator
- * @since  1.0
 */
 abstract class TypeMedicalRiskEstimator extends TypeMedicalEntity
 {

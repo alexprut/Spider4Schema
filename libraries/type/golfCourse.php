@@ -3,7 +3,6 @@
  * A golf course.
  *
  * @see    http://schema.org/GolfCourse
- * @since  1.0
 */
 abstract class TypeGolfCourse extends TypeSportsActivityLocation
 {

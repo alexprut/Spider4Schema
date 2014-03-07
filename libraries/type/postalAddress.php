@@ -3,7 +3,6 @@
  * The mailing address.
  *
  * @see    http://schema.org/PostalAddress
- * @since  1.0
 */
 abstract class TypePostalAddress extends TypeContactPoint
 {

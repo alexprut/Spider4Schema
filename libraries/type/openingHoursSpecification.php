@@ -3,7 +3,6 @@
  * A structured value providing information about the opening hours of a place or a certain service inside a place.
  *
  * @see    http://schema.org/OpeningHoursSpecification
- * @since  1.0
 */
 abstract class TypeOpeningHoursSpecification extends TypeStructuredValue
 {
@@ -45,7 +44,7 @@ abstract class TypeOpeningHoursSpecification extends TypeStructuredValue
 	);
 
 	/**
-	 * The beginning of the validity of offer, price specification, or opening hours data.
+	 * The date when the item becomes valid.
 	 * Expected Type: DateTime
 	 * 
 	 * @var	array

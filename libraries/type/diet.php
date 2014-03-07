@@ -3,7 +3,6 @@
  * A strategy of regulating the intake of food to achieve or maintain a specific health-related goal.
  *
  * @see    http://schema.org/Diet
- * @since  1.0
 */
 abstract class TypeDiet extends TypeCreativeWork
 {

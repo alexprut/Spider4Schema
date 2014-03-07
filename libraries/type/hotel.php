@@ -3,7 +3,6 @@
  * A hotel.
  *
  * @see    http://schema.org/Hotel
- * @since  1.0
 */
 abstract class TypeHotel extends TypeLodgingBusiness
 {

@@ -3,7 +3,6 @@
  * A florist.
  *
  * @see    http://schema.org/Florist
- * @since  1.0
 */
 abstract class TypeFlorist extends TypeStore
 {

@@ -3,7 +3,6 @@
  * A chemical or biologic substance, used as a medical therapy, that has a physiological effect on an organism.
  *
  * @see    http://schema.org/Drug
- * @since  1.0
 */
 abstract class TypeDrug extends TypeMedicalTherapy
 {

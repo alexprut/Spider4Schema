@@ -3,7 +3,6 @@
  * A single, identifiable product instance (e.g. a laptop with a particular serial number).
  *
  * @see    http://schema.org/IndividualProduct
- * @since  1.0
 */
 abstract class TypeIndividualProduct extends TypeProduct
 {

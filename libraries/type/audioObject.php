@@ -3,7 +3,6 @@
  * An audio file.
  *
  * @see    http://schema.org/AudioObject
- * @since  1.0
 */
 abstract class TypeAudioObject extends TypeMediaObject
 {

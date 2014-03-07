@@ -3,7 +3,6 @@
  * A state or province.
  *
  * @see    http://schema.org/State
- * @since  1.0
 */
 abstract class TypeState extends TypeAdministrativeArea
 {

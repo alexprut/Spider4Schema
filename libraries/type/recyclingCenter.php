@@ -3,7 +3,6 @@
  * A recycling center.
  *
  * @see    http://schema.org/RecyclingCenter
- * @since  1.0
 */
 abstract class TypeRecyclingCenter extends TypeLocalBusiness
 {

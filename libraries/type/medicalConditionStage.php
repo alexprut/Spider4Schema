@@ -3,7 +3,6 @@
  * A stage of a medical condition, such as 'Stage IIIa'.
  *
  * @see    http://schema.org/MedicalConditionStage
- * @since  1.0
 */
 abstract class TypeMedicalConditionStage extends TypeMedicalIntangible
 {

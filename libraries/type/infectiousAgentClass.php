@@ -3,7 +3,6 @@
  * Classes of agents or pathogens that transmit infectious diseases. Enumerated type.
  *
  * @see    http://schema.org/InfectiousAgentClass
- * @since  1.0
 */
 abstract class TypeInfectiousAgentClass extends TypeMedicalEnumeration
 {

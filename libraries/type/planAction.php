@@ -3,7 +3,6 @@
  * The act of planning the execution of an event/task/action/reservation/plan to a future date.
  *
  * @see    http://schema.org/PlanAction
- * @since  1.0
 */
 abstract class TypePlanAction extends TypeOrganizeAction
 {

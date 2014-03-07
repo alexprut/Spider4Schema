@@ -3,7 +3,6 @@
  * A common pathway for the electrochemical nerve impulses that are transmitted along each of the axons.
  *
  * @see    http://schema.org/Nerve
- * @since  1.0
 */
 abstract class TypeNerve extends TypeAnatomicalStructure
 {

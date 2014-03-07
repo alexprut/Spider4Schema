@@ -3,7 +3,6 @@
  * A web page element, like a table or an image
  *
  * @see    http://schema.org/WebPageElement
- * @since  1.0
 */
 abstract class TypeWebPageElement extends TypeCreativeWork
 {

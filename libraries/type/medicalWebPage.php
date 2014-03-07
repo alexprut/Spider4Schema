@@ -3,7 +3,6 @@
  * A web page that provides medical information.
  *
  * @see    http://schema.org/MedicalWebPage
- * @since  1.0
 */
 abstract class TypeMedicalWebPage extends TypeWebPage
 {

@@ -15,7 +15,6 @@ http://purl.org/goodrelations/v1#PublicHolidays
 		
  *
  * @see    http://schema.org/DayOfWeek
- * @since  1.0
 */
 abstract class TypeDayOfWeek extends TypeEnumeration
 {

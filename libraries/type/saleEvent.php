@@ -3,7 +3,6 @@
  * Event type: Sales event.
  *
  * @see    http://schema.org/SaleEvent
- * @since  1.0
 */
 abstract class TypeSaleEvent extends TypeEvent
 {

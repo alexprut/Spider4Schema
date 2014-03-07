@@ -51,6 +51,7 @@ class Types
 			'extends' => '',
 			'properties' => array(
 				'additionalType' => array('URL'),
+				'alternateName' => array('Text'),
 				'description' => array('Text'),
 				'image' => array('URL'),
 				'name' => array('Text'),
@@ -587,6 +588,14 @@ class Types
 				'replacer' => array('Thing')
 			)
 		),
+		'BroadcastService' => array(
+			'extends' => 'Thing',
+			'properties' => array(
+				'area' => array('Place'),
+				'broadcaster' => array('Organization'),
+				'parentService' => array('BroadcastService')
+			)
+		),
 		'Class' => array(
 			'extends' => 'Thing',
 			'properties' => array()
@@ -595,6 +604,10 @@ class Types
 			'extends' => 'Thing',
 			'properties' => array(
 				'about' => array('Thing'),
+				'accessibilityAPI' => array('Text'),
+				'accessibilityControl' => array('Text'),
+				'accessibilityFeature' => array('Text'),
+				'accessibilityHazard' => array('Text'),
 				'accountablePerson' => array('Person'),
 				'aggregateRating' => array('AggregateRating'),
 				'alternativeHeadline' => array('Text'),
@@ -711,6 +724,27 @@ class Types
 				'numberOfPages' => array('Integer')
 			)
 		),
+		'Clip' => array(
+			'extends' => 'CreativeWork',
+			'properties' => array(
+				'clipNumber' => array('Integer'),
+				'partOfEpisode' => array('Episode'),
+				'partOfSeason' => array('Season'),
+				'partOfSeries' => array('Series'),
+				'position' => array('Text'),
+				'publication' => array('PublicationEvent')
+			)
+		),
+		'RadioClip' => array(
+			'extends' => 'Clip',
+			'properties' => array()
+		),
+		'TVClip' => array(
+			'extends' => 'Clip',
+			'properties' => array(
+				'partOfTVSeries' => array('TVSeries')
+			)
+		),
 		'Code' => array(
 			'extends' => 'CreativeWork',
 			'properties' => array(
@@ -752,6 +786,34 @@ class Types
 				'risks' => array('Text')
 			)
 		),
+		'Episode' => array(
+			'extends' => 'CreativeWork',
+			'properties' => array(
+				'actor' => array('Person'),
+				'actors' => array('Person'),
+				'director' => array('Person'),
+				'directors' => array('Person'),
+				'episodeNumber' => array('Integer'),
+				'musicBy' => array('MusicGroup', 'Person'),
+				'partOfSeason' => array('Season'),
+				'partOfSeries' => array('Series'),
+				'position' => array('Text'),
+				'producer' => array('Person'),
+				'productionCompany' => array('Organization'),
+				'publication' => array('PublicationEvent'),
+				'trailer' => array('VideoObject')
+			)
+		),
+		'RadioEpisode' => array(
+			'extends' => 'Episode',
+			'properties' => array()
+		),
+		'TVEpisode' => array(
+			'extends' => 'Episode',
+			'properties' => array(
+				'partOfTVSeries' => array('TVSeries')
+			)
+		),
 		'ExercisePlan' => array(
 			'extends' => 'CreativeWork',
 			'properties' => array(
@@ -790,6 +852,8 @@ class Types
 				'expires' => array('Date'),
 				'height' => array('Distance', 'QuantitativeValue'),
 				'playerType' => array('Text'),
+				'productionCompany' => array('Organization'),
+				'publication' => array('PublicationEvent'),
 				'regionsAllowed' => array('Place'),
 				'requiresSubscription' => array('Boolean'),
 				'uploadDate' => array('Date'),
@@ -823,7 +887,6 @@ class Types
 			'extends' => 'MediaObject',
 			'properties' => array(
 				'caption' => array('Text'),
-				'productionCompany' => array('Organization'),
 				'thumbnail' => array('ImageObject'),
 				'transcript' => array('Text'),
 				'videoFrameSize' => array('Text'),
@@ -836,6 +899,7 @@ class Types
 				'actor' => array('Person'),
 				'actors' => array('Person'),
 				'director' => array('Person'),
+				'directors' => array('Person'),
 				'duration' => array('Duration'),
 				'musicBy' => array('MusicGroup', 'Person'),
 				'producer' => array('Person'),
@@ -901,6 +965,61 @@ class Types
 			'extends' => 'CreativeWork',
 			'properties' => array()
 		),
+		'Season' => array(
+			'extends' => 'CreativeWork',
+			'properties' => array(
+				'endDate' => array('Date'),
+				'episode' => array('Episode'),
+				'episodes' => array('Episode'),
+				'numberOfEpisodes' => array('Number'),
+				'partOfSeries' => array('Series'),
+				'position' => array('Text'),
+				'producer' => array('Person'),
+				'productionCompany' => array('Organization'),
+				'seasonNumber' => array('Integer'),
+				'startDate' => array('Date'),
+				'trailer' => array('VideoObject')
+			)
+		),
+		'RadioSeason' => array(
+			'extends' => 'Season',
+			'properties' => array()
+		),
+		'TVSeason' => array(
+			'extends' => 'CreativeWork',
+			'properties' => array(
+				'partOfTVSeries' => array('TVSeries')
+			)
+		),
+		'Series' => array(
+			'extends' => 'CreativeWork',
+			'properties' => array(
+				'actor' => array('Person'),
+				'actors' => array('Person'),
+				'director' => array('Person'),
+				'directors' => array('Person'),
+				'endDate' => array('Date'),
+				'episode' => array('Episode'),
+				'episodes' => array('Episode'),
+				'musicBy' => array('MusicGroup', 'Person'),
+				'numberOfEpisodes' => array('Number'),
+				'numberOfSeasons' => array('Number'),
+				'producer' => array('Person'),
+				'productionCompany' => array('Organization'),
+				'season' => array('Season'),
+				'seasons' => array('Season'),
+				'startDate' => array('Date'),
+				'trailer' => array('VideoObject')
+			)
+		),
+		'RadioSeries' => array(
+			'extends' => 'Series',
+			'properties' => array()
+		),
+		'TVSeries' => array(
+			'extends' => 'CreativeWork',
+			'properties' => array()
+		),
 		'SoftwareApplication' => array(
 			'extends' => 'CreativeWork',
 			'properties' => array(
@@ -936,53 +1055,6 @@ class Types
 			'extends' => 'SoftwareApplication',
 			'properties' => array(
 				'browserRequirements' => array('Text')
-			)
-		),
-		'TVEpisode' => array(
-			'extends' => 'CreativeWork',
-			'properties' => array(
-				'actor' => array('Person'),
-				'actors' => array('Person'),
-				'director' => array('Person'),
-				'episodeNumber' => array('Number'),
-				'musicBy' => array('MusicGroup', 'Person'),
-				'partOfSeason' => array('TVSeason'),
-				'partOfTVSeries' => array('TVSeries'),
-				'producer' => array('Person'),
-				'productionCompany' => array('Organization'),
-				'trailer' => array('VideoObject')
-			)
-		),
-		'TVSeason' => array(
-			'extends' => 'CreativeWork',
-			'properties' => array(
-				'endDate' => array('Date'),
-				'episode' => array('TVEpisode'),
-				'episodes' => array('TVEpisode'),
-				'numberOfEpisodes' => array('Number'),
-				'partOfTVSeries' => array('TVSeries'),
-				'seasonNumber' => array('Integer'),
-				'startDate' => array('Date'),
-				'trailer' => array('VideoObject')
-			)
-		),
-		'TVSeries' => array(
-			'extends' => 'CreativeWork',
-			'properties' => array(
-				'actor' => array('Person'),
-				'actors' => array('Person'),
-				'director' => array('Person'),
-				'endDate' => array('Date'),
-				'episode' => array('TVEpisode'),
-				'episodes' => array('TVEpisode'),
-				'musicBy' => array('MusicGroup', 'Person'),
-				'numberOfEpisodes' => array('Number'),
-				'producer' => array('Person'),
-				'productionCompany' => array('Organization'),
-				'season' => array('TVSeason'),
-				'seasons' => array('TVSeason'),
-				'startDate' => array('Date'),
-				'trailer' => array('VideoObject')
 			)
 		),
 		'WebPage' => array(
@@ -1075,16 +1147,20 @@ class Types
 			'properties' => array(
 				'attendee' => array('Organization', 'Person'),
 				'attendees' => array('Organization', 'Person'),
+				'doorTime' => array('DateTime'),
 				'duration' => array('Duration'),
 				'endDate' => array('Date'),
+				'eventStatus' => array('EventStatusType'),
 				'location' => array('Place', 'PostalAddress'),
 				'offers' => array('Offer'),
 				'performer' => array('Organization', 'Person'),
 				'performers' => array('Organization', 'Person'),
+				'previousStartDate' => array('Date'),
 				'startDate' => array('Date'),
 				'subEvent' => array('Event'),
 				'subEvents' => array('Event'),
-				'superEvent' => array('Event')
+				'superEvent' => array('Event'),
+				'typicalAgeRange' => array('Text')
 			)
 		),
 		'BusinessEvent' => array(
@@ -1102,6 +1178,15 @@ class Types
 		'DanceEvent' => array(
 			'extends' => 'Event',
 			'properties' => array()
+		),
+		'DeliveryEvent' => array(
+			'extends' => 'Event',
+			'properties' => array(
+				'accessCode' => array('Text'),
+				'availableFrom' => array('DateTime'),
+				'availableThrough' => array('DateTime'),
+				'hasDeliveryMethod' => array('DeliveryMethod')
+			)
 		),
 		'EducationEvent' => array(
 			'extends' => 'Event',
@@ -1121,6 +1206,21 @@ class Types
 		),
 		'MusicEvent' => array(
 			'extends' => 'Event',
+			'properties' => array()
+		),
+		'PublicationEvent' => array(
+			'extends' => 'Event',
+			'properties' => array(
+				'free' => array('Boolean'),
+				'publishedOn' => array('BroadcastService')
+			)
+		),
+		'BroadcastEvent' => array(
+			'extends' => 'PublicationEvent',
+			'properties' => array()
+		),
+		'OnDemandEvent' => array(
+			'extends' => 'PublicationEvent',
 			'properties' => array()
 		),
 		'SaleEvent' => array(
@@ -1205,7 +1305,18 @@ class Types
 		),
 		'Audience' => array(
 			'extends' => 'Intangible',
-			'properties' => array()
+			'properties' => array(
+				'audienceType' => array('Text'),
+				'geographicArea' => array('AdministrativeArea')
+			)
+		),
+		'BusinessAudience' => array(
+			'extends' => 'Audience',
+			'properties' => array(
+				'numberofEmployees' => array('QuantitativeValue'),
+				'yearlyRevenue' => array('QuantitativeValue'),
+				'yearsInOperation' => array('QuantitativeValue')
+			)
 		),
 		'EducationalAudience' => array(
 			'extends' => 'Audience',
@@ -1221,6 +1332,9 @@ class Types
 			'extends' => 'Audience',
 			'properties' => array(
 				'healthCondition' => array('MedicalCondition'),
+				'requiredGender' => array('Text'),
+				'requiredMaxAge' => array('Integer'),
+				'requiredMinAge' => array('Integer'),
 				'suggestedGender' => array('Text'),
 				'suggestedMaxAge' => array('Number'),
 				'suggestedMinAge' => array('Number')
@@ -1289,6 +1403,10 @@ class Types
 			'extends' => 'Enumeration',
 			'properties' => array()
 		),
+		'ContactPointOption' => array(
+			'extends' => 'Enumeration',
+			'properties' => array()
+		),
 		'DayOfWeek' => array(
 			'extends' => 'Enumeration',
 			'properties' => array()
@@ -1297,8 +1415,20 @@ class Types
 			'extends' => 'Enumeration',
 			'properties' => array()
 		),
+		'LockerDelivery' => array(
+			'extends' => 'DeliveryMethod',
+			'properties' => array()
+		),
+		'OnSitePickup' => array(
+			'extends' => 'DeliveryMethod',
+			'properties' => array()
+		),
 		'ParcelService' => array(
 			'extends' => 'DeliveryMethod',
+			'properties' => array()
+		),
+		'EventStatusType' => array(
+			'extends' => 'Enumeration',
 			'properties' => array()
 		),
 		'ItemAvailability' => array(
@@ -1306,6 +1436,10 @@ class Types
 			'properties' => array()
 		),
 		'OfferItemCondition' => array(
+			'extends' => 'Enumeration',
+			'properties' => array()
+		),
+		'OrderStatus' => array(
 			'extends' => 'Enumeration',
 			'properties' => array()
 		),
@@ -1418,6 +1552,60 @@ class Types
 				'offerCount' => array('Integer')
 			)
 		),
+		'Order' => array(
+			'extends' => 'Intangible',
+			'properties' => array(
+				'acceptedOffer' => array('Offer'),
+				'billingAddress' => array('PostalAddress'),
+				'confirmationNumber' => array('Text'),
+				'customer' => array('Organization', 'Person'),
+				'discount' => array('Number', 'Text'),
+				'discountCode' => array('Text'),
+				'discountCurrency' => array('Text'),
+				'isGift' => array('Boolean'),
+				'merchant' => array('Organization', 'Person'),
+				'orderDate' => array('DateTime'),
+				'orderedItem' => array('Product'),
+				'orderNumber' => array('Text'),
+				'orderStatus' => array('OrderStatus'),
+				'paymentDue' => array('DateTime'),
+				'paymentMethod' => array('PaymentMethod'),
+				'paymentMethodId' => array('Text'),
+				'paymentUrl' => array('URL')
+			)
+		),
+		'ParcelDelivery' => array(
+			'extends' => 'Intangible',
+			'properties' => array(
+				'carrier' => array('Organization'),
+				'deliveryAddress' => array('PostalAddress'),
+				'deliveryStatus' => array('DeliveryEvent'),
+				'expectedArrivalFrom' => array('DateTime'),
+				'expectedArrivalUntil' => array('DateTime'),
+				'hasDeliveryMethod' => array('DeliveryMethod'),
+				'itemShipped' => array('Product'),
+				'originAddress' => array('PostalAddress'),
+				'partOfOrder' => array('Order'),
+				'trackingNumber' => array('Text'),
+				'trackingUrl' => array('URL')
+			)
+		),
+		'Permit' => array(
+			'extends' => 'Intangible',
+			'properties' => array(
+				'issuedBy' => array('Organization'),
+				'issuedThrough' => array('Service'),
+				'permitAudience' => array('Audience'),
+				'validFor' => array('Duration'),
+				'validFrom' => array('DateTime'),
+				'validIn' => array('AdministrativeArea'),
+				'validUntil' => array('Date')
+			)
+		),
+		'GovernmentPermit' => array(
+			'extends' => 'Permit',
+			'properties' => array()
+		),
 		'Quantity' => array(
 			'extends' => 'Intangible',
 			'properties' => array()
@@ -1454,6 +1642,36 @@ class Types
 				'reviewCount' => array('Number')
 			)
 		),
+		'Service' => array(
+			'extends' => 'Intangible',
+			'properties' => array(
+				'availableChannel' => array('ServiceChannel'),
+				'produces' => array('Thing'),
+				'provider' => array('Organization', 'Person'),
+				'serviceArea' => array('AdministrativeArea'),
+				'serviceAudience' => array('Audience'),
+				'serviceType' => array('Text')
+			)
+		),
+		'GovernmentService' => array(
+			'extends' => 'Service',
+			'properties' => array(
+				'serviceOperator' => array('Organization')
+			)
+		),
+		'ServiceChannel' => array(
+			'extends' => 'Intangible',
+			'properties' => array(
+				'availableLanguage' => array('Language'),
+				'processingTime' => array('Duration'),
+				'providesService' => array('Service'),
+				'serviceLocation' => array('Place'),
+				'servicePhone' => array('ContactPoint'),
+				'servicePostalAddress' => array('PostalAddress'),
+				'serviceSmsNumber' => array('ContactPoint'),
+				'serviceUrl' => array('URL')
+			)
+		),
 		'StructuredValue' => array(
 			'extends' => 'Intangible',
 			'properties' => array()
@@ -1461,9 +1679,14 @@ class Types
 		'ContactPoint' => array(
 			'extends' => 'StructuredValue',
 			'properties' => array(
+				'areaServed' => array('AdministrativeArea'),
+				'availableLanguage' => array('Language'),
+				'contactOption' => array('ContactPointOption'),
 				'contactType' => array('Text'),
 				'email' => array('Text'),
 				'faxNumber' => array('Text'),
+				'hoursAvailable' => array('OpeningHoursSpecification'),
+				'productSupported' => array('Product', 'Text'),
 				'telephone' => array('Text')
 			)
 		),
@@ -1597,7 +1820,6 @@ class Types
 		'MedicalEntity' => array(
 			'extends' => 'Thing',
 			'properties' => array(
-				'alternateName' => array('Text'),
 				'code' => array('MedicalCode'),
 				'guideline' => array('MedicalGuideline'),
 				'medicineSystem' => array('MedicineSystem'),
@@ -2142,6 +2364,7 @@ class Types
 				'brand' => array('Brand', 'Organization'),
 				'contactPoint' => array('ContactPoint'),
 				'contactPoints' => array('ContactPoint'),
+				'department' => array('Organization'),
 				'duns' => array('Text'),
 				'email' => array('Text'),
 				'employee' => array('Person'),
@@ -2167,6 +2390,7 @@ class Types
 				'review' => array('Review'),
 				'reviews' => array('Review'),
 				'seeks' => array('Demand'),
+				'subOrganization' => array('Organization'),
 				'taxID' => array('Text'),
 				'telephone' => array('Text'),
 				'vatID' => array('Text')

@@ -3,7 +3,6 @@
  * An image file.
  *
  * @see    http://schema.org/ImageObject
- * @since  1.0
 */
 abstract class TypeImageObject extends TypeMediaObject
 {

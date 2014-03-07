@@ -3,7 +3,6 @@
  * An educational organization.
  *
  * @see    http://schema.org/EducationalOrganization
- * @since  1.0
 */
 abstract class TypeEducationalOrganization extends TypeOrganization
 {

@@ -13,7 +13,6 @@ http://purl.org/goodrelations/v1#VISA
 		
  *
  * @see    http://schema.org/CreditCard
- * @since  1.0
 */
 abstract class TypeCreditCard extends TypePaymentMethod
 {

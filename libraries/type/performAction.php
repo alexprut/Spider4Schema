@@ -3,7 +3,6 @@
  * The act of participating in performance arts.
  *
  * @see    http://schema.org/PerformAction
- * @since  1.0
 */
 abstract class TypePerformAction extends TypePlayAction
 {

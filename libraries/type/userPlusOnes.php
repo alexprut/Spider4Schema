@@ -3,7 +3,6 @@
  * User interaction: +1.
  *
  * @see    http://schema.org/UserPlusOnes
- * @since  1.0
 */
 abstract class TypeUserPlusOnes extends TypeUserInteraction
 {

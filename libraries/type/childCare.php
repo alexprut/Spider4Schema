@@ -3,7 +3,6 @@
  * A Childcare center.
  *
  * @see    http://schema.org/ChildCare
- * @since  1.0
 */
 abstract class TypeChildCare extends TypeLocalBusiness
 {

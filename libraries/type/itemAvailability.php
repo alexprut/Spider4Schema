@@ -1,9 +1,8 @@
 <?php
 /**
- * A list of possible product availablity options.
+ * A list of possible product availability options.
  *
  * @see    http://schema.org/ItemAvailability
- * @since  1.0
 */
 abstract class TypeItemAvailability extends TypeEnumeration
 {

@@ -3,7 +3,6 @@
  * Financial services business.
  *
  * @see    http://schema.org/FinancialService
- * @since  1.0
 */
 abstract class TypeFinancialService extends TypeLocalBusiness
 {

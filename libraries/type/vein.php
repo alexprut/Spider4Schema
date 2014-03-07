@@ -3,7 +3,6 @@
  * A type of blood vessel that specifically carries blood to the heart.
  *
  * @see    http://schema.org/Vein
- * @since  1.0
 */
 abstract class TypeVein extends TypeVessel
 {

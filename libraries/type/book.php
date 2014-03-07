@@ -3,7 +3,6 @@
  * A book.
  *
  * @see    http://schema.org/Book
- * @since  1.0
 */
 abstract class TypeBook extends TypeCreativeWork
 {

@@ -3,7 +3,6 @@
  * Provider of professional services.
  *
  * @see    http://schema.org/ProfessionalService
- * @since  1.0
 */
 abstract class TypeProfessionalService extends TypeLocalBusiness
 {

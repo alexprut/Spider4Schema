@@ -3,7 +3,6 @@
  * A guideline recommendation that is regarded as efficacious and where quality of the data supporting the recommendation is sound.
  *
  * @see    http://schema.org/MedicalGuidelineRecommendation
- * @since  1.0
 */
 abstract class TypeMedicalGuidelineRecommendation extends TypeMedicalGuideline
 {

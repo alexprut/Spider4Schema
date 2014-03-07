@@ -3,7 +3,6 @@
  * A medical laboratory that offers on-site or off-site diagnostic services.
  *
  * @see    http://schema.org/DiagnosticLab
- * @since  1.0
 */
 abstract class TypeDiagnosticLab extends TypeMedicalOrganization
 {

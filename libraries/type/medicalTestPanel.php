@@ -3,7 +3,6 @@
  * Any collection of tests commonly ordered together.
  *
  * @see    http://schema.org/MedicalTestPanel
- * @since  1.0
 */
 abstract class TypeMedicalTestPanel extends TypeMedicalTest
 {

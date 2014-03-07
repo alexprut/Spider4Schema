@@ -3,7 +3,6 @@
  * A motorcycle dealer.
  *
  * @see    http://schema.org/MotorcycleDealer
- * @since  1.0
 */
 abstract class TypeMotorcycleDealer extends TypeAutomotiveBusiness
 {

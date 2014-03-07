@@ -3,7 +3,6 @@
  * The geographic coordinates of a place or event.
  *
  * @see    http://schema.org/GeoCoordinates
- * @since  1.0
 */
 abstract class TypeGeoCoordinates extends TypeStructuredValue
 {

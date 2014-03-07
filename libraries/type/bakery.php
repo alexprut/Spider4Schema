@@ -3,7 +3,6 @@
  * A bakery.
  *
  * @see    http://schema.org/Bakery
- * @since  1.0
 */
 abstract class TypeBakery extends TypeFoodEstablishment
 {

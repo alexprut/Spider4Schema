@@ -3,7 +3,6 @@
  * A radio station.
  *
  * @see    http://schema.org/RadioStation
- * @since  1.0
 */
 abstract class TypeRadioStation extends TypeLocalBusiness
 {

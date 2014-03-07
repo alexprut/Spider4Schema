@@ -3,7 +3,6 @@
  * A product is anything that is made available for sale—for example, a pair of shoes, a concert ticket, or a car. Commodity services, like haircuts, can also be represented using this type.
  *
  * @see    http://schema.org/Product
- * @since  1.0
 */
 abstract class TypeProduct extends TypeThing
 {
@@ -155,7 +154,7 @@ abstract class TypeProduct extends TypeThing
 	);
 
 	/**
-	 * URL of an image for the logo of the item.
+	 * A logo associated with an organization.
 	 * Expected Type: ImageObject, URL
 	 * 
 	 * @var	array
@@ -195,7 +194,7 @@ abstract class TypeProduct extends TypeThing
 	);
 
 	/**
-	 * An offer to sell this item—for example, an offer to sell a product, the DVD of a movie, or tickets to an event.
+	 * An offer to transfer some rights to an item or to provide a service—for example, an offer to sell tickets to an event, to rent the DVD of a movie, to stream a TV show over the internet, to repair a motorcycle, or to loan a book.
 	 * Expected Type: Offer
 	 * 
 	 * @var	array

@@ -3,7 +3,6 @@
  * A predefined value for a product characteristic, e.g. the the power cord plug type "US" or the garment sizes "S", "M", "L", and "XL"
  *
  * @see    http://schema.org/QualitativeValue
- * @since  1.0
 */
 abstract class TypeQualitativeValue extends TypeEnumeration
 {

@@ -3,7 +3,6 @@
  * A city hall.
  *
  * @see    http://schema.org/CityHall
- * @since  1.0
 */
 abstract class TypeCityHall extends TypeGovernmentBuilding
 {

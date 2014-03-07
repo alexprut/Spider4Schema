@@ -3,7 +3,6 @@
  * Computer programming source code. Example: Full (compile ready) solutions, code snippet samples, scripts, templates.
  *
  * @see    http://schema.org/Code
- * @since  1.0
 */
 abstract class TypeCode extends TypeCreativeWork
 {

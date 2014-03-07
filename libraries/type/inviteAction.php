@@ -3,7 +3,6 @@
  * The act of asking someone to attend an event. Reciprocal of RsvpAction.
  *
  * @see    http://schema.org/InviteAction
- * @since  1.0
 */
 abstract class TypeInviteAction extends TypeCommunicateAction
 {

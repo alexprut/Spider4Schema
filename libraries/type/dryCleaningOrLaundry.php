@@ -3,7 +3,6 @@
  * A dry-cleaning business.
  *
  * @see    http://schema.org/DryCleaningOrLaundry
- * @since  1.0
 */
 abstract class TypeDryCleaningOrLaundry extends TypeLocalBusiness
 {

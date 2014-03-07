@@ -3,7 +3,6 @@
  * The act of consuming dynamic/moving visual content.
  *
  * @see    http://schema.org/WatchAction
- * @since  1.0
 */
 abstract class TypeWatchAction extends TypeConsumeAction
 {

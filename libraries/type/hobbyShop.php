@@ -3,7 +3,6 @@
  * A hobby store.
  *
  * @see    http://schema.org/HobbyShop
- * @since  1.0
 */
 abstract class TypeHobbyShop extends TypeStore
 {

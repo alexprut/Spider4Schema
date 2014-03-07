@@ -3,7 +3,6 @@
  * An elementary school.
  *
  * @see    http://schema.org/ElementarySchool
- * @since  1.0
 */
 abstract class TypeElementarySchool extends TypeEducationalOrganization
 {

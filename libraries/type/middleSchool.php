@@ -3,7 +3,6 @@
  * A middle school.
  *
  * @see    http://schema.org/MiddleSchool
- * @since  1.0
 */
 abstract class TypeMiddleSchool extends TypeEducationalOrganization
 {

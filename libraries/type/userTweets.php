@@ -3,7 +3,6 @@
  * User interaction: Tweets.
  *
  * @see    http://schema.org/UserTweets
- * @since  1.0
 */
 abstract class TypeUserTweets extends TypeUserInteraction
 {

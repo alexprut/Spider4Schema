@@ -3,7 +3,6 @@
  * The rating of the video.
  *
  * @see    http://schema.org/Rating
- * @since  1.0
 */
 abstract class TypeRating extends TypeIntangible
 {

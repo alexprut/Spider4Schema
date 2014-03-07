@@ -3,7 +3,6 @@
  * Bank or credit union.
  *
  * @see    http://schema.org/BankOrCreditUnion
- * @since  1.0
 */
 abstract class TypeBankOrCreditUnion extends TypeFinancialService
 {

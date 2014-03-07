@@ -3,7 +3,6 @@
  * A simple system that adds up the number of risk factors to yield a score that is associated with prognosis, e.g. CHAD score, TIMI risk score.
  *
  * @see    http://schema.org/MedicalRiskScore
- * @since  1.0
 */
 abstract class TypeMedicalRiskScore extends TypeMedicalRiskEstimator
 {

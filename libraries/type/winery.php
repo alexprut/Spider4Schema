@@ -3,7 +3,6 @@
  * A winery.
  *
  * @see    http://schema.org/Winery
- * @since  1.0
 */
 abstract class TypeWinery extends TypeFoodEstablishment
 {

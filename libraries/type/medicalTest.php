@@ -3,7 +3,6 @@
  * Any medical test, typically performed for diagnostic purposes.
  *
  * @see    http://schema.org/MedicalTest
- * @since  1.0
 */
 abstract class TypeMedicalTest extends TypeMedicalEntity
 {

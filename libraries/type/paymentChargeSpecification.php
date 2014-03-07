@@ -3,7 +3,6 @@
  * The costs of settling the payment using a particular payment method.
  *
  * @see    http://schema.org/PaymentChargeSpecification
- * @since  1.0
 */
 abstract class TypePaymentChargeSpecification extends TypePriceSpecification
 {

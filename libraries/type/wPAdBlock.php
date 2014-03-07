@@ -3,7 +3,6 @@
  * An advertising section of the page.
  *
  * @see    http://schema.org/WPAdBlock
- * @since  1.0
 */
 abstract class TypeWPAdBlock extends TypeWebPageElement
 {

@@ -3,7 +3,6 @@
  * A canal, like the Panama Canal
  *
  * @see    http://schema.org/Canal
- * @since  1.0
 */
 abstract class TypeCanal extends TypeBodyOfWater
 {

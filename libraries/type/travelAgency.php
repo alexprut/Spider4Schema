@@ -3,7 +3,6 @@
  * A travel agency.
  *
  * @see    http://schema.org/TravelAgency
- * @since  1.0
 */
 abstract class TypeTravelAgency extends TypeLocalBusiness
 {

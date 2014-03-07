@@ -3,7 +3,6 @@
  * The act of consuming audio content.
  *
  * @see    http://schema.org/ListenAction
- * @since  1.0
 */
 abstract class TypeListenAction extends TypeConsumeAction
 {

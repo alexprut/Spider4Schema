@@ -3,7 +3,6 @@
  * User interaction: Play count of an item, for example a video or a song.
  *
  * @see    http://schema.org/UserPlays
- * @since  1.0
 */
 abstract class TypeUserPlays extends TypeUserInteraction
 {

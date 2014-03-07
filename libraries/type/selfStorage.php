@@ -3,7 +3,6 @@
  * Self-storage facility.
  *
  * @see    http://schema.org/SelfStorage
- * @since  1.0
 */
 abstract class TypeSelfStorage extends TypeLocalBusiness
 {

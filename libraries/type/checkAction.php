@@ -3,7 +3,6 @@
  * An agent inspects/determines/investigates/inquire or examine an object's accuracy/quality/condition or state.
  *
  * @see    http://schema.org/CheckAction
- * @since  1.0
 */
 abstract class TypeCheckAction extends TypeFindAction
 {

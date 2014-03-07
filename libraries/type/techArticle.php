@@ -3,7 +3,6 @@
  * A technical article - Example: How-to (task) topics, step-by-step, procedural troubleshooting, specifications, etc.
  *
  * @see    http://schema.org/TechArticle
- * @since  1.0
 */
 abstract class TypeTechArticle extends TypeArticle
 {

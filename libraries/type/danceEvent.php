@@ -3,7 +3,6 @@
  * Event type: A social dance.
  *
  * @see    http://schema.org/DanceEvent
- * @since  1.0
 */
 abstract class TypeDanceEvent extends TypeEvent
 {

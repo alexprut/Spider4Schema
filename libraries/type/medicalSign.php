@@ -3,7 +3,6 @@
  * Any physical manifestation of a person's medical condition discoverable by objective diagnostic tests or physical examination.
  *
  * @see    http://schema.org/MedicalSign
- * @since  1.0
 */
 abstract class TypeMedicalSign extends TypeMedicalSignOrSymptom
 {

@@ -3,7 +3,6 @@
  * The header section of the page.
  *
  * @see    http://schema.org/WPHeader
- * @since  1.0
 */
 abstract class TypeWPHeader extends TypeWebPageElement
 {

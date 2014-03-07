@@ -3,7 +3,6 @@
  * Event type: Comedy event.
  *
  * @see    http://schema.org/ComedyEvent
- * @since  1.0
 */
 abstract class TypeComedyEvent extends TypeEvent
 {

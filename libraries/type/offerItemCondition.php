@@ -1,9 +1,8 @@
 <?php
 /**
- * A list of possible conditions for the item for sale.
+ * A list of possible conditions for the item.
  *
  * @see    http://schema.org/OfferItemCondition
- * @since  1.0
 */
 abstract class TypeOfferItemCondition extends TypeEnumeration
 {

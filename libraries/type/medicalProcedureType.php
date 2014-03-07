@@ -3,7 +3,6 @@
  * An enumeration that describes different types of medical procedures.
  *
  * @see    http://schema.org/MedicalProcedureType
- * @since  1.0
 */
 abstract class TypeMedicalProcedureType extends TypeMedicalEnumeration
 {

@@ -3,7 +3,6 @@
  * A clothing store.
  *
  * @see    http://schema.org/ClothingStore
- * @since  1.0
 */
 abstract class TypeClothingStore extends TypeStore
 {

@@ -1,6 +1,9 @@
 <?php
 /**
  * Methods to create the library classes
+ * 
+ * @copyright  Copyright (C) 2014. All rights reserved.
+ * @license    GNU General Public License version 2 or later; see LICENSE
  */
 
 /**
@@ -138,7 +141,6 @@ function createTypeClass($typeName, $type, $path)
 		. " * " . $type['comment'] . "\n"
 		. " *\n"
 		. " * @see    http://schema.org/" . ucfirst($typeName) . "\n"
-		. " * @since  1.0\n"
 		. "*/\n"
 		. "abstract class " . ucfirst(CLASS_PREFIX) . ucfirst($typeName) . $extends . "\n"
 		. "{\n"

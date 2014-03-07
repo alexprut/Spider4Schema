@@ -3,7 +3,6 @@
  * A movie rental store.
  *
  * @see    http://schema.org/MovieRentalStore
- * @since  1.0
 */
 abstract class TypeMovieRentalStore extends TypeStore
 {

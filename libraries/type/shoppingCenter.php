@@ -3,7 +3,6 @@
  * A shopping center or mall.
  *
  * @see    http://schema.org/ShoppingCenter
- * @since  1.0
 */
 abstract class TypeShoppingCenter extends TypeLocalBusiness
 {

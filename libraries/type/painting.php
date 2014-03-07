@@ -3,7 +3,6 @@
  * A painting.
  *
  * @see    http://schema.org/Painting
- * @since  1.0
 */
 abstract class TypePainting extends TypeCreativeWork
 {

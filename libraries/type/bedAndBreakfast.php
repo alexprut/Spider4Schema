@@ -3,7 +3,6 @@
  * Bed and breakfast.
  *
  * @see    http://schema.org/BedAndBreakfast
- * @since  1.0
 */
 abstract class TypeBedAndBreakfast extends TypeLodgingBusiness
 {

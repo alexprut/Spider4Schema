@@ -3,7 +3,6 @@
  * An organization such as a school, NGO, corporation, club, etc.
  *
  * @see    http://schema.org/Organization
- * @since  1.0
 */
 abstract class TypeOrganization extends TypeThing
 {
@@ -62,6 +61,16 @@ abstract class TypeOrganization extends TypeThing
 	 */
 	protected static $contactPoints = array('value' => 'contactPoints',
 		'expectedTypes' => array('ContactPoint')
+	);
+
+	/**
+	 * A relationship between an organization and a department of that organization, also described as an organization (allowing different urls, logos, opening hours). For example: a store with a pharmacy, or a bakery with a cafe.
+	 * Expected Type: Organization
+	 * 
+	 * @var	array
+	 */
+	protected static $department = array('value' => 'department',
+		'expectedTypes' => array('Organization')
 	);
 
 	/**
@@ -225,7 +234,7 @@ abstract class TypeOrganization extends TypeThing
 	);
 
 	/**
-	 * URL of an image for the logo of the item.
+	 * A logo associated with an organization.
 	 * Expected Type: ImageObject, URL
 	 * 
 	 * @var	array
@@ -315,6 +324,16 @@ abstract class TypeOrganization extends TypeThing
 	);
 
 	/**
+	 * A relationship between two organizations where the first includes the second, e.g., as a subsidiary. See also: the more specific 'department' property.
+	 * Expected Type: Organization
+	 * 
+	 * @var	array
+	 */
+	protected static $subOrganization = array('value' => 'subOrganization',
+		'expectedTypes' => array('Organization')
+	);
+
+	/**
 	 * The Tax / Fiscal ID of the organization or person, e.g. the TIN in the US or the CIF/NIF in Spain.
 	 * Expected Type: Text
 	 * 
@@ -392,6 +411,16 @@ abstract class TypeOrganization extends TypeThing
 	public static function pContactPoints()
 	{
 		return self::getValue(self::$contactPoints);
+	}
+
+	/**
+	 * Return the 'department' Property value
+	 *
+	 * @return	string
+	 */
+	public static function pDepartment()
+	{
+		return self::getValue(self::$department);
 	}
 
 	/**
@@ -642,6 +671,16 @@ abstract class TypeOrganization extends TypeThing
 	public static function pSeeks()
 	{
 		return self::getValue(self::$seeks);
+	}
+
+	/**
+	 * Return the 'subOrganization' Property value
+	 *
+	 * @return	string
+	 */
+	public static function pSubOrganization()
+	{
+		return self::getValue(self::$subOrganization);
 	}
 
 	/**

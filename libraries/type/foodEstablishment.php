@@ -3,7 +3,6 @@
  * A food-related business.
  *
  * @see    http://schema.org/FoodEstablishment
- * @since  1.0
 */
 abstract class TypeFoodEstablishment extends TypeLocalBusiness
 {

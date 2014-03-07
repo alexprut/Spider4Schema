@@ -3,7 +3,6 @@
  * An RV park.
  *
  * @see    http://schema.org/RVPark
- * @since  1.0
 */
 abstract class TypeRVPark extends TypeCivicStructure
 {

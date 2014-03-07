@@ -3,7 +3,6 @@
  * Web page type: Contact page.
  *
  * @see    http://schema.org/ContactPage
- * @since  1.0
 */
 abstract class TypeContactPage extends TypeWebPage
 {

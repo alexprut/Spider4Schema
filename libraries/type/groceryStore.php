@@ -3,7 +3,6 @@
  * A grocery store.
  *
  * @see    http://schema.org/GroceryStore
- * @since  1.0
 */
 abstract class TypeGroceryStore extends TypeStore
 {

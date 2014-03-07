@@ -3,7 +3,6 @@
  * A performance group, such as a band, an orchestra, or a circus.
  *
  * @see    http://schema.org/PerformingGroup
- * @since  1.0
 */
 abstract class TypePerformingGroup extends TypeOrganization
 {

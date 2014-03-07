@@ -3,7 +3,6 @@
  * Data type: Integer.
  *
  * @see    http://schema.org/Integer
- * @since  1.0
 */
 abstract class TypeInteger extends TypeNumber
 {

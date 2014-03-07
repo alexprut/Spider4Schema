@@ -3,7 +3,6 @@
  * A music venue.
  *
  * @see    http://schema.org/MusicVenue
- * @since  1.0
 */
 abstract class TypeMusicVenue extends TypeCivicStructure
 {

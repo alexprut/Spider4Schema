@@ -3,7 +3,6 @@
  * Lists or enumerations—for example, a list of cuisines or music genres, etc.
  *
  * @see    http://schema.org/Enumeration
- * @since  1.0
 */
 abstract class TypeEnumeration extends TypeIntangible
 {

@@ -3,7 +3,6 @@
  * An agent pays a price to a participant.
  *
  * @see    http://schema.org/PayAction
- * @since  1.0
 */
 abstract class TypePayAction extends TypeTradeAction
 {

@@ -3,7 +3,6 @@
  * A train station.
  *
  * @see    http://schema.org/TrainStation
- * @since  1.0
 */
 abstract class TypeTrainStation extends TypeCivicStructure
 {

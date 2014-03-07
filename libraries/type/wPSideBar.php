@@ -3,7 +3,6 @@
  * A sidebar section of the page.
  *
  * @see    http://schema.org/WPSideBar
- * @since  1.0
 */
 abstract class TypeWPSideBar extends TypeWebPageElement
 {

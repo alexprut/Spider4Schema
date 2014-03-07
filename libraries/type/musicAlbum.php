@@ -3,7 +3,6 @@
  * A collection of music tracks.
  *
  * @see    http://schema.org/MusicAlbum
- * @since  1.0
 */
 abstract class TypeMusicAlbum extends TypeMusicPlaylist
 {

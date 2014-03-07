@@ -3,7 +3,6 @@
  * An car dealership.
  *
  * @see    http://schema.org/AutoDealer
- * @since  1.0
 */
 abstract class TypeAutoDealer extends TypeAutomotiveBusiness
 {

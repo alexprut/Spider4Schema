@@ -3,7 +3,6 @@
  * An historical landmark or building.
  *
  * @see    http://schema.org/LandmarksOrHistoricalBuildings
- * @since  1.0
 */
 abstract class TypeLandmarksOrHistoricalBuildings extends TypePlace
 {

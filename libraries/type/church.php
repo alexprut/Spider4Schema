@@ -3,7 +3,6 @@
  * A church.
  *
  * @see    http://schema.org/Church
- * @since  1.0
 */
 abstract class TypeChurch extends TypePlaceOfWorship
 {

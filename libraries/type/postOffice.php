@@ -3,7 +3,6 @@
  * A post office.
  *
  * @see    http://schema.org/PostOffice
- * @since  1.0
 */
 abstract class TypePostOffice extends TypeGovernmentOffice
 {

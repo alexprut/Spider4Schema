@@ -3,7 +3,6 @@
  * A wholesale store.
  *
  * @see    http://schema.org/WholesaleStore
- * @since  1.0
 */
 abstract class TypeWholesaleStore extends TypeStore
 {

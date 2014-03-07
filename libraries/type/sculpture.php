@@ -3,7 +3,6 @@
  * A piece of sculpture.
  *
  * @see    http://schema.org/Sculpture
- * @since  1.0
 */
 abstract class TypeSculpture extends TypeCreativeWork
 {

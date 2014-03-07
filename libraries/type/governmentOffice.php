@@ -3,7 +3,6 @@
  * A government office—for example, an IRS or DMV office.
  *
  * @see    http://schema.org/GovernmentOffice
- * @since  1.0
 */
 abstract class TypeGovernmentOffice extends TypeLocalBusiness
 {

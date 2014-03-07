@@ -3,7 +3,6 @@
  * A listing that describes a job opening in a certain organization.
  *
  * @see    http://schema.org/JobPosting
- * @since  1.0
 */
 abstract class TypeJobPosting extends TypeIntangible
 {

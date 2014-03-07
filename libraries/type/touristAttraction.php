@@ -3,7 +3,6 @@
  * A tourist attraction.
  *
  * @see    http://schema.org/TouristAttraction
- * @since  1.0
 */
 abstract class TypeTouristAttraction extends TypePlace
 {

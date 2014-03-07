@@ -3,7 +3,6 @@
  * A museum.
  *
  * @see    http://schema.org/Museum
- * @since  1.0
 */
 abstract class TypeMuseum extends TypeCivicStructure
 {

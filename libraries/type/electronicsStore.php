@@ -3,7 +3,6 @@
  * An electronics store.
  *
  * @see    http://schema.org/ElectronicsStore
- * @since  1.0
 */
 abstract class TypeElectronicsStore extends TypeStore
 {

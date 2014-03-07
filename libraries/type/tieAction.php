@@ -3,7 +3,6 @@
  * The act of reaching a draw in a competitive activity.
  *
  * @see    http://schema.org/TieAction
- * @since  1.0
 */
 abstract class TypeTieAction extends TypeAchieveAction
 {

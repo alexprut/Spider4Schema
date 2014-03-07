@@ -3,7 +3,6 @@
  * A recipe.
  *
  * @see    http://schema.org/Recipe
- * @since  1.0
 */
 abstract class TypeRecipe extends TypeCreativeWork
 {

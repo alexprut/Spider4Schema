@@ -3,7 +3,6 @@
  * An employment agency.
  *
  * @see    http://schema.org/EmploymentAgency
- * @since  1.0
 */
 abstract class TypeEmploymentAgency extends TypeLocalBusiness
 {

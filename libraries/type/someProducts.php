@@ -3,7 +3,6 @@
  * A placeholder for multiple similar products of the same kind.
  *
  * @see    http://schema.org/SomeProducts
- * @since  1.0
 */
 abstract class TypeSomeProducts extends TypeProduct
 {

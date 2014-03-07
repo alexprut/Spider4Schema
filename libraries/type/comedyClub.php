@@ -3,7 +3,6 @@
  * A comedy club.
  *
  * @see    http://schema.org/ComedyClub
- * @since  1.0
 */
 abstract class TypeComedyClub extends TypeEntertainmentBusiness
 {

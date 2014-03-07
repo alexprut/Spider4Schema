@@ -3,7 +3,6 @@
  * The geographic shape of a place.
  *
  * @see    http://schema.org/GeoShape
- * @since  1.0
 */
 abstract class TypeGeoShape extends TypeStructuredValue
 {

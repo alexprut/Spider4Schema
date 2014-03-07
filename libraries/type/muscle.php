@@ -3,7 +3,6 @@
  * A muscle is an anatomical structure consisting of a contractile form of tissue that animals use to effect movement.
  *
  * @see    http://schema.org/Muscle
- * @since  1.0
 */
 abstract class TypeMuscle extends TypeAnatomicalStructure
 {

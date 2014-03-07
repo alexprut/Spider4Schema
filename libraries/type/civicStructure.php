@@ -3,7 +3,6 @@
  * A public structure, such as a town hall or concert hall.
  *
  * @see    http://schema.org/CivicStructure
- * @since  1.0
 */
 abstract class TypeCivicStructure extends TypePlace
 {

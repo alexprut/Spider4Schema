@@ -3,7 +3,6 @@
  * The act of conveying information to another person via a communication medium (instrument) such as speech, email, or telephone conversation.
  *
  * @see    http://schema.org/CommunicateAction
- * @since  1.0
 */
 abstract class TypeCommunicateAction extends TypeInteractAction
 {

@@ -3,7 +3,6 @@
  * A health club.
  *
  * @see    http://schema.org/HealthClub
- * @since  1.0
 */
 abstract class TypeHealthClub extends TypeHealthAndBeautyBusiness
 {

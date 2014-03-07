@@ -3,7 +3,6 @@
  * Event type: Sports event.
  *
  * @see    http://schema.org/SportsEvent
- * @since  1.0
 */
 abstract class TypeSportsEvent extends TypeEvent
 {

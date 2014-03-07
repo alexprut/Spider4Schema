@@ -3,7 +3,6 @@
  * A pond
  *
  * @see    http://schema.org/Pond
- * @since  1.0
 */
 abstract class TypePond extends TypeBodyOfWater
 {

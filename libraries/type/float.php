@@ -3,7 +3,6 @@
  * Data type: Floating number.
  *
  * @see    http://schema.org/Float
- * @since  1.0
 */
 abstract class TypeFloat extends TypeNumber
 {

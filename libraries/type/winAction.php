@@ -3,7 +3,6 @@
  * The act of achieving victory in a competitive activity.
  *
  * @see    http://schema.org/WinAction
- * @since  1.0
 */
 abstract class TypeWinAction extends TypeAchieveAction
 {

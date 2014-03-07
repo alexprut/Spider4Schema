@@ -3,7 +3,6 @@
  * Car repair, sales, or parts.
  *
  * @see    http://schema.org/AutomotiveBusiness
- * @since  1.0
 */
 abstract class TypeAutomotiveBusiness extends TypeLocalBusiness
 {

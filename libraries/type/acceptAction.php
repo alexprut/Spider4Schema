@@ -3,7 +3,6 @@
  * The act of committing to/adopting an object.Related actions:RejectAction: The antagonym of AcceptAction.
  *
  * @see    http://schema.org/AcceptAction
- * @since  1.0
 */
 abstract class TypeAcceptAction extends TypeAllocateAction
 {

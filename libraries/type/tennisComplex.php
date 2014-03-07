@@ -3,7 +3,6 @@
  * A tennis complex.
  *
  * @see    http://schema.org/TennisComplex
- * @since  1.0
 */
 abstract class TypeTennisComplex extends TypeSportsActivityLocation
 {

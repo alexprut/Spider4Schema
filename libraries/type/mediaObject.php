@@ -3,7 +3,6 @@
  * An image, video, or audio object embedded in a web page. Note that a creative work may have many media objects associated with it on the same web page. For example, a page about a single song (MusicRecording) may have a music video (VideoObject), and a high and low bandwidth audio stream (2 AudioObject's).
  *
  * @see    http://schema.org/MediaObject
- * @since  1.0
 */
 abstract class TypeMediaObject extends TypeCreativeWork
 {
@@ -122,6 +121,26 @@ abstract class TypeMediaObject extends TypeCreativeWork
 	 */
 	protected static $playerType = array('value' => 'playerType',
 		'expectedTypes' => array('Text')
+	);
+
+	/**
+	 * The production company or studio that made the movie, tv/radio series, season, or episode, or media object.
+	 * Expected Type: Organization
+	 * 
+	 * @var	array
+	 */
+	protected static $productionCompany = array('value' => 'productionCompany',
+		'expectedTypes' => array('Organization')
+	);
+
+	/**
+	 * A publication event associated with the episode, clip or media object.
+	 * Expected Type: PublicationEvent
+	 * 
+	 * @var	array
+	 */
+	protected static $publication = array('value' => 'publication',
+		'expectedTypes' => array('PublicationEvent')
 	);
 
 	/**
@@ -272,6 +291,26 @@ abstract class TypeMediaObject extends TypeCreativeWork
 	public static function pPlayerType()
 	{
 		return self::getValue(self::$playerType);
+	}
+
+	/**
+	 * Return the 'productionCompany' Property value
+	 *
+	 * @return	string
+	 */
+	public static function pProductionCompany()
+	{
+		return self::getValue(self::$productionCompany);
+	}
+
+	/**
+	 * Return the 'publication' Property value
+	 *
+	 * @return	string
+	 */
+	public static function pPublication()
+	{
+		return self::getValue(self::$publication);
 	}
 
 	/**

@@ -1,9 +1,8 @@
 <?php
 /**
- * An event happening at a certain time at a certain location.
+ * An event happening at a certain time and location, such as a concert, lecture, or festival. Ticketing information may be added via the 'offers' property. Repeated events may be structured as separate Event objects.
  *
  * @see    http://schema.org/Event
- * @since  1.0
 */
 abstract class TypeEvent extends TypeThing
 {
@@ -35,6 +34,16 @@ abstract class TypeEvent extends TypeThing
 	);
 
 	/**
+	 * The time admission will commence.
+	 * Expected Type: DateTime
+	 * 
+	 * @var	array
+	 */
+	protected static $doorTime = array('value' => 'doorTime',
+		'expectedTypes' => array('DateTime')
+	);
+
+	/**
 	 * The duration of the item (movie, audio recording, event, etc.) in ISO 8601 date format.
 	 * Expected Type: Duration
 	 * 
@@ -45,13 +54,23 @@ abstract class TypeEvent extends TypeThing
 	);
 
 	/**
-	 * The end date and time of the event (in ISO 8601 date format).
+	 * The end date and time of the event or item (in ISO 8601 date format).
 	 * Expected Type: Date
 	 * 
 	 * @var	array
 	 */
 	protected static $endDate = array('value' => 'endDate',
 		'expectedTypes' => array('Date')
+	);
+
+	/**
+	 * An eventStatus of an event represents its status; particularly useful when an event is cancelled or rescheduled.
+	 * Expected Type: EventStatusType
+	 * 
+	 * @var	array
+	 */
+	protected static $eventStatus = array('value' => 'eventStatus',
+		'expectedTypes' => array('EventStatusType')
 	);
 
 	/**
@@ -65,7 +84,7 @@ abstract class TypeEvent extends TypeThing
 	);
 
 	/**
-	 * An offer to sell this item—for example, an offer to sell a product, the DVD of a movie, or tickets to an event.
+	 * An offer to transfer some rights to an item or to provide a service—for example, an offer to sell tickets to an event, to rent the DVD of a movie, to stream a TV show over the internet, to repair a motorcycle, or to loan a book.
 	 * Expected Type: Offer
 	 * 
 	 * @var	array
@@ -95,7 +114,17 @@ abstract class TypeEvent extends TypeThing
 	);
 
 	/**
-	 * The start date and time of the event (in ISO 8601 date format).
+	 * Used in conjunction with eventStatus for rescheduled or cancelled events. This property contains the previously scheduled start date. For rescheduled events, the startDate property should be used for the newly scheduled start date. In the (rare) case of an event that has been postponed and rescheduled multiple times, this field may be repeated.
+	 * Expected Type: Date
+	 * 
+	 * @var	array
+	 */
+	protected static $previousStartDate = array('value' => 'previousStartDate',
+		'expectedTypes' => array('Date')
+	);
+
+	/**
+	 * The start date and time of the event or item (in ISO 8601 date format).
 	 * Expected Type: Date
 	 * 
 	 * @var	array
@@ -135,6 +164,16 @@ abstract class TypeEvent extends TypeThing
 	);
 
 	/**
+	 * The typical expected age range, e.g. '7-9', '11-'.
+	 * Expected Type: Text
+	 * 
+	 * @var	array
+	 */
+	protected static $typicalAgeRange = array('value' => 'typicalAgeRange',
+		'expectedTypes' => array('Text')
+	);
+
+	/**
 	 * Return the 'attendee' Property value
 	 *
 	 * @return	string
@@ -155,6 +194,16 @@ abstract class TypeEvent extends TypeThing
 	}
 
 	/**
+	 * Return the 'doorTime' Property value
+	 *
+	 * @return	string
+	 */
+	public static function pDoorTime()
+	{
+		return self::getValue(self::$doorTime);
+	}
+
+	/**
 	 * Return the 'duration' Property value
 	 *
 	 * @return	string
@@ -172,6 +221,16 @@ abstract class TypeEvent extends TypeThing
 	public static function pEndDate()
 	{
 		return self::getValue(self::$endDate);
+	}
+
+	/**
+	 * Return the 'eventStatus' Property value
+	 *
+	 * @return	string
+	 */
+	public static function pEventStatus()
+	{
+		return self::getValue(self::$eventStatus);
 	}
 
 	/**
@@ -215,6 +274,16 @@ abstract class TypeEvent extends TypeThing
 	}
 
 	/**
+	 * Return the 'previousStartDate' Property value
+	 *
+	 * @return	string
+	 */
+	public static function pPreviousStartDate()
+	{
+		return self::getValue(self::$previousStartDate);
+	}
+
+	/**
 	 * Return the 'startDate' Property value
 	 *
 	 * @return	string
@@ -252,5 +321,15 @@ abstract class TypeEvent extends TypeThing
 	public static function pSuperEvent()
 	{
 		return self::getValue(self::$superEvent);
+	}
+
+	/**
+	 * Return the 'typicalAgeRange' Property value
+	 *
+	 * @return	string
+	 */
+	public static function pTypicalAgeRange()
+	{
+		return self::getValue(self::$typicalAgeRange);
 	}
 }

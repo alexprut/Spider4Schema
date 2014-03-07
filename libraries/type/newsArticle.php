@@ -3,7 +3,6 @@
  * A news article
  *
  * @see    http://schema.org/NewsArticle
- * @since  1.0
 */
 abstract class TypeNewsArticle extends TypeArticle
 {

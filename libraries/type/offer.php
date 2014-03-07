@@ -1,9 +1,8 @@
 <?php
 /**
- * An offer to sell an item—for example, an offer to sell a product, the DVD of a movie, or tickets to an event.
+ * An offer to transfer some rights to an item or to provide a service—for example, an offer to sell tickets to an event, to rent the DVD of a movie, to stream a TV show over the internet, to repair a motorcycle, or to loan a book.
  *
  * @see    http://schema.org/Offer
- * @since  1.0
 */
 abstract class TypeOffer extends TypeIntangible
 {
@@ -245,7 +244,7 @@ abstract class TypeOffer extends TypeIntangible
 	);
 
 	/**
-	 * The item being sold.
+	 * The item being offered.
 	 * Expected Type: Product
 	 * 
 	 * @var	array
@@ -325,7 +324,7 @@ abstract class TypeOffer extends TypeIntangible
 	);
 
 	/**
-	 * The seller.
+	 * The organization or person making the offer.
 	 * Expected Type: Organization, Person
 	 * 
 	 * @var	array
@@ -355,7 +354,7 @@ abstract class TypeOffer extends TypeIntangible
 	);
 
 	/**
-	 * The beginning of the validity of offer, price specification, or opening hours data.
+	 * The date when the item becomes valid.
 	 * Expected Type: DateTime
 	 * 
 	 * @var	array

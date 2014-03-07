@@ -3,7 +3,6 @@
  * The act of installing an application.
  *
  * @see    http://schema.org/InstallAction
- * @since  1.0
 */
 abstract class TypeInstallAction extends TypeConsumeAction
 {

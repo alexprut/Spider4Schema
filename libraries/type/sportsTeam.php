@@ -3,7 +3,6 @@
  * Organization: Sports team.
  *
  * @see    http://schema.org/SportsTeam
- * @since  1.0
 */
 abstract class TypeSportsTeam extends TypeOrganization
 {

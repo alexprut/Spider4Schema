@@ -3,7 +3,6 @@
  * A government building.
  *
  * @see    http://schema.org/GovernmentBuilding
- * @since  1.0
 */
 abstract class TypeGovernmentBuilding extends TypeCivicStructure
 {

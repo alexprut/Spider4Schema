@@ -3,7 +3,6 @@
  * An amusement park.
  *
  * @see    http://schema.org/AmusementPark
- * @since  1.0
 */
 abstract class TypeAmusementPark extends TypeEntertainmentBusiness
 {

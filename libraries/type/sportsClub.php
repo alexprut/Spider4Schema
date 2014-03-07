@@ -3,7 +3,6 @@
  * A sports club.
  *
  * @see    http://schema.org/SportsClub
- * @since  1.0
 */
 abstract class TypeSportsClub extends TypeSportsActivityLocation
 {

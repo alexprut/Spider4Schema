@@ -3,7 +3,6 @@
  * A motel.
  *
  * @see    http://schema.org/Motel
- * @since  1.0
 */
 abstract class TypeMotel extends TypeLodgingBusiness
 {

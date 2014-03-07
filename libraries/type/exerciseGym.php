@@ -3,7 +3,6 @@
  * A gym.
  *
  * @see    http://schema.org/ExerciseGym
- * @since  1.0
 */
 abstract class TypeExerciseGym extends TypeSportsActivityLocation
 {

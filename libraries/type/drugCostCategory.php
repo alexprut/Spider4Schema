@@ -3,7 +3,6 @@
  * Enumerated categories of medical drug costs.
  *
  * @see    http://schema.org/DrugCostCategory
- * @since  1.0
 */
 abstract class TypeDrugCostCategory extends TypeMedicalEnumeration
 {

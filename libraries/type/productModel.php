@@ -3,7 +3,6 @@
  * A datasheet or vendor specification of a product (in the sense of a prototypical description).
  *
  * @see    http://schema.org/ProductModel
- * @since  1.0
 */
 abstract class TypeProductModel extends TypeProduct
 {

@@ -3,7 +3,6 @@
  * A department store.
  *
  * @see    http://schema.org/DepartmentStore
- * @since  1.0
 */
 abstract class TypeDepartmentStore extends TypeStore
 {

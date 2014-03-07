@@ -3,7 +3,6 @@
  * An auto parts store.
  *
  * @see    http://schema.org/AutoPartsStore
- * @since  1.0
 */
 abstract class TypeAutoPartsStore extends TypeAutomotiveBusiness
 {

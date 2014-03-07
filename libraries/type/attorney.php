@@ -3,7 +3,6 @@
  * Professional service: Attorney.
  *
  * @see    http://schema.org/Attorney
- * @since  1.0
 */
 abstract class TypeAttorney extends TypeProfessionalService
 {

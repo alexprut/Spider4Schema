@@ -3,7 +3,6 @@
  * The act of discovering/finding an object.
  *
  * @see    http://schema.org/DiscoverAction
- * @since  1.0
 */
 abstract class TypeDiscoverAction extends TypeFindAction
 {

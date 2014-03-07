@@ -3,7 +3,6 @@
  * A specific strength in which a medical drug is available in a specific country.
  *
  * @see    http://schema.org/DrugStrength
- * @since  1.0
 */
 abstract class TypeDrugStrength extends TypeMedicalIntangible
 {

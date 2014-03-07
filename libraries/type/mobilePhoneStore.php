@@ -3,7 +3,6 @@
  * A mobile-phone store.
  *
  * @see    http://schema.org/MobilePhoneStore
- * @since  1.0
 */
 abstract class TypeMobilePhoneStore extends TypeStore
 {

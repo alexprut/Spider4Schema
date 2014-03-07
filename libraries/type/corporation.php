@@ -3,7 +3,6 @@
  * Organization: A business corporation.
  *
  * @see    http://schema.org/Corporation
- * @since  1.0
 */
 abstract class TypeCorporation extends TypeOrganization
 {

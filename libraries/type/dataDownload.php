@@ -3,7 +3,6 @@
  * A dataset in downloadable form.
  *
  * @see    http://schema.org/DataDownload
- * @since  1.0
 */
 abstract class TypeDataDownload extends TypeMediaObject
 {

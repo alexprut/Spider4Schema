@@ -3,7 +3,6 @@
  * A notary.
  *
  * @see    http://schema.org/Notary
- * @since  1.0
 */
 abstract class TypeNotary extends TypeProfessionalService
 {

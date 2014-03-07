@@ -3,7 +3,6 @@
  * A bus stop.
  *
  * @see    http://schema.org/BusStop
- * @since  1.0
 */
 abstract class TypeBusStop extends TypeCivicStructure
 {

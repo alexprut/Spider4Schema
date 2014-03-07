@@ -3,7 +3,6 @@
  * The act of being defeated in a competitive activity.
  *
  * @see    http://schema.org/LoseAction
- * @since  1.0
 */
 abstract class TypeLoseAction extends TypeAchieveAction
 {

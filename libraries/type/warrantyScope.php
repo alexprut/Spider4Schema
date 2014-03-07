@@ -10,7 +10,6 @@ http://purl.org/goodrelations/v1#PartsAndLabor-PickUp
 	
  *
  * @see    http://schema.org/WarrantyScope
- * @since  1.0
 */
 abstract class TypeWarrantyScope extends TypeEnumeration
 {

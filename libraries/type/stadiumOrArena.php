@@ -3,7 +3,6 @@
  * A stadium.
  *
  * @see    http://schema.org/StadiumOrArena
- * @since  1.0
 */
 abstract class TypeStadiumOrArena extends TypeCivicStructure
 {

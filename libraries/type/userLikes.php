@@ -3,7 +3,6 @@
  * User interaction: Like an item.
  *
  * @see    http://schema.org/UserLikes
- * @since  1.0
 */
 abstract class TypeUserLikes extends TypeUserInteraction
 {

@@ -3,7 +3,6 @@
  * A medical procedure intended primarly for palliative purposes, aimed at relieving the symptoms of an underlying health condition.
  *
  * @see    http://schema.org/PalliativeProcedure
- * @since  1.0
 */
 abstract class TypePalliativeProcedure extends TypeMedicalProcedure
 {

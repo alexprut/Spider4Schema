@@ -3,7 +3,6 @@
  * A set of characteristics describing parents, who can be interested in viewing some content
  *
  * @see    http://schema.org/ParentAudience
- * @since  1.0
 */
 abstract class TypeParentAudience extends TypePeopleAudience
 {

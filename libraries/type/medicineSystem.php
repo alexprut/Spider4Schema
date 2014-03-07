@@ -3,7 +3,6 @@
  * Systems of medical practice.
  *
  * @see    http://schema.org/MedicineSystem
- * @since  1.0
 */
 abstract class TypeMedicineSystem extends TypeMedicalEnumeration
 {

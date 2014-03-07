@@ -3,7 +3,6 @@
  * An agent bookmarks/flags/labels/tags/marks an object.
  *
  * @see    http://schema.org/BookmarkAction
- * @since  1.0
 */
 abstract class TypeBookmarkAction extends TypeOrganizeAction
 {

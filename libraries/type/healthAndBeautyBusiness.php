@@ -3,7 +3,6 @@
  * Health and beauty.
  *
  * @see    http://schema.org/HealthAndBeautyBusiness
- * @since  1.0
 */
 abstract class TypeHealthAndBeautyBusiness extends TypeLocalBusiness
 {

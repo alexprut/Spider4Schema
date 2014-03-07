@@ -15,7 +15,6 @@ http://purl.org/goodrelations/v1#Buy
 		
  *
  * @see    http://schema.org/BusinessFunction
- * @since  1.0
 */
 abstract class TypeBusinessFunction extends TypeEnumeration
 {

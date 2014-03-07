@@ -3,7 +3,6 @@
  * A sea (for example, the Caspian sea).
  *
  * @see    http://schema.org/SeaBodyOfWater
- * @since  1.0
 */
 abstract class TypeSeaBodyOfWater extends TypeBodyOfWater
 {

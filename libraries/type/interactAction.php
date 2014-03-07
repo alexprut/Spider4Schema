@@ -3,7 +3,6 @@
  * The act of interacting with another person or organization.
  *
  * @see    http://schema.org/InteractAction
- * @since  1.0
 */
 abstract class TypeInteractAction extends TypeAction
 {

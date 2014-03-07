@@ -3,7 +3,6 @@
  * A body of structured information describing some topic(s) of interest.
  *
  * @see    http://schema.org/Dataset
- * @since  1.0
 */
 abstract class TypeDataset extends TypeCreativeWork
 {

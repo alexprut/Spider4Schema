@@ -3,7 +3,6 @@
  * A subway station.
  *
  * @see    http://schema.org/SubwayStation
- * @since  1.0
 */
 abstract class TypeSubwayStation extends TypeCivicStructure
 {

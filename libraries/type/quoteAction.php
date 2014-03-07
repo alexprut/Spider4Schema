@@ -3,7 +3,6 @@
  * An agent quotes/estimates/appraises an object/product/service with a price at a location/store.
  *
  * @see    http://schema.org/QuoteAction
- * @since  1.0
 */
 abstract class TypeQuoteAction extends TypeTradeAction
 {

@@ -3,7 +3,6 @@
  *  A point value or interval for product characteristics and other purposes.
  *
  * @see    http://schema.org/QuantitativeValue
- * @since  1.0
 */
 abstract class TypeQuantitativeValue extends TypeStructuredValue
 {

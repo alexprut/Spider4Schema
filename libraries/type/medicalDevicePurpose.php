@@ -3,7 +3,6 @@
  * Categories of medical devices, organized by the purpose or intended use of the device.
  *
  * @see    http://schema.org/MedicalDevicePurpose
- * @since  1.0
 */
 abstract class TypeMedicalDevicePurpose extends TypeMedicalEnumeration
 {

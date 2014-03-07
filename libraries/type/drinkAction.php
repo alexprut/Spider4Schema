@@ -3,7 +3,6 @@
  * The act of swallowing liquids.
  *
  * @see    http://schema.org/DrinkAction
- * @since  1.0
 */
 abstract class TypeDrinkAction extends TypeConsumeAction
 {

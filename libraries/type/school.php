@@ -3,7 +3,6 @@
  * A school.
  *
  * @see    http://schema.org/School
- * @since  1.0
 */
 abstract class TypeSchool extends TypeEducationalOrganization
 {

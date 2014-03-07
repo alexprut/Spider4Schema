@@ -3,7 +3,6 @@
  * An airport.
  *
  * @see    http://schema.org/Airport
- * @since  1.0
 */
 abstract class TypeAirport extends TypeCivicStructure
 {

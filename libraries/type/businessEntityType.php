@@ -12,7 +12,6 @@ http://purl.org/goodrelations/v1#Reseller
 		
  *
  * @see    http://schema.org/BusinessEntityType
- * @since  1.0
 */
 abstract class TypeBusinessEntityType extends TypeEnumeration
 {

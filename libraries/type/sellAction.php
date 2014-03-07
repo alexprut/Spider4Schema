@@ -3,7 +3,6 @@
  * The act of taking money from a buyer in exchange for goods or services rendered. An agent sells an object, product, or service to a buyer for a price. Reciprocal of BuyAction.
  *
  * @see    http://schema.org/SellAction
- * @since  1.0
 */
 abstract class TypeSellAction extends TypeTradeAction
 {

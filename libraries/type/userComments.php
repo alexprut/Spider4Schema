@@ -3,7 +3,6 @@
  * The UserInteraction event in which a user comments on an item.
  *
  * @see    http://schema.org/UserComments
- * @since  1.0
 */
 abstract class TypeUserComments extends TypeUserInteraction
 {

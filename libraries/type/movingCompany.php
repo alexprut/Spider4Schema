@@ -3,7 +3,6 @@
  * A moving company.
  *
  * @see    http://schema.org/MovingCompany
- * @since  1.0
 */
 abstract class TypeMovingCompany extends TypeHomeAndConstructionBusiness
 {

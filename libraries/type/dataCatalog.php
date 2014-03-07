@@ -3,7 +3,6 @@
  * A collection of datasets.
  *
  * @see    http://schema.org/DataCatalog
- * @since  1.0
 */
 abstract class TypeDataCatalog extends TypeCreativeWork
 {

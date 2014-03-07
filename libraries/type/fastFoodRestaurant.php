@@ -3,7 +3,6 @@
  * A fast-food restaurant.
  *
  * @see    http://schema.org/FastFoodRestaurant
- * @since  1.0
 */
 abstract class TypeFastFoodRestaurant extends TypeFoodEstablishment
 {

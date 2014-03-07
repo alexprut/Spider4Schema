@@ -3,7 +3,6 @@
  * The act of granting permission to an object.
  *
  * @see    http://schema.org/AuthorizeAction
- * @since  1.0
 */
 abstract class TypeAuthorizeAction extends TypeAllocateAction
 {

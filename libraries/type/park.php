@@ -3,7 +3,6 @@
  * A park.
  *
  * @see    http://schema.org/Park
- * @since  1.0
 */
 abstract class TypePark extends TypeCivicStructure
 {

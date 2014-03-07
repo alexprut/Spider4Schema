@@ -10,7 +10,6 @@ http://purl.org/goodrelations/v1#UPS
 	
  *
  * @see    http://schema.org/ParcelService
- * @since  1.0
 */
 abstract class TypeParcelService extends TypeDeliveryMethod
 {

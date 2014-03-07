@@ -3,7 +3,6 @@
  * A bike store.
  *
  * @see    http://schema.org/BikeStore
- * @since  1.0
 */
 abstract class TypeBikeStore extends TypeStore
 {

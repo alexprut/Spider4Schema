@@ -3,7 +3,6 @@
  * A bookstore.
  *
  * @see    http://schema.org/BookStore
- * @since  1.0
 */
 abstract class TypeBookStore extends TypeStore
 {

@@ -3,7 +3,6 @@
  * Beauty salon.
  *
  * @see    http://schema.org/BeautySalon
- * @since  1.0
 */
 abstract class TypeBeautySalon extends TypeHealthAndBeautyBusiness
 {

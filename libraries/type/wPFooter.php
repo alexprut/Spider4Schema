@@ -3,7 +3,6 @@
  * The footer section of the page.
  *
  * @see    http://schema.org/WPFooter
- * @since  1.0
 */
 abstract class TypeWPFooter extends TypeWebPageElement
 {

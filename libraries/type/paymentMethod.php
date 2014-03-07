@@ -16,7 +16,6 @@ http://purl.org/goodrelations/v1#PaySwarm
 		
  *
  * @see    http://schema.org/PaymentMethod
- * @since  1.0
 */
 abstract class TypePaymentMethod extends TypeEnumeration
 {

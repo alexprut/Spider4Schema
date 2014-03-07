@@ -3,7 +3,6 @@
  * The act of producing a visual/graphical representation of an object, typically with a pen/pencil and paper as instruments.
  *
  * @see    http://schema.org/DrawAction
- * @since  1.0
 */
 abstract class TypeDrawAction extends TypeCreateAction
 {

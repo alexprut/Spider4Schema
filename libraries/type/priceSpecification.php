@@ -3,7 +3,6 @@
  * A structured value representing a monetary amount. Typically, only the subclasses of this type are used for markup.
  *
  * @see    http://schema.org/PriceSpecification
- * @since  1.0
 */
 abstract class TypePriceSpecification extends TypeStructuredValue
 {
@@ -75,7 +74,7 @@ abstract class TypePriceSpecification extends TypeStructuredValue
 	);
 
 	/**
-	 * The beginning of the validity of offer, price specification, or opening hours data.
+	 * The date when the item becomes valid.
 	 * Expected Type: DateTime
 	 * 
 	 * @var	array

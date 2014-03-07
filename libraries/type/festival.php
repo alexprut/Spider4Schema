@@ -3,7 +3,6 @@
  * Event type: Festival.
  *
  * @see    http://schema.org/Festival
- * @since  1.0
 */
 abstract class TypeFestival extends TypeEvent
 {

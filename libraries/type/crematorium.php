@@ -3,7 +3,6 @@
  * A crematorium.
  *
  * @see    http://schema.org/Crematorium
- * @since  1.0
 */
 abstract class TypeCrematorium extends TypeCivicStructure
 {

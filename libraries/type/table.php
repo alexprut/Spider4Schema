@@ -3,7 +3,6 @@
  * A table on the page.
  *
  * @see    http://schema.org/Table
- * @since  1.0
 */
 abstract class TypeTable extends TypeWebPageElement
 {

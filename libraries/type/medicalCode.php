@@ -3,7 +3,6 @@
  * A code for a medical entity.
  *
  * @see    http://schema.org/MedicalCode
- * @since  1.0
 */
 abstract class TypeMedicalCode extends TypeMedicalIntangible
 {

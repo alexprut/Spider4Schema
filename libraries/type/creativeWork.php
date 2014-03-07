@@ -3,7 +3,6 @@
  * The most generic kind of creative work, including books, movies, photographs, software programs, etc.
  *
  * @see    http://schema.org/CreativeWork
- * @since  1.0
 */
 abstract class TypeCreativeWork extends TypeThing
 {
@@ -22,6 +21,46 @@ abstract class TypeCreativeWork extends TypeThing
 	 */
 	protected static $about = array('value' => 'about',
 		'expectedTypes' => array('Thing')
+	);
+
+	/**
+	 * Indicates that the resource is compatible with the referenced accessibility API (WebSchemas wiki lists possible values).
+	 * Expected Type: Text
+	 * 
+	 * @var	array
+	 */
+	protected static $accessibilityAPI = array('value' => 'accessibilityAPI',
+		'expectedTypes' => array('Text')
+	);
+
+	/**
+	 * Identifies input methods that are sufficient to fully control the described resource (WebSchemas wiki lists possible values).
+	 * Expected Type: Text
+	 * 
+	 * @var	array
+	 */
+	protected static $accessibilityControl = array('value' => 'accessibilityControl',
+		'expectedTypes' => array('Text')
+	);
+
+	/**
+	 * Content features of the resource, such as accessible media, alternatives and supported enhancements for accessibility (WebSchemas wiki lists possible values).
+	 * Expected Type: Text
+	 * 
+	 * @var	array
+	 */
+	protected static $accessibilityFeature = array('value' => 'accessibilityFeature',
+		'expectedTypes' => array('Text')
+	);
+
+	/**
+	 * A characteristic of the described resource that is physiologically dangerous to some users. Related to WCAG 2.0 guideline 2.3. (WebSchemas wiki lists possible values)
+	 * Expected Type: Text
+	 * 
+	 * @var	array
+	 */
+	protected static $accessibilityHazard = array('value' => 'accessibilityHazard',
+		'expectedTypes' => array('Text')
 	);
 
 	/**
@@ -115,7 +154,7 @@ abstract class TypeCreativeWork extends TypeThing
 	);
 
 	/**
-	 * A citation or reference to another creative work, such as another publication, web page, scholarly article, etc. NOTE: Candidate for promotion to ScholarlyArticle.
+	 * A citation or reference to another creative work, such as another publication, web page, scholarly article, etc.
 	 * Expected Type: CreativeWork, Text
 	 * 
 	 * @var	array
@@ -385,7 +424,7 @@ abstract class TypeCreativeWork extends TypeThing
 	);
 
 	/**
-	 * An offer to sell this item—for example, an offer to sell a product, the DVD of a movie, or tickets to an event.
+	 * An offer to transfer some rights to an item or to provide a service—for example, an offer to sell tickets to an event, to rent the DVD of a movie, to stream a TV show over the internet, to repair a motorcycle, or to loan a book.
 	 * Expected Type: Offer
 	 * 
 	 * @var	array
@@ -395,7 +434,7 @@ abstract class TypeCreativeWork extends TypeThing
 	);
 
 	/**
-	 * Specifies the Person or Organization that distributed the CreativeWork.
+	 * The organization or agency that is providing the service.
 	 * Expected Type: Organization, Person
 	 * 
 	 * @var	array
@@ -485,7 +524,7 @@ abstract class TypeCreativeWork extends TypeThing
 	);
 
 	/**
-	 * The typical range of ages the content's intendedEndUser, for example '7-9', '11-'.
+	 * The typical expected age range, e.g. '7-9', '11-'.
 	 * Expected Type: Text
 	 * 
 	 * @var	array
@@ -522,6 +561,46 @@ abstract class TypeCreativeWork extends TypeThing
 	public static function pAbout()
 	{
 		return self::getValue(self::$about);
+	}
+
+	/**
+	 * Return the 'accessibilityAPI' Property value
+	 *
+	 * @return	string
+	 */
+	public static function pAccessibilityAPI()
+	{
+		return self::getValue(self::$accessibilityAPI);
+	}
+
+	/**
+	 * Return the 'accessibilityControl' Property value
+	 *
+	 * @return	string
+	 */
+	public static function pAccessibilityControl()
+	{
+		return self::getValue(self::$accessibilityControl);
+	}
+
+	/**
+	 * Return the 'accessibilityFeature' Property value
+	 *
+	 * @return	string
+	 */
+	public static function pAccessibilityFeature()
+	{
+		return self::getValue(self::$accessibilityFeature);
+	}
+
+	/**
+	 * Return the 'accessibilityHazard' Property value
+	 *
+	 * @return	string
+	 */
+	public static function pAccessibilityHazard()
+	{
+		return self::getValue(self::$accessibilityHazard);
 	}
 
 	/**

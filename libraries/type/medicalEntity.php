@@ -3,7 +3,6 @@
  * The most generic type of entity related to health and the practice of medicine.
  *
  * @see    http://schema.org/MedicalEntity
- * @since  1.0
 */
 abstract class TypeMedicalEntity extends TypeThing
 {
@@ -13,16 +12,6 @@ abstract class TypeMedicalEntity extends TypeThing
 	 * @var string
 	 */
 	protected static $scope = 'https://schema.org/MedicalEntity';
-
-	/**
-	 * Any alternate name for this medical entity.
-	 * Expected Type: Text
-	 * 
-	 * @var	array
-	 */
-	protected static $alternateName = array('value' => 'alternateName',
-		'expectedTypes' => array('Text')
-	);
 
 	/**
 	 * A medical code for the entity, taken from a controlled vocabulary or ontology such as ICD-9, DiseasesDB, MeSH, SNOMED-CT, RxNorm, etc.
@@ -83,16 +72,6 @@ abstract class TypeMedicalEntity extends TypeThing
 	protected static $study = array('value' => 'study',
 		'expectedTypes' => array('MedicalStudy')
 	);
-
-	/**
-	 * Return the 'alternateName' Property value
-	 *
-	 * @return	string
-	 */
-	public static function pAlternateName()
-	{
-		return self::getValue(self::$alternateName);
-	}
 
 	/**
 	 * Return the 'code' Property value

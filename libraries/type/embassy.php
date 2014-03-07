@@ -3,7 +3,6 @@
  * An embassy.
  *
  * @see    http://schema.org/Embassy
- * @since  1.0
 */
 abstract class TypeEmbassy extends TypeGovernmentBuilding
 {
