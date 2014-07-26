@@ -1,7 +1,7 @@
 <?php
 /**
- * @copyright  Copyright (C) 2014. All rights reserved.
- * @license    GNU General Public License version 2 or later; see LICENSE
+ * @copyright  Copyright (C) 2013 - 2014 P.Alex (Alexandru Pruteanu)
+ * @license    Licensed under the MIT License; see LICENSE
  */
 
 include_once 'configuration.php';
@@ -42,7 +42,7 @@ class Http
 		// Minimize logs
 		curl_setopt($curl, CURLOPT_VERBOSE, false);
 
-		// Limit redirections to four
+		// Limit redirections to 4
 		curl_setopt($curl, CURLOPT_MAXREDIRS, 4);
 
 		// Follow redirects

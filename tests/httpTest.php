@@ -1,7 +1,7 @@
 <?php
 /**
- * @copyright  Copyright (C) 2014. All rights reserved.
- * @license    GNU General Public License version 2 or later; see LICENSE
+ * @copyright  Copyright (C) 2013 - 2014 P.Alex (Alexandru Pruteanu)
+ * @license    Licensed under the MIT License; see LICENSE
  */
 
 include_once 'http.php';
@@ -37,10 +37,10 @@ class HttpTest extends PHPUnit_Framework_TestCase
 	{
 		$url = 'https://schema.org';
 
-		$responce = $this->handle->httpRequest($url);
+		$response = $this->handle->httpRequest($url);
 
-		$this->assertArrayHasKey('status', $responce);
-		$this->assertArrayHasKey('error', $responce);
-		$this->assertArrayHasKey('file', $responce);
+		$this->assertArrayHasKey('status', $response);
+		$this->assertArrayHasKey('error', $response);
+		$this->assertArrayHasKey('file', $response);
 	}
 }

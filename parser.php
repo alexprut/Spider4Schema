@@ -2,8 +2,8 @@
 /**
  * A set of functions to parse the retrieved HTML and find the needed information
  * 
- * @copyright  Copyright (C) 2014. All rights reserved.
- * @license    GNU General Public License version 2 or later; see LICENSE
+ * @copyright  Copyright (C) 2013 - 2014 P.Alex (Alexandru Pruteanu)
+ * @license    Licensed under the MIT License; see LICENSE
  */
 
 /**
@@ -76,8 +76,8 @@ function parseType($html, $typeName)
 
 /**
  * Retrieve the Type comment
- * 
- * @param   string  $xpath  The Document object where to search
+ *
+ * @param   DOMXPath  $xpath  The Document object where to search
  * 
  * @return	string
  */
@@ -98,7 +98,7 @@ function parseTypeComment(DOMXPath $xpath)
 /**
  * Retrieve the Type inherence if available
  * 
- * @param   string  $xpath  The Document object where to search
+ * @param   DOMXPath  $xpath  The Document object where to search
  * 
  * @return	string
  */
@@ -125,8 +125,8 @@ function parseTypeExtends(DOMXPath $xpath)
 /**
  * Retrieve all available Properties of a given Type
  * 
- * @param   object  $xpath     The Document object where to search
- * @param   string  $typeName  The Type name
+ * @param   DOMXPath  $xpath     The Document object where to search
+ * @param   string    $typeName  The Type name
  * 
  * @return	array
  */
@@ -152,7 +152,7 @@ function parseTypeProperties(DOMXPath $xpath, $typeName)
 		$values = array();
 		$childNodes = $node->childNodes;
 
-		// Retrive all available information
+		// Retrieve all available information
 		foreach ($childNodes as $node)
 		{
 			if ($value = trim($node->nodeValue))

@@ -2,8 +2,8 @@
 /**
  * Methods to create the library classes
  * 
- * @copyright  Copyright (C) 2014. All rights reserved.
- * @license    GNU General Public License version 2 or later; see LICENSE
+ * @copyright  Copyright (C) 2013 - 2014 P.Alex (Alexandru Pruteanu)
+ * @license    Licensed under the MIT License; see LICENSE
  */
 
 /**
@@ -33,9 +33,9 @@ function createAllTypesClass($types, $path)
 			// Control if the Type has Properties
 			if ($type['properties'])
 			{
-				foreach ($type['properties'] as $properyName => $propertyInfo)
+				foreach ($type['properties'] as $propertyName => $propertyInfo)
 				{
-					$typeProperties .= "\n\t\t\t\t'$properyName' => array('" . join("', '", $propertyInfo['expectedTypes']) . "'),";
+					$typeProperties .= "\n\t\t\t\t'$propertyName' => array('" . join("', '", $propertyInfo['expectedTypes']) . "'),";
 				}
 
 				// Sanitize $typeProperties, remove ','
@@ -93,7 +93,6 @@ function createAllTypesClass($types, $path)
  */
 function createTypeClass($typeName, $type, $path)
 {
-	// FIXME Add getName(), scope() and other default functions to Thing and Date Type
 	// Create the new file
 	$fileName = lcfirst($typeName) . '.php';
 	$handle = fopen($path . '/' . $fileName, 'w');
