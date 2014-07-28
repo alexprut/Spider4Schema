@@ -14,13 +14,13 @@ abstract class TypeFoodEstablishment extends TypeLocalBusiness
 	protected static $scope = 'https://schema.org/FoodEstablishment';
 
 	/**
-	 * Either Yes/No, or a URL at which reservations can be made.
-	 * Expected Type: Text, URL
+	 * Indicates whether a FoodEstablishment accepts reservations. Values can be Boolean, an URL at which reservations can be made or (for backwards compatibility) the strings Yes or No.
+	 * Expected Type: Text, URL, Boolean
 	 * 
 	 * @var	array
 	 */
 	protected static $acceptsReservations = array('value' => 'acceptsReservations',
-		'expectedTypes' => array('Text', 'URL')
+		'expectedTypes' => array('Text', 'URL', 'Boolean')
 	);
 
 	/**

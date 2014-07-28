@@ -1,6 +1,6 @@
 <?php
 /**
- * An action performed by a direct agent and indirect     participants upon a direct object. Optionally happens at a location     with the help of an inanimate instrument. The execution of the action     may produce a result. Specific action sub-type documentation specifies     the exact expectation of each argument/role.
+ * An action performed by a direct agent and indirect participants upon a direct object. Optionally happens at a location with the help of an inanimate instrument. The execution of the action may produce a result. Specific action sub-type documentation specifies the exact expectation of each argument/role.
  *
  * @see    http://schema.org/Action
 */
@@ -14,6 +14,16 @@ abstract class TypeAction extends TypeThing
 	protected static $scope = 'https://schema.org/Action';
 
 	/**
+	 * Indicates the current disposition of the Action.
+	 * Expected Type: ActionStatusType
+	 * 
+	 * @var	array
+	 */
+	protected static $actionStatus = array('value' => 'actionStatus',
+		'expectedTypes' => array('ActionStatusType')
+	);
+
+	/**
 	 * The direct performer or driver of the action (animate or inanimate). e.g. *John* wrote a book.
 	 * Expected Type: Organization, Person
 	 * 
@@ -24,7 +34,7 @@ abstract class TypeAction extends TypeThing
 	);
 
 	/**
-	 * When the Action was performed: end time. This is for actions that span a period of time. e.g. John wrote a book from January to *December*.
+	 * The endTime of something. For a reserved event or service (e.g. FoodEstablishmentReservation), the time that it is expected to end. For actions that span a period of time, when the action was performed. e.g. John wrote a book from January to *December*. Note that Event uses startDate/endDate instead of startTime/endTime, even when describing dates with times. This situation may be clarified in future revisions.
 	 * Expected Type: DateTime
 	 * 
 	 * @var	array
@@ -84,7 +94,7 @@ abstract class TypeAction extends TypeThing
 	);
 
 	/**
-	 * When the Action was performed: start time. This is for actions that span a period of time. e.g. John wrote a book from *January* to December.
+	 * The startTime of something. For a reserved event or service (e.g. FoodEstablishmentReservation), the time that it is expected to start. For actions that span a period of time, when the action was performed. e.g. John wrote a book from *January* to December. Note that Event uses startDate/endDate instead of startTime/endTime, even when describing dates with times. This situation may be clarified in future revisions.
 	 * Expected Type: DateTime
 	 * 
 	 * @var	array
@@ -92,6 +102,26 @@ abstract class TypeAction extends TypeThing
 	protected static $startTime = array('value' => 'startTime',
 		'expectedTypes' => array('DateTime')
 	);
+
+	/**
+	 * Indicates a target EntryPoint for an Action.
+	 * Expected Type: EntryPoint
+	 * 
+	 * @var	array
+	 */
+	protected static $target = array('value' => 'target',
+		'expectedTypes' => array('EntryPoint')
+	);
+
+	/**
+	 * Return the 'actionStatus' Property value
+	 *
+	 * @return	string
+	 */
+	public static function pActionStatus()
+	{
+		return self::getValue(self::$actionStatus);
+	}
 
 	/**
 	 * Return the 'agent' Property value
@@ -171,5 +201,15 @@ abstract class TypeAction extends TypeThing
 	public static function pStartTime()
 	{
 		return self::getValue(self::$startTime);
+	}
+
+	/**
+	 * Return the 'target' Property value
+	 *
+	 * @return	string
+	 */
+	public static function pTarget()
+	{
+		return self::getValue(self::$target);
 	}
 }

@@ -34,7 +34,7 @@ abstract class TypeArtery extends TypeVessel
 	);
 
 	/**
-	 * The area to which the artery supplies blood to.
+	 * The area to which the artery supplies blood.
 	 * Expected Type: AnatomicalStructure
 	 * 
 	 * @var	array

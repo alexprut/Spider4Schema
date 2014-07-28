@@ -1,10 +1,10 @@
 <?php
 /**
- * A medical procedure intended primarly for palliative purposes, aimed at relieving the symptoms of an underlying health condition.
+ * A medical procedure intended primarily for palliative purposes, aimed at relieving the symptoms of an underlying health condition.
  *
  * @see    http://schema.org/PalliativeProcedure
 */
-abstract class TypePalliativeProcedure extends TypeMedicalProcedure
+abstract class TypePalliativeProcedure extends TypeMedicalTherapy
 {
 	/**
 	 * The Schema.org Type Scope

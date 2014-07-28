@@ -15,22 +15,12 @@ abstract class TypeEvent extends TypeThing
 
 	/**
 	 * A person or organization attending the event.
-	 * Expected Type: Organization, Person
+	 * Expected Type: Person, Organization
 	 * 
 	 * @var	array
 	 */
 	protected static $attendee = array('value' => 'attendee',
-		'expectedTypes' => array('Organization', 'Person')
-	);
-
-	/**
-	 * A person attending the event (legacy spelling; see singular form, attendee).
-	 * Expected Type: Organization, Person
-	 * 
-	 * @var	array
-	 */
-	protected static $attendees = array('value' => 'attendees',
-		'expectedTypes' => array('Organization', 'Person')
+		'expectedTypes' => array('Person', 'Organization')
 	);
 
 	/**
@@ -54,7 +44,7 @@ abstract class TypeEvent extends TypeThing
 	);
 
 	/**
-	 * The end date and time of the event or item (in ISO 8601 date format).
+	 * The end date and time of the role, event or item (in ISO 8601 date format).
 	 * Expected Type: Date
 	 * 
 	 * @var	array
@@ -84,7 +74,7 @@ abstract class TypeEvent extends TypeThing
 	);
 
 	/**
-	 * An offer to transfer some rights to an item or to provide a service—for example, an offer to sell tickets to an event, to rent the DVD of a movie, to stream a TV show over the internet, to repair a motorcycle, or to loan a book.
+	 * An offer to provide this item—for example, an offer to sell a product, rent the DVD of a movie, or give away tickets to an event.
 	 * Expected Type: Offer
 	 * 
 	 * @var	array
@@ -94,23 +84,23 @@ abstract class TypeEvent extends TypeThing
 	);
 
 	/**
-	 * A performer at the event—for example, a presenter, musician, musical group or actor.
-	 * Expected Type: Organization, Person
+	 * An organizer of an Event.
+	 * Expected Type: Person, Organization
+	 * 
+	 * @var	array
+	 */
+	protected static $organizer = array('value' => 'organizer',
+		'expectedTypes' => array('Person', 'Organization')
+	);
+
+	/**
+	 * A performer at the event—for example, a presenter, musician, musical group or actor. Supercedes performers.
+	 * Expected Type: Person, Organization
 	 * 
 	 * @var	array
 	 */
 	protected static $performer = array('value' => 'performer',
-		'expectedTypes' => array('Organization', 'Person')
-	);
-
-	/**
-	 * The main performer or performers of the event—for example, a presenter, musician, or actor (legacy spelling; see singular form, performer).
-	 * Expected Type: Organization, Person
-	 * 
-	 * @var	array
-	 */
-	protected static $performers = array('value' => 'performers',
-		'expectedTypes' => array('Organization', 'Person')
+		'expectedTypes' => array('Person', 'Organization')
 	);
 
 	/**
@@ -124,7 +114,7 @@ abstract class TypeEvent extends TypeThing
 	);
 
 	/**
-	 * The start date and time of the event or item (in ISO 8601 date format).
+	 * The start date and time of the event, role or item (in ISO 8601 date format).
 	 * Expected Type: Date
 	 * 
 	 * @var	array
@@ -134,22 +124,12 @@ abstract class TypeEvent extends TypeThing
 	);
 
 	/**
-	 * An Event that is part of this event. For example, a conference event includes many presentations, each are a subEvent of the conference.
+	 * An Event that is part of this event. For example, a conference event includes many presentations, each of which is a subEvent of the conference. Supercedes subEvents.
 	 * Expected Type: Event
 	 * 
 	 * @var	array
 	 */
 	protected static $subEvent = array('value' => 'subEvent',
-		'expectedTypes' => array('Event')
-	);
-
-	/**
-	 * Events that are a part of this event. For example, a conference event includes many presentations, each are subEvents of the conference (legacy spelling; see singular form, subEvent).
-	 * Expected Type: Event
-	 * 
-	 * @var	array
-	 */
-	protected static $subEvents = array('value' => 'subEvents',
 		'expectedTypes' => array('Event')
 	);
 
@@ -174,6 +154,16 @@ abstract class TypeEvent extends TypeThing
 	);
 
 	/**
+	 * A work performed in some event, for example a play performed in a TheaterEvent.
+	 * Expected Type: CreativeWork
+	 * 
+	 * @var	array
+	 */
+	protected static $workPerformed = array('value' => 'workPerformed',
+		'expectedTypes' => array('CreativeWork')
+	);
+
+	/**
 	 * Return the 'attendee' Property value
 	 *
 	 * @return	string
@@ -181,16 +171,6 @@ abstract class TypeEvent extends TypeThing
 	public static function pAttendee()
 	{
 		return self::getValue(self::$attendee);
-	}
-
-	/**
-	 * Return the 'attendees' Property value
-	 *
-	 * @return	string
-	 */
-	public static function pAttendees()
-	{
-		return self::getValue(self::$attendees);
 	}
 
 	/**
@@ -254,6 +234,16 @@ abstract class TypeEvent extends TypeThing
 	}
 
 	/**
+	 * Return the 'organizer' Property value
+	 *
+	 * @return	string
+	 */
+	public static function pOrganizer()
+	{
+		return self::getValue(self::$organizer);
+	}
+
+	/**
 	 * Return the 'performer' Property value
 	 *
 	 * @return	string
@@ -261,16 +251,6 @@ abstract class TypeEvent extends TypeThing
 	public static function pPerformer()
 	{
 		return self::getValue(self::$performer);
-	}
-
-	/**
-	 * Return the 'performers' Property value
-	 *
-	 * @return	string
-	 */
-	public static function pPerformers()
-	{
-		return self::getValue(self::$performers);
 	}
 
 	/**
@@ -304,16 +284,6 @@ abstract class TypeEvent extends TypeThing
 	}
 
 	/**
-	 * Return the 'subEvents' Property value
-	 *
-	 * @return	string
-	 */
-	public static function pSubEvents()
-	{
-		return self::getValue(self::$subEvents);
-	}
-
-	/**
 	 * Return the 'superEvent' Property value
 	 *
 	 * @return	string
@@ -331,5 +301,15 @@ abstract class TypeEvent extends TypeThing
 	public static function pTypicalAgeRange()
 	{
 		return self::getValue(self::$typicalAgeRange);
+	}
+
+	/**
+	 * Return the 'workPerformed' Property value
+	 *
+	 * @return	string
+	 */
+	public static function pWorkPerformed()
+	{
+		return self::getValue(self::$workPerformed);
 	}
 }

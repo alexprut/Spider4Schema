@@ -1,6 +1,6 @@
 <?php
 /**
- * Quantity: Duration (use  ISO 8601 duration format).
+ * Quantity: Duration (use ISO 8601 duration format).
  *
  * @see    http://schema.org/Duration
 */

@@ -14,7 +14,7 @@ abstract class TypeJoinAction extends TypeInteractAction
 	protected static $scope = 'https://schema.org/JoinAction';
 
 	/**
-	 * Upcoming or past event associated with this place or organization.
+	 * Upcoming or past event associated with this place or organization. Supercedes events.
 	 * Expected Type: Event
 	 * 
 	 * @var	array

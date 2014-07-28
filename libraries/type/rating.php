@@ -15,12 +15,12 @@ abstract class TypeRating extends TypeIntangible
 
 	/**
 	 * The highest value allowed in this rating system. If bestRating is omitted, 5 is assumed.
-	 * Expected Type: Number, Text
+	 * Expected Type: Text, Number
 	 * 
 	 * @var	array
 	 */
 	protected static $bestRating = array('value' => 'bestRating',
-		'expectedTypes' => array('Number', 'Text')
+		'expectedTypes' => array('Text', 'Number')
 	);
 
 	/**
@@ -35,12 +35,12 @@ abstract class TypeRating extends TypeIntangible
 
 	/**
 	 * The lowest value allowed in this rating system. If worstRating is omitted, 1 is assumed.
-	 * Expected Type: Number, Text
+	 * Expected Type: Text, Number
 	 * 
 	 * @var	array
 	 */
 	protected static $worstRating = array('value' => 'worstRating',
-		'expectedTypes' => array('Number', 'Text')
+		'expectedTypes' => array('Text', 'Number')
 	);
 
 	/**

@@ -24,7 +24,7 @@ abstract class TypeExerciseAction extends TypePlayAction
 	);
 
 	/**
-	 * A sub property of instrument. The died used in this action.
+	 * A sub property of instrument. The diet used in this action.
 	 * Expected Type: Diet
 	 * 
 	 * @var	array
@@ -34,7 +34,7 @@ abstract class TypeExerciseAction extends TypePlayAction
 	);
 
 	/**
-	 * A sub property of asset. The distance travelled.
+	 * The distance travelled, e.g. exercising or travelling.
 	 * Expected Type: Distance
 	 * 
 	 * @var	array
@@ -74,12 +74,12 @@ abstract class TypeExerciseAction extends TypePlayAction
 	);
 
 	/**
-	 * A sub property of participant. The oponent on this action.
+	 * A sub property of participant. The opponent on this action.
 	 * Expected Type: Person
 	 * 
 	 * @var	array
 	 */
-	protected static $oponent = array('value' => 'oponent',
+	protected static $opponent = array('value' => 'opponent',
 		'expectedTypes' => array('Person')
 	);
 
@@ -184,13 +184,13 @@ abstract class TypeExerciseAction extends TypePlayAction
 	}
 
 	/**
-	 * Return the 'oponent' Property value
+	 * Return the 'opponent' Property value
 	 *
 	 * @return	string
 	 */
-	public static function pOponent()
+	public static function pOpponent()
 	{
-		return self::getValue(self::$oponent);
+		return self::getValue(self::$opponent);
 	}
 
 	/**

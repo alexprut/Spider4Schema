@@ -45,22 +45,22 @@ abstract class TypeOrder extends TypeIntangible
 
 	/**
 	 * Party placing the order.
-	 * Expected Type: Organization, Person
+	 * Expected Type: Person, Organization
 	 * 
 	 * @var	array
 	 */
 	protected static $customer = array('value' => 'customer',
-		'expectedTypes' => array('Organization', 'Person')
+		'expectedTypes' => array('Person', 'Organization')
 	);
 
 	/**
 	 * Any discount applied (to an Order).
-	 * Expected Type: Number, Text
+	 * Expected Type: Text, Number
 	 * 
 	 * @var	array
 	 */
 	protected static $discount = array('value' => 'discount',
-		'expectedTypes' => array('Number', 'Text')
+		'expectedTypes' => array('Text', 'Number')
 	);
 
 	/**
@@ -95,12 +95,12 @@ abstract class TypeOrder extends TypeIntangible
 
 	/**
 	 * The party taking the order (e.g. Amazon.com is a merchant for many sellers).
-	 * Expected Type: Organization, Person
+	 * Expected Type: Person, Organization
 	 * 
 	 * @var	array
 	 */
 	protected static $merchant = array('value' => 'merchant',
-		'expectedTypes' => array('Organization', 'Person')
+		'expectedTypes' => array('Person', 'Organization')
 	);
 
 	/**
@@ -111,16 +111,6 @@ abstract class TypeOrder extends TypeIntangible
 	 */
 	protected static $orderDate = array('value' => 'orderDate',
 		'expectedTypes' => array('DateTime')
-	);
-
-	/**
-	 * The item ordered.
-	 * Expected Type: Product
-	 * 
-	 * @var	array
-	 */
-	protected static $orderedItem = array('value' => 'orderedItem',
-		'expectedTypes' => array('Product')
 	);
 
 	/**
@@ -141,6 +131,16 @@ abstract class TypeOrder extends TypeIntangible
 	 */
 	protected static $orderStatus = array('value' => 'orderStatus',
 		'expectedTypes' => array('OrderStatus')
+	);
+
+	/**
+	 * The item ordered.
+	 * Expected Type: Product
+	 * 
+	 * @var	array
+	 */
+	protected static $orderedItem = array('value' => 'orderedItem',
+		'expectedTypes' => array('Product')
 	);
 
 	/**
@@ -284,16 +284,6 @@ abstract class TypeOrder extends TypeIntangible
 	}
 
 	/**
-	 * Return the 'orderedItem' Property value
-	 *
-	 * @return	string
-	 */
-	public static function pOrderedItem()
-	{
-		return self::getValue(self::$orderedItem);
-	}
-
-	/**
 	 * Return the 'orderNumber' Property value
 	 *
 	 * @return	string
@@ -311,6 +301,16 @@ abstract class TypeOrder extends TypeIntangible
 	public static function pOrderStatus()
 	{
 		return self::getValue(self::$orderStatus);
+	}
+
+	/**
+	 * Return the 'orderedItem' Property value
+	 *
+	 * @return	string
+	 */
+	public static function pOrderedItem()
+	{
+		return self::getValue(self::$orderedItem);
 	}
 
 	/**

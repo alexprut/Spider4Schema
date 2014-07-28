@@ -45,12 +45,12 @@ abstract class TypeThing
 
 	/**
 	 * URL of an image of the item.
-	 * Expected Type: URL
+	 * Expected Type: ImageObject, URL
 	 * 
 	 * @var	array
 	 */
 	protected static $image = array('value' => 'image',
-		'expectedTypes' => array('URL')
+		'expectedTypes' => array('ImageObject', 'URL')
 	);
 
 	/**
@@ -61,6 +61,16 @@ abstract class TypeThing
 	 */
 	protected static $name = array('value' => 'name',
 		'expectedTypes' => array('Text')
+	);
+
+	/**
+	 * Indicates a potential Action, which describes an idealized action in which this thing would play an 'object' role.
+	 * Expected Type: Action
+	 * 
+	 * @var	array
+	 */
+	protected static $potentialAction = array('value' => 'potentialAction',
+		'expectedTypes' => array('Action')
 	);
 
 	/**
@@ -131,6 +141,16 @@ abstract class TypeThing
 	public static function pName()
 	{
 		return self::getValue(self::$name);
+	}
+
+	/**
+	 * Return the 'potentialAction' Property value
+	 *
+	 * @return	string
+	 */
+	public static function pPotentialAction()
+	{
+		return self::getValue(self::$potentialAction);
 	}
 
 	/**

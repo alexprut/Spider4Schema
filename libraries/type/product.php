@@ -1,6 +1,6 @@
 <?php
 /**
- * A product is anything that is made available for sale—for example, a pair of shoes, a concert ticket, or a car. Commodity services, like haircuts, can also be represented using this type.
+ * Any offered product or service. For example: a pair of shoes; a concert ticket; the rental of a car; a haircut; or an episode of a TV show streamed online.
  *
  * @see    http://schema.org/Product
 */
@@ -55,12 +55,12 @@ abstract class TypeProduct extends TypeThing
 
 	/**
 	 * The depth of the product.
-	 * Expected Type: Distance, QuantitativeValue
+	 * Expected Type: QuantitativeValue, Distance
 	 * 
 	 * @var	array
 	 */
 	protected static $depth = array('value' => 'depth',
-		'expectedTypes' => array('Distance', 'QuantitativeValue')
+		'expectedTypes' => array('QuantitativeValue', 'Distance')
 	);
 
 	/**
@@ -95,12 +95,12 @@ abstract class TypeProduct extends TypeThing
 
 	/**
 	 * The height of the item.
-	 * Expected Type: Distance, QuantitativeValue
+	 * Expected Type: QuantitativeValue, Distance
 	 * 
 	 * @var	array
 	 */
 	protected static $height = array('value' => 'height',
-		'expectedTypes' => array('Distance', 'QuantitativeValue')
+		'expectedTypes' => array('QuantitativeValue', 'Distance')
 	);
 
 	/**
@@ -155,12 +155,12 @@ abstract class TypeProduct extends TypeThing
 
 	/**
 	 * A logo associated with an organization.
-	 * Expected Type: ImageObject, URL
+	 * Expected Type: URL, ImageObject
 	 * 
 	 * @var	array
 	 */
 	protected static $logo = array('value' => 'logo',
-		'expectedTypes' => array('ImageObject', 'URL')
+		'expectedTypes' => array('URL', 'ImageObject')
 	);
 
 	/**
@@ -194,7 +194,7 @@ abstract class TypeProduct extends TypeThing
 	);
 
 	/**
-	 * An offer to transfer some rights to an item or to provide a service—for example, an offer to sell tickets to an event, to rent the DVD of a movie, to stream a TV show over the internet, to repair a motorcycle, or to loan a book.
+	 * An offer to provide this item—for example, an offer to sell a product, rent the DVD of a movie, or give away tickets to an event.
 	 * Expected Type: Offer
 	 * 
 	 * @var	array
@@ -224,22 +224,12 @@ abstract class TypeProduct extends TypeThing
 	);
 
 	/**
-	 * A review of the item.
+	 * A review of the item. Supercedes reviews.
 	 * Expected Type: Review
 	 * 
 	 * @var	array
 	 */
 	protected static $review = array('value' => 'review',
-		'expectedTypes' => array('Review')
-	);
-
-	/**
-	 * Review of the item (legacy spelling; see singular form, review).
-	 * Expected Type: Review
-	 * 
-	 * @var	array
-	 */
-	protected static $reviews = array('value' => 'reviews',
 		'expectedTypes' => array('Review')
 	);
 
@@ -265,12 +255,12 @@ abstract class TypeProduct extends TypeThing
 
 	/**
 	 * The width of the item.
-	 * Expected Type: Distance, QuantitativeValue
+	 * Expected Type: QuantitativeValue, Distance
 	 * 
 	 * @var	array
 	 */
 	protected static $width = array('value' => 'width',
-		'expectedTypes' => array('Distance', 'QuantitativeValue')
+		'expectedTypes' => array('QuantitativeValue', 'Distance')
 	);
 
 	/**
@@ -491,16 +481,6 @@ abstract class TypeProduct extends TypeThing
 	public static function pReview()
 	{
 		return self::getValue(self::$review);
-	}
-
-	/**
-	 * Return the 'reviews' Property value
-	 *
-	 * @return	string
-	 */
-	public static function pReviews()
-	{
-		return self::getValue(self::$reviews);
 	}
 
 	/**

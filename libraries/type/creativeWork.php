@@ -134,7 +134,7 @@ abstract class TypeCreativeWork extends TypeThing
 	);
 
 	/**
-	 * An award won by this person or for this creative work.
+	 * An award won by this person or for this creative work. Supercedes awards.
 	 * Expected Type: Text
 	 * 
 	 * @var	array
@@ -144,33 +144,33 @@ abstract class TypeCreativeWork extends TypeThing
 	);
 
 	/**
-	 * Awards won by this person or for this creative work. (legacy spelling; see singular form, award)
-	 * Expected Type: Text
-	 * 
-	 * @var	array
-	 */
-	protected static $awards = array('value' => 'awards',
-		'expectedTypes' => array('Text')
-	);
-
-	/**
 	 * A citation or reference to another creative work, such as another publication, web page, scholarly article, etc.
-	 * Expected Type: CreativeWork, Text
+	 * Expected Type: Text, CreativeWork
 	 * 
 	 * @var	array
 	 */
 	protected static $citation = array('value' => 'citation',
-		'expectedTypes' => array('CreativeWork', 'Text')
+		'expectedTypes' => array('Text', 'CreativeWork')
 	);
 
 	/**
 	 * Comments, typically from users, on this CreativeWork.
-	 * Expected Type: UserComments
+	 * Expected Type: Comment, UserComments
 	 * 
 	 * @var	array
 	 */
 	protected static $comment = array('value' => 'comment',
-		'expectedTypes' => array('UserComments')
+		'expectedTypes' => array('Comment', 'UserComments')
+	);
+
+	/**
+	 * The number of comments this CreativeWork (e.g. Article, Question or Answer) has received. This is most applicable to works published in Web sites with commenting system; additional comments may exist elsewhere.
+	 * Expected Type: Integer
+	 * 
+	 * @var	array
+	 */
+	protected static $commentCount = array('value' => 'commentCount',
+		'expectedTypes' => array('Integer')
 	);
 
 	/**
@@ -304,22 +304,12 @@ abstract class TypeCreativeWork extends TypeThing
 	);
 
 	/**
-	 * A media object that encode this CreativeWork.
+	 * A media object that encode this CreativeWork. Supercedes encodings.
 	 * Expected Type: MediaObject
 	 * 
 	 * @var	array
 	 */
 	protected static $encoding = array('value' => 'encoding',
-		'expectedTypes' => array('MediaObject')
-	);
-
-	/**
-	 * The media objects that encode this creative work (legacy spelling; see singular form, encoding).
-	 * Expected Type: MediaObject
-	 * 
-	 * @var	array
-	 */
-	protected static $encodings = array('value' => 'encodings',
 		'expectedTypes' => array('MediaObject')
 	);
 
@@ -394,7 +384,7 @@ abstract class TypeCreativeWork extends TypeThing
 	);
 
 	/**
-	 * The keywords/tags used to describe this content.
+	 * Keywords or tags used to describe this content. Multiple entries in a keywords list are typically delimited by commas.
 	 * Expected Type: Text
 	 * 
 	 * @var	array
@@ -414,6 +404,16 @@ abstract class TypeCreativeWork extends TypeThing
 	);
 
 	/**
+	 * A license document that applies to this content, typically indicated by URL.
+	 * Expected Type: CreativeWork, URL
+	 * 
+	 * @var	array
+	 */
+	protected static $license = array('value' => 'license',
+		'expectedTypes' => array('CreativeWork', 'URL')
+	);
+
+	/**
 	 * Indicates that the CreativeWork contains a reference to, but is not necessarily about a concept.
 	 * Expected Type: Thing
 	 * 
@@ -424,7 +424,7 @@ abstract class TypeCreativeWork extends TypeThing
 	);
 
 	/**
-	 * An offer to transfer some rights to an item or to provide a service—for example, an offer to sell tickets to an event, to rent the DVD of a movie, to stream a TV show over the internet, to repair a motorcycle, or to loan a book.
+	 * An offer to provide this item—for example, an offer to sell a product, rent the DVD of a movie, or give away tickets to an event.
 	 * Expected Type: Offer
 	 * 
 	 * @var	array
@@ -434,7 +434,7 @@ abstract class TypeCreativeWork extends TypeThing
 	);
 
 	/**
-	 * The organization or agency that is providing the service.
+	 * The person or organization providing the service, reservation, or creative work. The provider may subcontract out the service.
 	 * Expected Type: Organization, Person
 	 * 
 	 * @var	array
@@ -464,22 +464,12 @@ abstract class TypeCreativeWork extends TypeThing
 	);
 
 	/**
-	 * A review of the item.
+	 * A review of the item. Supercedes reviews.
 	 * Expected Type: Review
 	 * 
 	 * @var	array
 	 */
 	protected static $review = array('value' => 'review',
-		'expectedTypes' => array('Review')
-	);
-
-	/**
-	 * Review of the item (legacy spelling; see singular form, review).
-	 * Expected Type: Review
-	 * 
-	 * @var	array
-	 */
-	protected static $reviews = array('value' => 'reviews',
 		'expectedTypes' => array('Review')
 	);
 
@@ -684,16 +674,6 @@ abstract class TypeCreativeWork extends TypeThing
 	}
 
 	/**
-	 * Return the 'awards' Property value
-	 *
-	 * @return	string
-	 */
-	public static function pAwards()
-	{
-		return self::getValue(self::$awards);
-	}
-
-	/**
 	 * Return the 'citation' Property value
 	 *
 	 * @return	string
@@ -711,6 +691,16 @@ abstract class TypeCreativeWork extends TypeThing
 	public static function pComment()
 	{
 		return self::getValue(self::$comment);
+	}
+
+	/**
+	 * Return the 'commentCount' Property value
+	 *
+	 * @return	string
+	 */
+	public static function pCommentCount()
+	{
+		return self::getValue(self::$commentCount);
 	}
 
 	/**
@@ -854,16 +844,6 @@ abstract class TypeCreativeWork extends TypeThing
 	}
 
 	/**
-	 * Return the 'encodings' Property value
-	 *
-	 * @return	string
-	 */
-	public static function pEncodings()
-	{
-		return self::getValue(self::$encodings);
-	}
-
-	/**
 	 * Return the 'genre' Property value
 	 *
 	 * @return	string
@@ -954,6 +934,16 @@ abstract class TypeCreativeWork extends TypeThing
 	}
 
 	/**
+	 * Return the 'license' Property value
+	 *
+	 * @return	string
+	 */
+	public static function pLicense()
+	{
+		return self::getValue(self::$license);
+	}
+
+	/**
 	 * Return the 'mentions' Property value
 	 *
 	 * @return	string
@@ -1011,16 +1001,6 @@ abstract class TypeCreativeWork extends TypeThing
 	public static function pReview()
 	{
 		return self::getValue(self::$review);
-	}
-
-	/**
-	 * Return the 'reviews' Property value
-	 *
-	 * @return	string
-	 */
-	public static function pReviews()
-	{
-		return self::getValue(self::$reviews);
 	}
 
 	/**

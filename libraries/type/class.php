@@ -4,7 +4,7 @@
  *
  * @see    http://schema.org/Class
 */
-abstract class TypeClass extends TypeThing
+abstract class TypeClass extends TypeIntangible
 {
 	/**
 	 * The Schema.org Type Scope

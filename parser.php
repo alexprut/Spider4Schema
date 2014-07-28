@@ -31,7 +31,7 @@ function parseTypes($html)
 		// Sanitize the Type
 		$type = str_replace('*', '', $node->nodeValue);
 
-		$types[$type] = $type;
+		$types[$type] = removeSpaces($type);
 	}
 
 	// Debug
@@ -92,7 +92,7 @@ function parseTypeComment(DOMXPath $xpath)
 		$comment = $node->nodeValue;
 	}
 
-	return $comment;
+	return removeSpaces($comment);
 }
 
 /**
@@ -112,11 +112,11 @@ function parseTypeExtends(DOMXPath $xpath)
 	}
 
 	// Search for the Extended Type if available
-	$types = explode('>', trim($tmpExtends));
+	$types = explode('>', $tmpExtends);
 
 	if (count($types) > 1)
 	{
-		return trim($types[count($types) - 2]);
+		return removeSpaces($types[count($types) - 2]);
 	}
 
 	return '';
@@ -133,17 +133,14 @@ function parseTypeExtends(DOMXPath $xpath)
 function parseTypeProperties(DOMXPath $xpath, $typeName)
 {
 	// Control if properties available
-	$nodeList = $xpath->query("(//thead[@class='supertype'])[last()]//a");
+	$nodeList = $xpath->query("(//thead[@class='supertype'])//a");
 
-	foreach ($nodeList as $node)
-	{
-		// Return null if there is no property available
-		if ($node->nodeValue != $typeName)
-			return array();
-	}
+	// Return an empty array if there isn't any available property
+	if (!$nodeList->length || ($nodeList->item(0)->nodeValue != $typeName))
+		return array();
 
 	// Retrieve all Type Properties
-	$nodeList = $xpath->query("(//tbody[@class='supertype'])[last()]/tr");
+	$nodeList = $xpath->query("(//tbody[@class='supertype'])[1]/tr");
 
 	$properties = array();
 
@@ -155,13 +152,11 @@ function parseTypeProperties(DOMXPath $xpath, $typeName)
 		// Retrieve all available information
 		foreach ($childNodes as $node)
 		{
-			if ($value = trim($node->nodeValue))
+			if ($value = removeSpaces($node->nodeValue))
 				$values[] = $value;
 		}
 
-		// Create an array with the expected Types and sanitize
-		$expectedTypes = preg_replace('/\s+/', ' ', $values[1]);
-		$expectedTypes = explode(' or ', trim($expectedTypes));
+		$expectedTypes = explode(' or ', $values[1]);
 
 		// Create the final $property
 		$properties[$values[0]] = array(
@@ -174,4 +169,21 @@ function parseTypeProperties(DOMXPath $xpath, $typeName)
 		return array();
 
 	return $properties;
+}
+
+/**
+ * Remove white spaces from a string
+ *
+ * @param  $string  The string to sanitize
+ *
+ * @return string
+ */
+function removeSpaces($string)
+{
+	/* Remove multiple occurences of whitespace characters
+	 * in a string an convert them all into single spaces.
+	 * Also remove &nbsp; */
+	$string = preg_replace(array('/' . chr(0xC2) . chr(0xA0) . '/', '/\s+/'), ' ', $string);
+
+	return trim($string);
 }

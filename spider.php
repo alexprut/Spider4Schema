@@ -16,6 +16,9 @@ include_once 'fileCreator.php';
 // Initialize the HTTP object
 $http = new Http;
 
+// Disable frontend error reporting
+libxml_use_internal_errors(true);
+
 // Retrieve the HTML containing all available Types
 $html = $http->httpRequest('https://schema.org/docs/full.html');
 

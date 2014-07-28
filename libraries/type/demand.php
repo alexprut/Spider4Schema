@@ -135,12 +135,12 @@ abstract class TypeDemand extends TypeIntangible
 
 	/**
 	 * The ISO 3166-1 (ISO 3166-1 alpha-2) or ISO 3166-2 code, or the GeoShape for the geo-political region(s) for which the offer or delivery charge specification is valid.
-	 * Expected Type: GeoShape, Text
+	 * Expected Type: Text, GeoShape
 	 * 
 	 * @var	array
 	 */
 	protected static $eligibleRegion = array('value' => 'eligibleRegion',
-		'expectedTypes' => array('GeoShape', 'Text')
+		'expectedTypes' => array('Text', 'GeoShape')
 	);
 
 	/**
@@ -245,12 +245,12 @@ abstract class TypeDemand extends TypeIntangible
 
 	/**
 	 * The organization or person making the offer.
-	 * Expected Type: Organization, Person
+	 * Expected Type: Person, Organization
 	 * 
 	 * @var	array
 	 */
 	protected static $seller = array('value' => 'seller',
-		'expectedTypes' => array('Organization', 'Person')
+		'expectedTypes' => array('Person', 'Organization')
 	);
 
 	/**

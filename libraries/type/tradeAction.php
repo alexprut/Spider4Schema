@@ -15,12 +15,12 @@ abstract class TypeTradeAction extends TypeAction
 
 	/**
 	 * The offer price of a product, or of a price component when attached to PriceSpecification and its subtypes.
-	 * Expected Type: Number, Text
+	 * Expected Type: Text, Number
 	 * 
 	 * @var	array
 	 */
 	protected static $price = array('value' => 'price',
-		'expectedTypes' => array('Number', 'Text')
+		'expectedTypes' => array('Text', 'Number')
 	);
 
 	/**

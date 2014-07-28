@@ -44,22 +44,12 @@ abstract class TypeOrganization extends TypeThing
 	);
 
 	/**
-	 * A contact point for a person or organization.
+	 * A contact point for a person or organization. Supercedes contactPoints.
 	 * Expected Type: ContactPoint
 	 * 
 	 * @var	array
 	 */
 	protected static $contactPoint = array('value' => 'contactPoint',
-		'expectedTypes' => array('ContactPoint')
-	);
-
-	/**
-	 * A contact point for a person or organization (legacy spelling; see singular form, contactPoint).
-	 * Expected Type: ContactPoint
-	 * 
-	 * @var	array
-	 */
-	protected static $contactPoints = array('value' => 'contactPoints',
 		'expectedTypes' => array('ContactPoint')
 	);
 
@@ -71,6 +61,16 @@ abstract class TypeOrganization extends TypeThing
 	 */
 	protected static $department = array('value' => 'department',
 		'expectedTypes' => array('Organization')
+	);
+
+	/**
+	 * The date that this organization was dissolved.
+	 * Expected Type: Date
+	 * 
+	 * @var	array
+	 */
+	protected static $dissolutionDate = array('value' => 'dissolutionDate',
+		'expectedTypes' => array('Date')
 	);
 
 	/**
@@ -94,7 +94,7 @@ abstract class TypeOrganization extends TypeThing
 	);
 
 	/**
-	 * Someone working for this organization.
+	 * Someone working for this organization. Supercedes employees.
 	 * Expected Type: Person
 	 * 
 	 * @var	array
@@ -104,32 +104,12 @@ abstract class TypeOrganization extends TypeThing
 	);
 
 	/**
-	 * People working for this organization. (legacy spelling; see singular form, employee)
-	 * Expected Type: Person
-	 * 
-	 * @var	array
-	 */
-	protected static $employees = array('value' => 'employees',
-		'expectedTypes' => array('Person')
-	);
-
-	/**
-	 * Upcoming or past event associated with this place or organization.
+	 * Upcoming or past event associated with this place or organization. Supercedes events.
 	 * Expected Type: Event
 	 * 
 	 * @var	array
 	 */
 	protected static $event = array('value' => 'event',
-		'expectedTypes' => array('Event')
-	);
-
-	/**
-	 * Upcoming or past events associated with this place or organization (legacy spelling; see singular form, event).
-	 * Expected Type: Event
-	 * 
-	 * @var	array
-	 */
-	protected static $events = array('value' => 'events',
 		'expectedTypes' => array('Event')
 	);
 
@@ -144,22 +124,12 @@ abstract class TypeOrganization extends TypeThing
 	);
 
 	/**
-	 * A person who founded this organization.
+	 * A person who founded this organization. Supercedes founders.
 	 * Expected Type: Person
 	 * 
 	 * @var	array
 	 */
 	protected static $founder = array('value' => 'founder',
-		'expectedTypes' => array('Person')
-	);
-
-	/**
-	 * A person who founded this organization (legacy spelling; see singular form, founder).
-	 * Expected Type: Person
-	 * 
-	 * @var	array
-	 */
-	protected static $founders = array('value' => 'founders',
 		'expectedTypes' => array('Person')
 	);
 
@@ -235,12 +205,12 @@ abstract class TypeOrganization extends TypeThing
 
 	/**
 	 * A logo associated with an organization.
-	 * Expected Type: ImageObject, URL
+	 * Expected Type: URL, ImageObject
 	 * 
 	 * @var	array
 	 */
 	protected static $logo = array('value' => 'logo',
-		'expectedTypes' => array('ImageObject', 'URL')
+		'expectedTypes' => array('URL', 'ImageObject')
 	);
 
 	/**
@@ -254,23 +224,23 @@ abstract class TypeOrganization extends TypeThing
 	);
 
 	/**
-	 * A member of this organization.
-	 * Expected Type: Organization, Person
+	 * A member of an Organization or a ProgramMembership. Organizations can be members of organizations; ProgramMembership is typically for individuals. Supercedes members. Inverse property: memberOf.
+	 * Expected Type: Person, Organization
 	 * 
 	 * @var	array
 	 */
 	protected static $member = array('value' => 'member',
-		'expectedTypes' => array('Organization', 'Person')
+		'expectedTypes' => array('Person', 'Organization')
 	);
 
 	/**
-	 * A member of this organization (legacy spelling; see singular form, member).
-	 * Expected Type: Organization, Person
+	 * An Organization (or ProgramMembership) to which this Person or Organization belongs. Inverse property: member.
+	 * Expected Type: Organization, ProgramMembership
 	 * 
 	 * @var	array
 	 */
-	protected static $members = array('value' => 'members',
-		'expectedTypes' => array('Organization', 'Person')
+	protected static $memberOf = array('value' => 'memberOf',
+		'expectedTypes' => array('Organization', 'ProgramMembership')
 	);
 
 	/**
@@ -294,22 +264,12 @@ abstract class TypeOrganization extends TypeThing
 	);
 
 	/**
-	 * A review of the item.
+	 * A review of the item. Supercedes reviews.
 	 * Expected Type: Review
 	 * 
 	 * @var	array
 	 */
 	protected static $review = array('value' => 'review',
-		'expectedTypes' => array('Review')
-	);
-
-	/**
-	 * Review of the item (legacy spelling; see singular form, review).
-	 * Expected Type: Review
-	 * 
-	 * @var	array
-	 */
-	protected static $reviews = array('value' => 'reviews',
 		'expectedTypes' => array('Review')
 	);
 
@@ -354,7 +314,7 @@ abstract class TypeOrganization extends TypeThing
 	);
 
 	/**
-	 * The Value-added Tax ID of the organisation or person.
+	 * The Value-added Tax ID of the organization or person.
 	 * Expected Type: Text
 	 * 
 	 * @var	array
@@ -404,16 +364,6 @@ abstract class TypeOrganization extends TypeThing
 	}
 
 	/**
-	 * Return the 'contactPoints' Property value
-	 *
-	 * @return	string
-	 */
-	public static function pContactPoints()
-	{
-		return self::getValue(self::$contactPoints);
-	}
-
-	/**
 	 * Return the 'department' Property value
 	 *
 	 * @return	string
@@ -421,6 +371,16 @@ abstract class TypeOrganization extends TypeThing
 	public static function pDepartment()
 	{
 		return self::getValue(self::$department);
+	}
+
+	/**
+	 * Return the 'dissolutionDate' Property value
+	 *
+	 * @return	string
+	 */
+	public static function pDissolutionDate()
+	{
+		return self::getValue(self::$dissolutionDate);
 	}
 
 	/**
@@ -454,16 +414,6 @@ abstract class TypeOrganization extends TypeThing
 	}
 
 	/**
-	 * Return the 'employees' Property value
-	 *
-	 * @return	string
-	 */
-	public static function pEmployees()
-	{
-		return self::getValue(self::$employees);
-	}
-
-	/**
 	 * Return the 'event' Property value
 	 *
 	 * @return	string
@@ -471,16 +421,6 @@ abstract class TypeOrganization extends TypeThing
 	public static function pEvent()
 	{
 		return self::getValue(self::$event);
-	}
-
-	/**
-	 * Return the 'events' Property value
-	 *
-	 * @return	string
-	 */
-	public static function pEvents()
-	{
-		return self::getValue(self::$events);
 	}
 
 	/**
@@ -501,16 +441,6 @@ abstract class TypeOrganization extends TypeThing
 	public static function pFounder()
 	{
 		return self::getValue(self::$founder);
-	}
-
-	/**
-	 * Return the 'founders' Property value
-	 *
-	 * @return	string
-	 */
-	public static function pFounders()
-	{
-		return self::getValue(self::$founders);
 	}
 
 	/**
@@ -614,13 +544,13 @@ abstract class TypeOrganization extends TypeThing
 	}
 
 	/**
-	 * Return the 'members' Property value
+	 * Return the 'memberOf' Property value
 	 *
 	 * @return	string
 	 */
-	public static function pMembers()
+	public static function pMemberOf()
 	{
-		return self::getValue(self::$members);
+		return self::getValue(self::$memberOf);
 	}
 
 	/**
@@ -651,16 +581,6 @@ abstract class TypeOrganization extends TypeThing
 	public static function pReview()
 	{
 		return self::getValue(self::$review);
-	}
-
-	/**
-	 * Return the 'reviews' Property value
-	 *
-	 * @return	string
-	 */
-	public static function pReviews()
-	{
-		return self::getValue(self::$reviews);
 	}
 
 	/**

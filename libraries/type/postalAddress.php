@@ -44,22 +44,22 @@ abstract class TypePostalAddress extends TypeContactPoint
 	);
 
 	/**
+	 * The post office box number for PO box addresses.
+	 * Expected Type: Text
+	 * 
+	 * @var	array
+	 */
+	protected static $postOfficeBoxNumber = array('value' => 'postOfficeBoxNumber',
+		'expectedTypes' => array('Text')
+	);
+
+	/**
 	 * The postal code. For example, 94043.
 	 * Expected Type: Text
 	 * 
 	 * @var	array
 	 */
 	protected static $postalCode = array('value' => 'postalCode',
-		'expectedTypes' => array('Text')
-	);
-
-	/**
-	 * The post offce box number for PO box addresses.
-	 * Expected Type: Text
-	 * 
-	 * @var	array
-	 */
-	protected static $postOfficeBoxNumber = array('value' => 'postOfficeBoxNumber',
 		'expectedTypes' => array('Text')
 	);
 
@@ -104,16 +104,6 @@ abstract class TypePostalAddress extends TypeContactPoint
 	}
 
 	/**
-	 * Return the 'postalCode' Property value
-	 *
-	 * @return	string
-	 */
-	public static function pPostalCode()
-	{
-		return self::getValue(self::$postalCode);
-	}
-
-	/**
 	 * Return the 'postOfficeBoxNumber' Property value
 	 *
 	 * @return	string
@@ -121,6 +111,16 @@ abstract class TypePostalAddress extends TypeContactPoint
 	public static function pPostOfficeBoxNumber()
 	{
 		return self::getValue(self::$postOfficeBoxNumber);
+	}
+
+	/**
+	 * Return the 'postalCode' Property value
+	 *
+	 * @return	string
+	 */
+	public static function pPostalCode()
+	{
+		return self::getValue(self::$postalCode);
 	}
 
 	/**

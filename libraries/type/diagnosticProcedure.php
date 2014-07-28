@@ -1,6 +1,6 @@
 <?php
 /**
- * A medical procedure intended primarly for diagnostic, as opposed to therapeutic, purposes.
+ * A medical procedure intended primarily for diagnostic, as opposed to therapeutic, purposes.
  *
  * @see    http://schema.org/DiagnosticProcedure
 */

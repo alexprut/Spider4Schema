@@ -12,4 +12,24 @@ abstract class TypeMap extends TypeCreativeWork
 	 * @var string
 	 */
 	protected static $scope = 'https://schema.org/Map';
+
+	/**
+	 * Indicates the kind of Map, from the MapCategoryType Enumeration.
+	 * Expected Type: MapCategoryType
+	 * 
+	 * @var	array
+	 */
+	protected static $mapType = array('value' => 'mapType',
+		'expectedTypes' => array('MapCategoryType')
+	);
+
+	/**
+	 * Return the 'mapType' Property value
+	 *
+	 * @return	string
+	 */
+	public static function pMapType()
+	{
+		return self::getValue(self::$mapType);
+	}
 }

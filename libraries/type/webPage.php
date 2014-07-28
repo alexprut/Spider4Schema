@@ -54,7 +54,7 @@ abstract class TypeWebPage extends TypeCreativeWork
 	);
 
 	/**
-	 * Indicates the main image on the page
+	 * Indicates the main image on the page.
 	 * Expected Type: ImageObject
 	 * 
 	 * @var	array
@@ -84,22 +84,12 @@ abstract class TypeWebPage extends TypeCreativeWork
 	);
 
 	/**
-	 * One of the more significant URLs on the page. Typically, these are the non-navigation links that are clicked on the most.
+	 * One of the more significant URLs on the page. Typically, these are the non-navigation links that are clicked on the most. Supercedes significantLinks.
 	 * Expected Type: URL
 	 * 
 	 * @var	array
 	 */
 	protected static $significantLink = array('value' => 'significantLink',
-		'expectedTypes' => array('URL')
-	);
-
-	/**
-	 * The most significant URLs on the page. Typically, these are the non-navigation links that are clicked on the most (legacy spelling; see singular form, significantLink).
-	 * Expected Type: URL
-	 * 
-	 * @var	array
-	 */
-	protected static $significantLinks = array('value' => 'significantLinks',
 		'expectedTypes' => array('URL')
 	);
 
@@ -191,16 +181,6 @@ abstract class TypeWebPage extends TypeCreativeWork
 	public static function pSignificantLink()
 	{
 		return self::getValue(self::$significantLink);
-	}
-
-	/**
-	 * Return the 'significantLinks' Property value
-	 *
-	 * @return	string
-	 */
-	public static function pSignificantLinks()
-	{
-		return self::getValue(self::$significantLinks);
 	}
 
 	/**

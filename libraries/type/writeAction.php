@@ -14,7 +14,7 @@ abstract class TypeWriteAction extends TypeCreateAction
 	protected static $scope = 'https://schema.org/WriteAction';
 
 	/**
-	 * A sub property of instrument. The languaged used on this action.
+	 * A sub property of instrument. The language used on this action.
 	 * Expected Type: Language
 	 * 
 	 * @var	array

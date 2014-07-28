@@ -15,12 +15,12 @@ abstract class TypeMedicalClinic extends TypeMedicalOrganization
 
 	/**
 	 * A medical service available from this provider.
-	 * Expected Type: MedicalProcedure, MedicalTest, MedicalTherapy
+	 * Expected Type: MedicalTherapy, MedicalProcedure, MedicalTest
 	 * 
 	 * @var	array
 	 */
 	protected static $availableService = array('value' => 'availableService',
-		'expectedTypes' => array('MedicalProcedure', 'MedicalTest', 'MedicalTherapy')
+		'expectedTypes' => array('MedicalTherapy', 'MedicalProcedure', 'MedicalTest')
 	);
 
 	/**

@@ -4,7 +4,7 @@
  *
  * @see    http://schema.org/Plumber
 */
-abstract class TypePlumber extends TypeHomeAndConstructionBusiness
+abstract class TypePlumber extends TypeProfessionalService
 {
 	/**
 	 * The Schema.org Type Scope

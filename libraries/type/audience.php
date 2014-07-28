@@ -14,9 +14,7 @@ abstract class TypeAudience extends TypeIntangible
 	protected static $scope = 'https://schema.org/Audience';
 
 	/**
-	 * The target group associated with a given audience (e.g. veterans, car owners, musicians, etc.)
-      domain: Audience
-      Range: Text
+	 * The target group associated with a given audience (e.g. veterans, car owners, musicians, etc.) domain: Audience Range: Text
 	 * Expected Type: Text
 	 * 
 	 * @var	array

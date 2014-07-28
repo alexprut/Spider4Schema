@@ -14,7 +14,7 @@ abstract class TypeRentAction extends TypeTradeAction
 	protected static $scope = 'https://schema.org/RentAction';
 
 	/**
-	 * A sub property of participant. The owner of the real estate property. Sub property of destination or participant?
+	 * A sub property of participant. The owner of the real estate property.
 	 * Expected Type: Organization, Person
 	 * 
 	 * @var	array

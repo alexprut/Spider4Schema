@@ -4,7 +4,7 @@
  *
  * @see    http://schema.org/OnSitePickup
 */
-abstract class TypeOnSitePickup extends TypeDeliveryMethod
+abstract class TypeOnSitePickup extends TypeEnumeration
 {
 	/**
 	 * The Schema.org Type Scope

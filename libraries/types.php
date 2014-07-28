@@ -53,8 +53,9 @@ class Types
 				'additionalType' => array('URL'),
 				'alternateName' => array('Text'),
 				'description' => array('Text'),
-				'image' => array('URL'),
+				'image' => array('URL', 'ImageObject'),
 				'name' => array('Text'),
+				'potentialAction' => array('Action'),
 				'sameAs' => array('URL'),
 				'url' => array('URL')
 			)
@@ -62,14 +63,16 @@ class Types
 		'Action' => array(
 			'extends' => 'Thing',
 			'properties' => array(
-				'agent' => array('Organization', 'Person'),
+				'actionStatus' => array('ActionStatusType'),
+				'agent' => array('Person', 'Organization'),
 				'endTime' => array('DateTime'),
 				'instrument' => array('Thing'),
 				'location' => array('Place', 'PostalAddress'),
 				'object' => array('Thing'),
-				'participant' => array('Organization', 'Person'),
+				'participant' => array('Person', 'Organization'),
 				'result' => array('Thing'),
-				'startTime' => array('DateTime')
+				'startTime' => array('DateTime'),
+				'target' => array('EntryPoint')
 			)
 		),
 		'AchieveAction' => array(
@@ -131,7 +134,7 @@ class Types
 		'EndorseAction' => array(
 			'extends' => 'ReactAction',
 			'properties' => array(
-				'endorsee' => array('Organization', 'Person')
+				'endorsee' => array('Person', 'Organization')
 			)
 		),
 		'LikeAction' => array(
@@ -195,7 +198,7 @@ class Types
 		'CookAction' => array(
 			'extends' => 'CreateAction',
 			'properties' => array(
-				'foodEstablishment' => array('FoodEstablishment', 'Place'),
+				'foodEstablishment' => array('Place', 'FoodEstablishment'),
 				'foodEvent' => array('FoodEvent'),
 				'recipe' => array('Recipe')
 			)
@@ -253,7 +256,7 @@ class Types
 			'properties' => array(
 				'about' => array('Thing'),
 				'language' => array('Language'),
-				'recipient' => array('Audience', 'Organization', 'Person')
+				'recipient' => array('Audience', 'Person', 'Organization')
 			)
 		),
 		'AskAction' => array(
@@ -305,7 +308,7 @@ class Types
 		'FollowAction' => array(
 			'extends' => 'InteractAction',
 			'properties' => array(
-				'followee' => array('Organization', 'Person')
+				'followee' => array('Person', 'Organization')
 			)
 		),
 		'JoinAction' => array(
@@ -364,7 +367,7 @@ class Types
 		'AllocateAction' => array(
 			'extends' => 'OrganizeAction',
 			'properties' => array(
-				'purpose' => array('MedicalDevicePurpose', 'Thing')
+				'purpose' => array('Thing', 'MedicalDevicePurpose')
 			)
 		),
 		'AcceptAction' => array(
@@ -405,7 +408,9 @@ class Types
 		),
 		'ReserveAction' => array(
 			'extends' => 'PlanAction',
-			'properties' => array()
+			'properties' => array(
+				'scheduledTime' => array('DateTime')
+			)
 		),
 		'ScheduleAction' => array(
 			'extends' => 'PlanAction',
@@ -427,7 +432,7 @@ class Types
 				'exercisePlan' => array('ExercisePlan'),
 				'exerciseType' => array('Text'),
 				'fromLocation' => array('Number', 'Place'),
-				'oponent' => array('Person'),
+				'opponent' => array('Person'),
 				'sportsActivityLocation' => array('SportsActivityLocation'),
 				'sportsEvent' => array('SportsEvent'),
 				'sportsTeam' => array('SportsTeam'),
@@ -443,19 +448,19 @@ class Types
 		'SearchAction' => array(
 			'extends' => 'Action',
 			'properties' => array(
-				'query' => array('Class', 'Text')
+				'query' => array('Text', 'Class')
 			)
 		),
 		'TradeAction' => array(
 			'extends' => 'Action',
 			'properties' => array(
-				'price' => array('Number', 'Text')
+				'price' => array('Text', 'Number')
 			)
 		),
 		'BuyAction' => array(
 			'extends' => 'TradeAction',
 			'properties' => array(
-				'vendor' => array('Organization', 'Person'),
+				'vendor' => array('Person', 'Organization'),
 				'warrantyPromise' => array('WarrantyPromise')
 			)
 		),
@@ -472,7 +477,7 @@ class Types
 		'PayAction' => array(
 			'extends' => 'TradeAction',
 			'properties' => array(
-				'purpose' => array('MedicalDevicePurpose', 'Thing'),
+				'purpose' => array('Thing', 'MedicalDevicePurpose'),
 				'recipient' => array('Audience', 'Organization', 'Person')
 			)
 		),
@@ -483,7 +488,7 @@ class Types
 		'RentAction' => array(
 			'extends' => 'TradeAction',
 			'properties' => array(
-				'landlord' => array('Organization', 'Person'),
+				'landlord' => array('Person', 'Organization'),
 				'realEstateAgent' => array('RealEstateAgent')
 			)
 		),
@@ -597,7 +602,7 @@ class Types
 			)
 		),
 		'Class' => array(
-			'extends' => 'Thing',
+			'extends' => 'Intangible',
 			'properties' => array()
 		),
 		'CreativeWork' => array(
@@ -614,17 +619,17 @@ class Types
 				'associatedMedia' => array('MediaObject'),
 				'audience' => array('Audience'),
 				'audio' => array('AudioObject'),
-				'author' => array('Organization', 'Person'),
+				'author' => array('Person', 'Organization'),
 				'award' => array('Text'),
-				'awards' => array('Text'),
-				'citation' => array('CreativeWork', 'Text'),
-				'comment' => array('UserComments'),
+				'citation' => array('Text', 'CreativeWork'),
+				'comment' => array('Comment', 'UserComments'),
+				'commentCount' => array('Integer'),
 				'contentLocation' => array('Place'),
 				'contentRating' => array('Text'),
-				'contributor' => array('Organization', 'Person'),
-				'copyrightHolder' => array('Organization', 'Person'),
+				'contributor' => array('Person', 'Organization'),
+				'copyrightHolder' => array('Person', 'Organization'),
 				'copyrightYear' => array('Number'),
-				'creator' => array('Organization', 'Person'),
+				'creator' => array('Person', 'Organization'),
 				'dateCreated' => array('Date'),
 				'dateModified' => array('Date'),
 				'datePublished' => array('Date'),
@@ -633,7 +638,6 @@ class Types
 				'educationalAlignment' => array('AlignmentObject'),
 				'educationalUse' => array('Text'),
 				'encoding' => array('MediaObject'),
-				'encodings' => array('MediaObject'),
 				'genre' => array('Text'),
 				'headline' => array('Text'),
 				'inLanguage' => array('Text'),
@@ -643,13 +647,13 @@ class Types
 				'isFamilyFriendly' => array('Boolean'),
 				'keywords' => array('Text'),
 				'learningResourceType' => array('Text'),
+				'license' => array('URL', 'CreativeWork'),
 				'mentions' => array('Thing'),
 				'offers' => array('Offer'),
-				'provider' => array('Organization', 'Person'),
+				'provider' => array('Person', 'Organization'),
 				'publisher' => array('Organization'),
 				'publishingPrinciples' => array('URL'),
 				'review' => array('Review'),
-				'reviews' => array('Review'),
 				'sourceOrganization' => array('Organization'),
 				'text' => array('Text'),
 				'thumbnailUrl' => array('URL'),
@@ -657,6 +661,14 @@ class Types
 				'typicalAgeRange' => array('Text'),
 				'version' => array('Number'),
 				'video' => array('VideoObject')
+			)
+		),
+		'Answer' => array(
+			'extends' => 'CreativeWork',
+			'properties' => array(
+				'downvoteCount' => array('Integer'),
+				'parentItem' => array('Question'),
+				'upvoteCount' => array('Integer')
 			)
 		),
 		'Article' => array(
@@ -710,8 +722,7 @@ class Types
 		'Blog' => array(
 			'extends' => 'CreativeWork',
 			'properties' => array(
-				'blogPost' => array('BlogPosting'),
-				'blogPosts' => array('BlogPosting')
+				'blogPost' => array('BlogPosting')
 			)
 		),
 		'Book' => array(
@@ -737,12 +748,16 @@ class Types
 		),
 		'RadioClip' => array(
 			'extends' => 'Clip',
-			'properties' => array()
+			'properties' => array(
+				'partOfSeason' => array('Season'),
+				'partOfSeries' => array('Series')
+			)
 		),
 		'TVClip' => array(
 			'extends' => 'Clip',
 			'properties' => array(
-				'partOfTVSeries' => array('TVSeries')
+				'partOfSeason' => array('Season'),
+				'partOfSeries' => array('Series')
 			)
 		),
 		'Code' => array(
@@ -757,7 +772,11 @@ class Types
 		),
 		'Comment' => array(
 			'extends' => 'CreativeWork',
-			'properties' => array()
+			'properties' => array(
+				'downvoteCount' => array('Integer'),
+				'parentItem' => array('Question'),
+				'upvoteCount' => array('Integer')
+			)
 		),
 		'DataCatalog' => array(
 			'extends' => 'CreativeWork',
@@ -775,10 +794,10 @@ class Types
 			)
 		),
 		'Diet' => array(
-			'extends' => 'CreativeWork',
+			'extends' => 'LifestyleModification',
 			'properties' => array(
 				'dietFeatures' => array('Text'),
-				'endorsers' => array('Organization', 'Person'),
+				'endorsers' => array('Person', 'Organization'),
 				'expertConsiderations' => array('Text'),
 				'overview' => array('Text'),
 				'physiologicalBenefits' => array('Text'),
@@ -786,15 +805,17 @@ class Types
 				'risks' => array('Text')
 			)
 		),
+		'EmailMessage' => array(
+			'extends' => 'CreativeWork',
+			'properties' => array()
+		),
 		'Episode' => array(
 			'extends' => 'CreativeWork',
 			'properties' => array(
 				'actor' => array('Person'),
-				'actors' => array('Person'),
 				'director' => array('Person'),
-				'directors' => array('Person'),
 				'episodeNumber' => array('Integer'),
-				'musicBy' => array('MusicGroup', 'Person'),
+				'musicBy' => array('Person', 'MusicGroup'),
 				'partOfSeason' => array('Season'),
 				'partOfSeries' => array('Series'),
 				'position' => array('Text'),
@@ -806,16 +827,32 @@ class Types
 		),
 		'RadioEpisode' => array(
 			'extends' => 'Episode',
-			'properties' => array()
+			'properties' => array(
+				'actor' => array('Person'),
+				'director' => array('Person'),
+				'musicBy' => array('Person', 'MusicGroup'),
+				'partOfSeason' => array('Season'),
+				'partOfSeries' => array('Series'),
+				'producer' => array('Person'),
+				'productionCompany' => array('Organization'),
+				'trailer' => array('VideoObject')
+			)
 		),
 		'TVEpisode' => array(
 			'extends' => 'Episode',
 			'properties' => array(
-				'partOfTVSeries' => array('TVSeries')
+				'actor' => array('Person'),
+				'director' => array('Person'),
+				'musicBy' => array('Person', 'MusicGroup'),
+				'partOfSeason' => array('Season'),
+				'partOfSeries' => array('Series'),
+				'producer' => array('Person'),
+				'productionCompany' => array('Organization'),
+				'trailer' => array('VideoObject')
 			)
 		),
 		'ExercisePlan' => array(
-			'extends' => 'CreativeWork',
+			'extends' => 'PhysicalActivity',
 			'properties' => array(
 				'activityDuration' => array('Duration'),
 				'activityFrequency' => array('Text'),
@@ -836,7 +873,9 @@ class Types
 		),
 		'Map' => array(
 			'extends' => 'CreativeWork',
-			'properties' => array()
+			'properties' => array(
+				'mapType' => array('MapCategoryType')
+			)
 		),
 		'MediaObject' => array(
 			'extends' => 'CreativeWork',
@@ -850,14 +889,16 @@ class Types
 				'encodesCreativeWork' => array('CreativeWork'),
 				'encodingFormat' => array('Text'),
 				'expires' => array('Date'),
-				'height' => array('Distance', 'QuantitativeValue'),
+				'height' => array('QuantitativeValue', 'Distance'),
+				'interactionCount' => array('Text'),
+				'offers' => array('Offer'),
 				'playerType' => array('Text'),
 				'productionCompany' => array('Organization'),
 				'publication' => array('PublicationEvent'),
 				'regionsAllowed' => array('Place'),
 				'requiresSubscription' => array('Boolean'),
 				'uploadDate' => array('Date'),
-				'width' => array('Distance', 'QuantitativeValue')
+				'width' => array('QuantitativeValue', 'Distance')
 			)
 		),
 		'AudioObject' => array(
@@ -887,6 +928,7 @@ class Types
 			'extends' => 'MediaObject',
 			'properties' => array(
 				'caption' => array('Text'),
+				'productionCompany' => array('Organization'),
 				'thumbnail' => array('ImageObject'),
 				'transcript' => array('Text'),
 				'videoFrameSize' => array('Text'),
@@ -897,11 +939,9 @@ class Types
 			'extends' => 'CreativeWork',
 			'properties' => array(
 				'actor' => array('Person'),
-				'actors' => array('Person'),
 				'director' => array('Person'),
-				'directors' => array('Person'),
 				'duration' => array('Duration'),
-				'musicBy' => array('MusicGroup', 'Person'),
+				'musicBy' => array('Person', 'MusicGroup'),
 				'producer' => array('Person'),
 				'productionCompany' => array('Organization'),
 				'trailer' => array('VideoObject')
@@ -911,8 +951,7 @@ class Types
 			'extends' => 'CreativeWork',
 			'properties' => array(
 				'numTracks' => array('Integer'),
-				'track' => array('MusicRecording'),
-				'tracks' => array('MusicRecording')
+				'track' => array('MusicRecording')
 			)
 		),
 		'MusicAlbum' => array(
@@ -938,11 +977,21 @@ class Types
 			'extends' => 'CreativeWork',
 			'properties' => array()
 		),
+		'Question' => array(
+			'extends' => 'CreativeWork',
+			'properties' => array(
+				'acceptedAnswer' => array('Answer'),
+				'answerCount' => array('Integer'),
+				'downvoteCount' => array('Integer'),
+				'suggestedAnswer' => array('Answer'),
+				'upvoteCount' => array('Integer')
+			)
+		),
 		'Recipe' => array(
 			'extends' => 'CreativeWork',
 			'properties' => array(
-				'cookingMethod' => array('Text'),
 				'cookTime' => array('Duration'),
+				'cookingMethod' => array('Text'),
 				'ingredients' => array('Text'),
 				'nutrition' => array('NutritionInformation'),
 				'prepTime' => array('Duration'),
@@ -970,7 +1019,6 @@ class Types
 			'properties' => array(
 				'endDate' => array('Date'),
 				'episode' => array('Episode'),
-				'episodes' => array('Episode'),
 				'numberOfEpisodes' => array('Number'),
 				'partOfSeries' => array('Series'),
 				'position' => array('Text'),
@@ -983,42 +1031,71 @@ class Types
 		),
 		'RadioSeason' => array(
 			'extends' => 'Season',
-			'properties' => array()
+			'properties' => array(
+				'episode' => array('Episode'),
+				'numberOfEpisodes' => array('Number'),
+				'partOfSeries' => array('Series'),
+				'trailer' => array('VideoObject')
+			)
 		),
 		'TVSeason' => array(
-			'extends' => 'CreativeWork',
+			'extends' => 'Season',
 			'properties' => array(
-				'partOfTVSeries' => array('TVSeries')
+				'endDate' => array('Date'),
+				'episode' => array('Episode'),
+				'numberOfEpisodes' => array('Number'),
+				'partOfSeries' => array('Series'),
+				'seasonNumber' => array('Integer'),
+				'startDate' => array('Date'),
+				'trailer' => array('VideoObject')
 			)
 		),
 		'Series' => array(
 			'extends' => 'CreativeWork',
 			'properties' => array(
 				'actor' => array('Person'),
-				'actors' => array('Person'),
 				'director' => array('Person'),
-				'directors' => array('Person'),
 				'endDate' => array('Date'),
 				'episode' => array('Episode'),
-				'episodes' => array('Episode'),
-				'musicBy' => array('MusicGroup', 'Person'),
+				'musicBy' => array('Person', 'MusicGroup'),
 				'numberOfEpisodes' => array('Number'),
 				'numberOfSeasons' => array('Number'),
 				'producer' => array('Person'),
 				'productionCompany' => array('Organization'),
 				'season' => array('Season'),
-				'seasons' => array('Season'),
 				'startDate' => array('Date'),
 				'trailer' => array('VideoObject')
 			)
 		),
 		'RadioSeries' => array(
 			'extends' => 'Series',
-			'properties' => array()
+			'properties' => array(
+				'actor' => array('Person'),
+				'director' => array('Person'),
+				'episode' => array('Episode'),
+				'musicBy' => array('Person', 'MusicGroup'),
+				'numberOfEpisodes' => array('Number'),
+				'producer' => array('Person'),
+				'productionCompany' => array('Organization'),
+				'season' => array('Season'),
+				'trailer' => array('VideoObject')
+			)
 		),
 		'TVSeries' => array(
-			'extends' => 'CreativeWork',
-			'properties' => array()
+			'extends' => 'Series',
+			'properties' => array(
+				'actor' => array('Person'),
+				'director' => array('Person'),
+				'endDate' => array('Date'),
+				'episode' => array('Episode'),
+				'musicBy' => array('Person', 'MusicGroup'),
+				'numberOfEpisodes' => array('Number'),
+				'producer' => array('Person'),
+				'productionCompany' => array('Organization'),
+				'season' => array('Season'),
+				'startDate' => array('Date'),
+				'trailer' => array('VideoObject')
+			)
 		),
 		'SoftwareApplication' => array(
 			'extends' => 'CreativeWork',
@@ -1040,7 +1117,7 @@ class Types
 				'processorRequirements' => array('Text'),
 				'releaseNotes' => array('Text', 'URL'),
 				'requirements' => array('Text', 'URL'),
-				'screenshot' => array('ImageObject', 'URL'),
+				'screenshot' => array('URL', 'ImageObject'),
 				'softwareVersion' => array('Text'),
 				'storageRequirements' => array('Text', 'URL')
 			)
@@ -1066,9 +1143,8 @@ class Types
 				'mainContentOfPage' => array('WebPageElement'),
 				'primaryImageOfPage' => array('ImageObject'),
 				'relatedLink' => array('URL'),
-				'reviewedBy' => array('Organization', 'Person'),
+				'reviewedBy' => array('Person', 'Organization'),
 				'significantLink' => array('URL'),
-				'significantLinks' => array('URL'),
 				'specialty' => array('Specialty')
 			)
 		),
@@ -1110,6 +1186,10 @@ class Types
 			'extends' => 'WebPage',
 			'properties' => array()
 		),
+		'QAPage' => array(
+			'extends' => 'WebPage',
+			'properties' => array()
+		),
 		'SearchResultsPage' => array(
 			'extends' => 'WebPage',
 			'properties' => array()
@@ -1145,22 +1225,21 @@ class Types
 		'Event' => array(
 			'extends' => 'Thing',
 			'properties' => array(
-				'attendee' => array('Organization', 'Person'),
-				'attendees' => array('Organization', 'Person'),
+				'attendee' => array('Person', 'Organization'),
 				'doorTime' => array('DateTime'),
 				'duration' => array('Duration'),
 				'endDate' => array('Date'),
 				'eventStatus' => array('EventStatusType'),
 				'location' => array('Place', 'PostalAddress'),
 				'offers' => array('Offer'),
-				'performer' => array('Organization', 'Person'),
-				'performers' => array('Organization', 'Person'),
+				'organizer' => array('Person', 'Organization'),
+				'performer' => array('Person', 'Organization'),
 				'previousStartDate' => array('Date'),
 				'startDate' => array('Date'),
 				'subEvent' => array('Event'),
-				'subEvents' => array('Event'),
 				'superEvent' => array('Event'),
-				'typicalAgeRange' => array('Text')
+				'typicalAgeRange' => array('Text'),
+				'workPerformed' => array('CreativeWork')
 			)
 		),
 		'BusinessEvent' => array(
@@ -1256,7 +1335,7 @@ class Types
 			'properties' => array(
 				'commentText' => array('Text'),
 				'commentTime' => array('Date'),
-				'creator' => array('Organization', 'Person'),
+				'creator' => array('Person', 'Organization'),
 				'discusses' => array('CreativeWork'),
 				'replyToUrl' => array('URL')
 			)
@@ -1350,7 +1429,19 @@ class Types
 		'Brand' => array(
 			'extends' => 'Intangible',
 			'properties' => array(
-				'logo' => array('ImageObject', 'URL')
+				'logo' => array('URL', 'ImageObject')
+			)
+		),
+		'BusTrip' => array(
+			'extends' => 'Intangible',
+			'properties' => array(
+				'arrivalBusStop' => array('BusStation', 'BusStop'),
+				'arrivalTime' => array('DateTime'),
+				'busName' => array('Text'),
+				'busNumber' => array('Text'),
+				'departureBusStop' => array('BusStation', 'BusStop'),
+				'departureTime' => array('DateTime'),
+				'provider' => array('Person', 'Organization')
 			)
 		),
 		'Demand' => array(
@@ -1368,7 +1459,7 @@ class Types
 				'eligibleCustomerType' => array('BusinessEntityType'),
 				'eligibleDuration' => array('QuantitativeValue'),
 				'eligibleQuantity' => array('QuantitativeValue'),
-				'eligibleRegion' => array('GeoShape', 'Text'),
+				'eligibleRegion' => array('Text', 'GeoShape'),
 				'eligibleTransactionVolume' => array('PriceSpecification'),
 				'gtin13' => array('Text'),
 				'gtin14' => array('Text'),
@@ -1379,7 +1470,7 @@ class Types
 				'itemOffered' => array('Product'),
 				'mpn' => array('Text'),
 				'priceSpecification' => array('PriceSpecification'),
-				'seller' => array('Organization', 'Person'),
+				'seller' => array('Person', 'Organization'),
 				'serialNumber' => array('Text'),
 				'sku' => array('Text'),
 				'validFrom' => array('DateTime'),
@@ -1420,7 +1511,7 @@ class Types
 			'properties' => array()
 		),
 		'OnSitePickup' => array(
-			'extends' => 'DeliveryMethod',
+			'extends' => 'Enumeration',
 			'properties' => array()
 		),
 		'ParcelService' => array(
@@ -1463,6 +1554,10 @@ class Types
 				'valueReference' => array('Enumeration', 'StructuredValue')
 			)
 		),
+		'ReservationStatusType' => array(
+			'extends' => 'Enumeration',
+			'properties' => array()
+		),
 		'Specialty' => array(
 			'extends' => 'Enumeration',
 			'properties' => array()
@@ -1474,6 +1569,27 @@ class Types
 		'WarrantyScope' => array(
 			'extends' => 'Enumeration',
 			'properties' => array()
+		),
+		'Flight' => array(
+			'extends' => 'Intangible',
+			'properties' => array(
+				'aircraft' => array('Text', 'Vehicle'),
+				'arrivalAirport' => array('Airport'),
+				'arrivalGate' => array('Text'),
+				'arrivalTerminal' => array('Text'),
+				'arrivalTime' => array('DateTime'),
+				'carrier' => array('Organization'),
+				'departureAirport' => array('Airport'),
+				'departureGate' => array('Text'),
+				'departureTerminal' => array('Text'),
+				'departureTime' => array('DateTime'),
+				'estimatedFlightDuration' => array('Duration', 'Text'),
+				'flightDistance' => array('Text', 'Distance'),
+				'flightNumber' => array('Text'),
+				'mealService' => array('Text'),
+				'provider' => array('Person', 'Organization'),
+				'webCheckinTime' => array('DateTime')
+			)
 		),
 		'JobPosting' => array(
 			'extends' => 'Intangible',
@@ -1520,7 +1636,7 @@ class Types
 				'eligibleCustomerType' => array('BusinessEntityType'),
 				'eligibleDuration' => array('QuantitativeValue'),
 				'eligibleQuantity' => array('QuantitativeValue'),
-				'eligibleRegion' => array('GeoShape', 'Text'),
+				'eligibleRegion' => array('Text', 'GeoShape'),
 				'eligibleTransactionVolume' => array('PriceSpecification'),
 				'gtin13' => array('Text'),
 				'gtin14' => array('Text'),
@@ -1530,13 +1646,12 @@ class Types
 				'itemCondition' => array('OfferItemCondition'),
 				'itemOffered' => array('Product'),
 				'mpn' => array('Text'),
-				'price' => array('Number', 'Text'),
+				'price' => array('Text', 'Number'),
 				'priceCurrency' => array('Text'),
 				'priceSpecification' => array('PriceSpecification'),
 				'priceValidUntil' => array('Date'),
 				'review' => array('Review'),
-				'reviews' => array('Review'),
-				'seller' => array('Organization', 'Person'),
+				'seller' => array('Person', 'Organization'),
 				'serialNumber' => array('Text'),
 				'sku' => array('Text'),
 				'validFrom' => array('DateTime'),
@@ -1547,8 +1662,8 @@ class Types
 		'AggregateOffer' => array(
 			'extends' => 'Offer',
 			'properties' => array(
-				'highPrice' => array('Number', 'Text'),
-				'lowPrice' => array('Number', 'Text'),
+				'highPrice' => array('Text', 'Number'),
+				'lowPrice' => array('Text', 'Number'),
 				'offerCount' => array('Integer')
 			)
 		),
@@ -1558,16 +1673,16 @@ class Types
 				'acceptedOffer' => array('Offer'),
 				'billingAddress' => array('PostalAddress'),
 				'confirmationNumber' => array('Text'),
-				'customer' => array('Organization', 'Person'),
-				'discount' => array('Number', 'Text'),
+				'customer' => array('Person', 'Organization'),
+				'discount' => array('Text', 'Number'),
 				'discountCode' => array('Text'),
 				'discountCurrency' => array('Text'),
 				'isGift' => array('Boolean'),
-				'merchant' => array('Organization', 'Person'),
+				'merchant' => array('Person', 'Organization'),
 				'orderDate' => array('DateTime'),
-				'orderedItem' => array('Product'),
 				'orderNumber' => array('Text'),
 				'orderStatus' => array('OrderStatus'),
+				'orderedItem' => array('Product'),
 				'paymentDue' => array('DateTime'),
 				'paymentMethod' => array('PaymentMethod'),
 				'paymentMethodId' => array('Text'),
@@ -1606,6 +1721,15 @@ class Types
 			'extends' => 'Permit',
 			'properties' => array()
 		),
+		'ProgramMembership' => array(
+			'extends' => 'Intangible',
+			'properties' => array(
+				'hostingOrganization' => array('Organization'),
+				'member' => array('Person', 'Organization'),
+				'membershipNumber' => array('Text'),
+				'programName' => array('Text')
+			)
+		),
 		'Quantity' => array(
 			'extends' => 'Intangible',
 			'properties' => array()
@@ -1629,9 +1753,9 @@ class Types
 		'Rating' => array(
 			'extends' => 'Intangible',
 			'properties' => array(
-				'bestRating' => array('Number', 'Text'),
+				'bestRating' => array('Text', 'Number'),
 				'ratingValue' => array('Text'),
-				'worstRating' => array('Number', 'Text')
+				'worstRating' => array('Text', 'Number')
 			)
 		),
 		'AggregateRating' => array(
@@ -1642,12 +1766,98 @@ class Types
 				'reviewCount' => array('Number')
 			)
 		),
+		'Reservation' => array(
+			'extends' => 'Intangible',
+			'properties' => array(
+				'bookingAgent' => array('Person', 'Organization'),
+				'bookingTime' => array('DateTime'),
+				'modifiedTime' => array('DateTime'),
+				'priceCurrency' => array('Text'),
+				'programMembershipUsed' => array('ProgramMembership'),
+				'provider' => array('Person', 'Organization'),
+				'reservationFor' => array('Thing'),
+				'reservationId' => array('Text'),
+				'reservationStatus' => array('ReservationStatusType'),
+				'reservedTicket' => array('Ticket'),
+				'totalPrice' => array('Text', 'Number', 'PriceSpecification'),
+				'underName' => array('Person', 'Organization')
+			)
+		),
+		'BusReservation' => array(
+			'extends' => 'Reservation',
+			'properties' => array()
+		),
+		'EventReservation' => array(
+			'extends' => 'Reservation',
+			'properties' => array()
+		),
+		'FlightReservation' => array(
+			'extends' => 'Reservation',
+			'properties' => array(
+				'boardingGroup' => array('Text')
+			)
+		),
+		'FoodEstablishmentReservation' => array(
+			'extends' => 'Reservation',
+			'properties' => array(
+				'endTime' => array('DateTime'),
+				'partySize' => array('QuantitativeValue', 'Number'),
+				'startTime' => array('DateTime')
+			)
+		),
+		'LodgingReservation' => array(
+			'extends' => 'Reservation',
+			'properties' => array(
+				'checkinTime' => array('DateTime'),
+				'checkoutTime' => array('DateTime'),
+				'lodgingUnitDescription' => array('Text'),
+				'lodgingUnitType' => array('Text', 'QualitativeValue'),
+				'numAdults' => array('QuantitativeValue', 'Number'),
+				'numChildren' => array('QuantitativeValue', 'Number')
+			)
+		),
+		'RentalCarReservation' => array(
+			'extends' => 'Reservation',
+			'properties' => array(
+				'dropoffLocation' => array('Place'),
+				'dropoffTime' => array('DateTime'),
+				'pickupLocation' => array('Place'),
+				'pickupTime' => array('DateTime')
+			)
+		),
+		'ReservationPackage' => array(
+			'extends' => 'Reservation',
+			'properties' => array(
+				'subReservation' => array('Reservation')
+			)
+		),
+		'TaxiReservation' => array(
+			'extends' => 'Reservation',
+			'properties' => array(
+				'partySize' => array('QuantitativeValue', 'Number'),
+				'pickupLocation' => array('Place'),
+				'pickupTime' => array('DateTime')
+			)
+		),
+		'TrainReservation' => array(
+			'extends' => 'Reservation',
+			'properties' => array()
+		),
+		'Seat' => array(
+			'extends' => 'Intangible',
+			'properties' => array(
+				'seatNumber' => array('Text'),
+				'seatRow' => array('Text'),
+				'seatSection' => array('Text'),
+				'seatingType' => array('Text', 'QualitativeValue')
+			)
+		),
 		'Service' => array(
 			'extends' => 'Intangible',
 			'properties' => array(
 				'availableChannel' => array('ServiceChannel'),
 				'produces' => array('Thing'),
-				'provider' => array('Organization', 'Person'),
+				'provider' => array('Person', 'Organization'),
 				'serviceArea' => array('AdministrativeArea'),
 				'serviceAudience' => array('Audience'),
 				'serviceType' => array('Text')
@@ -1658,6 +1868,10 @@ class Types
 			'properties' => array(
 				'serviceOperator' => array('Organization')
 			)
+		),
+		'Taxi' => array(
+			'extends' => 'Service',
+			'properties' => array()
 		),
 		'ServiceChannel' => array(
 			'extends' => 'Intangible',
@@ -1696,17 +1910,17 @@ class Types
 				'addressCountry' => array('Country'),
 				'addressLocality' => array('Text'),
 				'addressRegion' => array('Text'),
-				'postalCode' => array('Text'),
 				'postOfficeBoxNumber' => array('Text'),
+				'postalCode' => array('Text'),
 				'streetAddress' => array('Text')
 			)
 		),
 		'GeoCoordinates' => array(
 			'extends' => 'StructuredValue',
 			'properties' => array(
-				'elevation' => array('Number', 'Text'),
-				'latitude' => array('Number', 'Text'),
-				'longitude' => array('Number', 'Text')
+				'elevation' => array('Text', 'Number'),
+				'latitude' => array('Text', 'Number'),
+				'longitude' => array('Text', 'Number')
 			)
 		),
 		'GeoShape' => array(
@@ -1714,7 +1928,7 @@ class Types
 			'properties' => array(
 				'box' => array('Text'),
 				'circle' => array('Text'),
-				'elevation' => array('Number', 'Text'),
+				'elevation' => array('Text', 'Number'),
 				'line' => array('Text'),
 				'polygon' => array('Text')
 			)
@@ -1749,7 +1963,7 @@ class Types
 		'OwnershipInfo' => array(
 			'extends' => 'StructuredValue',
 			'properties' => array(
-				'acquiredFrom' => array('Organization', 'Person'),
+				'acquiredFrom' => array('Person', 'Organization'),
 				'ownedFrom' => array('DateTime'),
 				'ownedThrough' => array('DateTime'),
 				'typeOfGood' => array('Product')
@@ -1762,7 +1976,7 @@ class Types
 				'eligibleTransactionVolume' => array('PriceSpecification'),
 				'maxPrice' => array('Number'),
 				'minPrice' => array('Number'),
-				'price' => array('Number', 'Text'),
+				'price' => array('Text', 'Number'),
 				'priceCurrency' => array('Text'),
 				'validFrom' => array('DateTime'),
 				'validThrough' => array('DateTime'),
@@ -1773,7 +1987,7 @@ class Types
 			'extends' => 'PriceSpecification',
 			'properties' => array(
 				'appliesToDeliveryMethod' => array('DeliveryMethod'),
-				'eligibleRegion' => array('GeoShape', 'Text')
+				'eligibleRegion' => array('Text', 'GeoShape')
 			)
 		),
 		'PaymentChargeSpecification' => array(
@@ -1817,9 +2031,37 @@ class Types
 				'warrantyScope' => array('WarrantyScope')
 			)
 		),
+		'Ticket' => array(
+			'extends' => 'Intangible',
+			'properties' => array(
+				'dateIssued' => array('DateTime'),
+				'issuedBy' => array('Organization'),
+				'priceCurrency' => array('Text'),
+				'ticketNumber' => array('Text'),
+				'ticketToken' => array('Text', 'URL'),
+				'ticketedSeat' => array('Seat'),
+				'totalPrice' => array('Text', 'Number', 'PriceSpecification'),
+				'underName' => array('Person', 'Organization')
+			)
+		),
+		'TrainTrip' => array(
+			'extends' => 'Intangible',
+			'properties' => array(
+				'arrivalPlatform' => array('Text'),
+				'arrivalStation' => array('TrainStation'),
+				'arrivalTime' => array('DateTime'),
+				'departurePlatform' => array('Text'),
+				'departureStation' => array('TrainStation'),
+				'departureTime' => array('DateTime'),
+				'provider' => array('Person', 'Organization'),
+				'trainName' => array('Text'),
+				'trainNumber' => array('Text')
+			)
+		),
 		'MedicalEntity' => array(
 			'extends' => 'Thing',
 			'properties' => array(
+				'alternateName' => array('Text'),
 				'code' => array('MedicalCode'),
 				'guideline' => array('MedicalGuideline'),
 				'medicineSystem' => array('MedicineSystem'),
@@ -1865,10 +2107,10 @@ class Types
 		'Muscle' => array(
 			'extends' => 'AnatomicalStructure',
 			'properties' => array(
-				'action' => array('Text'),
 				'antagonist' => array('Muscle'),
 				'bloodSupply' => array('Vessel'),
 				'insertion' => array('AnatomicalStructure'),
+				'muscleAction' => array('Text'),
 				'nerve' => array('Nerve'),
 				'origin' => array('AnatomicalStructure')
 			)
@@ -1876,7 +2118,7 @@ class Types
 		'Nerve' => array(
 			'extends' => 'AnatomicalStructure',
 			'properties' => array(
-				'branch' => array('AnatomicalStructure', 'Nerve'),
+				'branch' => array('Nerve', 'AnatomicalStructure'),
 				'nerveMotor' => array('Muscle'),
 				'sensoryUnit' => array('AnatomicalStructure', 'SuperficialAnatomy'),
 				'sourcedFrom' => array('BrainStructure')
@@ -1968,7 +2210,7 @@ class Types
 				'postOp' => array('Text'),
 				'preOp' => array('Text'),
 				'procedure' => array('Text'),
-				'purpose' => array('MedicalDevicePurpose', 'Thing'),
+				'purpose' => array('Thing', 'MedicalDevicePurpose'),
 				'seriousAdverseOutcome' => array('MedicalEntity')
 			)
 		),
@@ -2046,7 +2288,7 @@ class Types
 				'costCategory' => array('DrugCostCategory'),
 				'costCurrency' => array('Text'),
 				'costOrigin' => array('Text'),
-				'costPerUnit' => array('Number', 'Text'),
+				'costPerUnit' => array('Text', 'Number'),
 				'drugUnit' => array('Text')
 			)
 		),
@@ -2153,11 +2395,11 @@ class Types
 			'properties' => array()
 		),
 		'PalliativeProcedure' => array(
-			'extends' => 'MedicalProcedure',
+			'extends' => 'MedicalTherapy',
 			'properties' => array()
 		),
 		'TherapeuticProcedure' => array(
-			'extends' => 'MedicalProcedure',
+			'extends' => 'MedicalTherapy',
 			'properties' => array()
 		),
 		'MedicalRiskEstimator' => array(
@@ -2363,17 +2605,14 @@ class Types
 				'aggregateRating' => array('AggregateRating'),
 				'brand' => array('Brand', 'Organization'),
 				'contactPoint' => array('ContactPoint'),
-				'contactPoints' => array('ContactPoint'),
 				'department' => array('Organization'),
+				'dissolutionDate' => array('Date'),
 				'duns' => array('Text'),
 				'email' => array('Text'),
 				'employee' => array('Person'),
-				'employees' => array('Person'),
 				'event' => array('Event'),
-				'events' => array('Event'),
 				'faxNumber' => array('Text'),
 				'founder' => array('Person'),
-				'founders' => array('Person'),
 				'foundingDate' => array('Date'),
 				'globalLocationNumber' => array('Text'),
 				'hasPOS' => array('Place'),
@@ -2381,19 +2620,24 @@ class Types
 				'isicV4' => array('Text'),
 				'legalName' => array('Text'),
 				'location' => array('Place', 'PostalAddress'),
-				'logo' => array('ImageObject', 'URL'),
+				'logo' => array('URL', 'ImageObject'),
 				'makesOffer' => array('Offer'),
-				'member' => array('Organization', 'Person'),
-				'members' => array('Organization', 'Person'),
+				'member' => array('Person', 'Organization'),
+				'memberOf' => array('Organization', 'ProgramMembership'),
 				'naics' => array('Text'),
 				'owns' => array('OwnershipInfo', 'Product'),
 				'review' => array('Review'),
-				'reviews' => array('Review'),
 				'seeks' => array('Demand'),
 				'subOrganization' => array('Organization'),
 				'taxID' => array('Text'),
 				'telephone' => array('Text'),
 				'vatID' => array('Text')
+			)
+		),
+		'Airline' => array(
+			'extends' => 'Organization',
+			'properties' => array(
+				'iataCode' => array('Text')
 			)
 		),
 		'Corporation' => array(
@@ -2503,18 +2747,18 @@ class Types
 			'properties' => array()
 		),
 		'FireStation' => array(
-			'extends' => 'CivicStructure',
+			'extends' => 'EmergencyService',
 			'properties' => array()
 		),
 		'Hospital' => array(
-			'extends' => 'CivicStructure',
+			'extends' => 'EmergencyService',
 			'properties' => array(
-				'availableService' => array('MedicalProcedure', 'MedicalTest', 'MedicalTherapy'),
+				'availableService' => array('MedicalTherapy', 'MedicalProcedure', 'MedicalTest'),
 				'medicalSpecialty' => array('MedicalSpecialty')
 			)
 		),
 		'PoliceStation' => array(
-			'extends' => 'CivicStructure',
+			'extends' => 'EmergencyService',
 			'properties' => array()
 		),
 		'EmploymentAgency' => array(
@@ -2546,7 +2790,7 @@ class Types
 			'properties' => array()
 		),
 		'MovieTheater' => array(
-			'extends' => 'CivicStructure',
+			'extends' => 'EntertainmentBusiness',
 			'properties' => array()
 		),
 		'NightClub' => array(
@@ -2558,7 +2802,7 @@ class Types
 			'properties' => array()
 		),
 		'AccountingService' => array(
-			'extends' => 'FinancialService',
+			'extends' => 'ProfessionalService',
 			'properties' => array()
 		),
 		'AutomatedTeller' => array(
@@ -2576,7 +2820,7 @@ class Types
 		'FoodEstablishment' => array(
 			'extends' => 'LocalBusiness',
 			'properties' => array(
-				'acceptsReservations' => array('Text', 'URL'),
+				'acceptsReservations' => array('Text', 'URL', 'Boolean'),
 				'menu' => array('Text', 'URL'),
 				'servesCuisine' => array('Text')
 			)
@@ -2654,11 +2898,11 @@ class Types
 			'properties' => array()
 		),
 		'Electrician' => array(
-			'extends' => 'HomeAndConstructionBusiness',
+			'extends' => 'ProfessionalService',
 			'properties' => array()
 		),
 		'GeneralContractor' => array(
-			'extends' => 'HomeAndConstructionBusiness',
+			'extends' => 'ProfessionalService',
 			'properties' => array()
 		),
 		'HVACBusiness' => array(
@@ -2666,11 +2910,11 @@ class Types
 			'properties' => array()
 		),
 		'HousePainter' => array(
-			'extends' => 'HomeAndConstructionBusiness',
+			'extends' => 'ProfessionalService',
 			'properties' => array()
 		),
 		'Locksmith' => array(
-			'extends' => 'HomeAndConstructionBusiness',
+			'extends' => 'ProfessionalService',
 			'properties' => array()
 		),
 		'MovingCompany' => array(
@@ -2678,11 +2922,11 @@ class Types
 			'properties' => array()
 		),
 		'Plumber' => array(
-			'extends' => 'HomeAndConstructionBusiness',
+			'extends' => 'ProfessionalService',
 			'properties' => array()
 		),
 		'RoofingContractor' => array(
-			'extends' => 'HomeAndConstructionBusiness',
+			'extends' => 'ProfessionalService',
 			'properties' => array()
 		),
 		'InternetCafe' => array(
@@ -2730,7 +2974,7 @@ class Types
 		'MedicalClinic' => array(
 			'extends' => 'MedicalOrganization',
 			'properties' => array(
-				'availableService' => array('MedicalProcedure', 'MedicalTest', 'MedicalTherapy'),
+				'availableService' => array('MedicalTherapy', 'MedicalProcedure', 'MedicalTest'),
 				'medicalSpecialty' => array('MedicalSpecialty')
 			)
 		),
@@ -2745,7 +2989,7 @@ class Types
 		'Physician' => array(
 			'extends' => 'MedicalOrganization',
 			'properties' => array(
-				'availableService' => array('MedicalProcedure', 'MedicalTest', 'MedicalTherapy'),
+				'availableService' => array('MedicalTest', 'MedicalTherapy', 'MedicalProcedure'),
 				'hospitalAffiliation' => array('Hospital'),
 				'medicalSpecialty' => array('MedicalSpecialty')
 			)
@@ -2970,10 +3214,7 @@ class Types
 			'extends' => 'PerformingGroup',
 			'properties' => array(
 				'album' => array('MusicAlbum'),
-				'albums' => array('MusicAlbum'),
-				'musicGroupMember' => array('Person'),
-				'track' => array('MusicRecording'),
-				'tracks' => array('MusicRecording')
+				'track' => array('MusicRecording')
 			)
 		),
 		'TheaterGroup' => array(
@@ -2992,14 +3233,11 @@ class Types
 				'affiliation' => array('Organization'),
 				'alumniOf' => array('EducationalOrganization'),
 				'award' => array('Text'),
-				'awards' => array('Text'),
 				'birthDate' => array('Date'),
 				'brand' => array('Brand', 'Organization'),
 				'children' => array('Person'),
 				'colleague' => array('Person'),
-				'colleagues' => array('Person'),
 				'contactPoint' => array('ContactPoint'),
-				'contactPoints' => array('ContactPoint'),
 				'deathDate' => array('Date'),
 				'duns' => array('Text'),
 				'email' => array('Text'),
@@ -3018,17 +3256,15 @@ class Types
 				'jobTitle' => array('Text'),
 				'knows' => array('Person'),
 				'makesOffer' => array('Offer'),
-				'memberOf' => array('Organization'),
+				'memberOf' => array('Organization', 'ProgramMembership'),
 				'naics' => array('Text'),
 				'nationality' => array('Country'),
 				'owns' => array('OwnershipInfo', 'Product'),
 				'parent' => array('Person'),
-				'parents' => array('Person'),
 				'performerIn' => array('Event'),
 				'relatedTo' => array('Person'),
 				'seeks' => array('Demand'),
 				'sibling' => array('Person'),
-				'siblings' => array('Person'),
 				'spouse' => array('Person'),
 				'taxID' => array('Text'),
 				'telephone' => array('Text'),
@@ -3044,20 +3280,16 @@ class Types
 				'aggregateRating' => array('AggregateRating'),
 				'containedIn' => array('Place'),
 				'event' => array('Event'),
-				'events' => array('Event'),
 				'faxNumber' => array('Text'),
 				'geo' => array('GeoCoordinates', 'GeoShape'),
 				'globalLocationNumber' => array('Text'),
+				'hasMap' => array('Map', 'URL'),
 				'interactionCount' => array('Text'),
 				'isicV4' => array('Text'),
 				'logo' => array('ImageObject', 'URL'),
-				'map' => array('URL'),
-				'maps' => array('URL'),
 				'openingHoursSpecification' => array('OpeningHoursSpecification'),
 				'photo' => array('ImageObject', 'Photograph'),
-				'photos' => array('ImageObject', 'Photograph'),
 				'review' => array('Review'),
-				'reviews' => array('Review'),
 				'telephone' => array('Text')
 			)
 		),
@@ -3085,7 +3317,10 @@ class Types
 		),
 		'Airport' => array(
 			'extends' => 'CivicStructure',
-			'properties' => array()
+			'properties' => array(
+				'iataCode' => array('Text'),
+				'icaoCode' => array('Text')
+			)
 		),
 		'Aquarium' => array(
 			'extends' => 'CivicStructure',
@@ -3298,17 +3533,17 @@ class Types
 				'audience' => array('Audience'),
 				'brand' => array('Brand', 'Organization'),
 				'color' => array('Text'),
-				'depth' => array('Distance', 'QuantitativeValue'),
+				'depth' => array('QuantitativeValue', 'Distance'),
 				'gtin13' => array('Text'),
 				'gtin14' => array('Text'),
 				'gtin8' => array('Text'),
-				'height' => array('Distance', 'QuantitativeValue'),
+				'height' => array('QuantitativeValue', 'Distance'),
 				'isAccessoryOrSparePartFor' => array('Product'),
 				'isConsumableFor' => array('Product'),
 				'isRelatedTo' => array('Product'),
 				'isSimilarTo' => array('Product'),
 				'itemCondition' => array('OfferItemCondition'),
-				'logo' => array('ImageObject', 'URL'),
+				'logo' => array('URL', 'ImageObject'),
 				'manufacturer' => array('Organization'),
 				'model' => array('ProductModel', 'Text'),
 				'mpn' => array('Text'),
@@ -3316,10 +3551,9 @@ class Types
 				'productID' => array('Text'),
 				'releaseDate' => array('Date'),
 				'review' => array('Review'),
-				'reviews' => array('Review'),
 				'sku' => array('Text'),
 				'weight' => array('QuantitativeValue'),
-				'width' => array('Distance', 'QuantitativeValue')
+				'width' => array('QuantitativeValue', 'Distance')
 			)
 		),
 		'IndividualProduct' => array(
@@ -3342,11 +3576,21 @@ class Types
 				'inventoryLevel' => array('QuantitativeValue')
 			)
 		),
+		'Vehicle' => array(
+			'extends' => 'Product',
+			'properties' => array()
+		),
+		'Car' => array(
+			'extends' => 'Vehicle',
+			'properties' => array()
+		),
 		'Property' => array(
-			'extends' => 'Thing',
+			'extends' => 'Intangible',
 			'properties' => array(
 				'domainIncludes' => array('Class'),
-				'rangeIncludes' => array('Class')
+				'inverseOf' => array('Property'),
+				'rangeIncludes' => array('Class'),
+				'supercededBy' => array('Property')
 			)
 		)
 	);

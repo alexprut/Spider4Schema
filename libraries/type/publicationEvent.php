@@ -24,7 +24,7 @@ abstract class TypePublicationEvent extends TypeEvent
 	);
 
 	/**
-	 * A broadcast service associated with the publication event
+	 * A broadcast service associated with the publication event.
 	 * Expected Type: BroadcastService
 	 * 
 	 * @var	array

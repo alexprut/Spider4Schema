@@ -4,7 +4,7 @@
  *
  * @see    http://schema.org/Locksmith
 */
-abstract class TypeLocksmith extends TypeHomeAndConstructionBusiness
+abstract class TypeLocksmith extends TypeProfessionalService
 {
 	/**
 	 * The Schema.org Type Scope

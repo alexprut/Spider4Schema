@@ -15,12 +15,12 @@ abstract class TypeOwnershipInfo extends TypeStructuredValue
 
 	/**
 	 * The organization or person from which the product was acquired.
-	 * Expected Type: Organization, Person
+	 * Expected Type: Person, Organization
 	 * 
 	 * @var	array
 	 */
 	protected static $acquiredFrom = array('value' => 'acquiredFrom',
-		'expectedTypes' => array('Organization', 'Person')
+		'expectedTypes' => array('Person', 'Organization')
 	);
 
 	/**

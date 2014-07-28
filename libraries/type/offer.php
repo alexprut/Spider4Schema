@@ -165,12 +165,12 @@ abstract class TypeOffer extends TypeIntangible
 
 	/**
 	 * The ISO 3166-1 (ISO 3166-1 alpha-2) or ISO 3166-2 code, or the GeoShape for the geo-political region(s) for which the offer or delivery charge specification is valid.
-	 * Expected Type: GeoShape, Text
+	 * Expected Type: Text, GeoShape
 	 * 
 	 * @var	array
 	 */
 	protected static $eligibleRegion = array('value' => 'eligibleRegion',
-		'expectedTypes' => array('GeoShape', 'Text')
+		'expectedTypes' => array('Text', 'GeoShape')
 	);
 
 	/**
@@ -265,16 +265,16 @@ abstract class TypeOffer extends TypeIntangible
 
 	/**
 	 * The offer price of a product, or of a price component when attached to PriceSpecification and its subtypes.
-	 * Expected Type: Number, Text
+	 * Expected Type: Text, Number
 	 * 
 	 * @var	array
 	 */
 	protected static $price = array('value' => 'price',
-		'expectedTypes' => array('Number', 'Text')
+		'expectedTypes' => array('Text', 'Number')
 	);
 
 	/**
-	 * The currency (in 3-letter ISO 4217 format) of the offer price or a price component, when attached to PriceSpecification and its subtypes.
+	 * The currency (in 3-letter ISO 4217 format) of the price or a price component, when attached to PriceSpecification and its subtypes.
 	 * Expected Type: Text
 	 * 
 	 * @var	array
@@ -304,7 +304,7 @@ abstract class TypeOffer extends TypeIntangible
 	);
 
 	/**
-	 * A review of the item.
+	 * A review of the item. Supercedes reviews.
 	 * Expected Type: Review
 	 * 
 	 * @var	array
@@ -314,23 +314,13 @@ abstract class TypeOffer extends TypeIntangible
 	);
 
 	/**
-	 * Review of the item (legacy spelling; see singular form, review).
-	 * Expected Type: Review
-	 * 
-	 * @var	array
-	 */
-	protected static $reviews = array('value' => 'reviews',
-		'expectedTypes' => array('Review')
-	);
-
-	/**
 	 * The organization or person making the offer.
-	 * Expected Type: Organization, Person
+	 * Expected Type: Person, Organization
 	 * 
 	 * @var	array
 	 */
 	protected static $seller = array('value' => 'seller',
-		'expectedTypes' => array('Organization', 'Person')
+		'expectedTypes' => array('Person', 'Organization')
 	);
 
 	/**
@@ -681,16 +671,6 @@ abstract class TypeOffer extends TypeIntangible
 	public static function pReview()
 	{
 		return self::getValue(self::$review);
-	}
-
-	/**
-	 * Return the 'reviews' Property value
-	 *
-	 * @return	string
-	 */
-	public static function pReviews()
-	{
-		return self::getValue(self::$reviews);
 	}
 
 	/**

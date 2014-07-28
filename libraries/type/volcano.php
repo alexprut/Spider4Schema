@@ -1,6 +1,6 @@
 <?php
 /**
- * A volcano, like Fuji san
+ * A volcano, like Fuji san.
  *
  * @see    http://schema.org/Volcano
 */

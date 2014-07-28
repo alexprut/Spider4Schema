@@ -114,7 +114,7 @@ abstract class TypeMedicalCondition extends TypeMedicalEntity
 	);
 
 	/**
-	 * A modifiable or non-modifiable factor that increases the risk of a patient contracting this condition, e.g. age,  coexisting condition.
+	 * A modifiable or non-modifiable factor that increases the risk of a patient contracting this condition, e.g. age, coexisting condition.
 	 * Expected Type: MedicalRiskFactor
 	 * 
 	 * @var	array
@@ -134,7 +134,7 @@ abstract class TypeMedicalCondition extends TypeMedicalEntity
 	);
 
 	/**
-	 * A sign or symptom of this condition. Signs are objective or physically observable manifestations of the medical condition while symptoms are the subjective experienceof the medical condition.
+	 * A sign or symptom of this condition. Signs are objective or physically observable manifestations of the medical condition while symptoms are the subjective experience of the medical condition.
 	 * Expected Type: MedicalSignOrSymptom
 	 * 
 	 * @var	array

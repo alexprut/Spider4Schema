@@ -24,6 +24,16 @@ abstract class TypeVideoObject extends TypeMediaObject
 	);
 
 	/**
+	 * The production company or studio that made the movie, tv/radio series, season, or episode, or media object.
+	 * Expected Type: Organization
+	 * 
+	 * @var	array
+	 */
+	protected static $productionCompany = array('value' => 'productionCompany',
+		'expectedTypes' => array('Organization')
+	);
+
+	/**
 	 * Thumbnail image for an image or video.
 	 * Expected Type: ImageObject
 	 * 
@@ -71,6 +81,16 @@ abstract class TypeVideoObject extends TypeMediaObject
 	public static function pCaption()
 	{
 		return self::getValue(self::$caption);
+	}
+
+	/**
+	 * Return the 'productionCompany' Property value
+	 *
+	 * @return	string
+	 */
+	public static function pProductionCompany()
+	{
+		return self::getValue(self::$productionCompany);
 	}
 
 	/**

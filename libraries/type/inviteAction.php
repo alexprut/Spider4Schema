@@ -14,7 +14,7 @@ abstract class TypeInviteAction extends TypeCommunicateAction
 	protected static $scope = 'https://schema.org/InviteAction';
 
 	/**
-	 * Upcoming or past event associated with this place or organization.
+	 * Upcoming or past event associated with this place or organization. Supercedes events.
 	 * Expected Type: Event
 	 * 
 	 * @var	array

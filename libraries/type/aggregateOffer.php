@@ -15,22 +15,22 @@ abstract class TypeAggregateOffer extends TypeOffer
 
 	/**
 	 * The highest price of all offers available.
-	 * Expected Type: Number, Text
+	 * Expected Type: Text, Number
 	 * 
 	 * @var	array
 	 */
 	protected static $highPrice = array('value' => 'highPrice',
-		'expectedTypes' => array('Number', 'Text')
+		'expectedTypes' => array('Text', 'Number')
 	);
 
 	/**
 	 * The lowest price of all offers available.
-	 * Expected Type: Number, Text
+	 * Expected Type: Text, Number
 	 * 
 	 * @var	array
 	 */
 	protected static $lowPrice = array('value' => 'lowPrice',
-		'expectedTypes' => array('Number', 'Text')
+		'expectedTypes' => array('Text', 'Number')
 	);
 
 	/**

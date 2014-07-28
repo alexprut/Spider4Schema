@@ -1,6 +1,6 @@
 <?php
 /**
- * A theatre or other performing art center.
+ * A theater or other performing art center.
  *
  * @see    http://schema.org/PerformingArtsTheater
 */

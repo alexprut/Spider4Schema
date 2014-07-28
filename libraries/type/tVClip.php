@@ -1,6 +1,6 @@
 <?php
 /**
- * A short TV progam or a segment/part of a TV program.
+ * A short TV program or a segment/part of a TV program.
  *
  * @see    http://schema.org/TVClip
 */
@@ -14,22 +14,42 @@ abstract class TypeTVClip extends TypeClip
 	protected static $scope = 'https://schema.org/TVClip';
 
 	/**
-	 * The TV series to which this episode or season belongs. (legacy form; partOfSeries is preferred)
-	 * Expected Type: TVSeries
+	 * The season to which this episode belongs.
+	 * Expected Type: Season
 	 * 
 	 * @var	array
 	 */
-	protected static $partOfTVSeries = array('value' => 'partOfTVSeries',
-		'expectedTypes' => array('TVSeries')
+	protected static $partOfSeason = array('value' => 'partOfSeason',
+		'expectedTypes' => array('Season')
 	);
 
 	/**
-	 * Return the 'partOfTVSeries' Property value
+	 * The series to which this episode or season belongs. Supercedes partOfTVSeries.
+	 * Expected Type: Series
+	 * 
+	 * @var	array
+	 */
+	protected static $partOfSeries = array('value' => 'partOfSeries',
+		'expectedTypes' => array('Series')
+	);
+
+	/**
+	 * Return the 'partOfSeason' Property value
 	 *
 	 * @return	string
 	 */
-	public static function pPartOfTVSeries()
+	public static function pPartOfSeason()
 	{
-		return self::getValue(self::$partOfTVSeries);
+		return self::getValue(self::$partOfSeason);
+	}
+
+	/**
+	 * Return the 'partOfSeries' Property value
+	 *
+	 * @return	string
+	 */
+	public static function pPartOfSeries()
+	{
+		return self::getValue(self::$partOfSeries);
 	}
 }

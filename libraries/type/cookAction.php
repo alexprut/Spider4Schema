@@ -14,13 +14,13 @@ abstract class TypeCookAction extends TypeCreateAction
 	protected static $scope = 'https://schema.org/CookAction';
 
 	/**
-	 * A sub property of location. The specific food establishment where the action occurreed.
-	 * Expected Type: FoodEstablishment, Place
+	 * A sub property of location. The specific food establishment where the action occurred.
+	 * Expected Type: Place, FoodEstablishment
 	 * 
 	 * @var	array
 	 */
 	protected static $foodEstablishment = array('value' => 'foodEstablishment',
-		'expectedTypes' => array('FoodEstablishment', 'Place')
+		'expectedTypes' => array('Place', 'FoodEstablishment')
 	);
 
 	/**

@@ -15,12 +15,12 @@ abstract class TypeGiveAction extends TypeTransferAction
 
 	/**
 	 * A sub property of participant. The participant who is at the receiving end of the action.
-	 * Expected Type: Audience, Organization, Person
+	 * Expected Type: Organization, Audience, Person
 	 * 
 	 * @var	array
 	 */
 	protected static $recipient = array('value' => 'recipient',
-		'expectedTypes' => array('Audience', 'Organization', 'Person')
+		'expectedTypes' => array('Organization', 'Audience', 'Person')
 	);
 
 	/**

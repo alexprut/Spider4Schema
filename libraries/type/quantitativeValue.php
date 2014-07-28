@@ -1,6 +1,6 @@
 <?php
 /**
- *  A point value or interval for product characteristics and other purposes.
+ * A point value or interval for product characteristics and other purposes.
  *
  * @see    http://schema.org/QuantitativeValue
 */
@@ -14,7 +14,7 @@ abstract class TypeQuantitativeValue extends TypeStructuredValue
 	protected static $scope = 'https://schema.org/QuantitativeValue';
 
 	/**
-	 * The upper of the product characteristic.
+	 * The upper value of some characteristic or property.
 	 * Expected Type: Number
 	 * 
 	 * @var	array
@@ -24,7 +24,7 @@ abstract class TypeQuantitativeValue extends TypeStructuredValue
 	);
 
 	/**
-	 * The lower value of the product characteristic.
+	 * The lower value of some characteristic or property.
 	 * Expected Type: Number
 	 * 
 	 * @var	array

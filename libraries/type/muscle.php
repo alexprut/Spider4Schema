@@ -14,16 +14,6 @@ abstract class TypeMuscle extends TypeAnatomicalStructure
 	protected static $scope = 'https://schema.org/Muscle';
 
 	/**
-	 * The movement the muscle generates.
-	 * Expected Type: Text
-	 * 
-	 * @var	array
-	 */
-	protected static $action = array('value' => 'action',
-		'expectedTypes' => array('Text')
-	);
-
-	/**
 	 * The muscle whose action counteracts the specified muscle.
 	 * Expected Type: Muscle
 	 * 
@@ -54,6 +44,16 @@ abstract class TypeMuscle extends TypeAnatomicalStructure
 	);
 
 	/**
+	 * The movement the muscle generates. Supercedes action.
+	 * Expected Type: Text
+	 * 
+	 * @var	array
+	 */
+	protected static $muscleAction = array('value' => 'muscleAction',
+		'expectedTypes' => array('Text')
+	);
+
+	/**
 	 * The underlying innervation associated with the muscle.
 	 * Expected Type: Nerve
 	 * 
@@ -72,16 +72,6 @@ abstract class TypeMuscle extends TypeAnatomicalStructure
 	protected static $origin = array('value' => 'origin',
 		'expectedTypes' => array('AnatomicalStructure')
 	);
-
-	/**
-	 * Return the 'action' Property value
-	 *
-	 * @return	string
-	 */
-	public static function pAction()
-	{
-		return self::getValue(self::$action);
-	}
 
 	/**
 	 * Return the 'antagonist' Property value
@@ -111,6 +101,16 @@ abstract class TypeMuscle extends TypeAnatomicalStructure
 	public static function pInsertion()
 	{
 		return self::getValue(self::$insertion);
+	}
+
+	/**
+	 * Return the 'muscleAction' Property value
+	 *
+	 * @return	string
+	 */
+	public static function pMuscleAction()
+	{
+		return self::getValue(self::$muscleAction);
 	}
 
 	/**

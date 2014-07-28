@@ -15,12 +15,12 @@ abstract class TypeNerve extends TypeAnatomicalStructure
 
 	/**
 	 * The branches that delineate from the nerve bundle.
-	 * Expected Type: AnatomicalStructure, Nerve
+	 * Expected Type: Nerve, AnatomicalStructure
 	 * 
 	 * @var	array
 	 */
 	protected static $branch = array('value' => 'branch',
-		'expectedTypes' => array('AnatomicalStructure', 'Nerve')
+		'expectedTypes' => array('Nerve', 'AnatomicalStructure')
 	);
 
 	/**

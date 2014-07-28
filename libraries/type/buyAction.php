@@ -14,7 +14,7 @@ abstract class TypeBuyAction extends TypeTradeAction
 	protected static $scope = 'https://schema.org/BuyAction';
 
 	/**
-	 * A sub property of participant. The seller.The participant/person/organization that sold the object.
+	 * A sub property of participant. The seller. The participant/person/organization that sold the object.
 	 * Expected Type: Organization, Person
 	 * 
 	 * @var	array

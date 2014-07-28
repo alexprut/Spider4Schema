@@ -4,7 +4,7 @@
  *
  * @see    http://schema.org/Electrician
 */
-abstract class TypeElectrician extends TypeHomeAndConstructionBusiness
+abstract class TypeElectrician extends TypeProfessionalService
 {
 	/**
 	 * The Schema.org Type Scope

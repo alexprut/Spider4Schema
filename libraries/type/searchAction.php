@@ -15,12 +15,12 @@ abstract class TypeSearchAction extends TypeAction
 
 	/**
 	 * A sub property of instrument. The query used on this action.
-	 * Expected Type: Class, Text
+	 * Expected Type: Text, Class
 	 * 
 	 * @var	array
 	 */
 	protected static $query = array('value' => 'query',
-		'expectedTypes' => array('Class', 'Text')
+		'expectedTypes' => array('Text', 'Class')
 	);
 
 	/**

@@ -25,12 +25,12 @@ abstract class TypeReceiveAction extends TypeTransferAction
 
 	/**
 	 * A sub property of participant. The participant who is at the sending end of the action.
-	 * Expected Type: Audience, Organization, Person
+	 * Expected Type: Organization, Audience, Person
 	 * 
 	 * @var	array
 	 */
 	protected static $sender = array('value' => 'sender',
-		'expectedTypes' => array('Audience', 'Organization', 'Person')
+		'expectedTypes' => array('Organization', 'Audience', 'Person')
 	);
 
 	/**

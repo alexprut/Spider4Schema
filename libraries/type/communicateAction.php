@@ -24,7 +24,7 @@ abstract class TypeCommunicateAction extends TypeInteractAction
 	);
 
 	/**
-	 * A sub property of instrument. The languaged used on this action.
+	 * A sub property of instrument. The language used on this action.
 	 * Expected Type: Language
 	 * 
 	 * @var	array
@@ -35,12 +35,12 @@ abstract class TypeCommunicateAction extends TypeInteractAction
 
 	/**
 	 * A sub property of participant. The participant who is at the receiving end of the action.
-	 * Expected Type: Audience, Organization, Person
+	 * Expected Type: Organization, Audience, Person
 	 * 
 	 * @var	array
 	 */
 	protected static $recipient = array('value' => 'recipient',
-		'expectedTypes' => array('Audience', 'Organization', 'Person')
+		'expectedTypes' => array('Organization', 'Audience', 'Person')
 	);
 
 	/**

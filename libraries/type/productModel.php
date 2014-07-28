@@ -34,7 +34,7 @@ abstract class TypeProductModel extends TypeProduct
 	);
 
 	/**
-	 * A pointer from a newer variant of a product  to its previous, often discontinued predecessor.
+	 * A pointer from a newer variant of a product to its previous, often discontinued predecessor.
 	 * Expected Type: ProductModel
 	 * 
 	 * @var	array

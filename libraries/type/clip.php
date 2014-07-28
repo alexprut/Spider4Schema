@@ -44,7 +44,7 @@ abstract class TypeClip extends TypeCreativeWork
 	);
 
 	/**
-	 * The series to which this episode or season belongs.
+	 * The series to which this episode or season belongs. Supercedes partOfTVSeries.
 	 * Expected Type: Series
 	 * 
 	 * @var	array

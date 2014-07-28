@@ -14,16 +14,6 @@ abstract class TypeRecipe extends TypeCreativeWork
 	protected static $scope = 'https://schema.org/Recipe';
 
 	/**
-	 * The method of cooking, such as Frying, Steaming, ...
-	 * Expected Type: Text
-	 * 
-	 * @var	array
-	 */
-	protected static $cookingMethod = array('value' => 'cookingMethod',
-		'expectedTypes' => array('Text')
-	);
-
-	/**
 	 * The time it takes to actually cook the dish, in ISO 8601 duration format.
 	 * Expected Type: Duration
 	 * 
@@ -31,6 +21,16 @@ abstract class TypeRecipe extends TypeCreativeWork
 	 */
 	protected static $cookTime = array('value' => 'cookTime',
 		'expectedTypes' => array('Duration')
+	);
+
+	/**
+	 * The method of cooking, such as Frying, Steaming, ...
+	 * Expected Type: Text
+	 * 
+	 * @var	array
+	 */
+	protected static $cookingMethod = array('value' => 'cookingMethod',
+		'expectedTypes' => array('Text')
 	);
 
 	/**
@@ -74,7 +74,7 @@ abstract class TypeRecipe extends TypeCreativeWork
 	);
 
 	/**
-	 * The cuisine of the recipe (for example, French or Ethopian).
+	 * The cuisine of the recipe (for example, French or Ethiopian).
 	 * Expected Type: Text
 	 * 
 	 * @var	array
@@ -114,16 +114,6 @@ abstract class TypeRecipe extends TypeCreativeWork
 	);
 
 	/**
-	 * Return the 'cookingMethod' Property value
-	 *
-	 * @return	string
-	 */
-	public static function pCookingMethod()
-	{
-		return self::getValue(self::$cookingMethod);
-	}
-
-	/**
 	 * Return the 'cookTime' Property value
 	 *
 	 * @return	string
@@ -131,6 +121,16 @@ abstract class TypeRecipe extends TypeCreativeWork
 	public static function pCookTime()
 	{
 		return self::getValue(self::$cookTime);
+	}
+
+	/**
+	 * Return the 'cookingMethod' Property value
+	 *
+	 * @return	string
+	 */
+	public static function pCookingMethod()
+	{
+		return self::getValue(self::$cookingMethod);
 	}
 
 	/**

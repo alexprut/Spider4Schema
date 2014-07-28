@@ -14,7 +14,7 @@ abstract class TypeSeason extends TypeCreativeWork
 	protected static $scope = 'https://schema.org/Season';
 
 	/**
-	 * The end date and time of the event or item (in ISO 8601 date format).
+	 * The end date and time of the role, event or item (in ISO 8601 date format).
 	 * Expected Type: Date
 	 * 
 	 * @var	array
@@ -24,22 +24,12 @@ abstract class TypeSeason extends TypeCreativeWork
 	);
 
 	/**
-	 * An episode of a TV/radio series or season
+	 * An episode of a TV/radio series or season Supercedes episodes.
 	 * Expected Type: Episode
 	 * 
 	 * @var	array
 	 */
 	protected static $episode = array('value' => 'episode',
-		'expectedTypes' => array('Episode')
-	);
-
-	/**
-	 * An episode of a TV/radio series or season (legacy spelling; see singular form, episode)
-	 * Expected Type: Episode
-	 * 
-	 * @var	array
-	 */
-	protected static $episodes = array('value' => 'episodes',
 		'expectedTypes' => array('Episode')
 	);
 
@@ -54,7 +44,7 @@ abstract class TypeSeason extends TypeCreativeWork
 	);
 
 	/**
-	 * The series to which this episode or season belongs.
+	 * The series to which this episode or season belongs. Supercedes partOfTVSeries.
 	 * Expected Type: Series
 	 * 
 	 * @var	array
@@ -104,7 +94,7 @@ abstract class TypeSeason extends TypeCreativeWork
 	);
 
 	/**
-	 * The start date and time of the event or item (in ISO 8601 date format).
+	 * The start date and time of the event, role or item (in ISO 8601 date format).
 	 * Expected Type: Date
 	 * 
 	 * @var	array
@@ -141,16 +131,6 @@ abstract class TypeSeason extends TypeCreativeWork
 	public static function pEpisode()
 	{
 		return self::getValue(self::$episode);
-	}
-
-	/**
-	 * Return the 'episodes' Property value
-	 *
-	 * @return	string
-	 */
-	public static function pEpisodes()
-	{
-		return self::getValue(self::$episodes);
 	}
 
 	/**

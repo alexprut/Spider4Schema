@@ -1,6 +1,6 @@
 <?php
 /**
- * The act of accomplishing something via     previous efforts. It is an instantaneous action rather than an ongoing     process.
+ * The act of accomplishing something via previous efforts. It is an instantaneous action rather than an ongoing process.
  *
  * @see    http://schema.org/AchieveAction
 */

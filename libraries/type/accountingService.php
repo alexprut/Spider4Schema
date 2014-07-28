@@ -4,7 +4,7 @@
  *
  * @see    http://schema.org/AccountingService
 */
-abstract class TypeAccountingService extends TypeFinancialService
+abstract class TypeAccountingService extends TypeProfessionalService
 {
 	/**
 	 * The Schema.org Type Scope

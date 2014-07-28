@@ -14,7 +14,7 @@ abstract class TypeEducationalOrganization extends TypeOrganization
 	protected static $scope = 'https://schema.org/EducationalOrganization';
 
 	/**
-	 * Alumni of educational organization.
+	 * Alumni of educational organization. Inverse property: alumniOf.
 	 * Expected Type: Person
 	 * 
 	 * @var	array

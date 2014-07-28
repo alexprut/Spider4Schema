@@ -4,7 +4,7 @@
  *
  * @see    http://schema.org/MovieTheater
 */
-abstract class TypeMovieTheater extends TypeCivicStructure
+abstract class TypeMovieTheater extends TypeEntertainmentBusiness
 {
 	/**
 	 * The Schema.org Type Scope

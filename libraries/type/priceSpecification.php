@@ -55,16 +55,16 @@ abstract class TypePriceSpecification extends TypeStructuredValue
 
 	/**
 	 * The offer price of a product, or of a price component when attached to PriceSpecification and its subtypes.
-	 * Expected Type: Number, Text
+	 * Expected Type: Text, Number
 	 * 
 	 * @var	array
 	 */
 	protected static $price = array('value' => 'price',
-		'expectedTypes' => array('Number', 'Text')
+		'expectedTypes' => array('Text', 'Number')
 	);
 
 	/**
-	 * The currency (in 3-letter ISO 4217 format) of the offer price or a price component, when attached to PriceSpecification and its subtypes.
+	 * The currency (in 3-letter ISO 4217 format) of the price or a price component, when attached to PriceSpecification and its subtypes.
 	 * Expected Type: Text
 	 * 
 	 * @var	array

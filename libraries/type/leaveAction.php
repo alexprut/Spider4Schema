@@ -14,7 +14,7 @@ abstract class TypeLeaveAction extends TypeInteractAction
 	protected static $scope = 'https://schema.org/LeaveAction';
 
 	/**
-	 * Upcoming or past event associated with this place or organization.
+	 * Upcoming or past event associated with this place or organization. Supercedes events.
 	 * Expected Type: Event
 	 * 
 	 * @var	array

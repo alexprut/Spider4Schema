@@ -14,7 +14,7 @@ abstract class TypeTravelAction extends TypeMoveAction
 	protected static $scope = 'https://schema.org/TravelAction';
 
 	/**
-	 * A sub property of asset. The distance travelled.
+	 * The distance travelled, e.g. exercising or travelling.
 	 * Expected Type: Distance
 	 * 
 	 * @var	array

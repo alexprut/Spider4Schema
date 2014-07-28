@@ -14,7 +14,7 @@ abstract class TypeGovernmentService extends TypeService
 	protected static $scope = 'https://schema.org/GovernmentService';
 
 	/**
-	 * The operating organization, if different from the provider.  This enables the representation of services that are provided by an organization, but operated by another organization like a subcontractor.
+	 * The operating organization, if different from the provider. This enables the representation of services that are provided by an organization, but operated by another organization like a subcontractor.
 	 * Expected Type: Organization
 	 * 
 	 * @var	array

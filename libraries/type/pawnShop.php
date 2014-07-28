@@ -1,6 +1,6 @@
 <?php
 /**
- * A pawnstore.
+ * A pawn store.
  *
  * @see    http://schema.org/PawnShop
 */

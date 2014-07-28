@@ -15,12 +15,12 @@ abstract class TypeAllocateAction extends TypeOrganizeAction
 
 	/**
 	 * A goal towards an action is taken. Can be concrete or abstract.
-	 * Expected Type: MedicalDevicePurpose, Thing
+	 * Expected Type: Thing, MedicalDevicePurpose
 	 * 
 	 * @var	array
 	 */
 	protected static $purpose = array('value' => 'purpose',
-		'expectedTypes' => array('MedicalDevicePurpose', 'Thing')
+		'expectedTypes' => array('Thing', 'MedicalDevicePurpose')
 	);
 
 	/**

@@ -24,7 +24,7 @@ abstract class TypeReview extends TypeCreativeWork
 	);
 
 	/**
-	 * The actual body of the review
+	 * The actual body of the review.
 	 * Expected Type: Text
 	 * 
 	 * @var	array

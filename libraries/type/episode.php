@@ -14,7 +14,7 @@ abstract class TypeEpisode extends TypeCreativeWork
 	protected static $scope = 'https://schema.org/Episode';
 
 	/**
-	 * A cast member of the movie, tv/radio series, season, episode, or video.
+	 * A cast member of the movie, tv/radio series, season, episode, or video. Supercedes actors.
 	 * Expected Type: Person
 	 * 
 	 * @var	array
@@ -24,32 +24,12 @@ abstract class TypeEpisode extends TypeCreativeWork
 	);
 
 	/**
-	 * A cast member of the movie, tv/radio series, season, episode, or video. (legacy spelling; see singular form, actor)
-	 * Expected Type: Person
-	 * 
-	 * @var	array
-	 */
-	protected static $actors = array('value' => 'actors',
-		'expectedTypes' => array('Person')
-	);
-
-	/**
-	 * The director of the movie, tv/radio episode or series.
+	 * The director of the movie, tv/radio episode or series. Supercedes directors.
 	 * Expected Type: Person
 	 * 
 	 * @var	array
 	 */
 	protected static $director = array('value' => 'director',
-		'expectedTypes' => array('Person')
-	);
-
-	/**
-	 * The director of the movie, tv/radio episode or series. (legacy spelling; see singular form, director)
-	 * Expected Type: Person
-	 * 
-	 * @var	array
-	 */
-	protected static $directors = array('value' => 'directors',
 		'expectedTypes' => array('Person')
 	);
 
@@ -84,7 +64,7 @@ abstract class TypeEpisode extends TypeCreativeWork
 	);
 
 	/**
-	 * The series to which this episode or season belongs.
+	 * The series to which this episode or season belongs. Supercedes partOfTVSeries.
 	 * Expected Type: Series
 	 * 
 	 * @var	array
@@ -154,16 +134,6 @@ abstract class TypeEpisode extends TypeCreativeWork
 	}
 
 	/**
-	 * Return the 'actors' Property value
-	 *
-	 * @return	string
-	 */
-	public static function pActors()
-	{
-		return self::getValue(self::$actors);
-	}
-
-	/**
 	 * Return the 'director' Property value
 	 *
 	 * @return	string
@@ -171,16 +141,6 @@ abstract class TypeEpisode extends TypeCreativeWork
 	public static function pDirector()
 	{
 		return self::getValue(self::$director);
-	}
-
-	/**
-	 * Return the 'directors' Property value
-	 *
-	 * @return	string
-	 */
-	public static function pDirectors()
-	{
-		return self::getValue(self::$directors);
 	}
 
 	/**

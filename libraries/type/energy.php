@@ -1,6 +1,6 @@
 <?php
 /**
- * Properties that take Enerygy as values are of the form '<Number> <Energy unit of measure>'
+ * Properties that take Energy as values are of the form '<Number> <Energy unit of measure>'
  *
  * @see    http://schema.org/Energy
 */

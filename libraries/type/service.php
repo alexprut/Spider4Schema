@@ -34,13 +34,13 @@ abstract class TypeService extends TypeIntangible
 	);
 
 	/**
-	 * The organization or agency that is providing the service.
-	 * Expected Type: Organization, Person
+	 * The person or organization providing the service, reservation, or creative work. The provider may subcontract out the service.
+	 * Expected Type: Person, Organization
 	 * 
 	 * @var	array
 	 */
 	protected static $provider = array('value' => 'provider',
-		'expectedTypes' => array('Organization', 'Person')
+		'expectedTypes' => array('Person', 'Organization')
 	);
 
 	/**

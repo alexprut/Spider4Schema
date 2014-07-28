@@ -54,7 +54,7 @@ abstract class TypeCode extends TypeCreativeWork
 	);
 
 	/**
-	 * Target Operating System / Product to which the code applies.  If applies to several versions, just the product name can be used.
+	 * Target Operating System / Product to which the code applies. If applies to several versions, just the product name can be used.
 	 * Expected Type: SoftwareApplication
 	 * 
 	 * @var	array

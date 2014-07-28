@@ -4,7 +4,7 @@
  *
  * @see    http://schema.org/FireStation
 */
-abstract class TypeFireStation extends TypeCivicStructure
+abstract class TypeFireStation extends TypeEmergencyService
 {
 	/**
 	 * The Schema.org Type Scope

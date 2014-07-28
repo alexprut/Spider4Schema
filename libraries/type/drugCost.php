@@ -55,12 +55,12 @@ abstract class TypeDrugCost extends TypeMedicalIntangible
 
 	/**
 	 * The cost per unit of the drug.
-	 * Expected Type: Number, Text
+	 * Expected Type: Text, Number
 	 * 
 	 * @var	array
 	 */
 	protected static $costPerUnit = array('value' => 'costPerUnit',
-		'expectedTypes' => array('Number', 'Text')
+		'expectedTypes' => array('Text', 'Number')
 	);
 
 	/**

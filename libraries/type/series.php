@@ -14,7 +14,7 @@ abstract class TypeSeries extends TypeCreativeWork
 	protected static $scope = 'https://schema.org/Series';
 
 	/**
-	 * A cast member of the movie, tv/radio series, season, episode, or video.
+	 * A cast member of the movie, tv/radio series, season, episode, or video. Supercedes actors.
 	 * Expected Type: Person
 	 * 
 	 * @var	array
@@ -24,17 +24,7 @@ abstract class TypeSeries extends TypeCreativeWork
 	);
 
 	/**
-	 * A cast member of the movie, tv/radio series, season, episode, or video. (legacy spelling; see singular form, actor)
-	 * Expected Type: Person
-	 * 
-	 * @var	array
-	 */
-	protected static $actors = array('value' => 'actors',
-		'expectedTypes' => array('Person')
-	);
-
-	/**
-	 * The director of the movie, tv/radio episode or series.
+	 * The director of the movie, tv/radio episode or series. Supercedes directors.
 	 * Expected Type: Person
 	 * 
 	 * @var	array
@@ -44,17 +34,7 @@ abstract class TypeSeries extends TypeCreativeWork
 	);
 
 	/**
-	 * The director of the movie, tv/radio episode or series. (legacy spelling; see singular form, director)
-	 * Expected Type: Person
-	 * 
-	 * @var	array
-	 */
-	protected static $directors = array('value' => 'directors',
-		'expectedTypes' => array('Person')
-	);
-
-	/**
-	 * The end date and time of the event or item (in ISO 8601 date format).
+	 * The end date and time of the role, event or item (in ISO 8601 date format).
 	 * Expected Type: Date
 	 * 
 	 * @var	array
@@ -64,22 +44,12 @@ abstract class TypeSeries extends TypeCreativeWork
 	);
 
 	/**
-	 * An episode of a TV/radio series or season
+	 * An episode of a TV/radio series or season Supercedes episodes.
 	 * Expected Type: Episode
 	 * 
 	 * @var	array
 	 */
 	protected static $episode = array('value' => 'episode',
-		'expectedTypes' => array('Episode')
-	);
-
-	/**
-	 * An episode of a TV/radio series or season (legacy spelling; see singular form, episode)
-	 * Expected Type: Episode
-	 * 
-	 * @var	array
-	 */
-	protected static $episodes = array('value' => 'episodes',
 		'expectedTypes' => array('Episode')
 	);
 
@@ -134,7 +104,7 @@ abstract class TypeSeries extends TypeCreativeWork
 	);
 
 	/**
-	 * A season in a tv/radio series.
+	 * A season in a tv/radio series. Supercedes seasons.
 	 * Expected Type: Season
 	 * 
 	 * @var	array
@@ -144,17 +114,7 @@ abstract class TypeSeries extends TypeCreativeWork
 	);
 
 	/**
-	 * A season in a tv/radio series. (legacy spelling; see singular form, season)
-	 * Expected Type: Season
-	 * 
-	 * @var	array
-	 */
-	protected static $seasons = array('value' => 'seasons',
-		'expectedTypes' => array('Season')
-	);
-
-	/**
-	 * The start date and time of the event or item (in ISO 8601 date format).
+	 * The start date and time of the event, role or item (in ISO 8601 date format).
 	 * Expected Type: Date
 	 * 
 	 * @var	array
@@ -184,16 +144,6 @@ abstract class TypeSeries extends TypeCreativeWork
 	}
 
 	/**
-	 * Return the 'actors' Property value
-	 *
-	 * @return	string
-	 */
-	public static function pActors()
-	{
-		return self::getValue(self::$actors);
-	}
-
-	/**
 	 * Return the 'director' Property value
 	 *
 	 * @return	string
@@ -201,16 +151,6 @@ abstract class TypeSeries extends TypeCreativeWork
 	public static function pDirector()
 	{
 		return self::getValue(self::$director);
-	}
-
-	/**
-	 * Return the 'directors' Property value
-	 *
-	 * @return	string
-	 */
-	public static function pDirectors()
-	{
-		return self::getValue(self::$directors);
 	}
 
 	/**
@@ -231,16 +171,6 @@ abstract class TypeSeries extends TypeCreativeWork
 	public static function pEpisode()
 	{
 		return self::getValue(self::$episode);
-	}
-
-	/**
-	 * Return the 'episodes' Property value
-	 *
-	 * @return	string
-	 */
-	public static function pEpisodes()
-	{
-		return self::getValue(self::$episodes);
 	}
 
 	/**
@@ -301,16 +231,6 @@ abstract class TypeSeries extends TypeCreativeWork
 	public static function pSeason()
 	{
 		return self::getValue(self::$season);
-	}
-
-	/**
-	 * Return the 'seasons' Property value
-	 *
-	 * @return	string
-	 */
-	public static function pSeasons()
-	{
-		return self::getValue(self::$seasons);
 	}
 
 	/**

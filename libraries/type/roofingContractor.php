@@ -4,7 +4,7 @@
  *
  * @see    http://schema.org/RoofingContractor
 */
-abstract class TypeRoofingContractor extends TypeHomeAndConstructionBusiness
+abstract class TypeRoofingContractor extends TypeProfessionalService
 {
 	/**
 	 * The Schema.org Type Scope

@@ -44,22 +44,12 @@ abstract class TypePlace extends TypeThing
 	);
 
 	/**
-	 * Upcoming or past event associated with this place or organization.
+	 * Upcoming or past event associated with this place or organization. Supercedes events.
 	 * Expected Type: Event
 	 * 
 	 * @var	array
 	 */
 	protected static $event = array('value' => 'event',
-		'expectedTypes' => array('Event')
-	);
-
-	/**
-	 * Upcoming or past events associated with this place or organization (legacy spelling; see singular form, event).
-	 * Expected Type: Event
-	 * 
-	 * @var	array
-	 */
-	protected static $events = array('value' => 'events',
 		'expectedTypes' => array('Event')
 	);
 
@@ -94,6 +84,16 @@ abstract class TypePlace extends TypeThing
 	);
 
 	/**
+	 * A URL to a map of the place. Supercedes map.
+	 * Expected Type: URL, Map
+	 * 
+	 * @var	array
+	 */
+	protected static $hasMap = array('value' => 'hasMap',
+		'expectedTypes' => array('URL', 'Map')
+	);
+
+	/**
 	 * A count of a specific user interactions with this item—for example, 20 UserLikes, 5 UserComments, or 300 UserDownloads. The user interaction type should be one of the sub types of UserInteraction.
 	 * Expected Type: Text
 	 * 
@@ -115,32 +115,12 @@ abstract class TypePlace extends TypeThing
 
 	/**
 	 * A logo associated with an organization.
-	 * Expected Type: ImageObject, URL
+	 * Expected Type: URL, ImageObject
 	 * 
 	 * @var	array
 	 */
 	protected static $logo = array('value' => 'logo',
-		'expectedTypes' => array('ImageObject', 'URL')
-	);
-
-	/**
-	 * A URL to a map of the place.
-	 * Expected Type: URL
-	 * 
-	 * @var	array
-	 */
-	protected static $map = array('value' => 'map',
-		'expectedTypes' => array('URL')
-	);
-
-	/**
-	 * A URL to a map of the place (legacy spelling; see singular form, map).
-	 * Expected Type: URL
-	 * 
-	 * @var	array
-	 */
-	protected static $maps = array('value' => 'maps',
-		'expectedTypes' => array('URL')
+		'expectedTypes' => array('URL', 'ImageObject')
 	);
 
 	/**
@@ -154,42 +134,22 @@ abstract class TypePlace extends TypeThing
 	);
 
 	/**
-	 * A photograph of this place.
-	 * Expected Type: ImageObject, Photograph
+	 * A photograph of this place. Supercedes photos.
+	 * Expected Type: Photograph, ImageObject
 	 * 
 	 * @var	array
 	 */
 	protected static $photo = array('value' => 'photo',
-		'expectedTypes' => array('ImageObject', 'Photograph')
+		'expectedTypes' => array('Photograph', 'ImageObject')
 	);
 
 	/**
-	 * Photographs of this place (legacy spelling; see singular form, photo).
-	 * Expected Type: ImageObject, Photograph
-	 * 
-	 * @var	array
-	 */
-	protected static $photos = array('value' => 'photos',
-		'expectedTypes' => array('ImageObject', 'Photograph')
-	);
-
-	/**
-	 * A review of the item.
+	 * A review of the item. Supercedes reviews.
 	 * Expected Type: Review
 	 * 
 	 * @var	array
 	 */
 	protected static $review = array('value' => 'review',
-		'expectedTypes' => array('Review')
-	);
-
-	/**
-	 * Review of the item (legacy spelling; see singular form, review).
-	 * Expected Type: Review
-	 * 
-	 * @var	array
-	 */
-	protected static $reviews = array('value' => 'reviews',
 		'expectedTypes' => array('Review')
 	);
 
@@ -244,16 +204,6 @@ abstract class TypePlace extends TypeThing
 	}
 
 	/**
-	 * Return the 'events' Property value
-	 *
-	 * @return	string
-	 */
-	public static function pEvents()
-	{
-		return self::getValue(self::$events);
-	}
-
-	/**
 	 * Return the 'faxNumber' Property value
 	 *
 	 * @return	string
@@ -281,6 +231,16 @@ abstract class TypePlace extends TypeThing
 	public static function pGlobalLocationNumber()
 	{
 		return self::getValue(self::$globalLocationNumber);
+	}
+
+	/**
+	 * Return the 'hasMap' Property value
+	 *
+	 * @return	string
+	 */
+	public static function pHasMap()
+	{
+		return self::getValue(self::$hasMap);
 	}
 
 	/**
@@ -314,26 +274,6 @@ abstract class TypePlace extends TypeThing
 	}
 
 	/**
-	 * Return the 'map' Property value
-	 *
-	 * @return	string
-	 */
-	public static function pMap()
-	{
-		return self::getValue(self::$map);
-	}
-
-	/**
-	 * Return the 'maps' Property value
-	 *
-	 * @return	string
-	 */
-	public static function pMaps()
-	{
-		return self::getValue(self::$maps);
-	}
-
-	/**
 	 * Return the 'openingHoursSpecification' Property value
 	 *
 	 * @return	string
@@ -354,16 +294,6 @@ abstract class TypePlace extends TypeThing
 	}
 
 	/**
-	 * Return the 'photos' Property value
-	 *
-	 * @return	string
-	 */
-	public static function pPhotos()
-	{
-		return self::getValue(self::$photos);
-	}
-
-	/**
 	 * Return the 'review' Property value
 	 *
 	 * @return	string
@@ -371,16 +301,6 @@ abstract class TypePlace extends TypeThing
 	public static function pReview()
 	{
 		return self::getValue(self::$review);
-	}
-
-	/**
-	 * Return the 'reviews' Property value
-	 *
-	 * @return	string
-	 */
-	public static function pReviews()
-	{
-		return self::getValue(self::$reviews);
 	}
 
 	/**

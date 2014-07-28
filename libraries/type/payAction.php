@@ -15,22 +15,22 @@ abstract class TypePayAction extends TypeTradeAction
 
 	/**
 	 * A goal towards an action is taken. Can be concrete or abstract.
-	 * Expected Type: MedicalDevicePurpose, Thing
+	 * Expected Type: Thing, MedicalDevicePurpose
 	 * 
 	 * @var	array
 	 */
 	protected static $purpose = array('value' => 'purpose',
-		'expectedTypes' => array('MedicalDevicePurpose', 'Thing')
+		'expectedTypes' => array('Thing', 'MedicalDevicePurpose')
 	);
 
 	/**
 	 * A sub property of participant. The participant who is at the receiving end of the action.
-	 * Expected Type: Audience, Organization, Person
+	 * Expected Type: Organization, Audience, Person
 	 * 
 	 * @var	array
 	 */
 	protected static $recipient = array('value' => 'recipient',
-		'expectedTypes' => array('Audience', 'Organization', 'Person')
+		'expectedTypes' => array('Organization', 'Audience', 'Person')
 	);
 
 	/**

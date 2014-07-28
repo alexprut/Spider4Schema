@@ -4,7 +4,7 @@
  *
  * @see    http://schema.org/PoliceStation
 */
-abstract class TypePoliceStation extends TypeCivicStructure
+abstract class TypePoliceStation extends TypeEmergencyService
 {
 	/**
 	 * The Schema.org Type Scope

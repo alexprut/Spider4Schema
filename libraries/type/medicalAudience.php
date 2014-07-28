@@ -4,7 +4,7 @@
  *
  * @see    http://schema.org/MedicalAudience
 */
-abstract class TypeMedicalAudience extends TypeAudience
+abstract class TypeMedicalAudience extends TypeMedicalEnumeration
 {
 	/**
 	 * The Schema.org Type Scope

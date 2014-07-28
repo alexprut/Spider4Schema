@@ -44,7 +44,7 @@ abstract class TypePerson extends TypeThing
 	);
 
 	/**
-	 * An educational organizations that the person is an alumni of.
+	 * An educational organizations that the person is an alumni of. Inverse property: alumni.
 	 * Expected Type: EducationalOrganization
 	 * 
 	 * @var	array
@@ -54,22 +54,12 @@ abstract class TypePerson extends TypeThing
 	);
 
 	/**
-	 * An award won by this person or for this creative work.
+	 * An award won by this person or for this creative work. Supercedes awards.
 	 * Expected Type: Text
 	 * 
 	 * @var	array
 	 */
 	protected static $award = array('value' => 'award',
-		'expectedTypes' => array('Text')
-	);
-
-	/**
-	 * Awards won by this person or for this creative work. (legacy spelling; see singular form, award)
-	 * Expected Type: Text
-	 * 
-	 * @var	array
-	 */
-	protected static $awards = array('value' => 'awards',
 		'expectedTypes' => array('Text')
 	);
 
@@ -104,7 +94,7 @@ abstract class TypePerson extends TypeThing
 	);
 
 	/**
-	 * A colleague of the person.
+	 * A colleague of the person. Supercedes colleagues.
 	 * Expected Type: Person
 	 * 
 	 * @var	array
@@ -114,32 +104,12 @@ abstract class TypePerson extends TypeThing
 	);
 
 	/**
-	 * A colleague of the person (legacy spelling; see singular form, colleague).
-	 * Expected Type: Person
-	 * 
-	 * @var	array
-	 */
-	protected static $colleagues = array('value' => 'colleagues',
-		'expectedTypes' => array('Person')
-	);
-
-	/**
-	 * A contact point for a person or organization.
+	 * A contact point for a person or organization. Supercedes contactPoints.
 	 * Expected Type: ContactPoint
 	 * 
 	 * @var	array
 	 */
 	protected static $contactPoint = array('value' => 'contactPoint',
-		'expectedTypes' => array('ContactPoint')
-	);
-
-	/**
-	 * A contact point for a person or organization (legacy spelling; see singular form, contactPoint).
-	 * Expected Type: ContactPoint
-	 * 
-	 * @var	array
-	 */
-	protected static $contactPoints = array('value' => 'contactPoints',
 		'expectedTypes' => array('ContactPoint')
 	);
 
@@ -324,13 +294,13 @@ abstract class TypePerson extends TypeThing
 	);
 
 	/**
-	 * An organization to which the person belongs.
-	 * Expected Type: Organization
+	 * An Organization (or ProgramMembership) to which this Person or Organization belongs. Inverse property: member.
+	 * Expected Type: Organization, ProgramMembership
 	 * 
 	 * @var	array
 	 */
 	protected static $memberOf = array('value' => 'memberOf',
-		'expectedTypes' => array('Organization')
+		'expectedTypes' => array('Organization', 'ProgramMembership')
 	);
 
 	/**
@@ -364,22 +334,12 @@ abstract class TypePerson extends TypeThing
 	);
 
 	/**
-	 * A parent of this person.
+	 * A parent of this person. Supercedes parents.
 	 * Expected Type: Person
 	 * 
 	 * @var	array
 	 */
 	protected static $parent = array('value' => 'parent',
-		'expectedTypes' => array('Person')
-	);
-
-	/**
-	 * A parents of the person (legacy spelling; see singular form, parent).
-	 * Expected Type: Person
-	 * 
-	 * @var	array
-	 */
-	protected static $parents = array('value' => 'parents',
 		'expectedTypes' => array('Person')
 	);
 
@@ -414,22 +374,12 @@ abstract class TypePerson extends TypeThing
 	);
 
 	/**
-	 * A sibling of the person.
+	 * A sibling of the person. Supercedes siblings.
 	 * Expected Type: Person
 	 * 
 	 * @var	array
 	 */
 	protected static $sibling = array('value' => 'sibling',
-		'expectedTypes' => array('Person')
-	);
-
-	/**
-	 * A sibling of the person (legacy spelling; see singular form, sibling).
-	 * Expected Type: Person
-	 * 
-	 * @var	array
-	 */
-	protected static $siblings = array('value' => 'siblings',
 		'expectedTypes' => array('Person')
 	);
 
@@ -464,7 +414,7 @@ abstract class TypePerson extends TypeThing
 	);
 
 	/**
-	 * The Value-added Tax ID of the organisation or person.
+	 * The Value-added Tax ID of the organization or person.
 	 * Expected Type: Text
 	 * 
 	 * @var	array
@@ -544,16 +494,6 @@ abstract class TypePerson extends TypeThing
 	}
 
 	/**
-	 * Return the 'awards' Property value
-	 *
-	 * @return	string
-	 */
-	public static function pAwards()
-	{
-		return self::getValue(self::$awards);
-	}
-
-	/**
 	 * Return the 'birthDate' Property value
 	 *
 	 * @return	string
@@ -594,16 +534,6 @@ abstract class TypePerson extends TypeThing
 	}
 
 	/**
-	 * Return the 'colleagues' Property value
-	 *
-	 * @return	string
-	 */
-	public static function pColleagues()
-	{
-		return self::getValue(self::$colleagues);
-	}
-
-	/**
 	 * Return the 'contactPoint' Property value
 	 *
 	 * @return	string
@@ -611,16 +541,6 @@ abstract class TypePerson extends TypeThing
 	public static function pContactPoint()
 	{
 		return self::getValue(self::$contactPoint);
-	}
-
-	/**
-	 * Return the 'contactPoints' Property value
-	 *
-	 * @return	string
-	 */
-	public static function pContactPoints()
-	{
-		return self::getValue(self::$contactPoints);
 	}
 
 	/**
@@ -854,16 +774,6 @@ abstract class TypePerson extends TypeThing
 	}
 
 	/**
-	 * Return the 'parents' Property value
-	 *
-	 * @return	string
-	 */
-	public static function pParents()
-	{
-		return self::getValue(self::$parents);
-	}
-
-	/**
 	 * Return the 'performerIn' Property value
 	 *
 	 * @return	string
@@ -901,16 +811,6 @@ abstract class TypePerson extends TypeThing
 	public static function pSibling()
 	{
 		return self::getValue(self::$sibling);
-	}
-
-	/**
-	 * Return the 'siblings' Property value
-	 *
-	 * @return	string
-	 */
-	public static function pSiblings()
-	{
-		return self::getValue(self::$siblings);
 	}
 
 	/**

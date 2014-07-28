@@ -14,7 +14,7 @@ abstract class TypeGeoShape extends TypeStructuredValue
 	protected static $scope = 'https://schema.org/GeoShape';
 
 	/**
-	 * A polygon is the area enclosed by a point-to-point path for which the starting and ending points are the same. A polygon is expressed as a series of four or more spacedelimited points where the first and final points are identical.
+	 * A polygon is the area enclosed by a point-to-point path for which the starting and ending points are the same. A polygon is expressed as a series of four or more space delimited points where the first and final points are identical.
 	 * Expected Type: Text
 	 * 
 	 * @var	array
@@ -35,12 +35,12 @@ abstract class TypeGeoShape extends TypeStructuredValue
 
 	/**
 	 * The elevation of a location.
-	 * Expected Type: Number, Text
+	 * Expected Type: Text, Number
 	 * 
 	 * @var	array
 	 */
 	protected static $elevation = array('value' => 'elevation',
-		'expectedTypes' => array('Number', 'Text')
+		'expectedTypes' => array('Text', 'Number')
 	);
 
 	/**
@@ -54,7 +54,7 @@ abstract class TypeGeoShape extends TypeStructuredValue
 	);
 
 	/**
-	 * A polygon is the area enclosed by a point-to-point path for which the starting and ending points are the same. A polygon is expressed as a series of four or more spacedelimited points where the first and final points are identical.
+	 * A polygon is the area enclosed by a point-to-point path for which the starting and ending points are the same. A polygon is expressed as a series of four or more space delimited points where the first and final points are identical.
 	 * Expected Type: Text
 	 * 
 	 * @var	array

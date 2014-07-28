@@ -24,22 +24,12 @@ abstract class TypeMusicPlaylist extends TypeCreativeWork
 	);
 
 	/**
-	 * A music recording (track)—usually a single song.
+	 * A music recording (track)—usually a single song. Supercedes tracks.
 	 * Expected Type: MusicRecording
 	 * 
 	 * @var	array
 	 */
 	protected static $track = array('value' => 'track',
-		'expectedTypes' => array('MusicRecording')
-	);
-
-	/**
-	 * A music recording (track)—usually a single song (legacy spelling; see singular form, track).
-	 * Expected Type: MusicRecording
-	 * 
-	 * @var	array
-	 */
-	protected static $tracks = array('value' => 'tracks',
 		'expectedTypes' => array('MusicRecording')
 	);
 
@@ -61,15 +51,5 @@ abstract class TypeMusicPlaylist extends TypeCreativeWork
 	public static function pTrack()
 	{
 		return self::getValue(self::$track);
-	}
-
-	/**
-	 * Return the 'tracks' Property value
-	 *
-	 * @return	string
-	 */
-	public static function pTracks()
-	{
-		return self::getValue(self::$tracks);
 	}
 }

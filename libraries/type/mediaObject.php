@@ -105,12 +105,32 @@ abstract class TypeMediaObject extends TypeCreativeWork
 
 	/**
 	 * The height of the item.
-	 * Expected Type: Distance, QuantitativeValue
+	 * Expected Type: QuantitativeValue, Distance
 	 * 
 	 * @var	array
 	 */
 	protected static $height = array('value' => 'height',
-		'expectedTypes' => array('Distance', 'QuantitativeValue')
+		'expectedTypes' => array('QuantitativeValue', 'Distance')
+	);
+
+	/**
+	 * A count of a specific user interactions with this item—for example, 20 UserLikes, 5 UserComments, or 300 UserDownloads. The user interaction type should be one of the sub types of UserInteraction.
+	 * Expected Type: Text
+	 * 
+	 * @var	array
+	 */
+	protected static $interactionCount = array('value' => 'interactionCount',
+		'expectedTypes' => array('Text')
+	);
+
+	/**
+	 * An offer to provide this item—for example, an offer to sell a product, rent the DVD of a movie, or give away tickets to an event.
+	 * Expected Type: Offer
+	 * 
+	 * @var	array
+	 */
+	protected static $offers = array('value' => 'offers',
+		'expectedTypes' => array('Offer')
 	);
 
 	/**
@@ -154,7 +174,7 @@ abstract class TypeMediaObject extends TypeCreativeWork
 	);
 
 	/**
-	 * Indicates if use of the media require a subscription  (either paid or free). Allowed values are true or false (note that an earlier version had 'yes', 'no').
+	 * Indicates if use of the media require a subscription (either paid or free). Allowed values are true or false (note that an earlier version had 'yes', 'no').
 	 * Expected Type: Boolean
 	 * 
 	 * @var	array
@@ -175,12 +195,12 @@ abstract class TypeMediaObject extends TypeCreativeWork
 
 	/**
 	 * The width of the item.
-	 * Expected Type: Distance, QuantitativeValue
+	 * Expected Type: QuantitativeValue, Distance
 	 * 
 	 * @var	array
 	 */
 	protected static $width = array('value' => 'width',
-		'expectedTypes' => array('Distance', 'QuantitativeValue')
+		'expectedTypes' => array('QuantitativeValue', 'Distance')
 	);
 
 	/**
@@ -281,6 +301,26 @@ abstract class TypeMediaObject extends TypeCreativeWork
 	public static function pHeight()
 	{
 		return self::getValue(self::$height);
+	}
+
+	/**
+	 * Return the 'interactionCount' Property value
+	 *
+	 * @return	string
+	 */
+	public static function pInteractionCount()
+	{
+		return self::getValue(self::$interactionCount);
+	}
+
+	/**
+	 * Return the 'offers' Property value
+	 *
+	 * @return	string
+	 */
+	public static function pOffers()
+	{
+		return self::getValue(self::$offers);
 	}
 
 	/**

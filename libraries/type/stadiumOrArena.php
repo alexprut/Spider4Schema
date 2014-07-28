@@ -4,7 +4,7 @@
  *
  * @see    http://schema.org/StadiumOrArena
 */
-abstract class TypeStadiumOrArena extends TypeCivicStructure
+abstract class TypeStadiumOrArena extends TypeSportsActivityLocation
 {
 	/**
 	 * The Schema.org Type Scope

@@ -4,7 +4,7 @@
  *
  * @see    http://schema.org/Dentist
 */
-abstract class TypeDentist extends TypeMedicalOrganization
+abstract class TypeDentist extends TypeProfessionalService
 {
 	/**
 	 * The Schema.org Type Scope

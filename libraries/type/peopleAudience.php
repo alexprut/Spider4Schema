@@ -64,7 +64,7 @@ abstract class TypePeopleAudience extends TypeAudience
 	);
 
 	/**
-	 * Maximal age recommended for viewing content
+	 * Maximal age recommended for viewing content.
 	 * Expected Type: Number
 	 * 
 	 * @var	array
@@ -74,7 +74,7 @@ abstract class TypePeopleAudience extends TypeAudience
 	);
 
 	/**
-	 * Minimal age recommended for viewing content
+	 * Minimal age recommended for viewing content.
 	 * Expected Type: Number
 	 * 
 	 * @var	array

@@ -4,7 +4,7 @@
  *
  * @see    http://schema.org/GeneralContractor
 */
-abstract class TypeGeneralContractor extends TypeHomeAndConstructionBusiness
+abstract class TypeGeneralContractor extends TypeProfessionalService
 {
 	/**
 	 * The Schema.org Type Scope

@@ -84,7 +84,7 @@ abstract class TypeNutritionInformation extends TypeStructuredValue
 	);
 
 	/**
-	 * The serving size, in terms of the number of volume or mass
+	 * The serving size, in terms of the number of volume or mass.
 	 * Expected Type: Text
 	 * 
 	 * @var	array

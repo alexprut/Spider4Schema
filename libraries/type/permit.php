@@ -14,7 +14,7 @@ abstract class TypePermit extends TypeIntangible
 	protected static $scope = 'https://schema.org/Permit';
 
 	/**
-	 * The organization issuing the permit.
+	 * The organization issuing the ticket or permit.
 	 * Expected Type: Organization
 	 * 
 	 * @var	array

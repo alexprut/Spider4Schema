@@ -1,6 +1,6 @@
 <?php
 /**
- * A toystore.
+ * A toy store.
  *
  * @see    http://schema.org/ToyStore
 */
