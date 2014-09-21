@@ -8,10 +8,10 @@
  * The Spider4Schema logic
  */
 
-include_once 'configuration.php';
-include_once 'http.php';
-include_once 'parser.php';
-include_once 'fileCreator.php';
+require_once dirname(__FILE__) . DIRECTORY_SEPARATOR . 'src/configuration.php';
+require_once dirname(__FILE__) . DIRECTORY_SEPARATOR . 'src/http.php';
+require_once dirname(__FILE__) . DIRECTORY_SEPARATOR . 'src/parser.php';
+require_once dirname(__FILE__) . DIRECTORY_SEPARATOR . 'src/fileCreator.php';
 
 // Initialize the HTTP object
 $http = new Http;

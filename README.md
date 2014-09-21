@@ -16,7 +16,7 @@ Usage
 -----
 * Make sure you have the cURL library installed, and the PHP CLI shell script package
 * Clone the repo: git clone https://github.com/PAlexcom/Spider4Schema.git
-* Enter ```Spider4Schema``` directory
+* Enter ```Spider4Schema/src``` directory
 * Open ```configuration.php``` and edit the ```CREATE_LIBRARY``` constant in order to specify the type of library to be created
 * Open your ```terminal/shell``` and call ```php spider.php```  
   

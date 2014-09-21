@@ -4,7 +4,7 @@
  * @license    Licensed under the MIT License; see LICENSE
  */
 
-include_once 'http.php';
+require_once dirname(dirname(__FILE__)) . DIRECTORY_SEPARATOR . 'src/http.php';
 
 /**
  *
