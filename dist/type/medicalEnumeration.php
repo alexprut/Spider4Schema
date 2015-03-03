@@ -1,0 +1,15 @@
+<?php
+/**
+ * Enumerations related to health and the practice of medicine.
+ *
+ * @see    http://schema.org/MedicalEnumeration
+*/
+abstract class TypeMedicalEnumeration extends TypeEnumeration
+{
+	/**
+	 * The Schema.org Type Scope
+	 *
+	 * @var string
+	 */
+	protected static $scope = 'https://schema.org/MedicalEnumeration';
+}

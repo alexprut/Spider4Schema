@@ -15,28 +15,30 @@
  */
 function parseTypes($html)
 {
-	// Create a new DOMDocument
-	$doc = new DOMDocument;
-	$doc->loadHTML($html);
+    // Create a new DOMDocument
+    $doc = new DOMDocument;
+    $doc->loadHTML($html);
 
-	// Create a new DOMXPath, to make XPath queries
-	$xpath = new DOMXPath($doc);
+    // Create a new DOMXPath, to make XPath queries
+    $xpath = new DOMXPath($doc);
 
-	$nodeList = $xpath->query("//td[@class='tc']/a");
+    $nodeList = $xpath->query("//li[@class='tbranch']/a | //li[@class='tleaf']/a");
 
-	$types = array();
+    $types = array();
 
-	foreach ($nodeList as $node)
-	{
-		// Sanitize the Type
-		$type = str_replace('*', '', $node->nodeValue);
+    foreach ($nodeList as $node) {
+        // Sanitize the Type
+        $type = str_replace('*', '', $node->nodeValue);
 
-		$types[$type] = removeSpaces($type);
-	}
+        $types[$type] = removeSpaces($type);
+    }
 
-	// Debug
-	if (DEBUG)
+    // Debug
+    if (DEBUG)
+    {
 		echo "Retrieved types: " . count($types) . "\n";
+        echo "Please wait at least: " . gmdate("H:i:s", count($types)) . " h/m/s ...\n";
+    }
 
 	return $types;
 }
@@ -180,7 +182,7 @@ function parseTypeProperties(DOMXPath $xpath, $typeName)
  */
 function removeSpaces($string)
 {
-	/* Remove multiple occurences of whitespace characters
+	/* Remove multiple occurrences of whitespace characters
 	 * in a string an convert them all into single spaces.
 	 * Also remove &nbsp; */
 	$string = preg_replace(array('/' . chr(0xC2) . chr(0xA0) . '/', '/\s+/'), ' ', $string);
