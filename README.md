@@ -2,8 +2,10 @@ Spider4Schema [![Build Status](https://travis-ci.org/alexprut/Spider4Schema.svg)
 =============
 A Web Bot that crawls the http://Schema.org web site to retrieve all available Types and Properties in order to create a JSON file and also some PHP libraries.  
 For generating Microdata or RDFa Lite 1.1 semantics you can use the PHP library https://github.com/alexprut/PHPStructuredData.
-Created during the Google Summer of Code 2013 and 2014.  
+Created during the Google Summer of Code 2013 and 2014.    
   
+(__Deprecated__)
+
 Documentation
 -------------  
 #### Files structure:

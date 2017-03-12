@@ -2,7 +2,7 @@
 /**
  * Methods to create the library classes
  * 
- * @copyright  Copyright (C) 2013 - 2015 P.Alex (Alexandru Pruteanu)
+ * @copyright  Copyright (C) 2013 - 2015 Alex Prut (Alexandru Pruteanu)
  * @license    Licensed under the MIT License; see LICENSE
  */
 
